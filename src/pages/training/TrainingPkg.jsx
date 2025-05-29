@@ -1,0 +1,61 @@
+import React from 'react'
+
+
+const trainingData = [
+  "Leadership Training",
+  "Presentation Training",
+  "Sales Training",
+  "Customer ServiceTraining",
+  "People SkillsTraining",
+  "Org Development Solutions",
+];
+
+const TrainingCard = ({ title, description }) => (
+  <div className="bg-white rounded shadow-md max-w-[1140px] mx-auto text-center] ">
+    <div className="bg-[#ff5254] text-white text-[26px] font-bold text-center py-[10px] px-[15px] rounded-t">
+      {title}
+    </div>
+    <p className="text-center text-gray-700 mt-4 mb-6 px-4">{description}</p>
+    <ul className="space-y-2 text-center text-gray-700 text-sm">
+      {trainingData.map((item, idx) => (
+        <li
+          key={idx}
+          className={`py-2 ${idx % 2 === 0 ? "bg-gray-100" : "bg-white"}`}
+        >
+          {item}
+        </li>
+      ))}
+    </ul>
+    <div className="text-center mt-6  py-8 bg-gray-100">
+      <button className="bg-[#ff5254] text-white duration-300 px-[30px] py-[12px] text-[16px] rounded hover:bg-[#011833] hover:text-[#ff5254] font-semibold">
+        Get Started Now
+      </button>
+    </div>
+  </div>
+);
+
+
+
+const TrainingPkg = () => {
+  return (
+    <div className='w-full mt-20'>
+      <div className=' max-w-[1140px] mx-auto px-[15%] pb-[15px] text-center'>
+        <h1 className='text-[50px] text-[#3467d8] font-[700]'>Which Training Package Is Best For Me?</h1>
+      </div>
+      <div className=" bg-gray-50 py-10 px-4 flex justify-center">
+      <div className="max-w-[1140px] mx-auto w-[60%] flex flex-col lg:flex-row justify-between gap-8">
+        <TrainingCard
+          title="Individuals"
+          description="Looking to increase your personal sales skill set? Trying to push your income to the next level. CardoneU was designed just for that. Let us help get you there."
+        />
+        <TrainingCard
+          title="Teams & Businesses"
+          description="Running your business is hard enough without having to worry about your staff performing at their best. Let us help take their sales to the next level for you."
+        />
+      </div>
+    </div>
+    </div>
+  )
+}
+
+export default TrainingPkg
