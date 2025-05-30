@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 import cardData from '../../data/CardData';
+import { useNavigate } from 'react-router-dom';
 
 // const caseStudies = [
 //  {
@@ -141,6 +142,7 @@ import cardData from '../../data/CardData';
 // ];
 
 export default function CardCarousel() {
+  let navigate = useNavigate()
   return (
     <div className="py-12 px-4">
       
@@ -182,7 +184,10 @@ export default function CardCarousel() {
               </div>
               <div className=" flex pl-4   ">
               <div className=' flex absolute  '>
-                <button className=" border-white border-2 pl-[15px] py-[10px] pr-[25px] cursor-pointer  rounded hover:bg-[#ff5254] hover:border-[#ff5254] duration-500  text-[14px] bg-transparent">
+                <button
+                 onClick={() =>{navigate(study.link);window.scrollTo(0, 0); }} 
+                 
+                 className=" border-white border-2 pl-[15px] py-[10px] pr-[25px] cursor-pointer  rounded hover:bg-[#ff5254] hover:border-[#ff5254] duration-500  text-[14px] bg-transparent">
                 READ FULL CASE STUDY →
               </button>
               </div>

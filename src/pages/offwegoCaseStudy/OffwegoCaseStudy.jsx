@@ -24,7 +24,9 @@ const OffwegoCaseStudy = () => {
           center
         />
         <div className="mt-[50px] text-white">
-          <Button label="Launch Project" />
+          <Button 
+          link='https://offwegosafaris.com'
+          label="Launch Project" />
         </div>
       </div>
 

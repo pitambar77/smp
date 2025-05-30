@@ -8,7 +8,7 @@
       { value: '+58%', label: 'Overall Sessions' },
     ],
     tags: ['SEO', 'Ads', 'Social Media', 'Website Maintenance'],
-   
+    link:'/africanscenic-casestudy',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl1.png',
   },
   {
@@ -20,7 +20,7 @@
       { value: '+167%', label: 'Inquiries' },
     ],
     tags: ['SEO', 'Ads', 'Social Media', 'Website Maintenance'],
-   
+   link:'/lifetimesafari-casestudy',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl2.png',
   },
   {
@@ -32,7 +32,7 @@
       { value: '+250%', label: 'Goal Completions' },
     ],
     tags: ['SEO',  'Ads', 'Social Media', 'Website Maintenance'],
-  
+  link:'/jerrytanzaniatours-casestudy',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl3.png',
   },
   {
@@ -44,7 +44,7 @@
       { value: '+352%', label: 'Facebook Impressions' },
     ],
     tags: ['SEO',  'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/falconsafaris-casestudy',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl4.png',
   },
   {
@@ -56,7 +56,7 @@
       { value: '+355%', label: 'Facebook Impressions' },
     ],
     tags: ['SEO', 'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/taitutour-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl5.png',
   },
   {
@@ -68,7 +68,7 @@
       { value: '+68%', label: 'Increase in value' },
     ],
     tags: ['SEO', 'SMO','Ads', 'Social Media', 'Website Maintenance'],
-   
+   link:'/capearchivestours-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl6.png',
   },
    {
@@ -80,7 +80,7 @@
       { value: '+68%', label: 'Increase in value' },
     ],
     tags: ['SEO', 'SMO','Ads', 'Social Media', 'Website Maintenance'],
-   
+   link:'/africanluxurysafari-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl6.png',
   },
   {
@@ -92,7 +92,7 @@
       { value: '+355%', label: 'Facebook Impressions' },
     ],
     tags: ['SEO', 'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/offwego-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl9.png',
   },
   {
@@ -104,7 +104,7 @@
       { value: '+368%', label: 'Traffic' },
     ],
     tags: ['SEO', 'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/wowtravel-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl10.png',
   },
    {
@@ -116,7 +116,7 @@
       { value: '+40%', label: 'New Session' },
     ],
     tags: ['SEO', 'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/wildernessfirsttravel-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl8.png',
   },
   {
@@ -128,7 +128,7 @@
       { value: '+40%', label: 'New Session' },
     ],
     tags: ['SEO', 'SMO', 'Social Media', 'Website Maintenance'],
-   
+   link:'/outdooradventures-case-study',
     image: 'https://safarimarketingpro.com/images/fwhdatysbl11.png',
   },
 ];

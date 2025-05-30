@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 const Card = ({data}) => {
+  let navigate = useNavigate()
   return (
      <div className="bg-[#041936] text-white  shadow-lg flex flex-col items-start overflow-hidden">
       <div className=' p-4'>
@@ -30,7 +32,7 @@ const Card = ({data}) => {
       <div className="pb-[10px] flex  pl-4  ">
         <div className=' absolute pt-[16px]  '>
         <button
-        //   onClick={() => navigate(data.link)}
+           onClick={() => {navigate(data.link);window.scrollTo(0, 0); }}
           className=" border-white border-2 pl-[15px] py-[10px] pr-[25px]  rounded hover:bg-[#ff5254] hover:border-[#ff5254] duration-500  text-[14px] bg-transparent "
         >
           READ FULL CASE STUDY &rarr;

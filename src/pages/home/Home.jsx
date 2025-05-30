@@ -70,7 +70,7 @@ const reviews = [
 
 const Home = () => {
   return (
-    <div>
+    <div className=' '>
       <BodySection/>
       <CardSection/>
       <Content1/>

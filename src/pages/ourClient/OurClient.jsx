@@ -9,7 +9,7 @@ import cardData from '../../data/CardData'
 const OurClient = () => {
     const data = caseStudies.ourclient
   return (
-    <div>
+    <div className='-mt-[135px]'>
       <Banner {...data}/>
       <div className=' w-full'>
         <div className=' max-w-[1050px] mx-auto py-[50px] mb-[10px]' >

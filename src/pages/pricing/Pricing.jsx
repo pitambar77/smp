@@ -7,6 +7,7 @@ import Ads from './Ads';
 import VideoAdd from '../review/VideoAdd';
 import CaroselSection from './CaroselSection';
 
+
 const Pricing = () => {
 
     const [activeTab, setActiveTab] = useState("Website");
@@ -36,7 +37,7 @@ const Pricing = () => {
   const currentPackages = allPackages[activeTab];
 
   return (
-    <div>
+    <div className=' -mt-[135px]'>
       <Banner/>
       <main className="container mx-auto px-4">
         <Tabs activeTab={activeTab} onChange={setActiveTab} />
@@ -51,6 +52,7 @@ const Pricing = () => {
       <Ads/>
       <VideoAdd/>
       <CaroselSection/>
+     
     </div>
   )
 }

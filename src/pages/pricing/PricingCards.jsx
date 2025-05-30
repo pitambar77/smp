@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const PricingCards = ({title, price, investment}) => {
+  const navigate = useNavigate();
   return (
     <div className=' w-full'>
       <div className="bg-blue-50 border-b border-gray-300  p-6  text-center max-w-[1140px] mx-auto  ">
@@ -20,7 +22,9 @@ const PricingCards = ({title, price, investment}) => {
     </div>
      <div className="  hover:shadow  text-center max-w-[1140px] mx-auto  pt-[20px] pb-[40px] duration-300 ">
          <p className="font-semibold text-[20px] text-[#011833] pt-[20px] pb-[40px]">${investment} INITIAL INVESTMENT</p>
-      <button className="bg-[#ff4b4b] hover:bg-[#011833] hover:text-[#ff5254] text-white px-[30px] py-[12px] rounded font-semibold duration-500">
+      <button 
+       onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}
+      className="bg-[#ff4b4b] hover:bg-[#011833] hover:text-[#ff5254] text-white px-[30px] py-[12px] rounded font-semibold duration-500">
         Send Me A Proposal
       </button>
      </div>

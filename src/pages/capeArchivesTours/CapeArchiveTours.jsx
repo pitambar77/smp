@@ -23,7 +23,9 @@ const CapeArchiveTours = () => {
           center
         />
         <div className="mt-[50px] text-white">
-          <Button label="Launch Project" />
+          <Button 
+          link='https://capearchivestours.com'
+          label="Launch Project" />
         </div>
       </div>
 

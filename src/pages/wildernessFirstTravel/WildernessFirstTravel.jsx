@@ -24,7 +24,9 @@ const WildernessFirstTravel = () => {
           center
         />
         <div className="mt-[50px] text-white">
-          <Button label="Launch Project" />
+          <Button 
+          link='https://wildernessfirsttravel.com/'
+          label="Launch Project" />
         </div>
       </div>
 

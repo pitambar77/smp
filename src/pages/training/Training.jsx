@@ -12,7 +12,7 @@ import teamChinpal from '../../assets/images/team-chinpal.png'
 const Training = () => {
   const data = caseStudies.training
   return (
-    <div>
+    <div className='-mt-[135px]'>
       <Banner {...data}/>
        <div className=' pt-24'>
                    <div className='max-w-[1140px]  mx-auto  '>

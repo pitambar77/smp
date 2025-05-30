@@ -1,13 +1,18 @@
 import React from 'react'
 
 const TaituTourContent = () => {
+  const handleClick = () => {
+    window.open('https://taitutour.com/', '_blank', 'noopener,noreferrer');
+  };
   return (
     <div className=' w-full py-[100px] bg-[#ff5254]'>
       <div className=' max-w-[60%] mx-auto text-white text-center '>
-        <h1 className=' text-[48px] font-[800] mb-[20px] '>Ahead of the game</h1>
+        <h1 className=' capitalize text-[48px] font-[900] mb-[20px] '>Ahead of the game</h1>
         <p className=' text-[17px] font-[300] leading-[1.5]'>Taitu Tour and Travel, a prestigious name in luxury global travel, aspired to redefine its online presence and enhance lead generation with a website that would not only encapsulate the opulence of Taitu's tailor-made journeys to Ethiopia but also appeal to a global elite clientele.</p>
         <div className=' mt-[50px]'>
-            <button className=' uppercase text-[16px] rounded-[5px] bg-[#011833] border-[#011833] hover:text-[#23527c] cursor-pointer border-2 py-[12px] px-[30px] font-[600] duration-300'>LAUNCH PROJECT</button>
+            <button
+            onClick={handleClick}
+             className=' uppercase text-[16px] rounded-[5px] bg-[#011833] border-[#011833] hover:text-[#23527c] cursor-pointer border-2 py-[12px] px-[30px] font-[600] duration-300'>LAUNCH PROJECT</button>
         </div>
       </div>
       <div className=' flex items-center my-[50px] '>

@@ -23,6 +23,10 @@ import WildernessFirstTravel from './pages/wildernessFirstTravel/WildernessFirst
 import WowTravelCaseStudy from './pages/wowtravelCaseStudy/WowTravelCaseStudy'
 import Home from './pages/home/Home'
 import Ourcompany from './pages/About/OurCompany'
+import Contactus from './pages/contactUs/ContactUs'
+import Ebook from './pages/resources/Ebook'
+import LetsGrowBussiness from './pages/letsGrow/LetsGrowBussiness'
+import Socialmedia from './pages/services/socialmedia/Socialmedia'
 
 function App() {
 
@@ -34,6 +38,24 @@ function App() {
         <Route path='about-us' element={<Ourcompany/>}/>
         <Route path='team' element={<Team/>}/>
         <Route path='review' element={<Review/>}/>
+         <Route path='pricing' element={<Pricing/>}/>
+         <Route path='our-clients' element={<OurClient/>}/>
+         <Route path='training' element={<Training/>}/>
+         <Route path='africanscenic-casestudy' element={<AfricanScenic/>}/>
+         <Route path='lifetimesafari-casestudy' element={<LifetimeSafari/>}/>
+         <Route path='jerrytanzaniatours-casestudy' element={<JerryTanzania/>}/>
+         <Route path='falconsafaris-casestudy' element={<FalconSafari/>}/>
+         <Route path='taitutour-case-study' element={<TaituTourCaseStudy/>}/>
+         <Route path='capearchivestours-case-study' element={<CapeArchiveTours/>}/>
+         <Route path='offwego-case-study' element={<OffwegoCaseStudy/>}/>
+         <Route path='wowtravel-case-study' element={<WowTravelCaseStudy/>}/>
+         <Route path='wildernessfirsttravel-case-study' element={<WildernessFirstTravel/>}/>
+         <Route path='outdooradventures-case-study' element={<OutDoorAdventure/>}/>
+         <Route path='africanluxurysafari-case-study' element={<AfricanluxurysafariCaseStudy/>}/>
+         <Route path='contact-us' element={<Contactus/>}/> 
+         <Route path='ebook' element={<Ebook/>}/> 
+         <Route path='lets-grow-business' element={<LetsGrowBussiness/>}/> 
+         <Route path='social-media-marketing' element={<Socialmedia/>}/> 
 
       </Route>
     )

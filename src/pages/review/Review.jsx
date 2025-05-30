@@ -60,7 +60,7 @@ const reviews = [
 const Review = () => {
  
   return (
-    <div >
+    <div className=' -mt-[135px]'>
      
     <Banner/>
 

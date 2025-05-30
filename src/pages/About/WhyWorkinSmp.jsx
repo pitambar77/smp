@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
  
 function WhyWorkinSmp() {
+  let navigate = useNavigate();
   return (
     <div>
    
@@ -24,7 +26,9 @@ function WhyWorkinSmp() {
             The only 1-2% of the safari companies that have some knowledge on how to convince & acquire the customers are gathering most part of the revenue even when the tour experience provided by lesser-known companies are better than them.
           </p>
  
-          <button className="bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-md text-[16px] uppercase tracking-wide">
+          <button 
+           onClick={() => {navigate('/our-clients');window.scrollTo(0, 0); }}
+          className="bg-[#ff4c4c] text-white font-bold py-3 px-6 rounded-md text-[16px] uppercase tracking-wide cursor-pointer">
             Browse All Case Studies
           </button>
         </div>

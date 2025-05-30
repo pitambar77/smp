@@ -19,7 +19,7 @@ function Ourcompany() {
     const data = caseStudies.oueCompany
   return (
     <>
-      
+    <div className=' -mt-[135px]'>
       <Banner {...data}/>
       <Softbanner/>
       <WhyWorkinSmp/>
@@ -33,6 +33,9 @@ function Ourcompany() {
       <AfricaHome/>
       <Review/>
       <Content9/>
+    </div>
+      
+     
     </>
   )
 }

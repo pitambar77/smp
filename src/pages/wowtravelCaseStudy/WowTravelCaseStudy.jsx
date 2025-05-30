@@ -11,7 +11,10 @@ import Common from '../../components/Common'
 
 import wowTravel1 from '../../assets/images/wowtravel-case-study1.png'
 
+
 const WowTravelCaseStudy = () => {
+  
+  
     const data = caseStudies.wowTravelCaseStudy
   return (
      <>
@@ -24,7 +27,13 @@ const WowTravelCaseStudy = () => {
           center
         />
         <div className="mt-[50px] text-white">
-          <Button label="Launch Project" />
+        
+          
+            <Button 
+            link='https://wowtraveltours.com/'
+             label="Launch Project" />
+          
+          
         </div>
       </div>
 

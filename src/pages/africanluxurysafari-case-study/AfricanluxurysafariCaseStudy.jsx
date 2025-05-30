@@ -26,7 +26,9 @@ const AfricanluxurysafariCaseStudy = () => {
           center
         />
         <div className="mt-[50px] text-white">
-          <Button label="Launch Project" />
+          <Button 
+          link='https://africanluxurysafari.com'
+          label="Launch Project" />
         </div>
       </div>
 

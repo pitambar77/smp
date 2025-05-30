@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
  
 function PartnerSection() {
+  let navigate = useNavigate();
   return (
     <section className="bg-white  md:px-16">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between gap-23">
@@ -32,6 +34,7 @@ function PartnerSection() {
             This elite Premier Partner status is something we are truly proud of and grateful for. It is a testament to the profitable results we deliver to our clients every day.
           </p>
          <button
+          onClick={() => {navigate('/contact-us');window.scrollTo(0, 0); }}
   className="bg-red-500 text-white px-[40px] py-[15px] uppercase text-[18px] tracking-[0.8px] rounded border border-red-500 hover:bg-[#011833] hover:border-[#011833] hover:text-[#ff5254] transition-all duration-300 w-[250px] font-semibold"
 >
   WORK WITH US

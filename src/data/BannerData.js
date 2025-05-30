@@ -14,6 +14,10 @@ import teamBanner from '../assets/images/team-banner.jpg'
 import reviewBanner from '../assets/images/reviews-banner-fig-1.jpg'
 import trainingBanner from '../assets/images/training-banner.jpg'
 import CompanyBanner from '../assets/images/about-us-banner.jpg'
+import EbookBanner from '../assets/images/google-ads-banner.jpg'
+import SocialMediaBanner from '../assets/images/social-media-marketing-banner.jpg'
+
+
 
 const caseStudies = {
   africanScenic: {
@@ -103,6 +107,24 @@ const caseStudies = {
     description:
       "",
     imageUrl: CompanyBanner,
+  },
+  ebook: {
+    title: "Our E-Books that educate our clients for their digital growth",
+    description:
+      "Our comprehensive guides contain everything you need to know to thrive in the world of search and digital marketing. From planning to understanding your audience up to executing your digital marketing plans to bring 10X ROI, these amazing E books will help you.",
+    imageUrl: EbookBanner,
+  },
+  letsGrow: {
+    title: "Your First Step Towards Digital Success",
+    description:
+      "Attract, Impress, and Convert more inquiries and bookings online and get results with Safari Marketing Pro.",
+    imageUrl: EbookBanner,
+  },
+  socialmedia: {
+    title: "Fuel the growth of your safari brand with our custom social media marketing",
+    description:
+      "Get a customized solution that will help you maximize your online presence, expand your reach, and build a brand image that will even improve your bookings.",
+    imageUrl: SocialMediaBanner,
   },
 };
 

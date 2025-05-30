@@ -15,11 +15,14 @@ const Team = () => {
 
   return (
     <>
-       <Banner {...data}/>
+    <div className='-mt-[135px]'>
+      <Banner {...data}/>
         <SubBanner/>
         <Card/>
         <Gallery/>
         <Common/>
+    </div>
+       
     </>
   )
 }

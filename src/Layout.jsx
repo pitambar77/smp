@@ -7,7 +7,10 @@ const Layout = () => {
   return (
     <>
     <Header/>
-    <Outlet/>
+    <div className=' -mt-[135px]'>
+        <Outlet/>
+    </div>
+    
     <Footer/>
     </>
   )
