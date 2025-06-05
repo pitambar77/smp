@@ -57,7 +57,7 @@ export default function WhySafari() {
       <p className="text-[#787878] test-[17px] font[400] mx-auto leading-relaxed mb-4">
         But fear not, intrepid entrepreneurs! Imagine having a dream team of seasoned social media experts at your side, equipped with the latest tools and strategies, ready to guide your brand through the vast digital savannah. Enter Sand Safari Marketing Pro – the unsung heroes of the modern marketing era.
       </p>
-      <p className="text-[#787878] test-[17px] font[400]  mx-auto leading-relaxed mb-4">
+      <p className="text-[#787878] test-[17px] font[400]  mx-auto leading-relaxed mb-50">
         Now, let's delve into the irresistible benefits that await:
       </p>
     </div>
@@ -107,4 +107,3 @@ export default function WhySafari() {
 </>
   );
 }
- 

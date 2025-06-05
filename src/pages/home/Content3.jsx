@@ -57,7 +57,7 @@ function Content3() {
          
          <a href="#" className="text-red-400 font-semibold hover:underline inline-flex items-center gap-2">
   READ MORE
-<i class="fas fa-arrow-circle-right"></i>
+<i className="fas fa-arrow-circle-right"></i>
 </a>
  
         </div>

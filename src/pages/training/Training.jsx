@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaCheckCircle } from "react-icons/fa";
 import TrainingPkg from './TrainingPkg'
-import Gallery from './Gallery'
+import SubGallery from './SubGallery'
 import Video from './Video'
 import BgSticky from './BgSticky'
 import Common from '../../components/Common'
@@ -64,7 +64,7 @@ const Training = () => {
               
            </div>
       <TrainingPkg/>
-      <Gallery/>
+      <SubGallery/>
       <Video/>
       <BgSticky/>
       <Common/>

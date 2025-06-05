@@ -13,14 +13,14 @@ const CardSection = () => {
     >
       <img
         src={img.src}
-        alt={`img-${img.id}`}
+        alt=""
         className="w-full h-full object-contain rounded-md"
       />
     </div>
   );
  
   return (
-    <div className="min-h-screen flex items-center justify-center ">
+    <div className="py-[100px] flex items-center justify-center ">
       <div className=" max-w-6xl w-full">
         <div className="grid grid-cols-8 gap-1 justify-items-center">
           {Array.from({ length: 32 }).map((_, idx) => {

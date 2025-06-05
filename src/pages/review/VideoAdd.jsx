@@ -14,16 +14,16 @@ const VideoAdd = () => {
             
         <div className=' grid sm:grid-cols-1 md:grid-cols-2 gap-7 md:px-2 px-6 items-center'>
          <div className='bg-[url(https://i.ytimg.com/vi_webp/n6JyE-KVCsE/maxresdefault.webp)] h-[304px] bg-cover bg-bg-center'>
-            <iframe src="https://www.youtube.com/embed/n6JyE-KVCsE?controls=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen="1" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
+            <iframe src="https://www.youtube.com/embed/n6JyE-KVCsE?controls=0"  allow="autoplay; encrypted-media;" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
         </div>
          <div className='bg-[url(https://i.ytimg.com/vi_webp/n6JyE-KVCsE/maxresdefault.webp)] h-[304px] bg-cover bg-bg-center'>
-           <iframe src="https://www.youtube.com/embed/kskzj2zBEIM?controls=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen="1" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
+           <iframe src="https://www.youtube.com/embed/kskzj2zBEIM?controls=0"  allow="autoplay; encrypted-media;" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
         </div>
          <div className='bg-[url(https://i.ytimg.com/vi_webp/n6JyE-KVCsE/maxresdefault.webp)] h-[304px] bg-cover bg-bg-center'>
-           <iframe src="https://www.youtube.com/embed/11OYDxAxnf4?controls=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen="1" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
+           <iframe src="https://www.youtube.com/embed/11OYDxAxnf4?controls=0"  allow="autoplay; encrypted-media;" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
         </div>
          <div className='bg-[url(https://i.ytimg.com/vi_webp/n6JyE-KVCsE/maxresdefault.webp)] h-[304px] bg-cover bg-bg-center'>
-           <iframe src="https://www.youtube.com/embed/bpHRzjP6dhs?controls=0" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen="1" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
+           <iframe src="https://www.youtube.com/embed/bpHRzjP6dhs?controls=0"  allow="autoplay; encrypted-media;" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
         </div>
       </div>
         </div>

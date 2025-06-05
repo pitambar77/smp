@@ -1,0 +1,79 @@
+import React, { useState } from 'react';
+ 
+const faqs = [
+  { question: 'What makes a successful marketing strategy?',answer:'Over the years, we’ve worked with safari operators in whole African continents dedicatedly. We manage all the marketing efforts for small medium and luxury safari operators.' },
+  { question: 'How soon can I expect results?',answer:'Organic marketing services can take a few months to a year to complete. Certain factors, such as your starting point, can determine the overall length that it takes to see noticeable results. We’ve seen noticeable improvements with campaigns within a couple of weeks. Still, most safari operators can expect sizable results and work completed on their organic campaign in a 6 months mark if specific guidelines are met.' },
+  { question: 'Why safari operators most do organic marketing?',answer:'Spreading brand awareness, generating bookings, increasing your brand’s reach, instilling trust among consumers, all these primarily depend on one thing: marketing.' },
+  { question: 'Who will I be working with?',answer:'Your main point of contact will be a dedicated Google Ads Manager who is responsible for the research, planning, and performance of your account. Plus, our founder MR. CHIN PAL for all of our Google Ads projects for quality.' },
+      { question: 'Do You Guarantee Results?',answer:'We guarantee that if you implement everything to give you 10X growth for your safari business. Depending on the starting point and existing issues with your site this can take a varying amount of time, but we’ll always explain every situation in detail and answer questions you have so you know what we’re aiming for you and what stands in the way.' },
+ 
+  { question: 'Do I pick the keywords?',answer:'We would love your input on potential keywords. You know your market best, and your input would be highly beneficial. However, we go through extensive keyword research and qualification processes to identify the top intend keywords to target at the beginning of every marketing process. Our expert team will then map out every page to be created with the target keywords associated with each page. Once completed, we will share it with you for approval before moving on to the next steps.' },
+  { question: 'How much do your charge for organic marketing cost?',answer:'Our monthly organic marketing fees range from 1000$ to $3000+/month. When you request an Organic marketing quote, we’ll review your website and provide a quote based on the size of your website and the strength of your competition.' },
+ 
+  { question: 'Is Organic Marketing Is Better Than Paid Advertising?',answer:'ORGANIC MARKETING and PAID ADVERTISING work together to boost your website and position your brand as an authority in your industry or niche. ORGANIC MARKETING often gives you a far better return on your investment by comparison to paid media options. That’s not to say that ORGANIC MARKETING is cheap and easy; it takes a fair amount of time and resources to get it right but its long-term rewards are immense and sustainable. Most times, SEO and paid advertising will work together to provide the best results.' },
+  // { question: 'How does the payment work and how much does it cost?', answer: 'We agree on payment before starting. For websites: 50% upfront, 50% before launch. For marketing: 50% upfront, 50% after 6 months...' },
+  // { question: 'What are the benefits of hiring a digital marketing agency?', answer: 'It lets you focus on growing your safari business while we handle digital growth with reliable, accountable experts...' }
+];
+ 
+function Faqorganic() {
+  const [openIndex, setOpenIndex] = useState(null);
+ 
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+ 
+  const leftColumn = faqs.filter((_, i) => i % 2 === 0);
+  const rightColumn = faqs.filter((_, i) => i % 2 === 1);
+ 
+  const renderFAQItems = (faqList, colOffset) =>
+    faqList.map(({ question, answer }, i) => {
+      const index = i * 2 + colOffset;
+      return (
+        <div key={index} className="rounded-lg border border-gray-300 overflow-hidden">
+          <button
+            onClick={() => toggleFAQ(index)}
+            className={`w-full flex justify-between items-center px-6 py-4 text-[18px] font-[500] transition-colors duration-300 ease-in-out
+              ${openIndex === index ? 'bg-gray-900 text-white' : 'bg-gray-100 text-gray-900 hover:bg-[#333] hover:text-white'}`}
+          >
+            <span className="text-left">{question}</span>
+            <span className="ml-4 text-lg font-extrabold">
+              <i className={`fa-solid fa-${openIndex === index ? 'chevron-down' : 'chevron-right'}`}></i>
+            </span>
+          </button>
+          {openIndex === index && (
+            <div className="px-6 py-4 bg-white border-t border-gray-300 text-[#787878] text-[17px]">
+              <p className="mb-0 whitespace-pre-line">{answer}</p>
+            </div>
+          )}
+        </div>
+      );
+    });
+ 
+  return (
+    <div className="bg-white py-25 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1125px] mx-auto">
+        <h2 className="font-[Montserrat] text-center font-[700] text-[40px] capitalize text-[#3467d8] leading-[1.3] mb-10 px-[20%] ">
+          Frequently Asked Questions
+        </h2>
+ 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-4 text-center">
+            <h3 className="text-[24px] font-bold text-[#0a1f44] mb-2">Sales Questions</h3>
+            {renderFAQItems(leftColumn, 0)}
+          </div>
+ 
+          {/* Column 2 */}
+          <div className="flex flex-col gap-4 text-center">
+            <h3 className="text-[24px] font-bold text-[#0a1f44] mb-2">Content Marketing Questions</h3>
+            {renderFAQItems(rightColumn, 1)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+ 
+export default Faqorganic;
+ 
+ 

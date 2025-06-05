@@ -19,7 +19,8 @@ const Socialmedia = () => {
   return (
     <div>
      <Banner {...data} />
-     <div className="flex justify-center items-center -mt-16 z-10 relative">
+     {/* YouTube Video Overlapping */}
+      <div className="flex justify-center items-center -mt-16 z-10 relative">
         <div
           className="w-full max-w-4xl h-[450px] aspect-video rounded-lg shadow-2xl overflow-hidden bg-cover bg-center"
           style={{
@@ -29,7 +30,7 @@ const Socialmedia = () => {
           <iframe
             width="100%"
             height="100%"
-            src="blob:https://www.youtube.com/855c1f65-1b2a-44b2-a0b3-fd4ddc00e95f"
+      src="https://www.youtube.com/embed/cFgBGjHNFr8?controls=1&modestbranding=0&rel=0"
             title="Safari Marketing Video"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -37,7 +38,11 @@ const Socialmedia = () => {
           ></iframe>
         </div>
       </div>
+ 
+ 
+      {/* Optional spacing below */}
       <div className="h-20 bg-white" />
+ 
      <Takepridesocial/>
      <Socialmediauser/>
      <Managersocialmedia/>

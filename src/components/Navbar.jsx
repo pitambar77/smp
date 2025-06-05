@@ -21,13 +21,13 @@ export default function Navbar() {
                   />
                 </div>
                 </Link> 
-             <div className=" text-white text-[19px] text-left flex items-center pr-[15px] cursor-pointer hover:text-[#ff5254]">
+             <div className=" text-white text-left flex items-center pr-[15px] cursor-pointer hover:text-[#ff5254]">
               <img
                 src={phonelogo}
                 alt="Phone"
                 className="h-5 sm:h-6 w-auto mr-2 filter invert brightness-0 "
               />
-               <p className=' font-semibold'>+91 63712 23581</p>
+               <p style={{ fontFamily: 'Lato, sans-serif' }} className=' text-[18px]  font-[600] leading-inherit'>+91 6371 223 581</p>
                 </div>
               
  

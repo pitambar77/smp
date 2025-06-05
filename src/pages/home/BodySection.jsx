@@ -1,77 +1,112 @@
-import React from 'react'
- 
+import axios from 'axios';
+import { useEffect } from "react";
+import { useState } from "react";
+import { FaChevronDown } from "react-icons/fa";
+import { BASE_URL } from '../../api/config';
 export default function BodySection() {
+    const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("I need more traffic to my website");
+
+const [banner, setBanner] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}/api/banner`)
+      .then((res) => {
+        setBanner(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching banner:", err);
+      });
+  }, []);
+  
+
+  if (!banner) return <div className="text-center mt-10">Loading...</div>;
+
+
+
+  const options = [
+    "I need more traffic to my website",
+    "I need more bookings",
+    "I need more agents",
+  ];
   return (
     <>
-    <div className='bg-[rgba(61,114,194,0.95)] relative w-full overflow-hidden py-[68px]'></div>
-    <section className="bg-[rgba(61,114,194,0.95)] relative w-full overflow-hidden ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 mt-6">
-        <div className="flex flex-col md:flex-row items-center justify-between md:gap-x-20">
-         
-          {/* Left: Text/Content */}
-          <div className="w-2/3 text-center md:text-left flex flex-col justify-center z-10 mt-12 pr-5 ml-10">
-           <h2 className="font-montserrat text-white font-bold text-[50px] text-left   mb-6 m-0 pr-[20px] leading-[1.1]">
-  We Want To Turn Your  <br />Lookers Into Bookers.
-</h2>
- 
-            <p className="text-white mb-8 text-xl lg:text-xl mr-32 font-Montserrat', sans-serif">
-              Providing African safari operators with more website visits, more  <br />bookings and more agents.
-            </p>
- 
-            {/* CTA Buttons */}
-      <div className="flex flex-col sm:flex-row items-stretch justify-center md:justify-start mb-10 gap-0 w-full max-w-[900px] mx-auto">
-  {/* First Button */}
-  <button
-    className="font-lato text-[rgb(120,120,120)] text-[20px] font-semibold leading-none
-               w-full sm:w-auto h-[70px] rounded-t-md sm:rounded-l-md sm:rounded-tr-none
-               m-0 px-5 py-[15px] outline-none border border-transparent
-               hover:border-red-500 flex justify-between items-center text-left
-               bg-white transition duration-300"
-  >
-    <span className="font-bold">I need more traffic to my website</span>
-    <i className="fa-solid fa-angle-down ml-3 text-gray-600 text-2xl font-bold"></i>
-  </button>
- 
-  {/* Second Button */}
-  <button
-    className="font-lato text-white text-[17px] tracking-[1px] font-semibold uppercase
-               w-full sm:w-auto h-[70px] rounded-b-md sm:rounded-r-md sm:rounded-bl-none
-               px-6 py-[15px] bg-[rgb(255,82,84)] border border-[rgb(255,82,84)]
-               transition ease-out duration-500 outline-none hover:bg-black hover:text-red-500"
-  >
-    Get A Free Quote
-  </button>
-</div>
- 
- 
- 
- 
- 
-            {/* 4 Images in a row */}
-            <div className="flex justify-center md:justify-start gap-7 pb-10 ">
-              <img src="https://safarimarketingpro.com/images/hm-baner-logo-1.png" alt="Logo 1" className="h-23 w-auto" />
-              <img src="https://safarimarketingpro.com/images/hm-baner-logo-1.png" alt="Logo 2" className="h-23 w-auto" />
-              <img src="https://safarimarketingpro.com/images/hm-baner-logo-1.png" alt="Logo 3" className="h-23 w-auto" />
-              <img src="https://safarimarketingpro.com/images/hm-baner-logo-1.png" alt="Logo 4" className="h-23 w-auto" />
-            </div>
+    <div className='bg-[rgba(61,114,194,0.95)] relative w-full overflow-hidden   pt-[270px]'>
+      
+      <div className=' max-w-[1140px] mx-auto  '>
+        <div className=' max-w-[60%]  pr-[10px] pb-[90px]'>
+            <div className=' pb-[35px]'>
+                <h1 className=' font-[700] text-[50px] text-[#fff] leading-[1.1] pb-[20px] text-start'>{banner.heading}</h1>
+                <p className=' text-[20px] text-[#fff] leading-[28px] pb-[20px] text-start'>{banner.subheading}</p>
+
+                <div className="flex  shadow-[0_12px_18px_0_rgb(0_0_0_/_15%)] mt-1.5 ">
+                  <div className="relative bg-white w-[100%] " style={{ fontFamily: "'Lato', sans-serif" }}>
+        <button
+          onClick={() => setOpen(!open)}
+          className=" h-[70px] px-5 text-left text-[#787878] text-[20px] font-semibold leading-inherit absolute  rounded-l-[4px]"
+        >
+          {selected}
+        </button>
+
+        {open && (
+          <div className="absolute top-full left-0 w-full bg-white border shadow-md z-30">
+            {options.map((option) => (
+              <div
+                key={option}
+                onClick={() => {
+                  setSelected(option);
+                  setOpen(false);
+                }}
+                className="px-5 py-3 hover:bg-gray-100 text-[#787878] cursor-pointer"
+              >
+                {option}
+              </div>
+            ))}
           </div>
- 
-          {/* Right: Full-height & wide image */}
-         
-        </div>
-       
+        )}
       </div>
- 
-  <div className="hidden md:block absolute right-0 pt-17  top-0 bottom-0">
-    <img
-      src="https://safarimarketingpro.com/images/banner-single-fig-1.png"
-      alt="SMP Service"
-      className="h-auto w-[620px]   object-cover"
-    />
-  </div>
- 
- 
-    </section>
+
+      {/* Down Arrow */}
+      <div
+        onClick={() => setOpen(!open)}
+        className="w-[50px] bg-white flex items-center justify-center cursor-pointer"
+      >
+        <FaChevronDown className=" w-[30px] pr-[10px] text-[#787878]  text-[22px] font-[700] text-center" />
+
+      </div>
+
+      {/* CTA Button */}
+      <button
+        type="button"
+        className="bg-[#FF4F4F] border-[#ff5254] w-[60%] h-[70px] py-[5px] px-[15px] text-white tracking-[1px] text-[17px] font-semibold rounded-r-[4px]"
+      >
+        GET A FREE QUOTE
+      </button>
+                </div>
+               </div>
+
+               <div className=" grid grid-cols-4 gap-[30px] mt-2">
+                  <img  src={`${BASE_URL}/uploads/${banner.logo1}`} alt="logo1" />
+                  <img  src={`${BASE_URL}/uploads/${banner.logo2}`} alt="logo2" />
+                  <img  src={`${BASE_URL}/uploads/${banner.logo3}`} alt="logo3" />
+                  <img  src={`${BASE_URL}/uploads/${banner.logo4}`} alt="logo4" />
+
+               </div>
+                            
+            </div>
+           
+           
+        </div>
+        <div className="absolute -right-15.5 top-[23.5%]">
+  <img
+    src={`${BASE_URL}/uploads/${banner.image}`}
+    alt=""
+    className="object-contain max-w-none"
+  />
+</div>
+    </div>
+
+    
     </>
   )
 }

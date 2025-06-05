@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner = ({ title, description, imageUrl }) => {
+const Banner = ({ title, description,description1, imageUrl }) => {
   return (
     <section
       className="relative  w-[100%] h-[540px] bg-cover bg-center text-white"
@@ -10,6 +10,7 @@ const Banner = ({ title, description, imageUrl }) => {
         <div className="max-w-[1140px] mx-auto text-center">
           <h1 className="text-[48px] font-[600] md:text-5xl  pb-[15px] leading-[1.4]">{title}</h1>
           <p className="text-lg md:text-[18px] font-[500] px-[10%] leading-[1.5]">{description}</p>
+          <p className=' text-[18px] font-[600] text-center leading-[1.5] '>{description1}</p>
         </div>
       </div>
     </section>

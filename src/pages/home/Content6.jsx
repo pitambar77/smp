@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
  
 const services = [
   {
@@ -22,65 +23,55 @@ const services = [
 ];
  
 function Content6() {
+  const navigate = useNavigate()
   return (
     <div className="bg-[#011833] py-16 px-4 sm:px-6 lg:px-10">
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[1140px] mx-auto mb-7 mt-10">
         <h2
-          className="text-white font-bold text-center capitalize leading-[1.3] mb-10 mt-14"
+          className="text-white text-center mb-16"
           style={{
             fontFamily: 'Montserrat, sans-serif',
             fontWeight: 700,
             fontSize: '48px',
-            padding: '0 5% 20px 5%',
+            lineHeight: '1.3',
           }}
         >
           Digital Growth For Your African Safari Business
         </h2>
  
-        <div className="flex flex-col lg:flex-row justify-center gap-6">
+        <div className="flex flex-col lg:flex-row justify-between gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="text-white rounded-md p-6 w-full lg:w-[28%] shadow-md"
+              className="bg-transparent text-white p-6 rounded-lg w-full lg:w-[32%] transition-all duration-300 hover:bg-[#ffffff0d] hover:shadow-lg hover:scale-[1.02] cursor-pointer"
             >
-              <div className="mb-6 flex items-start gap-4">
-                <img src={service.image} alt={service.title} className="w-12 h-12" />
-                <h3
-                  className="text-left text-white"
-                  style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 600,
-                    fontSize: '22px',
-                    lineHeight: 'inherit',
-                    margin: 0,
-                    padding: '0 25% 15px 0',
-                  }}
-                >
-                  {service.title}
-                </h3>
+              {/* Icon + Title + Description */}
+              <div className="flex mb-4">
+                {/* Icon */}
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-12 h-12 mr-3 self-start"
+                />
+ 
+                {/* Right side: Title and Description */}
+                <div className="flex flex-col justify-end">
+                  {/* Title aligned bottom */}
+                  <h3 className="text-[22px] w-[100px] font-[600]">{service.title}</h3>
+ 
+                  {/* Description below title */}
+                  <p className="font-[400] w-[266px] text-[16px] leading-[1.6] mt-4 max-w-xs">
+                    {service.description}
+                  </p>
+                </div>
               </div>
  
-              <p
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 400,
-                  fontSize: '16px',
-                  textAlign: 'left',
-                  color: '#fff',
-                  lineHeight: '1.6',
-                  textTransform: 'inherit',
-                  margin: 0,
-                  padding: 0,
-                }}
-              >
-                {service.description}
-              </p>
- 
+              {/* Button */}
               <button
-                className="text-white font-semibold bg-[#ff5254] border border-[#ff5254] px-6 py-3 mt-6 rounded-md text-sm uppercase tracking-widest shadow-md hover:bg-red-600 transition"
-                style={{ fontFamily: 'Montserrat, sans-serif' }}
+               onClick={() => {navigate('/web-designing');window.scrollTo(0, 0); }}
+                className="mt-6 ml-20 text-white font-semibold bg-[#ff5254] border border-[#ff5254] hove:text-[#ff5254] hover:bg-[#011833] px-6 py-3 rounded-md text-sm uppercase tracking-widest shadow-md  transition"
               >
-                READ MORE
+                Read More
               </button>
             </div>
           ))}
@@ -91,3 +82,5 @@ function Content6() {
 }
  
 export default Content6;
+ 
+ 

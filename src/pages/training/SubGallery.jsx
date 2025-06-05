@@ -1,6 +1,7 @@
 import React from 'react'
+import Gallery from '../../components/Gallery'
 
-const Gallery = () => {
+const SubGallery = () => {
   return (
     <div className=' w-full pt-[80px] pb-[10px]'>
       <div className=' max-w-[1140px] mx-auto text-center  '>
@@ -8,7 +9,7 @@ const Gallery = () => {
         <p className=' text-[18px] font-[500] text-[#787878]'>Anyone can give you promises, we can give you proof. We are incredibly proud of who we are, what we do, and how we do it.</p>
       </div>
 
-      <div className=' max-w-[1140px] mx-auto pt-[30px] '>
+      {/* <div className=' max-w-[1140px] mx-auto pt-[30px] '>
         <div className=' grid md:grid-cols-4 sm:grid-cols-2 gap-5 '>
            <div className='hover:bg-black/80'>
              <img src="https://safarimarketingpro.com/images/galddr-fig-1.jpg" alt=""  className='hover:bg-black/80'/>
@@ -72,9 +73,10 @@ const Gallery = () => {
              <img src="https://safarimarketingpro.com/images/galddr-fig-7.jpg" alt="" />
            </div>
         </div>
-      </div>
+      </div> */}
+      <Gallery/>
     </div>
   )
 }
 
-export default Gallery
+export default SubGallery

@@ -57,6 +57,12 @@ Analyzing The Results   </>
 ];
  
 const Worksocial = () => {
+     const handleScrollToStep = (number) => {
+    const el = document.getElementById(`step-${number}`);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
     return (
         <section className="bg-[#f0f0f0] text-center px-4 py-16 font-[Montserrat]">
             {/* Heading */}
@@ -69,29 +75,31 @@ Our Social Media Management Process
             <p className="text-xl mt-5 mb-5 text-[#5e5e5e]">A Holistic Approach to Maintaining Your Online Profiles
  
             </p>
-            {/* <p className="text-xl text-[#5e5e5e] mb-6">Identify the goal of your Safari Website</p> */}
- 
-            {/* Description */}
- 
-            {/* <p className=" float-left  text-[#5e5e5e] text-[17px]  text-start leading-relaxed ">
- 
-                As every safari & tour business requires unique attention for running an ad campaign, we prepare tailor made strategies that would result in great returns along with amazing revenue generations.
-                   </p> */}
+      
             <p className=' text-[#5e5e5e] text-[17px]  text-center leading-relaxed mb-12'>
 Establishing a robust brand presence on social media and effectively marketing your safari and tour business involves meticulous planning and execution. Carefully connecting your brand with the target market is key to optimizing returns on your investments in social media marketing.
  
             </p>
  
             {/* Steps Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-                {steps.map((step, index) => (
-                    <div key={index} className="flex items-start text-left gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="flex items-start text-left gap-4 cursor-pointer"
+              onClick={() => handleScrollToStep(step.number)}
+              role="button"
+              tabIndex={0}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') handleScrollToStep(step.number);
+              }}
+            >
                         {/* Number */}
                         <span
-                            className="text-[80px] font-semibold leading-[1em] relative -left-1"
+                            className="text-[80px]  hover:text-red-500 font-semibold leading-[1em] relative -left-1"
                             style={{
                                 fontFamily: "'Poppins', sans-serif",
-                                color: 'black',
+                                // color: 'black',
                                 display: 'block',
                                 textAlign: 'left',
                                 position: 'relative',
@@ -103,13 +111,13 @@ Establishing a robust brand presence on social media and effectively marketing y
  
  
  
-                        {/* Text */}
+
                         <div
-                            className="text-xl font-semibold leading-snug text-[22px] text-left "
-                            style={{ color: step.color }}
-                        >
-                            {step.text}
-                        </div>
+  className={`text-xl text-red-500 font-semibold leading-snug text-[22px] text-left items-center text-[${step.color}] hover:text-blue-500`}
+>
+  {step.text}
+</div>
+ 
                     </div>
                 ))}
             </div>
@@ -119,3 +127,5 @@ Establishing a robust brand presence on social media and effectively marketing y
 };
  
 export default Worksocial;
+ 
+ 

@@ -1,4 +1,6 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
+
 
 
 const trainingData = [
@@ -10,7 +12,11 @@ const trainingData = [
   "Org Development Solutions",
 ];
 
-const TrainingCard = ({ title, description }) => (
+
+
+const TrainingCard = ({ title, onClick, description }) => (
+
+
   <div className="bg-white rounded shadow-md max-w-[1140px] mx-auto text-center] ">
     <div className="bg-[#ff5254] text-white text-[26px] font-bold text-center py-[10px] px-[15px] rounded-t">
       {title}
@@ -27,7 +33,12 @@ const TrainingCard = ({ title, description }) => (
       ))}
     </ul>
     <div className="text-center mt-6  py-8 bg-gray-100">
-      <button className="bg-[#ff5254] text-white duration-300 px-[30px] py-[12px] text-[16px] rounded hover:bg-[#011833] hover:text-[#ff5254] font-semibold">
+      <button 
+      onClick={() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+    onClick(); // Call the passed onClick function
+  }}
+      className="bg-[#ff5254] text-white duration-300 px-[30px] py-[12px] text-[16px] rounded hover:bg-[#011833] hover:text-[#ff5254] font-semibold">
         Get Started Now
       </button>
     </div>
@@ -37,6 +48,16 @@ const TrainingCard = ({ title, description }) => (
 
 
 const TrainingPkg = () => {
+  const navigate = useNavigate();
+
+  const handleIndividualsClick = () => {
+    navigate("/get-start-for-training");
+  };
+
+  const handleTeamsClick = () => {
+    navigate("/get-start-for-training");
+  };
+  
   return (
     <div className='w-full mt-20'>
       <div className=' max-w-[1140px] mx-auto px-[15%] pb-[15px] text-center'>
@@ -47,10 +68,13 @@ const TrainingPkg = () => {
         <TrainingCard
           title="Individuals"
           description="Looking to increase your personal sales skill set? Trying to push your income to the next level. CardoneU was designed just for that. Let us help get you there."
+        onClick={handleTeamsClick}
+
         />
         <TrainingCard
           title="Teams & Businesses"
           description="Running your business is hard enough without having to worry about your staff performing at their best. Let us help take their sales to the next level for you."
+        onClick={handleIndividualsClick}
         />
       </div>
     </div>

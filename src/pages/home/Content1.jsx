@@ -1,23 +1,46 @@
 import React from 'react';
- 
+import axios from 'axios';
+import { useEffect } from "react";
+import { useState } from "react";
+import { BASE_URL } from '../../api/config';
+
 const Content1 = () => {
+
+
+ 
+const [overview, setOverview] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${BASE_URL}/api/home-overview`)
+      .then((res) => {
+        setOverview(res.data);
+      })
+      .catch((err) => {
+        console.error("Error fetching overview:", err);
+      });
+  }, []);
+  
+
+  if (!overview) return <div className="text-center mt-10">Loading...</div>;
+
+
   return (
     <div className="w-full relative flex justify-center bg-white py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="font-montserrat font-bold text-[40px] text-center capitalize text-[#3467d8] leading-[1.3] mb-5 px-0 pb-5">
-          A Comprehensive Marketing Solution for Your Safari Company
+         {overview.heading}
         </h1>
  
         <p className="text-[20px] font-medium leading-[32px] mt-5 text-gray-600 mb-6 text-center  font-montserrat">
-         Do you think only having a safari website can make you found by your potential customers? Almost 90% majority of Safari Holidays plans starts with a search in google. With thousands of safari websites and 2.3 millions of searches going every day, your safari website needs to be visible to your potential customers who are looking for a safari holidays
+        {overview.subheading}
         </p>
  
         <p className="text-[19px] font-normal leading-[1.8] text-center text-[#787878] mb-4 font-montserrat">
-          There's nothing more depressing than sitting around & waiting for the inquiries to be full in your inbox. You know that to get more customers you need more inquiries and to get more inquiries you need better marketing. And the problem is you're not a marketing expert; you're a Safari Operator and you understand the safari business well.
+         {overview.content1}
         </p>
  
         <p className="text-[19px] font-normal leading-[1.8] text-center text-[#787878] mb-4 font-montserrat">
-         Sure, you've heard people talk about things like SEO and PPC, but you don't really know what any of that means, so you feel a bit insecure and inadequate. You may have hired someone to help, but you've just not seen the results you want
+       {overview.content2}
         </p>
  
         <p className="text-[19px] font-normal leading-[1.8] text-center text-[#787878] mb-4 font-montserrat">
@@ -35,7 +58,7 @@ That’s why we at <strong>Safari Marketing Pro</strong> designed a proven proce
         {/* Image after content */}
         <div className="mt-10">
           <img
-            src="https://safarimarketingpro.com/images/acmsyhc-fig-1.jpg" // Replace with your image URL
+            src={`${BASE_URL}/uploads/${overview.image}`}// Replace with your image URL
             alt="Safari Marketing"
             className="mx-auto rounded-5xl w-full max-w-6xl"
           />

@@ -91,17 +91,13 @@ Why settle for the ordinary when extraordinary results are within reach? Trust S
 Don't just witness the transformation; be a part of it. Elevate your brand with Safari Marketing Pro, where innovation, excellence, and unparalleled results converge. Your brand deserves more than just attention; it deserves a lasting impression. Experience the extraordinary with Safari Marketing Pro – because your success is our adventure.
               </p>
  
-              {/* <button
-          className="uppercase mb-20 w-[300px] text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[10px] py-[15px] bg-[#ff5254] text-white border border-[#ff5254] font-semibold hover:bg-black hover:text-red-500 transition-colors duration-300 rounded-md"
-        >
-          REQUEST A FREE Proposal
-        </button> */}
+    
          <div className=" py-[10px] text-[16px] ">
-              <a href="/signup">
+              
                 <button className="bg-[#FF5254] text-white text-[16px] hover:bg-black hover:text-red-500 transition-colors font-semibold duration-300 min-w-[148px] rounded-r-md p-3 ">
                   <strong>REQUEST A FREE STRATEGY SESSION</strong>
                 </button>
-              </a>
+        
             </div>
             </div>
  

@@ -16,6 +16,12 @@ import trainingBanner from '../assets/images/training-banner.jpg'
 import CompanyBanner from '../assets/images/about-us-banner.jpg'
 import EbookBanner from '../assets/images/google-ads-banner.jpg'
 import SocialMediaBanner from '../assets/images/social-media-marketing-banner.jpg'
+import organicMarketngBanner from '../assets/images/seo-banner.jpg'
+import getStartTraningBanner from '../assets/images/google-ads-banner.jpg'
+import webDesignBanner from '../assets/images/web-designing-banner-fig-1.jpg'
+
+
+
 
 
 
@@ -125,6 +131,25 @@ const caseStudies = {
     description:
       "Get a customized solution that will help you maximize your online presence, expand your reach, and build a brand image that will even improve your bookings.",
     imageUrl: SocialMediaBanner,
+  },
+   organicMarketng: {
+    title: "Our Strategic Approach To Climb The Google Mountain",
+    description:
+      "You know investing your time into a SEO strategy can give you great results but not sure how to have a head start? Let us help you reach the position where your potential customers are waiting to be found.",
+    description1:'Higher Rankings > More Traffics > More Bookings.',
+    imageUrl: organicMarketngBanner,
+  },
+  getStartTraning: {
+    title: "Get Started On Your Safari Business With Training From Our Experts.",
+    description:
+      "Attract, Impress, and Convert more inquiries and bookings online and get results with Safari Marketing Pro.",
+    imageUrl: getStartTraningBanner,
+  },
+  webDesign: {
+    title: "Turn Your Safari Website into Your Lead Generation Machine",
+    description:
+      "Our years of experience in the African safari industry enables us to understand their whole eco-system inside out. That is why we build websites that stand out from the competitors & most importantly generate more quality leads.",
+    imageUrl: webDesignBanner,
   },
 };
 

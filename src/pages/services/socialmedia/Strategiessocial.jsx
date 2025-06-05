@@ -1,8 +1,9 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-const Step = ({ number, title, children, isFirst = false }) => {
+import { useNavigate } from 'react-router-dom';
+const Step = ({id, number, title, children, isFirst = false }) => {
   return (
-    <div className="pt-4 pb-5 ">  {/* Reduced padding top and bottom */}
+    <div id ={id} className="pt-14  pb-5 ">  {/* Reduced padding top and bottom */}
       {!isFirst && (
         <div className="max-w-[1140px] mx-auto">
           <div className="border-t border-gray-300 w-full" />
@@ -34,6 +35,7 @@ const Step = ({ number, title, children, isFirst = false }) => {
  
  
 const Strategiessocial = () => {
+  const navigate = useNavigate();
   return (
    
     <div className="bg-[#ff5254] min-h-screen ">
@@ -41,6 +43,7 @@ const Strategiessocial = () => {
       {/* Step 1 */}
      
       <Step
+      id="step-1"
         number={1}
           isFirst={true}
  
@@ -52,20 +55,7 @@ Our first step is to understand the client’s goals. Like, what the client want
         <p>
 Is it to increase brand awareness, drive traffic to their safari website, generate leads, or engage with the customers?
         </p>
-        {/* <ul className="space-y-2 ml-9">
-          {[
-            'What is your target audience?',
-            'Which services do you want to offer to your customers mostly (Like trekking or Safaris)?',
-            'What are itineraries sizes (Budget, Mid-range, or Luxury)?',
-            'What extra features you are giving which will help to attract your customers?',
-            'Who are your competitors and how they are performing?',
-          ].map((item, i) => (
-            <li key={i} className="flex items-start gap-2">
-<i className="fas fa-check text-white mt-1"></i>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul> */}
+
         <p>
 We then thoroughly research and identify the platforms where the target audience is most active and tailor the content that would perform the best
         </p>
@@ -73,6 +63,7 @@ We then thoroughly research and identify the platforms where the target audience
  
       {/* Step 2 */}
       <Step
+      id="step-2"
         number={2}
         title={`Account Optimization.`}
       >
@@ -101,6 +92,7 @@ We first do a precise competitor analysis to know what parameters should be work
  
       {/* Step 3 */}
       <Step
+      id="step-3"
         number={3}
         title={`Developing A Content Calendar`}
       >
@@ -117,8 +109,7 @@ We first do a precise competitor analysis to know what parameters should be work
             'Saving from last-minute planning',
             'Maintaining consistency in posting',
             'KMaintaining the safari brand’s positioning',
-            // 'Compiling your essential information in a place like Instagram highlights',
-            // 'Who are your competitors and how they are performing?',
+          
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
 <i className="fas fa-check text-white mt-1"></i>
@@ -138,8 +129,7 @@ A basic content calendar includes:
             'Date and time',
             'The platforms, and',
             'Type of content (like images, videos, surveys, or blogs)'
-            // 'Compiling your essential information in a place like Instagram highlights',
-            // 'Who are your competitors and how they are performing?',
+          
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
 <i className="fas fa-check text-white mt-1"></i>
@@ -155,6 +145,7 @@ A basic content calendar includes:
       </Step>
       {/* Step 4 */}
       <Step
+      id="step-4"
         number={4}
         title={`Creating And Posting Content`}
       >
@@ -169,9 +160,7 @@ We then post a variety of creatives like:
             'Carousels for better engagement',
             'Reels for a better reach, and',
             'Long videos for informative content',
-            // 'Type of content (like images, videos, surveys, or blogs)'
-            // 'Compiling your essential information in a place like Instagram highlights',
-            // 'Who are your competitors and how they are performing?',
+           
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
 <i className="fas fa-check text-white mt-1"></i>
@@ -191,7 +180,7 @@ We mainly focus on 5 platforms:
             'Twitter',
             'LinkedIn, and',
             'YouTube',
-            // 'Who are your competitors and how they are performing?',
+          
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
 <i className="fas fa-check text-white mt-1"></i>
@@ -205,6 +194,7 @@ We mainly focus on 5 platforms:
        
       </Step>{/* Step 5 */}
       <Step
+      id="step-5"
         number={5}
         title={`Engaging With The Audience`}
       >
@@ -218,8 +208,7 @@ We mainly focus on 5 platforms:
             'Sharing safari brand stories',
             'Promoting the special offers',
             'Asking for regular customer feedback',
-            // 'Does any part of the design confuse the user?',
-            // 'How friendly is your safari website to your customers?'
+          
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
 <i className="fas fa-check text-white mt-1"></i>
@@ -232,6 +221,7 @@ We mainly focus on 5 platforms:
 </p>
       </Step>{/* Step 6 */}
       <Step
+      id="step-6"
         number={6}
         title={`Analyzing the results`}
       >
@@ -239,11 +229,11 @@ We mainly focus on 5 platforms:
 Keeping track of the <strong>Social Media Performance Of African Safari Operator</strong> is an important step to growing your safari brand.</p>
         <p>We constantly analyze if the social media content aligns with your safari marketing goals. We monitor how every post is performing and which are the lowest and highest performing ones. After that, we analyze all the likes, comments, and every other form of engagement to plan the content that would work best for your business to generate revenue.</p>
        <div className="px-[10px] py-[10px] text-[16px] mt-15 mb-8">
-  <a href="/signup">
-    <button className="bg-[#011833] text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#011833] hover:bg-red-400 hover:text-white transition-colors duration-300">
-      <strong>STAND OUT AMONGST THE CROWD</strong>
-    </button>
-  </a>
+  <button
+             onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}
+             className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white transition-colors duration-300">
+              <strong>STAND OUT AMONGST THE CROWD</strong>
+            </button>
 </div>
  
       </Step>

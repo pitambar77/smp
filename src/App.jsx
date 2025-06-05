@@ -27,12 +27,24 @@ import Contactus from './pages/contactUs/ContactUs'
 import Ebook from './pages/resources/Ebook'
 import LetsGrowBussiness from './pages/letsGrow/LetsGrowBussiness'
 import Socialmedia from './pages/services/socialmedia/Socialmedia'
+import OrganicMarketing from './pages/services/organicMarketing/OrganicMarketing'
+import Gallery from './components/Gallery'
+import GetStartTraining from './pages/training/GetStartTraining'
+import WebDesign from './pages/services/webDesign/WebDesign'
+import Googleads from './pages/services/Sevicegoogleads/Googleads'
+import Content from './pages/services/Contentmarketing/Content'
+import AdminPanel from './pages/Admin/AdminPanel'
+import BannerAdmin from './components/BannerAdmin'
+import BannerView from './components/BannerView'
+
+
 
 function App() {
 
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path='/' element={<Layout/>}>
+      <>
+        <Route path='/' element={<Layout/>}>
         
         <Route path='' element={<Home/>}/>
         <Route path='about-us' element={<Ourcompany/>}/>
@@ -56,8 +68,23 @@ function App() {
          <Route path='ebook' element={<Ebook/>}/> 
          <Route path='lets-grow-business' element={<LetsGrowBussiness/>}/> 
          <Route path='social-media-marketing' element={<Socialmedia/>}/> 
+         <Route path='organic-marketing' element={<OrganicMarketing/>}/> 
+         <Route path='get-start-for-training' element={<GetStartTraining/>}/> 
+         <Route path='web-designing' element={<WebDesign/>}/> 
+
+         <Route path='google-ads' element={<Googleads/>}/> 
+         <Route path='content-marketing' element={<Content/>}/> 
+          <Route path='contact-us' element={<Contactus/>}/> 
 
       </Route>
+      
+      <Route path='admin' element={<AdminPanel/>}/> 
+      <Route path='dashbord' element={<BannerAdmin/>}/> 
+      <Route path='view' element={<BannerView/>}/> 
+
+      </>
+    
+      
     )
   )
 
