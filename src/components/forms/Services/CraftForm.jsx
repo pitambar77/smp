@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
 
-const API_URL = 'http://localhost:8000/api/craft';
+const API_URL = `${ BASE_URL }/api/craft`;
 
 export default function CraftForm() {
   const [heading, setHeading] = useState('');
@@ -18,7 +19,7 @@ export default function CraftForm() {
         setHeading(res.data.heading || '');
         setPara1(res.data.para1 || '');
         setPara2(res.data.para2 || '');
-        setPreview(`http://localhost:8000/${res.data.image}`);
+        setPreview(`${ BASE_URL }/${res.data.image}`);
       }
     });
   }, []);

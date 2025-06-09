@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
 
-const API_URL = 'http://localhost:8000/api/contentVideo';
+const API_URL = `${ BASE_URL }/api/contentVideo`;
 
 export default function ContentVideoForm() {
   const [videoUrl, setVideoUrl] = useState('');

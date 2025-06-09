@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../api/config";
  
 export default function ImageForm() {
   const [images, setImages] = useState([]);
@@ -20,7 +21,7 @@ export default function ImageForm() {
  
   const fetchImages = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/api/images");
+      const res = await axios.get(`${ BASE_URL }/api/images`);
       setImages(res.data);
     } catch (err) {
       console.error(err);
@@ -42,7 +43,7 @@ export default function ImageForm() {
       formData.append("image", imageFile);
       formData.append("alt", altText);
  
-      const res = await axios.post("http://localhost:8000/api/images", formData, {
+      const res = await axios.post(`${ BASE_URL }/api/images`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
  
@@ -61,7 +62,7 @@ export default function ImageForm() {
   const deleteImage = async (id) => {
     if (!window.confirm("Delete this image?")) return;
     try {
-      await axios.delete(`http://localhost:8000/api/images/${id}`);
+      await axios.delete(`${ BASE_URL }/api/images/${id}`);
       setImages((prev) => prev.filter((img) => img._id !== id));
       if (editImageId === id) cancelEdit();
     } catch (err) {
@@ -92,7 +93,7 @@ export default function ImageForm() {
     if (editFile) formData.append("image", editFile);
  
     try {
-      const res = await axios.put(`http://localhost:8000/api/images/${editImageId}`, formData, {
+      const res = await axios.put(`${ BASE_URL }/api/images/${editImageId}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
  
@@ -135,7 +136,7 @@ export default function ImageForm() {
         {images.map((img) => (
           <div key={img._id} className="border p-2 rounded relative">
             <img
-              src={`http://localhost:8000${img.src}`}
+              src={`${ BASE_URL }${img.src}`}
               alt={img.alt || "image"}
               className="w-full h-32 object-contain rounded"
             />

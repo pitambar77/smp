@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
 
-const API_URL = 'http://localhost:8000/api/socialImage';
+const API_URL = `${ BASE_URL }/api/socialImage`;
 
 export default function SocialUserImageForm() {
   const [image, setImage] = useState(null);
@@ -66,7 +67,7 @@ export default function SocialUserImageForm() {
         <div className="mb-4">
           <p className="mb-2">Current Image:</p>
           <img
-            src={`http://localhost:8000/${existingImage}`}
+            src={`${ BASE_URL }/${existingImage}`}
             alt="Social Media"
             className="w-full rounded border"
           />

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../api/config';
 
-const API_URL = 'http://localhost:8000/api/banner';
+const API_URL = `${ BASE_URL }/api/banner`;
 
 const BannerAdmin = () => {
   const [banner, setBanner] = useState(null);
@@ -99,7 +100,7 @@ const BannerAdmin = () => {
           {banner?.image && (
             <div className="mt-2">
               <img
-                src={`http://localhost:8000/uploads/${banner.image}`}
+                src={`${ BASE_URL }/uploads/${banner.image}`}
                 alt="Banner"
                 className="w-full h-48 object-cover rounded shadow"
               />

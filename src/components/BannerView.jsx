@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../api/config';
 
 const BannerView = () => {
   const [banner, setBanner] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/api/banner')
+    axios.get(`${ BASE_URL }/api/banner`)
       .then((res) => {
         setBanner(res.data);
       })
@@ -22,7 +23,7 @@ const BannerView = () => {
       className="min-h-[400px] flex flex-col justify-center items-center px-6 text-center"
       style={{
   backgroundImage: banner.image
-    ? `url(http://localhost:8000/uploads/${banner.image})`
+    ? `url(${ BASE_URL }/uploads/${banner.image})`
     : 'none',
     backgroundSize: 'cover',
         backgroundPosition: 'center',

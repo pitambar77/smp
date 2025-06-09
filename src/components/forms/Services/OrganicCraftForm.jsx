@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
 
-const API_URL = 'http://localhost:8000/api/organicCraft';
+const API_URL = `${ BASE_URL }/api/organicCraft`;
 export default function OrganiccraftForm() {
   const [heading, setHeading] = useState('');
   const [paragraphs, setParagraphs] = useState(['']);
@@ -17,7 +18,7 @@ export default function OrganiccraftForm() {
         setExistingData(res.data);
         setHeading(res.data.heading || '');
         setParagraphs(res.data.paragraphs || ['']);
-        setPreview(`http://localhost:8000/${res.data.image}`);
+        setPreview(`${ BASE_URL }/${res.data.image}`);
       }
     });
   }, []);

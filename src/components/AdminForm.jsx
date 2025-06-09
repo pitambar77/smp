@@ -58,6 +58,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { pageFields } from "../data/pageFields"
+import { BASE_URL } from "../api/config";
 
 const AdminForm = ({ page, subpage }) => {
   const [data, setData] = useState({});
@@ -65,7 +66,7 @@ const AdminForm = ({ page, subpage }) => {
   const fields = pageFields[subpage] || [];
 
   useEffect(() => {
-    axios.get(`http://localhost:8000/api/content/${page}/${subpage}`).then(res => {
+    axios.get(`${ BASE_URL }/api/content/${page}/${subpage}`).then(res => {
       if (res.data) {
         setData({ ...res.data.fields, ...res.data.images });
         setId(res.data._id);
@@ -84,7 +85,7 @@ const AdminForm = ({ page, subpage }) => {
       formData.append(key, val);
     });
 
-    const url = `http://localhost:8000/api/content/${page}/${subpage}`;
+    const url = `${ BASE_URL }/api/content/${page}/${subpage}`;
     if (method === "save") {
       await axios.post(url, formData);
     } else if (method === "update" && id) {

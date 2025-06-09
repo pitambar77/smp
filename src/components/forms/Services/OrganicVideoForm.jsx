@@ -107,8 +107,9 @@
 // File: OrganicVideoForm.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
 
-const API_URL = 'http://localhost:8000/api/organicVideo';
+const API_URL = `${ BASE_URL }/api/organicVideo`;
 
 export default function OrganicVideoForm() {
   const [videoUrl, setVideoUrl] = useState('');

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
- 
+import { BASE_URL } from "../../api/config"; 
+
+
 export default function EducatorForm() {
   const [heading, setHeading] = useState("");
   const [subheading, setSubheading] = useState("");
@@ -10,7 +12,7 @@ export default function EducatorForm() {
   // Fetch existing data
   useEffect(() => {
     axios
-      .get("http://localhost:8000/api/educator")
+      .get(`${ BASE_URL }/api/educator`)
       .then((res) => {
         if (res.data) {
           setHeading(res.data.heading || "");
@@ -38,7 +40,7 @@ export default function EducatorForm() {
     }
  
     try {
-      await axios.post("http://localhost:8000/api/educator", formData);
+      await axios.post(`${ BASE_URL }/api/educator`, formData);
       alert("Educator section updated successfully!");
     } catch (err) {
       console.error("Error updating educator section:", err);
@@ -49,7 +51,7 @@ export default function EducatorForm() {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete the Educator content?")) {
       try {
-        await axios.delete("http://localhost:8000/api/educator");
+        await axios.delete(`${ BASE_URL }/api/educator`);
         setHeading("");
         setSubheading("");
         setBackgroundImage(null);
