@@ -77,7 +77,7 @@ export default function Content9() {
                   </div>
  
                   <div>
-                    <label className="block text-[16px] font-[500] -mb-2   text-[#787878] mb-2">Further Comments</label>
+                    <label className="block text-[16px] font-[500] -mb-2   text-[#787878]">Further Comments</label>
                     <textarea
                       rows="1"
                       className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500  text-sm resize-none"
