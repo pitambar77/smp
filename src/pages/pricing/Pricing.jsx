@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
-import Banner from './Banner'
+import React, { useEffect, useState } from 'react'
+import Banner from '../../components/Banner';
 import Tabs from './Tabs'
 import PricingCards from './PricingCards';
 import BudgetPlan from './BudgetPlan';
 import Ads from './Ads';
 import VideoAdd from '../review/VideoAdd';
 import CaroselSection from './CaroselSection';
+import { BASE_URL } from '../../api/config';
+import axios from 'axios';
 
 
 const Pricing = () => {
@@ -35,10 +37,35 @@ const Pricing = () => {
   };
 
   const currentPackages = allPackages[activeTab];
+const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/pricing`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div></div>;
+
+  
 
   return (
-    <div className=' -mt-[135px]'>
-      <Banner/>
+    <div>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
+   
+       <div className=' w-[1140px]  mx-auto mt-20  text-center  '>
+        <p className='  text-center pr-[12%] pl-[12%] pb-3 text-[20px]  text-[#787878] font-[400] leading-8 '>Too many digital marketing providers take a copy-and-paste approach to their services. That’s not our style — and it’s not how we've driven $3 billion in revenue for our clients in just the past twelve years. Instead, we build custom plans based on your safari and tour business industry and goals. Get a preview of what that can look like below:</p>
+     </div>
       <main className="container mx-auto px-4">
         <Tabs activeTab={activeTab} onChange={setActiveTab} />
         <div className="grid md:grid-cols-3 gap-6 mt-10 p-10 ">

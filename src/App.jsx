@@ -34,8 +34,12 @@ import WebDesign from './pages/services/webDesign/WebDesign'
 import Googleads from './pages/services/Sevicegoogleads/Googleads'
 import Content from './pages/services/Contentmarketing/Content'
 import AdminPanel from './pages/Admin/AdminPanel'
-import BannerAdmin from './components/BannerAdmin'
-import BannerView from './components/BannerView'
+
+import ProtectedRoute from './components/ProtectedRoute'
+import Login from './pages/Auth/Login'
+import Signup from './pages/Auth/Signup'
+import ResetPassword from './pages/Auth/ResetPassword'
+
 
 
 
@@ -78,9 +82,19 @@ function App() {
 
       </Route>
       
-      <Route path='admin' element={<AdminPanel/>}/> 
-      <Route path='dashbord' element={<BannerAdmin/>}/> 
-      <Route path='view' element={<BannerView/>}/> 
+      
+       <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+         <Route path="/forgot-password" element={<ResetPassword />} />
+      
+<Route
+    path="/admin"
+    element={
+      <ProtectedRoute requiredRole="admin">
+        <AdminPanel />
+      </ProtectedRoute>
+    }
+  />
 
       </>
     

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
-import caseStudies from '../../data/BannerData'
+
 import SectionLayout from '../../components/SectionLayout'
 import TitleBlock from '../../components/TitleBlock'
 import Button from '../../components/Button'
@@ -10,14 +10,38 @@ import CardCarousel from '../taituTour/CardCarousel'
 import Common from '../../components/Common'
 
 import aficanluxurysafari1 from '../../assets/images/africanluxurysafari-case-study1.png'
+import axios from 'axios'
 // import aficanluxurysafari2 from '../../assets/images/africanluxurysafari-case-study2.png'
 
+import { BASE_URL } from '../../api/config';
 
 const AfricanluxurysafariCaseStudy = () => {
-    const data = caseStudies.africanluxurySafariBanner
+   
+  const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/africanluxurySafariBanner`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div>Loading...</div>;
+
+  
+
   return (
-     <>
-    <Banner {...data}/>
+    <>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
     <SectionLayout>
       <div className="max-w-[60%] mx-auto text-center">
         <TitleBlock

@@ -1,28 +1,45 @@
+import axios from 'axios';
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { BASE_URL } from '../../api/config';
  
 function Meeting() {
+
+const [galleryData, setgalleryData] = useState(null);
+  
+    useEffect(() => {
+      axios.get(`${ BASE_URL }/api/company-gallery`)
+        .then((res) => {
+          setgalleryData(res.data);
+        })
+        .catch((err) => {
+          console.error("Error fetching Galley data:", err);
+        });
+    }, []);
+    
+  
+    if (!galleryData) return <div className="text-center mt-10">Loading...</div>;
+  
+
   return (
     <div>
-      <section className="text-center px-4 md:px-10 my-12 mt-0">
-        {/* Heading */}
-        <h2 className="text-[40px] font-bold text-[#3467d8] text-center capitalize leading-[1.4] font-[Montserrat] px-[8%] pb-[15px]">
-          We Promise To Have Face To Face Meeting <br /> Once In A Year.
-        </h2>
- 
-        {/* Subheading */}
-        <p className="text-[22px] font-medium leading-inherit capitalize font-[Montserrat] text-[#787878] text-center mb-0 tracking-[0.5px] mt-4">
-          The One Where We Tell You How Good We Are.
-        </p>
- 
-        {/* Image */}
-        <div className="mx-auto max-w-6xl mt-[-26px] "> {/* adjust mt-* here as needed */}
-          <img
-            src="https://safarimarketingpro.com/images/group-fig-lg.png"
-            alt="Face-to-Face Meeting Collage"
-            className="w-full h-auto object-cover rounded-lg"
-          />
+     <div className=' w-full pb-[70px] '>
+        
+      <div className=' max-w-[1140px] mx-auto   items-center justify-center text-center '>
+        <h1 className=' capitalize  text-[40px] text-[#3467d8] font-[700] px-[114px] leading-relaxed'>{galleryData.heading}</h1>
+        <p  className=' py-4 text-[#787878] text-[22px] font-[500] capitalize '>{galleryData.subheading}
+    </p>
+   
+      </div>
+      <div className=' max-w-[1140px] mx-auto -mt-10'>
+        <div className='  '>
+            <img src={`${ BASE_URL }/uploads/${galleryData.image}`} alt="gallery image" className=' bg-cover' /> 
         </div>
-      </section>
+       
+      </div>
+      
+    </div>
     </div>
   )
 }

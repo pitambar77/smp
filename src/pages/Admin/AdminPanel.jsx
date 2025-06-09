@@ -11,7 +11,6 @@
 // }
 
 // export default AdminPanel
-
 import React, { useState } from "react";
 import Sidebar from "../../components/Sidebar";
 import MainContent from "../../components/MainContent";
@@ -19,18 +18,27 @@ import MainContent from "../../components/MainContent";
 export default function AdminPanel() {
   const [selectedPage, setSelectedPage] = useState("Home");
   const [selectedSubpage, setSelectedSubpage] = useState("Banner");
+  const [selectedChildSubpage, setSelectedChildSubpage] = useState("");
+
+  const handleSelect = (page, subpage, childSubpage = "") => {
+    setSelectedPage(page);
+    setSelectedSubpage(subpage);
+    setSelectedChildSubpage(childSubpage); // optional, only for nested subpages
+  };
 
   return (
     <div className="flex">
       <Sidebar
-        onSelect={(page, subpage) => {
-          setSelectedPage(page);
-          setSelectedSubpage(subpage);
-        }}
+        onSelect={handleSelect}
         activePage={selectedPage}
         activeSubpage={selectedSubpage}
+        activeChildSubpage={selectedChildSubpage}
       />
-      <MainContent page={selectedPage} subpage={selectedSubpage} />
+      <MainContent
+        page={selectedPage}
+        subpage={selectedSubpage}
+        childSubpage={selectedChildSubpage}
+      />
     </div>
   );
 }

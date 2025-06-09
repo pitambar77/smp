@@ -1,20 +1,43 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import SectionLayout from '../../components/SectionLayout';
 import TitleBlock from '../../components/TitleBlock';
 import Button from '../../components/Button';
 import ImageBlock from '../../components/ImageBlock';
 import TextImageSection from '../../components/TextImageSection';
 import Banner from '../../components/Banner';
-import caseStudies from '../../data/BannerData';
+
 import CardCarousel from '../taituTour/CardCarousel';
 import Common from '../../components/Common';
+import axios from 'axios';
+import { BASE_URL } from '../../api/config';
 
 
 const CapeArchiveTours = () => {
-    const data = caseStudies.capeachiveTour
+    const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/capeachiveTour`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div>Loading...</div>;
+
+  
+
   return (
     <>
-    <Banner {...data}/>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
     <SectionLayout>
       <div className="max-w-[60%] mx-auto text-center">
         <TitleBlock

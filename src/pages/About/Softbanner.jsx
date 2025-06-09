@@ -1,14 +1,34 @@
+import axios from 'axios';
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { BASE_URL } from '../../api/config';
  
 const Softbanner = () => {
+
+   const [director, setdirector] = useState(null);
+
+  useEffect(() => {
+    axios.get(`${ BASE_URL }/api/about-director`)
+      .then(res => {
+        if (res.data.length > 0) {
+          setdirector(res.data[0]); // assuming single entry
+        }
+      })
+      .catch(err => console.error(err));
+  }, []);
+  
+
+  if (!director) return <div className="text-center mt-10">Loading...</div>;
+console.log(director)
   return (
     <div className="bg-[#f0f0f0]">
       <div className="flex pt-13 flex-col md:flex-row md:items-end justify-center max-w-6xl mx-auto ">
         {/* Left - Image */}
         <div className="w-full md:w-5/12 h-full">
           <img
-            src="https://safarimarketingpro.com/images/md-fig.png"
-            alt="Safari Adventure"
+            src={`${ BASE_URL }/uploads/${director.image}`} alt="Director"
+            
             className="w-full h-[800px] rounded-lg object-cover transform scale-x-[-1]"
           />
         </div>
@@ -27,7 +47,9 @@ const Softbanner = () => {
               margin: 0,
             }}
           >
-            We thrive to get the right essence of your Safari brand
+           
+           {director.heading}
+           
           </h3>
  
           <p
@@ -42,7 +64,7 @@ const Softbanner = () => {
     padding: '15px 0 17px 0',
   }}
 >
-  Our goal is to create a strong and consistent brand identity for each and every safari operator in Africa that accurately reflects the core values and bootstrapping of their brand, and appeals to their revenue model. This can help to establish small or medium safari operators to boost their brand recognition and loyalty and increase their revenue by up to 300%.
+  {director.content1}
 </p>
  
  
@@ -58,7 +80,7 @@ const Softbanner = () => {
               padding: '15px 0 17px 0',
             }}
           >
-            Whether you are launching a new safari company or looking to revitalize an existing one, we can help you to develop a compelling brand strategy that will drive growth and success for your safari business
+           {director.content2}
           </p>
  
           <div

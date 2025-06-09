@@ -1,6 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { BASE_URL } from '../../../api/config';
+ 
+const API = `${ BASE_URL }/api/socialCraft`;
  
 const Craftsocialmedia = () => {
+  const [data, setData] = useState(null);
+ 
+  useEffect(() => {
+    axios
+      .get(API)
+      .then((res) => setData(res.data))
+      .catch((err) => console.error('Failed to fetch craft content', err));
+  }, []);
+ 
+  if (!data) return null;
   return (
         <div
           className="text-white "
@@ -8,13 +22,13 @@ const Craftsocialmedia = () => {
             background: 'linear-gradient(0deg, #427fdf 0%, #396bb1 100%)',
           }}
         >
-          <div className=" max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-15">
+          <div className=" max-w-[1140px]  mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-15">
  
             {/* Left Text Section */}
-            <div  className=' w-[655px] mt-20 '>
+            <div  className=' w-[640px] ml-15 mr-70'>
              <h1
       style={{
-        fontSize: '38px',
+        fontSize: '35px',
         fontFamily: `'Montserrat', sans-serif`,
         textTransform: 'capitalize',
         color: '#fff',
@@ -28,85 +42,46 @@ const Craftsocialmedia = () => {
       }}
       className="mb-4"
     >
-Optimize Growth with Strategic Social Media Mastery    </h1>
+ {data.heading}  </h1>
  
-              <p
+           {data.paragraphs?.map((para, idx) => (
+ 
+              <p              
+              key={idx}
+ 
       style={{
         fontFamily: "'Montserrat', sans-serif",
         fontWeight: 400,
-        fontSize: '17px',
+        fontSize: '15px',
         textAlign: 'left',
         color: '#fff',
         lineHeight: 'inherit',
  
  
       }}
- 
+   className='mb-4'
     >
-For more than a decade, Safari Marketing Pro has been at the forefront of revolutionizing the digital landscape for a diverse array of clients, ranging from small-scale to large safari and tour companies. Our platform's marketing strategies have not only withstood the test of time but have also been proven effective by clients who've witnessed unprecedented success.
- 
+ {para}
   </p>
+    ))}
+             
  
-              <p className="text-lg md:text-xl mb-5 leading-relaxed"
-                style={{
-        fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400,
-        fontSize: '17px',
-        textAlign: 'left',
-        color: '#fff',
-        lineHeight: 'inherit',
- 
-      }}
- 
-              >
-In the blink of an eye, your audience forms an opinion about your brand. At Safari Marketing Pro, we recognize the critical importance of making that moment count. We are dedicated to crafting unique and exceptional experiences that not only elevate your brand's reputation but also trigger a surge in inquiries.
-              </p>
- 
- <p className="text-lg md:text-xl mb-5 leading-relaxed"
-                style={{
-        fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400,
-        fontSize: '17px',
-        textAlign: 'left',
-        color: '#fff',
-        lineHeight: 'inherit',
- 
-      }}
- 
-              >
-Why settle for the ordinary when extraordinary results are within reach? Trust Safari Marketing Pro to not just meet but exceed your expectations in the realm of social media management. Join the ranks of those who've harnessed the power of our proven strategies – where each second counts, and each experience leaves an indelible mark on your brand's journey to success.
- 
-              </p> <p className="text-lg md:text-xl mb-5 leading-relaxed"
-                style={{
-        fontFamily: "'Montserrat', sans-serif",
-        fontWeight: 400,
-        fontSize: '17px',
-        textAlign: 'left',
-        color: '#fff',
-        lineHeight: 'inherit',
- 
-      }}
- 
-              >
-Don't just witness the transformation; be a part of it. Elevate your brand with Safari Marketing Pro, where innovation, excellence, and unparalleled results converge. Your brand deserves more than just attention; it deserves a lasting impression. Experience the extraordinary with Safari Marketing Pro – because your success is our adventure.
-              </p>
- 
-    
-         <div className=" py-[10px] text-[16px] ">
-              
+   
+         <div className=" -mb-10 text-[16px] ">
+             
                 <button className="bg-[#FF5254] text-white text-[16px] hover:bg-black hover:text-red-500 transition-colors font-semibold duration-300 min-w-[148px] rounded-r-md p-3 ">
                   <strong>REQUEST A FREE STRATEGY SESSION</strong>
                 </button>
-        
+       
             </div>
             </div>
  
             {/* Right Image */}
             <div className="flex justify-center ">
               <img
-                src="https://safarimarketingpro.com/images/lfsais-figs-2a.png"
-                alt="Safari Marketing Pro Representative"
-                className="h-[700px] object-cover ml-30 mt-62 "
+                src={`${ BASE_URL }/${data.image}`}
+          alt="Craft Section"
+                className="h-[620px] object-cover ml-30  mt-30 "
               />
             </div>
           </div>
@@ -116,3 +91,4 @@ Don't just witness the transformation; be a part of it. Elevate your brand with 
 };
  
       export default Craftsocialmedia;
+ 

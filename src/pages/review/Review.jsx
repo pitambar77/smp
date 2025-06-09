@@ -1,11 +1,13 @@
-import React from 'react'
-import Banner from './Banner'
+import React, { useEffect, useState } from 'react'
+import Banner from '../../components/Banner';
 import { FaStar, FaRegStar} from 'react-icons/fa';
 import Testimonial from './Testimonial';
 import Work from './Work';
 import Common from '../../components/Common';
 import VideoAdd from './VideoAdd';
 import { LuCircleCheckBig } from "react-icons/lu";
+import axios from 'axios';
+import { BASE_URL } from '../../api/config';
 
 const reviews = [
   {
@@ -58,11 +60,31 @@ const reviews = [
 ];
 
 const Review = () => {
- 
+     const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/review`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div></div>;
+
+  
+
   return (
-    <div className=' -mt-[135px]'>
-     
-    <Banner/>
+    <div>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
 
     <VideoAdd/>
 

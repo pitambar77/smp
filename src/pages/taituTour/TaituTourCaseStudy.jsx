@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
-import caseStudies from '../../data/BannerData'
+
 import TaituTourContent from './TaituTourContent'
 import CardCarousel from './CardCarousel'
 import Common from '../../components/Common'
+import axios from 'axios'
+import { BASE_URL } from '../../api/config'
 
 const TaituTourCaseStudy = () => {
-    const data = caseStudies.taituTour
+    const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/taituTour`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div>Loading...</div>;
+
+  
+
   return (
     <div>
-      <Banner {...data}/>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
       <TaituTourContent/>
       <div className=' w-full py-[100px]'>
             <div className=' max-w-[1140px] mx-auto text-center'>

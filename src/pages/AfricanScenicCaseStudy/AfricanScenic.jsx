@@ -1,19 +1,42 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
-import caseStudies from '../../data/BannerData';
+
 import NumberCounter from './NumberCounter';
 import ContentCard from './ContentCard';
 import { FaCheck } from "react-icons/fa";
 import { IoMdArrowRoundUp } from "react-icons/io";
 import Common from '../../components/Common';
+import axios from 'axios';
+import { BASE_URL } from '../../api/config';
+
+
 const AfricanScenic = () => {
-    const data = caseStudies.africanScenic;
+   
+const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/africanScenic`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div>Loading...</div>;
 
   
 
   return (
     <div>
-       <Banner {...data} />
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
       {/* Other African Scenic sections */}
       <div className='w-full'>
 

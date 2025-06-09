@@ -1,15 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Banner'
-import caseStudies from '../../data/BannerData'
+
 import NumberCounter from '../AfricanScenicCaseStudy/NumberCounter'
 import { FaCheck } from 'react-icons/fa'
 import FalconSafariContentCard from './FalconSafariContentCard'
+import axios from 'axios'
+import { BASE_URL } from '../../api/config'
 
 const FalconSafari = () => {
-    const data = caseStudies.falconSafari
+   const [bannerData, setBannerData] = useState(null);
+
+  useEffect(() => {
+    const fetchBanner = async () => {
+      try {
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/falconSafari`);
+        setBannerData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch banner", err);
+      }
+    };
+    fetchBanner();
+  }, []);
+
+  if (!bannerData) return <div>Loading...</div>;
+
+  
+
   return (
     <div>
-      <Banner {...data}/>
+       <Banner
+        title={bannerData.title}
+        description={bannerData.description}
+        imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
+      />
        <div className=' w-full'>
          <div className=' max-w-[1140px] mx-auto mt-[60px] py-[29.45px]'>
             <div>
