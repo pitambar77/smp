@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../api/config";
 
 const pageKeys = [
   "africanScenic",
@@ -27,7 +28,7 @@ const pageKeys = [
   "pricing"
 ];
 
-const API_BASE = "http://localhost:8000"; // Change to live URL when deployed
+// const API_BASE = "http://localhost:8000"; // Change to live URL when deployed
 
 const AllBannerForm = () => {
   const [pageKey, setPageKey] = useState("");
@@ -50,7 +51,7 @@ const AllBannerForm = () => {
 
   const fetchAllBanners = async () => {
     try {
-      const res = await axios.get(`${API_BASE}/api/all-banners`);
+      const res = await axios.get(`${ BASE_URL }/api/all-banners`);
       setBanners(res.data);
     } catch (err) {
       console.error("Failed to fetch banners", err);
@@ -59,11 +60,11 @@ const AllBannerForm = () => {
 
   const fetchBannerByKey = async (key) => {
     try {
-      const res = await axios.get(`${API_BASE}/api/all-banners/${key}`);
+      const res = await axios.get(`${ BASE_URL }/api/all-banners/${key}`);
       const { title, description, imageUrl } = res.data;
       setTitle(title || "");
       setDescription(description || "");
-      setPreviewImage(`${API_BASE}/${imageUrl}`);
+      setPreviewImage(`${ BASE_URL }/${imageUrl}`);
     } catch {
       setTitle("");
       setDescription("");
@@ -92,7 +93,7 @@ const AllBannerForm = () => {
     if (imageFile) formData.append("image", imageFile);
 
     try {
-      await axios.post(`${API_BASE}/api/all-banners`, formData);
+      await axios.post(`${ BASE_URL }/api/all-banners`, formData);
       setMessage("Banner saved successfully!");
       setImageFile(null);
       fetchAllBanners();
@@ -105,7 +106,7 @@ const AllBannerForm = () => {
   const handleDelete = async (key) => {
     if (!window.confirm("Are you sure you want to delete this banner?")) return;
     try {
-      await axios.delete(`${API_BASE}/api/all-banners/${key}`);
+      await axios.delete(`${ BASE_URL }/api/all-banners/${key}`);
       setMessage("Banner deleted");
       fetchAllBanners();
     } catch (err) {
@@ -203,7 +204,7 @@ const AllBannerForm = () => {
                 <td className="px-4 py-2">{banner.description?.slice(0, 60)}...</td>
                 <td className="px-4 py-2">
                   <img
-                    src={`${API_BASE}/${banner.imageUrl}`}
+                    src={`${ BASE_URL }/${banner.imageUrl}`}
                     alt="banner"
                     className="w-24 h-16 object-cover rounded"
                   />
