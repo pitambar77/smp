@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <div className=' '>
       <BodySection/>
-      {/* <CardSection/> */}
+      <CardSection/>
       <Content1/>
       <Content2/>
       <Content3/>
