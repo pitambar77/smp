@@ -54,12 +54,12 @@ import MarketingProofAdmin from "./forms/Resource/MarketingProofAdmin";
 import WebVideoForm from './forms/Services/WebVideoForm'
 import CraftForm from "./forms/Services/CraftForm";
 import OrganicVideoForm from './forms/Services/OrganicVideoForm'
-import OrganiccraftForm from './forms/Services/OrganiccraftForm'
+import OrganicCraftForm from './forms/Services/OrganicCraftForm'
 import SocialVideoForm from './forms/Services/SocialVideoForm'
 import GoogleVideoForm from './forms/Services/GoogleVideoForm'
 import ContentVideoForm from './forms/Services/ContentVideoForm'
-import SocialMediacraftForm from "./forms/Services/SocialMediacraftForm";
-import GoogleCraftForm from "./forms/Services/GoogleCraftForm";
+import SocialMediaCraftForm from "./forms/Services/SocialMediaCraftForm";
+import GooglecraftForm from "./forms/Services/GooglecraftForm";
 import ContentCraftForm from "./forms/Services/ContentCraftForm";
 import SocialUserImageForm from './forms/Services/SocialUserImageForm'
 
@@ -104,7 +104,7 @@ const componentMap = {
     },
     "Organic": {
       Video:OrganicVideoForm,
-      Craft:OrganiccraftForm,
+      Craft:OrganicCraftForm,
     },
     "Content Marketing": {
       Video:ContentVideoForm,
@@ -112,12 +112,12 @@ const componentMap = {
     },
     "Social Media": {
       Video:SocialVideoForm,
-      Craft:SocialMediacraftForm,
+      Craft:SocialMediaCraftForm,
       "Social User":SocialUserImageForm
     },
     "Google Ads": {
       Video:GoogleVideoForm,
-      Craft:GoogleCraftForm,
+      Craft:GooglecraftForm,
     },
   }
 };
