@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../../api/config";
  
-const API_URL = "http://localhost:8000/api/marketing-proof";
+const API_URL = `${ BASE_URL }/api/marketing-proof`;
  
 const MarketingProofAdmin = () => {
   const [heading, setHeading] = useState("");

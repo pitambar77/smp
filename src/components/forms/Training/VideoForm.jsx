@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../../api/config";
 
 const VideoUploadForm = () => {
   const [title, setTitle] = useState("");
@@ -8,10 +9,10 @@ const VideoUploadForm = () => {
   const [videos, setVideos] = useState([]);
   const [editId, setEditId] = useState(null); // track which video is being edited
 
-  const API_BASE = "http://localhost:8000";
+  // const API_BASE = "http://localhost:8000";
 
   const fetchVideos = async () => {
-    const res = await axios.get(`${API_BASE}/api/videos`);
+    const res = await axios.get(`${ BASE_URL }/api/videos`);
     setVideos(res.data);
   };
 
@@ -33,9 +34,9 @@ const VideoUploadForm = () => {
 
     try {
       if (editId) {
-        await axios.put(`${API_BASE}/api/videos/${editId}`, formData);
+        await axios.put(`${ BASE_URL }/api/videos/${editId}`, formData);
       } else {
-        await axios.post(`${API_BASE}/api/videos`, formData);
+        await axios.post(`${ BASE_URL }/api/videos`, formData);
       }
 
       setTitle("");
@@ -52,7 +53,7 @@ const VideoUploadForm = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this video?")) {
       try {
-        await axios.delete(`${API_BASE}/api/videos/${id}`);
+        await axios.delete(`${ BASE_URL }/api/videos/${id}`);
         fetchVideos();
       } catch (err) {
         console.error(err);
@@ -133,14 +134,14 @@ const VideoUploadForm = () => {
           <div key={video._id} className="border rounded-lg p-4 bg-white shadow">
             <h3 className="font-semibold text-lg mb-2">{video.title}</h3>
             <img
-              src={`${API_BASE}/${video.thumbnail}`}
+              src={`${ BASE_URL }/${video.thumbnail}`}
               alt="thumbnail"
               className="w-full h-40 object-cover rounded mb-2"
             />
             <video
               controls
               className="w-full h-52 rounded"
-              src={`${API_BASE}/${video.videoFile}`}
+              src={`${ BASE_URL }/${video.videoFile}`}
             />
             <div className="flex gap-3 mt-4">
               <button

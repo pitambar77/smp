@@ -2,17 +2,18 @@
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../../api/config";
 
 const Video = () => {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  const API_BASE = "http://localhost:8000"; // Replace with your live backend
+  // const API_BASE = "http://localhost:8000"; // Replace with your live backend
 
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await axios.get(`${API_BASE}/api/videos`);
+        const res = await axios.get(`${ BASE_URL }/api/videos`);
         setVideos(res.data);
       } catch (err) {
         console.error("Failed to fetch videos", err);
@@ -48,7 +49,7 @@ const Video = () => {
               className="relative w-full h-[244px] overflow-hidden cursor-pointer"
             >
               <img
-                src={`${API_BASE}/${video.thumbnail}`}
+                src={`${ BASE_URL }/${video.thumbnail}`}
                 alt={video.title}
                 className="w-full object-cover"
               />
@@ -101,7 +102,7 @@ const Video = () => {
       <video
         controls
         autoPlay
-        src={`${API_BASE}/${selectedVideo.videoFile}`}
+        src={`${ BASE_URL }/${selectedVideo.videoFile}`}
         className="w-full rounded-lg shadow-lg"
       />
       
