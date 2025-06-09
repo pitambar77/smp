@@ -75,7 +75,7 @@ function App() {
          <Route path='organic-marketing' element={<OrganicMarketing/>}/> 
          <Route path='get-start-for-training' element={<GetStartTraining/>}/> 
          <Route path='web-designing' element={<WebDesign/>}/> 
-
+          <Route path='privacy-policy' element={<Privacy/>}/>
          <Route path='google-ads' element={<Googleads/>}/> 
          <Route path='content-marketing' element={<Content/>}/> 
           <Route path='contact-us' element={<Contactus/>}/> 
@@ -87,18 +87,16 @@ function App() {
         <Route path="/signup" element={<Signup />} />
          <Route path="/forgot-password" element={<ResetPassword />} />
       
-<Route
-    path="/admin"
-    element={
+      <Route
+          path="/admin"
+          element={
       <ProtectedRoute requiredRole="admin">
         <AdminPanel />
       </ProtectedRoute>
     }
   />
 
-      </>
-    
-      
+      </> 
     )
   )
 

@@ -25,10 +25,11 @@ const pageKeys = [
   "organicMarketng",
   "getStartTraning",
   "webDesign",
-  "pricing"
+  "pricing",
+  "contentMarketng"
 ];
 
-// const API_BASE = "http://localhost:8000"; // Change to live URL when deployed
+
 
 const AllBannerForm = () => {
   const [pageKey, setPageKey] = useState("");

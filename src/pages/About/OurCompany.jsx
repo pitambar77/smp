@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Banner from '../../components/Banner'
 import caseStudies from '../../data/BannerData'
@@ -16,6 +16,9 @@ import Review from '../../components/Review'
 import Content9 from '../home/Content9'
  
 function Ourcompany() {
+  useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
     const data = caseStudies.oueCompany
   return (
     <>

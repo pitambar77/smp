@@ -59,9 +59,16 @@ export default function FooterReviewcard() {
         {/* Footer */}
        
         </div>
-         <div className="bg-[#16333c] w-[290px] text-[#fff] text-sm text-center font-[400] font-[Roboto,sans-serif] py-2 mt-2 -mb-2.6 text-[12px]">
+        <a  
+        href="https://clutch.co/profile/manorama-web-solutions-private?utm_source=widget&utm_medium=3&utm_campaign=widget&utm_content=stars&utm_term=safarimarketingpro.com#logo"
+        target="_blank"
+        rel="noopener noreferrer">
+ <div className="bg-[#16333c] w-[290px] text-[#fff] text-sm text-center font-[400] font-[Roboto,sans-serif] py-2 mt-2 -mb-2.6 text-[12px]">
           Powered by <span className="font-semibold tracking-wide text-[18px] font-montserrat ">Clutch</span>
         </div>
+
+        </a>
+        
       </div>
     </div>
   );

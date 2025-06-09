@@ -1,6 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import FooterReviewcard from "./FooterReviewcard";
+import { Link } from "react-router-dom";
  
 export default function Footer() {
   return (
@@ -11,17 +12,54 @@ export default function Footer() {
           <h3 className="font-semibold text-[22px] mb-3 tracking-wide ">
             USEFUL LINKS
           </h3>
-          <ul className="space-y-4  text-[#fff] text-[17px] font-[400] tracking-wide leading-0.2">
-            <li  className="hover:text-[#ff5254]">Website Designing</li>
-            <li className="hover:text-[#ff5254]">Organic Marketing</li>
-            <li className="hover:text-[#ff5254]">Google Advertising</li>
-            <li className="hover:text-[#ff5254]">Content Marketing</li>
-            <li className="hover:text-[#ff5254]">Social Media Marketing</li>
-            <li className="hover:text-[#ff5254]">Pricing</li>
-            <li className="hover:text-[#ff5254]">Ebooks</li>
-            <li className="hover:text-[#ff5254]">Contact Us</li>
-            <li className="hover:text-[#ff5254]">Blog</li>
-          </ul>
+          <ul className="space-y-4 text-[#fff] text-[17px] font-[400] tracking-wide leading-0.2">
+  <li>
+    <Link to="/web-designing" className="hover:text-[#ff5254]">
+      Website Designing
+    </Link>
+  </li>
+  <li>
+    <Link to="/organic-marketing" className="hover:text-[#ff5254]">
+      Organic Marketing
+    </Link>
+  </li>
+  <li>
+    <Link to="/google-ads" className="hover:text-[#ff5254]">
+      Google Advertising
+    </Link>
+  </li>
+  <li>
+    <Link to="/content-marketing" className="hover:text-[#ff5254]">
+      Content Marketing
+    </Link>
+  </li>
+  <li>
+    <Link to="/social-media-marketing" className="hover:text-[#ff5254]">
+      Social Media Marketing
+    </Link>
+  </li>
+  <li>
+    <Link to="/pricing" className="hover:text-[#ff5254]">
+      Pricing
+    </Link>
+  </li>
+  <li>
+    <Link to="/ebook" className="hover:text-[#ff5254]">
+      Ebooks
+    </Link>
+  </li>
+  <li>
+    <Link to="/contact-us" className="hover:text-[#ff5254]">
+      Contact Us
+    </Link>
+  </li>
+  <li>
+    <Link to="/blog" className="hover:text-[#ff5254]">
+      Blog
+    </Link>
+  </li>
+</ul>
+
         </div>
  
         {/* Contacts */}
@@ -53,17 +91,33 @@ export default function Footer() {
           <h3 className="font-semibold text-[22px] mt-2.5 mb-4 tracking-wide text-left  ">
             LOVE US AS WE LOVE YOU!
           </h3>
-          <div className="flex items-center gap-5 tracking-wider ">
-            <span className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]">
-              <FaFacebookF />
-            </span>
-            <span className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]">
-              <FaInstagram />
-            </span>
-            <span className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]">
-              <FaYoutube />
-            </span>
-          </div>
+          <div className="flex items-center gap-5 tracking-wider">
+  <a
+    href="https://www.facebook.com/safarimarketingpro"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]"
+  >
+    <FaFacebookF />
+  </a>
+  <a
+    href="https://www.instagram.com/safari_marketing_pro"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]"
+  >
+    <FaInstagram />
+  </a>
+  <a
+    href="https://www.youtube.com/channel/UCUZXWTAJQ-xl6KcuOCli2Jw?view_as=subscriber"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[#75b6ff] text-white rounded-full p-4.5 text-2xl border border-[#75b6ff] hover:text-[#ff5254] hover:border-[#ff5254]"
+  >
+    <FaYoutube />
+  </a>
+</div>
+
         </div>
  
         {/* Reviews */}
@@ -81,12 +135,12 @@ export default function Footer() {
           © 2025 Safari Marketing Pro
         </p>
         <div className="flex items-center gap-2 flex-wrap mr-25 pl-[60px]">
-          <a
-            href="#"
+          <Link
+            to="/privacy-policy" 
             className="underline hover:text-[#ff5254] text-[14px] tracking-tighterst p-2 ml-[-130px] font-[500]  mr-20"
           >
             Privacy Policy
-          </a>
+          </Link>
           <img
             src="https://safarimarketingpro.com/images/new-part-1.png"
             alt="Google Partner"

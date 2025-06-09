@@ -38,7 +38,7 @@ import React from "react";
 
 // Import all your forms
 import TeamForm from "./forms/TeamForm";
-import ReviewForm from "./forms/ReviewForm";
+
 import BannerForm from "./forms/BannerForm";
 import HomeOverview from "./forms/HomeOverview";
 import TeamCardForm from "./forms/Team/TeamCardForm";
@@ -62,6 +62,7 @@ import SocialMediaCraftForm from "./forms/Services/SocialMediaCraftForm";
 import GooglecraftForm from "./forms/Services/GooglecraftForm";
 import ContentCraftForm from "./forms/Services/ContentCraftForm";
 import SocialUserImageForm from './forms/Services/SocialUserImageForm'
+import ReviewCardForm from "./forms/ReviewCardForm";
 
 
 
@@ -78,7 +79,7 @@ const componentMap = {
       Card: TeamCardForm,
       Gallery: TeamGalleryForm,
     },
-    Review: ReviewForm,
+    Review: ReviewCardForm,
   },
   Home: {
     Banner: BannerForm,
