@@ -40,8 +40,7 @@ import Login from './pages/Auth/Login'
 import Signup from './pages/Auth/Signup'
 import ResetPassword from './pages/Auth/ResetPassword'
 import FormComponent from './components/FormComponent'
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 
 
 
@@ -85,7 +84,7 @@ function App() {
           
       </Route>
       
-      <ToastContainer/>
+    
        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
          <Route path="/forgot-password" element={<ResetPassword />} />
