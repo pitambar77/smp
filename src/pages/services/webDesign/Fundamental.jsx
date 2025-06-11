@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import RequestForm from '../../../components/RequestForm';
  
 const features = [
     {
@@ -146,6 +147,17 @@ const features = [
 ];
  
 function Fundamental() {
+    const [showForm, setShowForm] = useState(false);
+        
+           useEffect(() => {
+            if (showForm) {
+              document.body.classList.add('overflow-hidden');
+            } else {
+              document.body.classList.remove('overflow-hidden');
+            }
+        
+            return () => document.body.classList.remove('overflow-hidden');
+          }, [showForm]);
     return (
         <div>
             <div className="w-full h-full bg-[#f0f0f0] flex items-center justify-center px-4">
@@ -182,10 +194,37 @@ function Fundamental() {
                         </div>
  
                         <div className="mt-12 text-center mb-22">
-                            <button className="bg-[#ff4d4d] text-white font-semibold px-6 py-3 rounded hover:bg-black hover:text-red-600 transition">
+                            <button
+                            onClick={() => setShowForm(true)}
+                             className="bg-[#ff4d4d] text-white font-semibold px-6 py-3 rounded hover:bg-[#011833] ease-in duration-500 cursor-pointer hover:text-red-600 transition">
                                 SCHEDULE CALL WITH AN EXPERT
                             </button>
                         </div>
+                        {showForm && (
+                            
+                             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+                               <div  className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                                         animate-slide-down-fade  ">
+                                
+                                {/* Close Button */}
+                                <button
+                                  onClick={() => setShowForm(false)}
+                                  className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+                                >
+                                  ×
+                                </button>
+                                 <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                                  <h3 className="text-[24px] font-medium leading-snug uppercase">
+                                    Schedule Call with an Expert
+                                  </h3>
+                                  <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+                                </div>
+                                <RequestForm/>
+                          
+                              </div>
+                             </div>
+                          )}
+                        
                     </section>
                 </div>
             </div>

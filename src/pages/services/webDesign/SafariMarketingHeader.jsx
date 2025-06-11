@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
  
 const SafariMarketingHeader = () => {
+    const navigate = useNavigate()
     return (
         <>
             {/* <div className="w-full h-full  bg-[url('https://safarimarketingpro.com/images/bg-monkey.png')] " > */}
@@ -112,10 +114,13 @@ So now as an <strong> African Safari Operator </strong> you can aware of how a s
  
                     </div>
                     <div className=" text-center mt-7 mb-2 ">
-                        <p className=" font-bold text-[28px] text-white underline">
-                            <a href="" target='_blank'>So Stop Losing Money And get Your Safari Website Ready Today.</a>
- 
+                        <button  onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}>
+                        <p className=" font-bold text-[28px] text-white underline cursor-pointer hover:text-black">
+                            
+                                So Stop Losing Money And get Your Safari Website Ready Today.
                         </p>
+                        </button>
+ 
                     </div>
                 </div>
             </div>

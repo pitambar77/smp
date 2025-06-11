@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { FaCheck } from "react-icons/fa";
 import { FiPlayCircle } from "react-icons/fi";
  
 import { useState } from "react";
+import RequestForm from '../../components/RequestForm';
  
 function AfricaHome() {
     const [playVideo, setPlayVideo] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    
+       useEffect(() => {
+        if (showForm) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+    
+        return () => document.body.classList.remove('overflow-hidden');
+      }, [showForm]);
+    
  
   return (
     <div className="relative w-full overflow-hidden">
@@ -64,10 +77,38 @@ That’s why Chin is committed to giving them face-to-face meetings to bring val
 </div>
  
               <div className="mt-6">
-                <button className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition">
+                <button 
+                onClick={() => setShowForm(true)}
+                className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition ease-in duration-500">
                   SCHEDULE CALL WITH AN EXPERT
                 </button>
               </div>
+
+{showForm && (
+    
+     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+       <div  className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade  ">
+        
+        {/* Close Button */}
+        <button
+          onClick={() => setShowForm(false)}
+          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+        >
+          ×
+        </button>
+         <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug uppercase">
+            Schedule Call with an Expert
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+        </div>
+        <RequestForm/>
+  
+      </div>
+     </div>
+  )}
+
             </div>
  
             {/* Right: Video Embed */}
@@ -103,7 +144,7 @@ That’s why Chin is committed to giving them face-to-face meetings to bring val
             height="100%"
             src="https://www.youtube.com/embed/V12f3YAttXY?autoplay=1"
             title="Safari Marketing Video"
-            frameBorder="0"
+         
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />

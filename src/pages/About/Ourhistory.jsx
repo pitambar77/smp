@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import RequestForm from '../../components/RequestForm';
  
 function Ourhistory() {
+    const [showForm, setShowForm] = useState(false);
+    
+       useEffect(() => {
+        if (showForm) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+    
+        return () => document.body.classList.remove('overflow-hidden');
+      }, [showForm]);
+    
     return (
         <div>
             <div className="py-16 px-4 md:px-24 text-center mt-10">
@@ -153,15 +166,40 @@ function Ourhistory() {
                     </div>
  
                 </div>
-              <div className="px-[10px] py-[10px] text-[16px]">
-  <a href="/signup">
+              <div className="">
+  
     <button
-      className="uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px] py-[15px] bg-[#ff5254] text-white border border-[#ff5254] font-semibold hover:bg-black hover:text-red-500 transition-colors duration-300 rounded-md"
+ onClick={() => setShowForm(true)}
+      className="uppercase cursor-pointer text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px] py-[15px] bg-[#ff5254] text-white   font-semibold hover:bg-[#011833]  hover:text-red-500 duration-500 ease-in rounded-[4px]"
     >
       REQUEST A FREE STRATEGY SESSION
     </button>
-  </a>
+  
 </div>
+{showForm && (
+    
+     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+       <div  className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade  ">
+        
+        {/* Close Button */}
+        <button
+          onClick={() => setShowForm(false)}
+          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+        >
+          ×
+        </button>
+         <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug">
+            REQUEST A FREE STRATEGY SESSION
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+        </div>
+        <RequestForm/>
+  
+      </div>
+     </div>
+  )}
  
             </div>
  

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../../../api/config';
+import Banner from '../../../components/Banner';
 
  
 const API_URL = `${ BASE_URL }/api/contentvideo`;

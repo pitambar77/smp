@@ -108,15 +108,22 @@ export default function Header() {
   {showForm && (
     
      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
-       <div className="relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg">
+       <div className="  relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade">
         
         {/* Close Button */}
         <button
           onClick={() => setShowForm(false)}
-          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white text-2xl font-extrabold w-10 h-10 flex items-center justify-center shadow-md"
+          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
         >
-          ✕
+           ×
         </button>
+         <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug">
+            REQUEST A FREE STRATEGY SESSION
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+        </div>
         <RequestForm/>
   
       </div>

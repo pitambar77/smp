@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import RequestForm from '../../components/RequestForm';
  
 function Content4() {
+   const [showForm, setShowForm] = useState(false);
+  
+     useEffect(() => {
+      if (showForm) {
+        document.body.classList.add('overflow-hidden');
+      } else {
+        document.body.classList.remove('overflow-hidden');
+      }
+  
+      return () => document.body.classList.remove('overflow-hidden');
+    }, [showForm]);
+  
   return (
     <div className="bg-[rgba(61,114,194,0.95)] w-full py-20 px-4 sm:px-6">
       {/* Inner Wrapper with consistent max width */}
@@ -116,10 +129,38 @@ function Content4() {
  
         {/* Footer Call-to-Action */}
         <div className="mt-20 text-center">
-          <p className="text-3xl font-bold text-white underline hover:text-black duration-500 cursor-pointer">
+          <button  onClick={() => setShowForm(true)} >
+            <p className="text-3xl font-bold text-white underline hover:text-black duration-500 cursor-pointer">
             So Now Stop Losing Money and Get the first step towards getting More Leads
             and Schedule a Strategy Session</p>
+       
+          </button>
+           </div>
+                      {showForm && (
+               
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+                  <div className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade">
+                   
+                   {/* Close Button */}
+                   <button
+                     onClick={() => setShowForm(false)}
+                     className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+                   >
+                      ×
+                   </button>
+                   <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug uppercase">
+             schedule a strategy session
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
         </div>
+                   <RequestForm/>
+             
+                 </div>
+                </div>
+             )}
+            
       </div>
     </div>
   );

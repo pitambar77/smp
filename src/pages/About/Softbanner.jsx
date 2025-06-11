@@ -23,7 +23,7 @@ const Softbanner = () => {
 console.log(director)
   return (
     <div className="bg-[#f0f0f0]">
-      <div className="flex pt-13 flex-col md:flex-row md:items-end justify-center max-w-6xl mx-auto ">
+      <div className="flex pt-13 flex-col md:flex-row md:items-end justify-center max-w-[1140px] mx-auto px-[15px] ">
         {/* Left - Image */}
         <div className="w-full md:w-5/12 h-full">
           <img

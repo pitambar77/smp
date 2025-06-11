@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaCheck } from "react-icons/fa";
+import RequestForm from '../../components/RequestForm';
  
 function Content2() {
+   const [showForm, setShowForm] = useState(false);
+
+   useEffect(() => {
+    if (showForm) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    return () => document.body.classList.remove('overflow-hidden');
+  }, [showForm]);
+
   return (
     <div className="relative w-full overflow-hidden">
       {/* Background Image Layer */}
@@ -58,11 +71,39 @@ function Content2() {
 </div>
  
               <div className="mt-6">
-                <button className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition">
+                <button 
+                 onClick={() => setShowForm(true)}
+                className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition">
                   SCHEDULE CALL WITH AN EXPERT
                 </button>
               </div>
             </div>
+
+            {showForm && (
+    
+     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+       <div  className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade  ">
+        
+        {/* Close Button */}
+        <button
+          onClick={() => setShowForm(false)}
+          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+        >
+          ×
+        </button>
+         <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug uppercase">
+            Schedule Call with an Expert
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+        </div>
+
+        <RequestForm/>
+  
+      </div>
+     </div>
+  )}
  
             {/* Right: Video Embed */}
             <div className="flex-1 flex justify-center items-center  ">
@@ -72,7 +113,7 @@ function Content2() {
       height="100%"
       src="https://www.youtube.com/embed/M3j3TDH1r8g"
       title="Safari Marketing Video"
-      frameBorder="0"
+      
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     />
@@ -84,7 +125,7 @@ function Content2() {
       </div>
  
       {/* Bottom Image Section */}
-      <div className="relative z-20 pt-5">
+      <div className=" z-20 pt-5">
         <div className="flex justify-center mb-28 relative">
           <img
             src="https://safarimarketingpro.com/images/soowrk-fig-1.png"

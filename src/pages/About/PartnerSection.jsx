@@ -35,7 +35,7 @@ function PartnerSection() {
           </p>
          <button
           onClick={() => {navigate('/contact-us');window.scrollTo(0, 0); }}
-  className="bg-red-500 text-white px-[40px] py-[15px] uppercase text-[18px] tracking-[0.8px] rounded border border-red-500 hover:bg-[#011833] hover:border-[#011833] hover:text-[#ff5254] transition-all duration-300 w-[250px] font-semibold"
+ className="uppercase cursor-pointer text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px] py-[15px] bg-[#ff5254] text-white   font-semibold hover:bg-[#011833]  hover:text-red-500 duration-500 ease-in rounded-[4px]"
 >
   WORK WITH US
 </button>

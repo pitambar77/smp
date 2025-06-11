@@ -69,14 +69,7 @@ The Way We Work, Makes Us Different            </h2>
             {/* Subheadings */}
             <p className="text-xl mt-5 mb-5 text-[#5e5e5e]">Your First Step Towards Digital Success
 </p>
-            {/* <p className="text-xl text-[#5e5e5e] mb-6">Identify the goal of your Safari Website</p> */}
- 
-            {/* Description */}
- 
-            {/* <p className=" float-left  text-[#5e5e5e] text-[17px]  text-start leading-relaxed ">
- 
-                As every safari & tour business requires unique attention for running an ad campaign, we prepare tailor made strategies that would result in great returns along with amazing revenue generations.
-                   </p> */}
+           
             <p className=' text-[#5e5e5e] text-[17px]  text-start leading-relaxed mb-12'>
 We understand your safari & tour business needs to be more visible on the search engine result page to attract more potential customers and opportunities that would convert. With years of trial & test, we come up with some ways that would give you the best results by implementing SEO.
  

@@ -73,7 +73,7 @@ const CardSection = () => {
             }
  
             const img = images[imageIndex++];
-            return img ? renderImageBox(img, idx) : <div key={idx} className="w-[120px] h-[85px] m-1" />;
+            return img ? renderImageBox(img, img._id || idx) : <div key={idx} className="w-[120px] h-[85px] m-1" />;
           })}
         </div>
  

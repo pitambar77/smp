@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import RequestForm from '../../../components/RequestForm';
  
 const features = [
     {
@@ -266,9 +267,20 @@ const features = [
 ];
  
 function Results() {
+  const [showForm, setShowForm] = useState(false);
+          
+             useEffect(() => {
+              if (showForm) {
+                document.body.classList.add('overflow-hidden');
+              } else {
+                document.body.classList.remove('overflow-hidden');
+              }
+          
+              return () => document.body.classList.remove('overflow-hidden');
+            }, [showForm]);
     return (
         <div>
-            <div className="w-full h-full bg-[#f0f0f0] flex items-center justify-center px-4">
+            <div className="w-full bg-[#f0f0f0] flex items-center justify-center px-4">
                 <div className="max-w-[1140px] mx-auto text-center mt-20">
                     <h2 className="font-[Montserrat] font-bold text-[48px] text-center capitalize text-[#3467d8] leading-[1.4]  pb-[18px]">
                         Long-Lasting Results For your Safari business.
@@ -290,13 +302,13 @@ We understand your safari & tour business needs to be more visible on the search
                                 <div key={idx} className="flex items-start gap-8">
                                     <div className="w-9 h-8 mt-1 ">{feature.icon}</div>
                                     <div>
-                                        <h3 className="font-[Montserrat] font-semibold text-[22px] text-left text-[#011833] m-0 p-0 pb-[5px] capitalize">
+                                        <h3 className="font-[Montserrat] font-semibold text-[22px] text-left text-[#011833] m-0 p-0 pb-[10px] capitalize">
                                             {feature.title}
                                         </h3>
-                                        <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 pb-2 min-h-[120px]">
+                                        <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 pb-2 ">
                                             {feature.description}
                                         </p>
-                                         <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 p-0 min-h-[120px]">
+                                         <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 p-0 ">
                                             {feature.description2}
                                         </p>
                                     </div>
@@ -304,11 +316,37 @@ We understand your safari & tour business needs to be more visible on the search
                             ))}
                         </div>
  
-                        <div className="mt-12 text-center mb-18">
-                            <button className="bg-[#ff4d4d] text-white font-semibold px-6 py-3 rounded hover:bg-black hover:text-red-600 transition">
+                        <div className=" text-center mb-18">
+                            <button
+                            onClick={() => setShowForm(true)}
+                             className="bg-[#ff4d4d] text-white font-semibold px-6 py-3 rounded cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition">
                                 SCHEDULE CALL WITH AN EXPERT
                             </button>
                         </div>
+                         {showForm && (
+                                        
+                                         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
+                                           <div className="  relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
+                                                     animate-slide-down-fade">
+                                            
+                                            {/* Close Button */}
+                                            <button
+                                              onClick={() => setShowForm(false)}
+                                              className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+                                            >
+                                               ×
+                                            </button>
+                                             <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                                              <h3 className="text-[24px] font-medium leading-snug">
+                                                SCHEDULE CALL WITH AN EXPERT
+                                              </h3>
+                                              <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+                                            </div>
+                                            <RequestForm/>
+                                      
+                                          </div>
+                                         </div>
+                          )}
                     </section>
                 </div>
             </div>

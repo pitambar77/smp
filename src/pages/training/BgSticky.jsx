@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import RequestForm from '../../components/RequestForm';
+import { IoIosClose } from "react-icons/io";
 
 const BgSticky = () => {
+  const [showForm, setShowForm] = useState(false);
+    
+       useEffect(() => {
+        if (showForm) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+    
+        return () => document.body.classList.remove('overflow-hidden');
+      }, [showForm]);
   return (
     <div
       className="relative h-[420px] bg-fixed bg-cover bg-center flex items-center justify-center"
@@ -23,9 +36,37 @@ const BgSticky = () => {
         <p className="text-lg sm:text-xl text-white mb-8">
          All good things start with a chat…
         </p>
-       <button className="font-semibold uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[15px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[5px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]">
-  Get my free 30-minute strategy session
-</button>
+       <button 
+       onClick={() => setShowForm(true)}
+       className="font-semibold uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[15px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[5px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]">
+        Get my free 30-minute strategy session
+    </button>
+
+    {showForm && (
+                   
+                    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+                      <div className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                 animate-slide-down-fade">
+                       
+                       {/* Close Button */}
+                       <button
+                         onClick={() => setShowForm(false)}
+                         className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+                       >
+                      ×
+                       </button>
+ <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+          <h3 className="text-[24px] font-medium leading-snug uppercase">
+             Get my free 30 minute strategy session
+          </h3>
+          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
+        </div>
+                      
+                       <RequestForm/>
+                 
+                     </div>
+                    </div>
+                 )}
 
       </div>
     </div>

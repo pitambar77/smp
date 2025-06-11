@@ -1,10 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
  
 function WhyWorkinSmp() {
+  const navigate = useNavigate()
   return (
-    <div>
+    <div className=' max-w-[1140px] mx-auto'>
    
-    <section className="px-4 md:px-16 py-16 bg-white ml-35 mr-35 mt-10 mb-10">
+    <section className="  py-16 bg-white px-[15px]">
      
  
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -27,7 +29,8 @@ function WhyWorkinSmp() {
           </p>
  
            <button
-          className="uppercase mt-2 w-[368px] text-[18px] tracking-[1.5px] p-2 py-2.5 bg-[#ff5254] text-white border border-[#ff5254] font-semibold hover:bg-black hover:text-red-500 transition-colors duration-300 rounded"
+           onClick={() => {navigate('/our-clients');window.scrollTo(0, 0); }}
+          className="uppercase cursor-pointer text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px] py-[15px] bg-[#ff5254] text-white   font-semibold hover:bg-[#011833]  hover:text-red-500 duration-500 ease-in rounded-[4px]"
         >
   BROWSE ALL CASE STUDIES
         </button>
@@ -40,7 +43,7 @@ function WhyWorkinSmp() {
               className="w-full h-[300px] "
       src="https://www.youtube.com/embed/M3j3TDH1r8g"
               title="10x Your Safari Bookings With Safari Marketing Pro"
-              frameBorder="0"
+              
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
