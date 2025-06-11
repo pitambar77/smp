@@ -51,23 +51,25 @@ export default function RequestForm() {
         <form onSubmit={handleSubmit} className="px-6 pb-8 space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
             <input
-                value={form.firstName} onChange={handleChange}
-              type="text"
+            name="firstName"
+            value={form.firstName} onChange={handleChange}
+              
               placeholder="First Name*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white   hover:border-red-500"
-            />
+              className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
             <input
+            name="email"
               value={form.email} onChange={handleChange}  
-              type="email"
+             
               placeholder="Email Address*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
+              className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required
             />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
             <select 
+                name="countryCode"
                 value={form.countryCode} onChange={handleChange}
-                className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-500 bg-white hover:border-red-500">
+                className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white">
               <option value=''>Country Code</option>
               <option value="+91">+91</option>
               <option value="+1">+1</option>
@@ -75,29 +77,36 @@ export default function RequestForm() {
               <option value="+92">+92</option>
             </select>
             <input
-                value={form.phone} onChange={handleChange}
-              type="tel"
+            value={form.phone} onChange={handleChange}
+              name="phone"
               placeholder="Phone*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
+               className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required
             />
           </div>
 
           <input
+          name="website"
           value={form.website} onChange={handleChange}
             type="text"
             placeholder="Website*"
-            className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
+            className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
-            <select className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
+            <select
+            name="selectServices"
+            value={form.selectServices} onChange={handleChange}
+             className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
               <option value='' >Select Services</option>
               <option value='Organic Marketing'>Organic Marketing</option>
               <option value='Paid Advertising'>Paid Advertising</option>
               <option value='360 Marketing'>360 Marketing</option>
               <option value='Web Design & Development'>Web Design & Development</option>
             </select>
-            <select className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
+            <select 
+             name="bestTimetoCall"
+            value={form.bestTimetoCall} onChange={handleChange}
+            className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
               <option value=''>Best Time To Call</option>
               <option value='12 AM - 3 AM'>12 AM - 3 AM</option>
               <option value='3 AM - 6 AM'>3 AM - 6 AM</option>
