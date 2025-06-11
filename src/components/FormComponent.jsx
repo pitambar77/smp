@@ -21,7 +21,7 @@ export default function FormComponent() {
     }
 
     try {
-      const res = await axios.post('/api/form-contact', { ...form, captchaToken });
+      const res = await axios.post('https://smp-backend-production.up.railway.app/api/form-contact', { ...form, captchaToken });
       toast.success(res.data.message);
       setForm({ firstName: '', email: '', countryCode: '', phone: '', website: '' });
     } catch (err) {
