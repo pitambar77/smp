@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import { IoMdArrowDropdown } from "react-icons/io";
+import RequestForm from './RequestForm';
 
 
 export default function Header() {
@@ -105,104 +106,21 @@ export default function Header() {
 
   {/* Modal */}
   {showForm && (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
-      <div className="relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg">
+    
+     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
+       <div className="relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg">
         
         {/* Close Button */}
         <button
           onClick={() => setShowForm(false)}
-          className="absolute -top-6 -right-5 bg-red-400 text-white text-2xl font-extrabold w-10 h-10 flex items-center justify-center shadow-md"
+          className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white text-2xl font-extrabold w-10 h-10 flex items-center justify-center shadow-md"
         >
           ✕
         </button>
-
-        {/* Heading */}
-        <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
-          <h3 className="text-[24px] font-medium leading-snug">
-            REQUEST A FREE STRATEGY SESSION
-          </h3>
-          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
-        </div>
-
-        {/* Form */}
-        <form className="px-6 pb-8 space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="First Name*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
-            />
-            <input
-              type="email"
-              placeholder="Email Address*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
-            />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <select className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-500 bg-white hover:border-red-500">
-              <option>Country Code</option>
-              <option>+254</option>
-              <option>+255</option>
-              <option>+256</option>
-              <option>+27</option>
-            </select>
-            <input
-              type="tel"
-              placeholder="Phone*"
-              className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
-            />
-          </div>
-
-          <input
-            type="text"
-            placeholder="Website*"
-            className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-700 bg-white hover:border-red-500"
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <select className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
-              <option>Select Services</option>
-              <option>Organic Marketing</option>
-              <option>Paid Advertising</option>
-              <option>360 Marketing</option>
-              <option>Web Design & Development</option>
-            </select>
-            <select className="rounded p-4 border border-white text-[15px] font-semibold w-full text-gray-600 bg-white hover:border-red-500">
-              <option>Best Time To Call</option>
-              <option>12 AM - 3 AM</option>
-              <option>3 AM - 6 AM</option>
-              <option>6 AM - 9 AM</option>
-              <option>9 AM - 12 PM</option>
-              <option>12 PM - 3 PM</option>
-              <option>3 PM - 6 PM</option>
-              <option>6 PM - 9 PM</option>
-              <option>9 PM - 12 AM</option>
-              <option>Any Time</option>
-            </select>
-          </div>
-
-          {/* CAPTCHA */}
-          <div className="flex w-[300px] bg-white items-center gap-2 border rounded p-5 text-[15px] font-semibold text-gray-600 hover:border-red-500">
-            <input type="checkbox" className="w-5 h-5" />
-            <span className="text-sm">I'm not a robot</span>
-            <img
-              src="https://www.gstatic.com/recaptcha/api2/logo_48.png"
-              alt="reCAPTCHA"
-              className="ml-auto w-6 h-6"
-            />
-          </div>
-
-          {/* Submit */}
-          <button
-            type="submit"
-            className="w-[200px] bg-[#ff5254] border border-[#ff5254] cursor-pointer hover:bg-[#333] text-white font-semibold py-3 rounded"
-          >
-            Get My Free Quote
-          </button>
-        </form>
+        <RequestForm/>
+  
       </div>
-    </div>
+     </div>
   )}
 </nav>
 
