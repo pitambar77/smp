@@ -111,7 +111,7 @@ export default function FormComponent() {
 
       <div className="mt-5 flex flex-col gap-[10px]">
         <ReCAPTCHA
-          sitekey="6LeFRVsrAAAAAEfgOzVimk_7BG5hM0hQFzgsYyZ9"
+          sitekey="6Lf2glwrAAAAAPsuvFIyVh24DbavfwihlL8CU2-Z"
           onChange={(token) => setCaptchaToken(token)}
         />
         <button className="bg-[#ff5254] h-[60px] cursor-pointer border border-[#ff5254] hover:bg-[#011833] hover:border-[#011833] duration-500 ease-in-out hover:text-[#ff5254] text-white px-6 py-3 rounded font-semibold">
