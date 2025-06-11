@@ -40,6 +40,7 @@ import Login from './pages/Auth/Login'
 import Signup from './pages/Auth/Signup'
 import ResetPassword from './pages/Auth/ResetPassword'
 import FormComponent from './components/FormComponent'
+import StrategyForm from './components/StrategyForm'
 
 
 
@@ -81,6 +82,7 @@ function App() {
          <Route path='content-marketing' element={<Content/>}/> 
           <Route path='contact-us' element={<Contactus/>}/> 
           <Route path='form-component' element={<FormComponent/>} />
+          <Route path='contacts' element={<StrategyForm/>}/>
           
       </Route>
       
