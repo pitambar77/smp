@@ -16,9 +16,7 @@ const contentLeft = [
     {
         text: `<span class="font-semibold"> Provides Long-Term Results -</span>High-quality African Travel Content tends to be timeless, addressing fundamental topics and providing information that remains relevant over time. As a result, it continues to rank well on search engines and keeps a flow of organic traffic.`,
     },
-    // {
-    //     text: `<span class="font-semibold">Long-term growth</span> – A well-optimized <span class="font-semibold"> African Safari Operators Website </span> with growth-oriented content can bring traffic and inquiries that convert into customers for a long duration of time.`,
-    // },
+   
 
 ];
 

@@ -19,7 +19,7 @@ const Adstrategies = () => {
 
 
                 <div>
-                    <h3 className="font-[Montserrat] text-left font-bold text-[48px] text-center capitalize text-[#3467d8] leading-[1.4] m-0 pb-[15px]">
+                    <h3 className="font-[Montserrat] text-left font-bold text-[48px] capitalize text-[#3467d8] leading-[1.4] m-0 pb-[15px]">
 
 Ad Strategies That Grow Your Profit                    </h3>
 

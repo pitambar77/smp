@@ -1,26 +1,40 @@
-
-import React from "react";
+import React, { useEffect, useState } from "react";
+import GooglAdsPPCForm from "../../../components/GooglAdsPPCForm";
 
 const ComplimentaryAnalysis = () => {
+
+     const [showForm, setShowForm] = useState(false);
+  
+     useEffect(() => {
+      if (showForm) {
+        document.body.classList.add('overflow-hidden');
+      } else {
+        document.body.classList.remove('overflow-hidden');
+      }
+  
+      return () => document.body.classList.remove('overflow-hidden');
+    }, [showForm]);
+
   return (
     <div className="bg-[#ff4f4f] py-16 relative overflow-hidden">
       <div className="max-w-[1110px]  mt-4  mx-auto    items-center relative">
         {/* Left Column: Heading + Boxes */}
         <div className="w-[75%]">
           <h2 className="font-[Montserrat] font-bold text-[40px] text-left text-white leading-[1.3] capitalize">
-  Begin With A Complimentary Analysis
-  Of Your Google Advertising Campaign.
-</h2>
-
+            Begin With A Complimentary Analysis Of Your Google Advertising
+            Campaign.
+          </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 h-[280px] mt-25 mb-10 mr-5 ">
             {/* Box 1 */}
-            <div className="bg-white p-8  text-center shadow-sm">
+            <div className="bg-white p-8  text-center shadow-sm" >
               <h3 className="text-[#3467d8] font-semibold text-[22px]  font-[Montserrat] mb-2 mt-5">
-                I Am New To Google Advertising
+                <button onClick={() => setShowForm(true)}> I Am New To Google Advertising</button>
+               
               </h3>
               <p className="text-[#787878] ml-5 mr-5 text-center text-[18px] font-[Montserrat] leading-relaxed">
-                How can Google advertising help grow your safari and tour business? Let’s run the numbers.
+                How can Google advertising help grow your safari and tour
+                business? Let’s run the numbers.
               </p>
             </div>
 
@@ -30,11 +44,16 @@ const ComplimentaryAnalysis = () => {
                 I Am Running A Google Ads Campaign
               </h3>
               <p className="text-[#787878] ml-5 mr-5 text-center text-[18px] font-[Montserrat] leading-relaxed">
-                Get a complimentary audit to see how much money we can save for your safari and tour business.
+                Get a complimentary audit to see how much money we can save for
+                your safari and tour business.
               </p>
             </div>
           </div>
         </div>
+
+              {showForm && ( 
+                <GooglAdsPPCForm/>
+               )}
 
         {/* Right Column: Phone Image */}
         <div className=" ">

@@ -53,7 +53,7 @@ const Searchers= () => {
             {showForm && (
                 
                  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
-                   <div className="  relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
+                   <div className="  relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
                              animate-slide-down-fade">
                     
                     {/* Close Button */}

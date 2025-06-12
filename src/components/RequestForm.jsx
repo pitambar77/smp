@@ -38,14 +38,6 @@ export default function RequestForm() {
   return (
     <>
        
-  
-        {/* Heading */}
-        {/* <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
-          <h3 className="text-[24px] font-medium leading-snug">
-            REQUEST A FREE STRATEGY SESSION
-          </h3>
-          <div className="border-t border-white w-full mx-auto mt-4 -mb-4" />
-        </div> */}
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="px-6 pb-8 space-y-4">

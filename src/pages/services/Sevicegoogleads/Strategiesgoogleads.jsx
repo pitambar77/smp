@@ -1,5 +1,5 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Step = ({ id, number, title, children, isFirst = false }) => {
   return (
@@ -21,7 +21,9 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
         </div>
 
         {/* Right side */}
-        <div className="md:col-span-8 text-white space-y-4 text-[17px]">{children}</div>
+        <div className="md:col-span-8 text-white space-y-4 text-[17px]">
+          {children}
+        </div>
       </div>
     </div>
   );
@@ -40,21 +42,38 @@ const Strategiesgoogleads = () => {
 `}
       >
         <p>
-      Every safari business is different with its own needs. So, there’s no such thing as a one-size-fits-all strategy. We’ll analyze <strong  className='font-bold'>your market size, and market trends and also listen to your concerns so we can tailor-made a strategy</strong>{' '}
-that works only for your safari company.        </p>
-
+          Every safari business is different with its own needs. So, there’s no
+          such thing as a one-size-fits-all strategy. We’ll analyze{" "}
+          <strong className="font-bold">
+            your market size, and market trends and also listen to your concerns
+            so we can tailor-made a strategy
+          </strong>{" "}
+          that works only for your safari company.{" "}
+        </p>
       </Step>
 
       {/* Step 2 */}
-      <Step id="step-2" number={2} title={`Collect Information.\nBrainstorm And Analyse\nSketches.`}>
+      <Step
+        id="step-2"
+        number={2}
+        title={`Collect Information.\nBrainstorm And Analyse\nSketches.`}
+      >
         <p>
           Intent Keyword Research
-<strong className='font-semibold'>African Safari Google Ads Campaigns</strong> today, then search Intent needs to be a big part of your approach. At Safari Marketing Pro, 
-<strong className='font-semibold'>we know the customer’s intent behind target keywords can make your safari campaign more effective and efficient.</strong>
+          <strong className="font-semibold">
+            African Safari Google Ads Campaigns
+          </strong>{" "}
+          today, then search Intent needs to be a big part of your approach. At
+          Safari Marketing Pro,
+          <strong className="font-semibold">
+            we know the customer’s intent behind target keywords can make your
+            safari campaign more effective and efficient.
+          </strong>
         </p>
         <p>
-          We brainstorm to build a sketches layout and structure with the goals and scope in mind.
-          After all this we create some rough designs from early feedback from the client.
+          We brainstorm to build a sketches layout and structure with the goals
+          and scope in mind. After all this we create some rough designs from
+          early feedback from the client.
         </p>
       </Step>
 
@@ -66,11 +85,14 @@ that works only for your safari company.        </p>
 `}
       >
         <p>
-         It’s the <strong className='font-semibold'>only bridge between your safari landing pages and all the potential customers searching online for African Safaris.</strong>
-       So before creating ad copy, the first thing we do is define the goal of the copy which will make the customers book with you.
-
- </p>
-   
+          It’s the{" "}
+          <strong className="font-semibold">
+            only bridge between your safari landing pages and all the potential
+            customers searching online for African Safaris.
+          </strong>
+          So before creating ad copy, the first thing we do is define the goal
+          of the copy which will make the customers book with you.
+        </p>
       </Step>
 
       {/* Step 4 */}
@@ -81,19 +103,33 @@ that works only for your safari company.        </p>
 `}
       >
         <p>
-         We create your safari landing pages with one intent to<strong className='font-semibold'>— get more inquiries and bookings. </strong>So once someone lands on your safari landing page, it should be clear what you want them to do —
-         <strong className='font-semibold'>submit their info to your lead form.</strong>
+          We create your safari landing pages with one intent to
+          <strong className="font-semibold">
+            — get more inquiries and bookings.{" "}
+          </strong>
+          So once someone lands on your safari landing page, it should be clear
+          what you want them to do —
+          <strong className="font-semibold">
+            submit their info to your lead form.
+          </strong>
         </p>
-      
       </Step>
 
       {/* Step 5 */}
-      <Step id="step-5" number={5} title={`Transparent Safari Campaign Management Pricing
-`}>
-  
+      <Step
+        id="step-5"
+        number={5}
+        title={`Transparent Safari Campaign Management Pricing
+`}
+      >
         <p>
-        At Safari Marketing Pro, we always aim to form a strong working relationship with our clients. 
-        <strong className='font-semibold'>This is why we’re all about transparency. </strong>We work with your goals in mind every step of the way, so you get results you can actually see.
+          At Safari Marketing Pro, we always aim to form a strong working
+          relationship with our clients.
+          <strong className="font-semibold">
+            This is why we’re all about transparency.{" "}
+          </strong>
+          We work with your goals in mind every step of the way, so you get
+          results you can actually see.
         </p>
       </Step>
 
@@ -105,18 +141,33 @@ that works only for your safari company.        </p>
 `}
       >
         <p>
-          Safari Marketing Pro is all about involving you with your customers. Our <strong className='font-semibold'>Google Ad Marketing For African Safari Operator</strong> includes
-         <strong className='font-semibold'> comprehensive data tracking tools </strong>
-
- that will let us know how well your campaign is performing. You’ll know everything you need to know and <strong className='font-semibold'>we’ll give educated suggestions on how to proceed.</strong>
+          Safari Marketing Pro is all about involving you with your customers.
+          Our{" "}
+          <strong className="font-semibold">
+            Google Ad Marketing For African Safari Operator
+          </strong>{" "}
+          includes
+          <strong className="font-semibold">
+            {" "}
+            comprehensive data tracking tools{" "}
+          </strong>
+          that will let us know how well your campaign is performing. You’ll
+          know everything you need to know and{" "}
+          <strong className="font-semibold">
+            we’ll give educated suggestions on how to proceed.
+          </strong>
         </p>
 
         <div className="px-[10px] py-[10px] text-[16px] mt-15 mb-8">
           <button
-             onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}
-             className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white transition-colors duration-300">
-              <strong>STAND OUT AMONGST THE CROWD</strong>
-            </button>
+            onClick={() => {
+              navigate("/lets-grow-business");
+              window.scrollTo(0, 0);
+            }}
+            className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white transition-colors duration-300"
+          >
+            <strong>STAND OUT AMONGST THE CROWD</strong>
+          </button>
         </div>
       </Step>
     </div>

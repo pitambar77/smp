@@ -41,6 +41,7 @@ import Signup from './pages/Auth/Signup'
 import ResetPassword from './pages/Auth/ResetPassword'
 import FormComponent from './components/FormComponent'
 import StrategyForm from './components/StrategyForm'
+import GooglAdsPPCForm from './components/GooglAdsPPCForm'
 
 
 
@@ -84,9 +85,12 @@ function App() {
           <Route path='form-component' element={<FormComponent/>} />
           <Route path='contacts' element={<StrategyForm/>}/>
           
+
+          
+          
       </Route>
       
-    
+    <Route path='/contacts-form' element={<GooglAdsPPCForm/>}/>
        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
          <Route path="/forgot-password" element={<ResetPassword />} />
