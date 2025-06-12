@@ -13,19 +13,20 @@ function Content3() {
  
   return (
     <div
-      className="relative py-[100px]  bg-cover bg-center"
+      className="relative py-[100px]  bg-cover bg-center "
       style={{
         backgroundImage:
           'linear-gradient(to right, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.01)), url("https://safarimarketingpro.com/images/socs-bg1.jpg")',
           // smaller size => zoom out
     backgroundRepeat: 'no-repeat',
+    
       }}
     >
       <div className="max-w-[1170px]   mx-auto flex flex-col lg:flex-row justify-between items-center ">
         {/* Left Content */}
-        <div className=" lg:w-2/3  text-white space-y-6   drop-shadow-md">
+        <div className=" w-[58.333%] px-[15px]  text-white space-y-6   drop-shadow-md">
           <h2
-  className=" mb-6  font-bold leading-tight drop-shadow-lg font-montserrat "
+  className=" mb-6  font-bold leading-tight drop-shadow-lg  "
   style={{
     fontWeight: 600,
     fontSize: '36px',
@@ -38,12 +39,12 @@ function Content3() {
   }}
 >
   SMP is the only choice for safari operators in AFRICA.
-  <div className=" h-[1px]  bg-gradient-to-r from-transparent via-[#cfd0d1] to-[#c5c5c5] opacity-50 mr-120 mt-6" />
+  <div className=" h-[1px] border-b-1 border-white/20  w-[40%] mt-[20px]" />
  
 </h2>
  
 <p
-  className="drop-shadow font-montserrat w-[610px] "
+  className="drop-shadow font-montserrat  "
   style={{
    
         fontWeight: 400,
@@ -70,7 +71,7 @@ We’re just like you, that’s why we understand your safari business needs and
         <div className="flex justify-center items-center w-full lg:w-1/3 mt-10 lg:mt-0">
        <button
   onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="w-[83px] h-[83px] right-20 rounded-full mx-auto relative bg-red-400/95 text-white flex justify-center items-center transition-transform transform hover:scale-110 shadow-2xl"
+  className="w-[83px] h-[83px] right-20 rounded-full mx-auto relative bg-red-400 text-white flex justify-center items-center transition-transform transform hover:scale-110 shadow-2xl"
   style={{
     animation: 'pulse 1.50s infinite cubic-bezier(.66,0,0,1)',
     boxShadow: '0 0 0 0 rgba(217, 217, 217, 0.7)',

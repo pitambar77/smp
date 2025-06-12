@@ -25,7 +25,7 @@ const [overview, setOverview] = useState(null);
 
 
   return (
-    <div className="w-full relative flex justify-center bg-white py-8 px-4 sm:px-6 lg:px-8">
+    <div className="w-full relative flex justify-center bg-white pb-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="font-montserrat font-bold text-[40px] text-center capitalize text-[#3467d8] leading-[1.3] mb-5 px-0 pb-5">
          {overview.heading}
@@ -66,7 +66,7 @@ That’s why we at <strong>Safari Marketing Pro</strong> designed a proven proce
  
       <div className="mt-10">
   <button
-    className="bg-gray-900 text-white text-l px-12 py-3 rounded-[5px] hover:bg-red-400"
+    className="bg-gray-900 text-white text-l px-[40px] py-[15px] rounded-[5px] hover:bg-red-400"
     onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
   >
     <strong>GET MY FREE PROPOSAL</strong>
