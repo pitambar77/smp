@@ -63,6 +63,7 @@ import GooglecraftForm from "./forms/Services/GooglecraftForm";
 import ContentCraftForm from "./forms/Services/ContentCraftForm";
 import SocialUserImageForm from './forms/Services/SocialUserImageForm'
 import ReviewCardForm from "./forms/ReviewCardForm";
+import TeamSoftBanner from "./forms/Team/TeamSoftBanner";
 
 
 
@@ -75,7 +76,7 @@ const componentMap = {
       "Company Gallery": GalleryForm,
     },
     Team: {
-      "Soft Banner":TeamForm,
+      "Soft Banner":TeamSoftBanner,
       Card: TeamCardForm,
       Gallery: TeamGalleryForm,
     },

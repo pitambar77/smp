@@ -43,7 +43,7 @@ const Socialmedia = () => {
     <div>
       <Banner {...data} />
       {/* YouTube Video Overlapping */}
-      <div className="flex justify-center items-center -mt-15 z-10 relative">
+      <div className="flex justify-center items-center -mt-15 z-10  relative">
         <div
           className="w-full max-w-[918px] h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative"
           style={{ filter: "drop-shadow(9px 13px 11px #4679c5)" }}
@@ -65,7 +65,7 @@ const Socialmedia = () => {
       </div>
 
       {/* Optional spacing below */}
-      <div className="h-20 bg-white" />
+      {/* <div className="h-20 bg-white" /> */}
 
       <Takepridesocial />
       <Socialmediauser />

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BASE_URL } from "../../api/config";
-import FormComponent from "../../components/FormComponent";
-import RequestForm from "../../components/RequestForm";
+
 import GetFreeQuoteForm from "../../components/GetFreeQuoteForm";
 
 const API_URL = `${BASE_URL}/api/marketing-proof`;
@@ -33,19 +32,19 @@ const MarketingProofSection = () => {
   console.log(data);
 
   return (
-    <div className="py-16 px-6 bg-white">
+    <div className="pt-[90px] pb-[45px] px-6 bg-white">
       {/* Header */}
-      <div className="text-center mt-5 mb-12 max-w-[1140px] mx-auto">
-        <h2 className="font-[Montserrat] font-bold text-[40px] text-center capitalize text-[#3467d8] leading-[1.3] m-0 px-[15%]">
+      <div className="text-center  mb-12 max-w-[1140px] mx-auto">
+        <h2 className=" font-bold text-[40px] text-center capitalize text-[#3467d8] leading-[1.3] m-0 px-[15%]">
           {data.heading}
         </h2>
-        <p className="font-[Montserrat] font-normal text-[18px] text-center text-[#787878] leading-normal -mb-5 px-[30px] py-[15px]">
+        <p className=" font-normal text-[18px] text-center text-[#787878] leading-normal -mb-5 px-[30px] py-[15px]">
           {data.subheading}
         </p>
       </div>
 
       {/* Cards */}
-      <div className="grid -mb-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-[1040px] mx-auto pr-8">
+      <div className="grid  grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 max-w-[1140px] mx-auto pr-8">
         {Array.isArray(data.images) &&
           data.images.map((image, index) => (
             <div

@@ -131,7 +131,7 @@ const packages = [
 const BudgetPlan = () => {
   return (
     <div className="overflow-auto w-full">
-      <div className="max-w-[1140px] mx-auto  py-10">
+      <div className="max-w-[1140px] mx-auto  pt-[16px]">
       <div className="min-w-[1000px] grid grid-cols-4 border border-gray-300">
         {packages.map((pkg, i) => (
           <React.Fragment key={i}>

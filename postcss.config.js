@@ -6,4 +6,8 @@ export default {
     tailwindcss,
     autoprefixer,
   ],
+
 };
+
+
+  

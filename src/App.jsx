@@ -1,8 +1,7 @@
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Footer from './components/Footer'
-import Header from './components/Header'
+
 import Layout from './Layout'
 import AfricanluxurysafariCaseStudy from './pages/africanluxurysafari-case-study/AfricanluxurysafariCaseStudy'
 import AfricanScenic from './pages/AfricanScenicCaseStudy/AfricanScenic'

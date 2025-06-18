@@ -1,127 +1,64 @@
-import axios from 'axios';
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { BASE_URL } from '../../api/config';
- 
-const Softbanner = () => {
+import axios from "axios";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { BASE_URL } from "../../api/config";
 
-   const [director, setdirector] = useState(null);
+const Softbanner = () => {
+  const [director, setdirector] = useState(null);
 
   useEffect(() => {
-    axios.get(`${ BASE_URL }/api/about-director`)
-      .then(res => {
+    axios
+      .get(`${BASE_URL}/api/about-director`)
+      .then((res) => {
         if (res.data.length > 0) {
-          setdirector(res.data[0]); // assuming single entry
+          setdirector(res.data[0]);
         }
       })
-      .catch(err => console.error(err));
+      .catch((err) => console.error(err));
   }, []);
-  
 
-  if (!director) return <div className="text-center mt-10">Loading...</div>;
-console.log(director)
+  if (!director) return <div className="text-center">Loading...</div>;
+  console.log(director);
   return (
     <div className="bg-[#f0f0f0]">
-      <div className="flex pt-13 flex-col md:flex-row md:items-end justify-center max-w-[1140px] mx-auto px-[15px] ">
-        {/* Left - Image */}
-        <div className="w-full md:w-5/12 h-full">
-          <img
-            src={`${ BASE_URL }/uploads/${director.image}`} alt="Director"
-            
-            className="w-full h-[800px] rounded-lg object-cover transform scale-x-[-1]"
-          />
-        </div>
- 
-        {/* Right - Content */}
-        <div className="w-full md:w-7/12 md:pl-12 pb-16">
-          <h3
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 600,
-              fontSize: '36px',
-              textAlign: 'left',
-              textTransform: 'capitalize',
-              color: '#3467d8',
-              lineHeight: 1.3,
-              margin: 0,
-            }}
-          >
-           
-           {director.heading}
-           
-          </h3>
- 
-          <p
-  style={{
-    fontFamily: 'Montserrat, sans-serif',
-    fontWeight: 500,
-    fontSize: '20px',
-    textAlign: 'left',
-    color: '#787878',
-    lineHeight: '32px',
-    marginTop: '20px',
-    padding: '15px 0 17px 0',
-  }}
->
-  {director.content1}
-</p>
- 
- 
-          <p
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 400,
-              fontSize: '18px',
-              textAlign: 'left',
-              color: '#787878',
-              lineHeight: 1.5,
-              margin: 0,
-              padding: '15px 0 17px 0',
-            }}
-          >
-           {director.content2}
-          </p>
- 
-          <div
-            style={{
-              width: '180px',
-              marginLeft: '-22px',
-              float: 'left',
-              position: 'relative',
-              padding: '15px 0',
-            }}
-          >
+      <div className=" pt-[50px]  max-w-[1140px] mx-auto  ">
+        <div className=" flex justify-between items-center">
+          {/* Left - Image */}
+          <div className=" w-1/2 px-[15px]">
             <img
-              src="https://safarimarketingpro.com/images/md-sign.svg.png"
-              alt="Signature"
-              style={{
-                width: '180px',
-              }}
+              src={`${BASE_URL}/uploads/${director.image}`}
+              alt="Director"
+              className=" w-[100%] transform scale-x-[-1]"
             />
           </div>
- 
-          <h5
-            style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 500,
-              fontSize: '24px',
-              textAlign: 'left',
-              color: '#3467d8',
-              lineHeight: 'inherit',
-              margin: 0,
-              padding: 0,
-              fontStyle: 'italic',
-              width: '100%',
-              float: 'left',
-            }}
-          >
-            <span>Manorama Pallai -</span> Managing Director
-          </h5>
+
+          {/* Right - Content */}
+          <div className=" w-1/2  mt-[50px] ">
+            <h3 className=" px-[15px] text-[36px] font-[600] text-[#3467d8] capitalize leading-[1.3] ">{director.heading}</h3>
+
+            <p className=" px-[15px] text-[20px] font-[500] text-[#787878]  leading-[32px] mt-[20px] pt-[15px] pb-[17px]">{director.content1}</p>
+
+            <p className=" px-[15px] text-[18px] font-[400] text-[#787878]  leading-[1.5]  pt-[15px] pb-[17px]">{director.content2}</p>
+
+            <div className=" py-[15px]">
+              <img
+                src="https://safarimarketingpro.com/images/md-sign.svg.png"
+                alt="Signature"
+                style={{
+                  width: "180px",
+                }}
+              />
+            </div>
+
+            <h5 className=" px-[15px] text-[24px] font-[500] text-[#3467d8] capitalize leading-[inherit] ">
+              Manorama Pallai - <span className=" italic "> Managing Director </span>
+            </h5>
+          </div>
         </div>
       </div>
     </div>
   );
 };
- 
+
 export default Softbanner;

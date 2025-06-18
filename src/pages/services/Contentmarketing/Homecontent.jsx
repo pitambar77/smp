@@ -30,7 +30,7 @@ const Homecontent = () => {
   useEffect(() => {
     const fetchBanner = async () => {
       try {
-        const res = await axios.get(`${ BASE_URL }/api/all-banners/webDesign`);
+        const res = await axios.get(`${ BASE_URL }/api/all-banners/contentMarketng`);
         setBannerData(res.data);
       } catch (err) {
         console.error("Failed to fetch banner", err);

@@ -241,12 +241,12 @@ const Work = () => {
       </div>
 
         <div className=' max-w-[1170px] mx-auto'>
-            <div className=' grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-3  p-4'>
+            <div className=' grid lg:grid-cols-10 md:grid-cols-5 grid-cols-4 gap-3  p-[10px]'>
                 
                        {Array.isArray(data.images) &&
                         data.images.map((image, index) => (
  
-                            <div className='  border border-gray-200 shadow-[0_0_9px_0_rgba(0,0,0,0.1)] items-center p-2'>
+                            <div className='  border border-gray-200 shadow-[0_0_9px_0_rgba(0,0,0,0.1)] items-center p-[10px]'>
                             <div className='' key={index}>
                                 <div className=' flex'>
                                     <img src={`${BASE_URL}${image.url}`}

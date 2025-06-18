@@ -3,7 +3,7 @@ import Banner from '../../components/Banner'
 import Card from './Card'
 import Gallery from './Gallery'
 import SubBanner from './SubBanner'
-
+import Content9 from '../home/Content9'
 import Common from '../../components/Common'
 import axios from 'axios'
 import { BASE_URL } from '../../api/config'
@@ -41,6 +41,10 @@ const Team = () => {
         <Card/>
         <Gallery/>
         <Common/>
+        <div className=' mt-[15px]'>
+ <Content9/>
+        </div>
+       
     
        
     </>

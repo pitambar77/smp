@@ -16,7 +16,7 @@ function Content4() {
   }, [showForm]);
 
   return (
-    <div className="bg-[#3467d8] bg-[url('https://safarimarketingpro.com/images/bg-monkey.png')] bg-cover bg-center  w-full py-20 px-4 sm:px-6">
+    <div className="bg-[#3467d8] bg-[url('https://safarimarketingpro.com/images/bg-monkey.png')] bg-cover bg-center  w-full py-[100px] px-4 sm:px-6">
       {/* Inner Wrapper with consistent max width */}
       <div className="max-w-[1140px] mx-auto ">
         {/* Heading */}
@@ -48,21 +48,28 @@ function Content4() {
               Most the safari operators sending lots of money on their{" "}
               <strong className=" font-semibold">
                 SAFARI GUIDES, OUTDOOR EQUIPMENT, SAFARI FLEETS, and INVEST in
-                the INTERIOR DESIGN OF THEIR OFFICE.
-              </strong>
-              <strong className=" font-semibold">
-                Because they don’t understand customers will not knock on their
-                doors.
+                the INTERIOR DESIGN OF THEIR OFFICE. Because they don’t
+                understand customers will not knock on their doors.
               </strong>
             </p>
+            {/* <p className="text-[#efefef] mb-[15px] text-[18px] font-[300] leading-[1.5] text-justify">
+                Even when a prospect visits your company/office to inquire or
+                get more information your representative briefs them or
+                motivates them to understand and buy your services.
+              </p> */}
+
             <p className=" text-[#efefef] mb-[15px] text-[18px] font-[300] leading-[1.5] text-justify">
               Even when a prospect visits your company/office to inquire or get
               more information your representative briefs them or motivates them
-              to understand and buy your services{" "}
+              to understand and buy your services.{" "}
               <strong className=" font-semibold">
                 But your website is your online shop that doesn’t need a
-                salesperson to educate your customers.
+                salesperson to educate your customers.{" "}
               </strong>
+              A well-presented and informative safari website can convert
+              website users to paying customers in a fraction of the time. You
+              just have to understand what your potential customers need and
+              design a professional website according to that.
             </p>
             <h6 className=" font-semibold text-[20px] text-left text-white italic leading-normal  pb-[10px] ">
               Not having a solid marketing plan to achieve your goals
@@ -90,9 +97,10 @@ function Content4() {
                 African Safari.
               </strong>
             </p>
-            <p className=" text-[#efefef] text-[18px] font-[300] leading-[1.5] text-justify">
-              Do you know more than 2 million people search safari-related
-              keywords on Google? How many of them are reaching you?
+            <p className=" text-[#efefef] text-[18px] font-[300] leading-[1.5] pb-[15px] text-justify">
+              Do you know there are almost more than 2 Million people searching
+              safari-related keywords on Google?? How many of them are reaching
+              you on a regular basis??
             </p>
           </div>
 
@@ -114,7 +122,18 @@ function Content4() {
             <h3 className=" font-semibold text-[20px] text-left text-white italic leading-normal  pb-[10px] ">
               You are sharing your Profits to Your Agents
             </h3>
-
+            <p className=" text-[#efefef] text-[18px] font-[300] leading-[1.5] mb-[15px] text-justify">
+              Is not it painful to benefit a third-party business by throwing a
+              huge share of your Profits?{" "}
+              <strong className="font-semibold">
+                {" "}
+                Most safari companies share a strong opinion that Safari Agents
+                are the game changer for their safari business. But Do they
+                really?
+              </strong>{" "}
+              Have you ever analyzed how much money you are throwing away by
+              completely depending on Agents?
+            </p>
             <p className=" text-[#efefef] text-[18px] font-[300] leading-[1.5] mb-[15px] text-justify">
               When as a safari company you make all the efforts and hard work to
               make your safari customers' trip a memorable one, why you are
@@ -152,7 +171,7 @@ function Content4() {
                 "No control over your business",
               ].map((item, index) => (
                 <div key={index} className="flex items-start  ">
-                  <div className="flex items-center justify-center w-4 h-4 mt-1 mx-[10px] rounded-full border-3 border-[#ff5254] text-[#ff5254] font-extrabold text-[18px] ">
+                  <div className="flex items-center justify-center w-4 h-4 mt-1  mx-[10px] rounded-full border-3 border-[#ff5254] text-[#ff5254] font-extrabold text-[22px] ">
                     &middot;
                   </div>
                   {/* <FaRegDotCircle  className="flex items-center justify-center pl-[10px] text-[#ff5254] text-[26px] font-extrabold "/> */}
@@ -176,9 +195,9 @@ function Content4() {
         </div>
 
         {/* Footer Call-to-Action */}
-        <div className="mt-[30px] text-center">
+        <div className="pt-[30px] text-center">
           <button onClick={() => setShowForm(true)}>
-            <p className="text-3xl font-bold text-white underline hover:text-black duration-500 cursor-pointer">
+            <p className="text-3xl font-bold pb-[15px] text-white underline hover:text-black duration-500 cursor-pointer">
               So Now Stop Losing Money and Get the first step towards getting
               More Leads and Schedule a Strategy Session
             </p>

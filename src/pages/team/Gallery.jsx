@@ -25,11 +25,11 @@ const Gallery = () => {
   
 
   return (
-    <div className=' w-full pb-[80px] '>
+    <div className=' w-full pt-[105px] pb-[100px] '>
         
-      <div className=' max-w-[1140px] mx-auto pt-20   items-center justify-center text-center bg-url(https://safarimarketingpro.com/images/smp-whphrd-sec-bg.png)'>
-        <h1 className=' capitalize  text-5xl text-[#3467d8] font-[700] md:px-48 px-4 leading-relaxed'>{galleryData.heading}</h1>
-        <p  className=' py-4 text-[#787878] text-[22px] font-[400] '>{galleryData.subheading}
+      <div className=' max-w-[1140px] mx-auto   items-center justify-center text-center bg-url(https://safarimarketingpro.com/images/smp-whphrd-sec-bg.png)'>
+        <h1 className=' capitalize  text-[50px] text-[#3467d8] font-[700]  px-[12%] pb-[15px] leading-[1.4]'>{galleryData.heading}</h1>
+        <p  className='  text-[#787878] text-[22px] font-[400] leading-[1.4]  '>{galleryData.subheading}
     </p>
    
       </div>

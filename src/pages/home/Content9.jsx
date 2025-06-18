@@ -25,32 +25,32 @@ export default function Content9() {
  
   return (
     <>
-      <div className="bg-[#011833]">
+      <div className="bg-[#011833] py-[25px]">
         <div
-          className="bg-no-repeat bg-left bg-contain sm:px-6"
+          className="bg-no-repeat bg-left bg-contain my-1"
           style={{
             backgroundImage: `url('${backgroundImage || "https://safarimarketingpro.com/images/lets-talk-img.png"}')`,
           }}
         >
-          <div className="max-w-[1500px] mx-auto rounded-3xl shadow-2xl overflow-hidden md:flex md:space-x-0">
+          <div className="max-w-[1140px] mx-auto rounded-3xl  overflow-hidden md:flex ">
             {/* Left Spacer (Image is in background) */}
             <div className="hidden md:block md:w-1/2 h-[850px]" />
  
             {/* Right Side (Text & Form) */}
-            <div className="md:w-[610PX] p-8 mb-13 flex flex-col justify-center">
+            <div className=" w-1/2 py-[70px]">
               {/* Heading and Description */}
-              <div className="mb-8">
-                <h2 className="text-[40px] sm:text-4xl font-bold text-white mb-4 mt-15 leading-tight">
+              <div className="">
+                <h2 className="text-[40px]  font-bold text-white pb-[15px]  pr-[10%] tracking-[0.45px] leading-[1.2]">
                   {heading || 'We Don’t Charge To Educate Our Customers'}
                 </h2>
-                <p className="text-[#fff8f8] text-base font-[300] text-[17px] font-montserrat">
+                <p className="text-[#fff8f8]  font-[300] text-[17px] pb-[10px]">
                   {subheading ||
                     'Customer Education accelerates growth throughout the customer journey. We are a friendly bunch and would love to hear from you. Fill out the form below and we will be in touch.'}
                 </p>
               </div>
  
               {/* Contact Form (Unchanged) */}
-              <div className="max-w-4xl mx-auto bg-white rounded-t-md p-8 font-montserrat text-[#333]">
+              <div className="max-w-4xl mx-auto bg-white rounded-t-md p-8 mt-[25px] font-montserrat text-[#333]">
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-[16px] font-[500] -mb-2  text-[#787878]">Full Name</label>
