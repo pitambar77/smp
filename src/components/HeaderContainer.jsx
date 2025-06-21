@@ -43,19 +43,15 @@
 //   );
 // }
 
-
-
 import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header";
 import Navbar from "./Navbar";
-import smplogo from '../assets/images/smp-logo.png'
+import smplogo from "../assets/images/smp-logo.png";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function HeaderContainer() {
-
-    const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const headerRef = useRef(null);
   const [showSticky, setShowSticky] = useState(false);
@@ -113,19 +109,26 @@ export default function HeaderContainer() {
             variants={variants}
             className="fixed top-0 left-0 w-full z-[999] bg-[#0057ff]  shadow-[0_1px_7px_0_rgba(0,0,0,0.4)] py-[15px]"
           >
-           <div className=" max-w-[1140px] mx-auto">
-                <div className=" flex justify-between items-center">
-                    <button className=" cursor-pointer"
-                        onClick={() => {navigate('/');window.scrollTo(0, 0); }}>
-                         <img src={smplogo} alt="smp logo"  className=" w-24 filter invert brightness-0"/>
-                       
-                       
-                    </button>
-                    <div className="">
-                        <Header/>
-                    </div>
+            <div className=" max-w-[1140px] mx-auto">
+              <div className=" flex justify-between items-center">
+                <button
+                  className=" cursor-pointer"
+                  onClick={() => {
+                    navigate("/");
+                    window.scrollTo(0, 0);
+                  }}
+                >
+                  <img
+                    src={smplogo}
+                    alt="smp logo"
+                    className=" w-24 filter invert brightness-0"
+                  />
+                </button>
+                <div className="">
+                  <Header />
                 </div>
-           </div>
+              </div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,4 +1,5 @@
 import React from "react";
+import { PiCheckFatFill } from "react-icons/pi";
 
 const items = [
   "Testing what works for your safari customers",
@@ -44,7 +45,8 @@ const Displauads = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
             {items.map((text, index) => (
               <div key={index} className="flex items-start space-x-8">
-                <span className="text-green-500 text-xl mt-[18px]">✔</span>
+                {/* <span className="text-green-500 text-xl mt-[18px]">✔</span> */}
+                <span className=' mt-[18px] mr-[12px] text-[#0dc091] text-[14px] font-[600]'><PiCheckFatFill  /></span>
                 <p className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] m-0 pt-[15px] pb-[17px]">
                   {text}
                 </p>

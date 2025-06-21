@@ -41,6 +41,7 @@ import ResetPassword from './pages/Auth/ResetPassword'
 import FormComponent from './components/FormComponent'
 import StrategyForm from './components/StrategyForm'
 import GooglAdsPPCForm from './components/GooglAdsPPCForm'
+import PaymentForm from './components/PaymentForm'
 
 
 
@@ -93,6 +94,7 @@ function App() {
        <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
          <Route path="/forgot-password" element={<ResetPassword />} />
+          <Route path="/payment" element={<PaymentForm/>} />
       
       <Route
           path="/admin"

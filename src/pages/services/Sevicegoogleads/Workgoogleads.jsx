@@ -41,7 +41,7 @@ const WorkProcessgoogleads = () => {
     }
   };
   return (
-    <section className="bg-[#f4f4f4] text-center px-4 py-16 font-[Montserrat]">
+    <section className="bg-[#f4f4f4] text-center px-2 py-16 font-[Montserrat]">
       {/* Heading */}
       <div className="max-w-[1140px] mx-auto mt-6 mb-6">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#3467d8] mb-2 leading-[1.5]">
@@ -56,23 +56,23 @@ const WorkProcessgoogleads = () => {
 
         {/* Description */}
 
-        <p className=" float-left  text-[#5e5e5e] text-[17px]  text-start leading-relaxed ">
+        <p className=" float-left  text-[#5e5e5e] text-[17px]  text-start leading-relaxed px-[15px] ">
           As every safari & tour business requires unique attention for running
           an ad campaign, we prepare tailor made strategies that would result in
           great returns along with amazing revenue generations.
         </p>
-        <p className=" text-[#5e5e5e] text-[17px]  text-start leading-relaxed mb-12">
+        <p className=" text-[#5e5e5e] text-[17px]  text-start leading-relaxed mb-12 px-[15px]">
           With doing a deep analysis like knowing the keywords that would give
           us a great exposure to preparing world-class landing pages that would
           convert, we help you in designing great ad campaigns
         </p>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-10 max-w-[1140px] mx-auto">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex items-start text-left gap-4 cursor-pointer"
+              className="flex  text-left gap-4 px-[15px] cursor-pointer capitalize items-center"
               onClick={() => handleScrollToStep(step.number)}
               role="button"
               tabIndex={0}
@@ -97,7 +97,7 @@ const WorkProcessgoogleads = () => {
 
               {/* Text */}
               <div
-                className={`text-xl text-red-500 items-center font-semibold leading-snug text-[22px] text-left   hover:text-blue-500 ${step.color}`}
+                className={`text-xl text-red-500 items-center font-semibold leading-snug text-[22px] text-left   hover:text-[#3467d8] ${step.color}`}
                 // style={{ color: step.color }}
               >
                 {step.text}

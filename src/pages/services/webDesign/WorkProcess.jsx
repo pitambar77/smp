@@ -1,94 +1,97 @@
- 
-import React from 'react';
- 
+import React from "react";
+
 const steps = [
   {
-    number: '1',
+    number: "1",
     text: (
       <>
-        Identify The Goal Of Your <br /> Safari Website
+        Identify The Goal Of Your  Safari Website
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
   {
-    number: '2',
+    number: "2",
     text: (
       <>
-        Collect Information, <br /> Brainstorm & Analyze <br /> Sketches
+        Collect Information,  Brainstorm & Analyze  Sketches
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
   {
-    number: '3',
+    number: "3",
     text: (
       <>
-        Design A World-Class <br /> Safari Website That <br /> Enhances Brand <br /> Credibility
+        Design A World-Class  Safari Website That  Enhances Brand{" "}
+         Credibility
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
   {
-    number: '4',
+    number: "4",
     text: (
       <>
-        Add Value To Your <br /> Destinations By Creating <br /> Amazing Content
+        Add Value To Your  Destinations By Creating  Amazing Content
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
   {
-    number: '5',
+    number: "5",
     text: (
       <>
-        Now It’s Time To Test <br /> Your Website
+        Now It’s Time To Test  Your Website
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
   {
-    number: '6',
+    number: "6",
     text: (
       <>
-        Time To Present Your <br /> Safari Website To Your <br /> Customers
+        Time To Present Your  Safari Website To Your  Customers
       </>
     ),
-    color: '#ff4c4c',
+    color: "#ff4c4c",
   },
 ];
- 
+
 const WorkProcess = () => {
   const handleScrollToStep = (number) => {
     const el = document.getElementById(`step-${number}`);
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
- 
+
   return (
-    <section className="bg-[#f4f4f4] text-center font-[Montserrat]">
-      <div className="py-[100px]">
+    <section className="bg-[#f4f4f4] text-center ">
+      <div className="sm:py-[100px] py-[50px]">
         {/* Heading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#3467d8] mb-5">
+        <h2 className="text-[24px] sm:text-5xl font-bold text-[#3467d8] sm:mb-5 mb-[10px]">
           The Way We Work, Makes Us Different
         </h2>
- 
+
         {/* Subheadings */}
-        <p className="text-[22px] text-[#5e5e5e]">Custom Website Design Process</p>
-        <p className="text-[22px] text-[#5e5e5e] mb-6">
+        <p className="text-[22px] text-[#787878]">
+          Custom Website Design Process
+        </p>
+        <p className="text-[22px] text-[#787878] sm:mb-6 mb-2">
           Identify the goal of your Safari Website
         </p>
- 
+
         {/* Description */}
-        <p className="max-w-6xl mx-auto text-[#5e5e5e] text-[17px] text-center leading-relaxed mb-12">
-          With everyone having an online presence, it’s a difficult job to stand out as a safari
-          website. With our years of expertise in the safari industry, we have come out with
-          these 6 points to have a superior website for your safari & tour brand.
+        <p className="max-w-6xl mx-auto text-[#787878] text-[17px] text-center leading-relaxed mb-12 sm:px-0 px-4">
+          With everyone having an online presence, it’s a difficult job to stand
+          out as a safari website. With our years of expertise in the safari
+          industry, we have come out with these 6 points to have a superior
+          website for your safari & tour brand.
         </p>
- 
+
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 gap-5  px-4 max-w-[1140px] sm:px-[15px] mx-auto">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -97,27 +100,26 @@ const WorkProcess = () => {
               role="button"
               tabIndex={0}
               onKeyPress={(e) => {
-                if (e.key === 'Enter') handleScrollToStep(step.number);
+                if (e.key === "Enter") handleScrollToStep(step.number);
               }}
             >
               {/* Number */}
               <span
-                className="text-[80px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                className="sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
-                  display: 'block',
-                  textAlign: 'left',
-                  position: 'relative',
-                  marginTop: '-2%',
+                  display: "block",
+                  textAlign: "left",
+                  position: "relative",
+                  marginTop: "-2%",
                 }}
               >
                 {step.number}
               </span>
- 
+
               {/* Text */}
               <div
-                className={`text-xl text-red-500 items-center  font-semibold leading-snug text-[22px] text-left hover:text-blue-800`}
-                
+                className={`sm:text-[22px] text-red-500 items-center  font-semibold leading-snug text-[16px] text-left hover:text-blue-800`}
               >
                 {step.text}
               </div>
@@ -128,7 +130,5 @@ const WorkProcess = () => {
     </section>
   );
 };
- 
+
 export default WorkProcess;
- 
- 

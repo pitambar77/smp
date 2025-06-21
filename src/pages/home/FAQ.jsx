@@ -79,7 +79,7 @@ function FAQ() {
          
           <button
             onClick={() => toggleFAQ(index)}
-            className={`w-full flex justify-between px-[15px] py-[20px] text-[18px] font-[500] transition-colors duration-300 ease-in-out
+            className={`w-full flex justify-between cursor-pointer px-[15px] py-[20px] text-[18px] font-[500] transition-colors duration-300 ease-in-out
               ${
                 openIndex === index
                   ? "hover:bg-[#333] bg-[#f1f1f1]  hover:text-white text-gray-900 "

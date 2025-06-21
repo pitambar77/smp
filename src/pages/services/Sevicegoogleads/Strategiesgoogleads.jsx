@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Step = ({ id, number, title, children, isFirst = false }) => {
   return (
-    <div id={id} className="pt-15 pb-5">
+    <div id={id} className="pt-12 ">
       {!isFirst && (
         <div className="max-w-[1140px] mx-auto">
           <div className="border-t border-gray-300 w-full" />
@@ -41,7 +41,7 @@ const Strategiesgoogleads = () => {
         title={`Strategies That Work for You
 `}
       >
-        <p>
+        <p className=" ">
           Every safari business is different with its own needs. So, there’s no
           such thing as a one-size-fits-all strategy. We’ll analyze{" "}
           <strong className="font-bold">
@@ -56,25 +56,16 @@ const Strategiesgoogleads = () => {
       <Step
         id="step-2"
         number={2}
-        title={`Collect Information.\nBrainstorm And Analyse\nSketches.`}
+        title={`Intent Keyword Research`}
       >
-        <p>
-          Intent Keyword Research
-          <strong className="font-semibold">
-            African Safari Google Ads Campaigns
-          </strong>{" "}
-          today, then search Intent needs to be a big part of your approach. At
-          Safari Marketing Pro,
-          <strong className="font-semibold">
-            we know the customer’s intent behind target keywords can make your
-            safari campaign more effective and efficient.
-          </strong>
+        <p className=" ">
+          So, if you want to succeed with your <span className=" font-semibold"> African Safari Google Ads
+          Campaigns </span> today, then search Intent needs to be a big part of your
+          approach. At Safari Marketing Pro, <span className=" font-semibold"> we know the customer’s intent
+          behind target keywords can make your safari campaign more effective
+          and efficient</span>.
         </p>
-        <p>
-          We brainstorm to build a sketches layout and structure with the goals
-          and scope in mind. After all this we create some rough designs from
-          early feedback from the client.
-        </p>
+        
       </Step>
 
       {/* Step 3 */}
@@ -84,7 +75,7 @@ const Strategiesgoogleads = () => {
         title={`Creation Of Effective Safari Ad Copy
 `}
       >
-        <p>
+        <p className=" ">
           It’s the{" "}
           <strong className="font-semibold">
             only bridge between your safari landing pages and all the potential
@@ -102,7 +93,7 @@ const Strategiesgoogleads = () => {
         title={`Safari Landing Page That Covert Bookings
 `}
       >
-        <p>
+        <p className=" ">
           We create your safari landing pages with one intent to
           <strong className="font-semibold">
             — get more inquiries and bookings.{" "}
@@ -122,7 +113,7 @@ const Strategiesgoogleads = () => {
         title={`Transparent Safari Campaign Management Pricing
 `}
       >
-        <p>
+        <p className=" ">
           At Safari Marketing Pro, we always aim to form a strong working
           relationship with our clients.
           <strong className="font-semibold">
@@ -140,36 +131,38 @@ const Strategiesgoogleads = () => {
         title={`Detailed Reporting
 `}
       >
-        <p>
+        <p className=" leading-[1.6] pr-6">
           Safari Marketing Pro is all about involving you with your customers.
           Our{" "}
-          <strong className="font-semibold">
-            Google Ad Marketing For African Safari Operator
-          </strong>{" "}
-          includes
-          <strong className="font-semibold">
+          <span className=" font-[600]">
+            {" "}
+            Google Ad Marketing For African Safari Operator{" "}
+          </span>{" "}
+          includes{" "}
+          <span className=" font-[600]">
             {" "}
             comprehensive data tracking tools{" "}
-          </strong>
+          </span>{" "}
           that will let us know how well your campaign is performing. You’ll
           know everything you need to know and{" "}
-          <strong className="font-semibold">
-            we’ll give educated suggestions on how to proceed.
-          </strong>
+          <span className=" font-[600]">
+            {" "}
+            we’ll give educated suggestions on how to proceed{" "}
+          </span>
+          .
         </p>
-
-        <div className="px-[10px] py-[10px] text-[16px] mt-15 mb-8">
-          <button
-            onClick={() => {
-              navigate("/lets-grow-business");
-              window.scrollTo(0, 0);
-            }}
-            className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white transition-colors duration-300"
-          >
-            <strong>STAND OUT AMONGST THE CROWD</strong>
-          </button>
-        </div>
       </Step>
+      <div className="px-[10px] py-[10px] text-center text-[16px] mt-8 pb-[100px] ">
+        <button
+          onClick={() => {
+            navigate("/lets-grow-business");
+            window.scrollTo(0, 0);
+          }}
+          className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[12px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white ease-in duration-300"
+        >
+          Get Quick Inquiries Now
+        </button>
+      </div>
     </div>
   );
 };

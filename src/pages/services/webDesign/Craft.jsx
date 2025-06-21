@@ -25,34 +25,26 @@ const Craft = () => {
         background: "linear-gradient(0deg, #427fdf 0%, #396bb1 100%)",
       }}
     >
-      <div className="max-w-[1140px] mx-auto flex  ">
+      <div className="max-w-[1140px] mx-auto flex sm:flex-row flex-col ">
         {/* Left Text Section */}
-        <div className="w-[60%] pr-[30px] pb-[80px]">
+        <div className="sm:w-[60%] sm:pr-[30px] sm:pb-[80px] sm:px-0 px-4  ">
           <h1
-            style={{
-              fontSize: "38px",
-              fontFamily: `'Montserrat', sans-serif`,
-              textTransform: "capitalize",
-              color: "#fff",
-              fontWeight: 700,
-              letterSpacing: "0.45px",
-              lineHeight: "1.2",
-            }}
-            className="mb-4"
+          
+            className="mb-4 sm:text-[38px] font-bold text-[24px] capitalize leading-[1.2] text-white sm:text-start text-center"
           >
             {data.heading}
           </h1>
 
-          <p className=" text-[17px] font-[400] mb-[15px]">{data.para1}</p>
+          <p className=" sm:text-[17px] text-[14px] font-[400] sm:mb-[15px] mb-[10px] sm:text-start text-justify">{data.para1}</p>
 
-          <p className=" text-[17px] font-[400] ">{data.para2}</p>
-          <div className=" pt-[40px]">
+          <p className=" sm:text-[17px] text-[14px] font-[400] sm:mb-[15px] mb-[10px] sm:text-start text-justify">{data.para2}</p>
+          <div className=" pt-[10px]">
             <button
               onClick={() => {
                 navigate("/lets-grow-business");
                 window.scrollTo(0, 0);
               }}
-              className="uppercase  text-white cursor-pointer font-semibold text-[15px] px-[30px] py-3 bg-[#ff5254] rounded-[4px] hover:bg-black hover:text-[#ff5254] transition-colors duration-300"
+              className="uppercase  text-white cursor-pointer font-semibold sm:text-[15px] text-[13px] sm:px-[30px] px-[15px] sm:py-3 py-[10px] bg-[#ff5254] rounded-[4px] hover:bg-black hover:text-[#ff5254] transition-colors duration-300"
             >
               Request a Free Proposal
             </button>
@@ -60,8 +52,8 @@ const Craft = () => {
         </div>
 
         {/* Right Image */}
-        <div className=" w-[40%] -mt-[70px]  ">
-          <div className=" -mb-[100px]  ">
+        <div className=" sm:w-[40%] sm:-mt-[70px] ">
+          <div className=" sm:-mb-[100px] -mb-5  ">
             <img
               src={`${BASE_URL}/${data.image}`}
               alt="Safari Marketing Pro Representative"

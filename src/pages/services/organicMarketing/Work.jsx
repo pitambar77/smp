@@ -43,17 +43,17 @@ const Work = () => {
   return (
     <section className="bg-white text-center px-4 py-16 font-[Montserrat]">
       {/* Heading */}
-      <div className="max-w-[1140px] mx-auto mt-6 mb-6">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#3467d8] mb-2 leading-[1.5]">
+      <div className="max-w-[1140px] mx-auto sm:mt-6 sm:mb-6">
+        <h2 className="text-[24px] sm:text-5xl font-bold text-[#3467d8] mb-2 leading-[1.5]">
           The Way We Work, Makes Us Different{" "}
         </h2>
 
         {/* Subheadings */}
-        <p className="text-xl mt-5 mb-5 text-[#5e5e5e]">
+        <p className="sm:text-xl text-[18px] mt-5 mb-5 text-[#5e5e5e]">
           Your First Step Towards Digital Success
         </p>
 
-        <p className=" text-[#5e5e5e] text-[17px]  text-start leading-relaxed mb-12">
+        <p className=" text-[#5e5e5e] sm:text-[17px] text-[14px] sm:text-start text-justify sm:px-[15px] px-[4px] leading-relaxed mb-12">
           We understand your safari & tour business needs to be more visible on
           the search engine result page to attract more potential customers and
           opportunities that would convert. With years of trial & test, we come
@@ -62,7 +62,7 @@ const Work = () => {
         </p>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 gap-5  px-4 max-w-[1140px] sm:px-[15px] mx-auto">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -76,7 +76,7 @@ const Work = () => {
             >
               {/* Number */}
               <span
-                className="text-[80px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                className="sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   display: "block",
@@ -89,7 +89,7 @@ const Work = () => {
 
               {/* Text */}
               <div
-                className={`text-xl font-semibold text-red-500 leading-snug text-[22px] text-left mt-3 hover:text-blue-500 ${step.color}`}
+                className={`text-[20px] font-semibold text-red-500 leading-snug sm:text-[22px] text-left sm:mt-3 hover:text-blue-500 ${step.color}`}
               >
                 {step.text}
               </div>

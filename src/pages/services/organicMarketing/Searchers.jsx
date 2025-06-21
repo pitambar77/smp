@@ -16,24 +16,24 @@ const Searchers= () => {
           }, [showForm]);
 
   return (
-    <section className="bg-[#F0F0F0] py-20 px-4 font-[Montserrat]">
+    <section className="bg-[#F0F0F0] sm:pt-20 pt-[40px] sm:pb-20 pb-28 px-4 font-[Montserrat]">
       <div className="max-w-[1140px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center   -mb-18 mt-6">
         {/* Left Side: Stat */}
-        <div className="border-l-4 border-[#ff4e4e]  pl-6 mb-58">
-          <h2 className="text-[#2f6bd7] text-[48px] sm:text-5xl font-[700] leading-tight">
-            75% of searchers <br /> never go past <br /> the first page of <br /> search results.
+        <div className=" sm:border-l-4 border-[#ff4e4e]  sm:pl-6 sm:mb-58">
+          <h2 className="text-[#2f6bd7] sm:text-[48px] text-[30px] sm:text-5xl font-[700] text-center sm:leading-tight ">
+            75% of searchers  never go past  the first page of  search results.
           </h2>
         </div>
  
         {/* Right Side: Paragraphs + Button */}
         <div>
-          <p className="text-[#787878] text-[18px] leading-relaxed mb-6">
+          <p className="text-[#787878] sm:text-[18px] text-[14px] leading-relaxed sm:mb-6 mb-4 sm:text-start text-justify ">
             If your African Safari Website is not showing up on the first page of Google when someone
             makes a search regarding the kind of services you provide, then you might be putting all
             your <strong className="font-semibold">SEO Marketing For African Safari</strong> efforts wrong.
           </p>
  
-          <p className="text-[#787878] text-[18px] leading-relaxed mb-8">
+          <p className="text-[#787878] sm:text-[18px] text-[14px] leading-relaxed sm:mb-8 mb-4 sm:text-start text-justify ">
             You are losing on a great load of potential customers and a huge reach that can make your
             <strong className="font-semibold"> African Safari Website</strong> win leading to long-term exponential growth.
           </p>
@@ -41,11 +41,11 @@ const Searchers= () => {
           {/* <button className="bg-[#ff4e4e] text-white font-semibold text-sm px-6 py-3 rounded hover:bg-red-500 transition">
             GET YOUR FREE INITIAL ANALYSIS
           </button> */}
-          <div className=" text-[16px]">
+          <div className=" text-center">
              
                 <button 
                 onClick={() => setShowForm(true)}
-                className="bg-[#FF5254] text-white font-semibold  text-[16px] hover:bg-[#011833] ease-in duration-500 cursor-pointer hover:text-red-500 transition-colors   min-w-[148px] rounded px-8 py-3">
+                className="bg-[#FF5254] text-white font-semibold  sm:text-[16px] text-[13px] hover:bg-[#011833] ease-in duration-500 cursor-pointer hover:text-red-500 transition-colors   min-w-[148px] rounded sm:px-8 px-[12px] sm:py-3 py-[10px]">
                   GET YOUR FREE INITIAL ANALYSIS
                 </button>
       

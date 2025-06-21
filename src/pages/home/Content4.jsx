@@ -199,7 +199,7 @@ function Content4() {
           <button onClick={() => setShowForm(true)}>
             <p className="text-3xl font-bold pb-[15px] text-white underline hover:text-black duration-500 cursor-pointer">
               So Now Stop Losing Money and Get the first step towards getting
-              More Leads and Schedule a Strategy Session
+              More Leads and Schedule a Strategy Session!
             </p>
           </button>
         </div>

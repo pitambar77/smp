@@ -1,4 +1,5 @@
 import React from "react";
+import { PiCheckFatFill } from "react-icons/pi";
 
 const items = [
   "Responsive Display Ads to fit everywhere you want your ad to be shown",
@@ -56,7 +57,7 @@ const Highlytailored = () => {
               <div className="space-y-4">
                 {items.map((text, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <span className="text-green-500 text-xl ">✔</span>
+                    <span className=' mt-[12px] mr-[12px] text-[#0dc091] text-[14px] font-[600]'><PiCheckFatFill  /></span>
                     <p className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] p-2 ">
                       {text}
                     </p>

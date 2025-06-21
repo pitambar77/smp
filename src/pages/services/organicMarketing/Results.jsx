@@ -28,8 +28,17 @@ const features = [
     title: "Customer Lifetime Value",
     description:
       "In the process of doing doing SEO, we get involved in so many techniques that come under it. Customer lifetime value is a process through which we can measure which technique is bringing in the greatest number of leads.",
-    description2:
-      "Once we recognize how we bring more leads, we can strengthen that aspect and change all our SEO Strategies For African Safari Operators according to it.",
+    description2: (
+      <>
+        Once we recognize how we bring more leads, we can strengthen that aspect
+        and change all our{" "}
+        <span className=" font-[600]">
+          {" "}
+          SEO Strategies For African Safari Operators{" "}
+        </span>{" "}
+        according to it.
+      </>
+    ),
   },
   {
     icon: (
@@ -176,7 +185,14 @@ const features = [
       </svg>
     ),
     title: "Conversion Goals By Percent-Based Metrics",
-    description: `Conversion can only mean, generating revenue for your company from the leads that you get from Organic Marketing.`,
+    description: (
+      <>
+        {" "}
+        Conversion can only mean, generating revenue for your company from the
+        leads that you get from{" "}
+        <span className=" font-[600]">Organic Marketing</span> .
+      </>
+    ),
 
     description2: `You should always look into the percentage of improvement, like with traffic flowing into your website, your conversion rate should increase too. Or, on the flip side, with traffic decreasing the conversion rate is increasing because you are better at focusing your target audience.`,
   },
@@ -203,9 +219,19 @@ const features = [
     ),
     title: "Brand Visibility In Search KPIs",
     description: [
-      `This Organic Marketing KPI For African Safari Operators indicates what is our brand position in terms of search engines. With all the on-page and off-page SEO work that goes into ranking your website, by this visibility KPI you would be able to know what percentage of the search engine you result in for all the organic work that has been done in the back-end.
- 
-`,
+      <>
+        {" "}
+        This{" "}
+        <span className=" font-[600]">
+          {" "}
+          Organic Marketing KPI For African Safari Operators{" "}
+        </span>{" "}
+        indicates what is our brand position in terms of search engines. With
+        all the on-page and off-page SEO work that goes into ranking your
+        website, by this visibility KPI you would be able to know what
+        percentage of the search engine you result in for all the organic work
+        that has been done in the back-end.
+      </>,
     ],
   },
   {
@@ -298,12 +324,12 @@ function Results() {
   return (
     <div>
       <div className="w-full bg-[#f0f0f0] flex items-center justify-center px-4">
-        <div className="max-w-[1140px] mx-auto text-center mt-20">
-          <h2 className="font-[Montserrat] font-bold text-[48px] text-center capitalize text-[#3467d8] leading-[1.4]  pb-[18px]">
+        <div className="max-w-[1140px] mx-auto text-center sm:mt-20 mt-10">
+          <h2 className=" font-bold sm:text-[48px] text-[24px] text-center capitalize text-[#3467d8] leading-[1.4]  pb-[18px]">
             Long-Lasting Results For your Safari business.
           </h2>
 
-          <h6 className="font-[Montserrat] font-normal text-[22px] text-center capitalize text-[#787878] leading-[1.4] mb-12">
+          <h6 className="font-[Montserrat] font-normal sm:text-[22px] text-[18px] text-center capitalize text-[#787878] leading-[1.4] mb-12">
             Our Marketing Solutions Work: We’ve Proven it Over and Over Again
           </h6>
 
@@ -311,18 +337,18 @@ function Results() {
 We understand your safari & tour business needs to be more visible on the search engine result page to attract more potential customers and opportunities that would convert. With years of trial & test, we come up with some ways that would give you the best results by implementing SEO.                        </p> */}
 
           <section className="mt-8">
-            <div className=" pl-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className=" sm:pl-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-8">
                   <div className="w-9 h-8 mt-1 ">{feature.icon}</div>
                   <div>
-                    <h3 className="font-[Montserrat] font-semibold text-[22px] text-left text-[#011833] m-0 p-0 pb-[10px] capitalize">
+                    <h3 className="font-[Montserrat] font-semibold sm:text-[22px] text-[18px] text-left text-[#011833] m-0 p-0 pb-[10px] capitalize">
                       {feature.title}
                     </h3>
-                    <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 pb-2 ">
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] text-left text-[#787878] m-0 pb-2 ">
                       {feature.description}
                     </p>
-                    <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 p-0 ">
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] text-left text-[#787878] m-0 p-0 ">
                       {feature.description2}
                     </p>
                   </div>
@@ -330,10 +356,10 @@ We understand your safari & tour business needs to be more visible on the search
               ))}
             </div>
 
-            <div className=" text-center mb-18">
+            <div className=" text-center sm:mb-18 mb-10 sm:mt-0 mt-6 ">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#ff4d4d] text-white font-semibold px-6 py-3 rounded cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition"
+                className="bg-[#ff4d4d] text-white text-[13px] sm:text-[17px] font-semibold sm:px-6 sm:py-3 px-[15px] py-[10px] rounded cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition"
               >
                 SCHEDULE CALL WITH AN EXPERT
               </button>

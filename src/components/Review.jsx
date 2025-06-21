@@ -41,7 +41,7 @@ const reviews = [
   },
   {
     id: 5,
-    name: "Owner, Safari World Tours",
+    name: "Managing Director, EURAY ESCAPADES LIMITED",
     rating: 4,
     comment: "Great service, will use again.",
     description:
@@ -51,7 +51,7 @@ const reviews = [
   },
   {
     id: 6,
-    name: "Carol Williams",
+    name: "Owner, Safari World Tours",
     rating: 5.0,
     comment: "Good, but room for improvement.",
     description:
@@ -86,7 +86,7 @@ const Review = () => {
               </div>
             </div>
 
-            <p className="text-[#17313b] pt-4 pb-[10px] font-[500] text-[14px] leading-[18px] ">
+            <p className="text-[#17313b] pt-4 pb-[10px] font-[500] text-[14px] leading-[18px]   ">
               {review.description}
             </p>
             <p className="text-[#6a7a7e] py-4 font-[500] text-[12px] ">

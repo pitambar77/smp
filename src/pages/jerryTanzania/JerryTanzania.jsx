@@ -5,6 +5,9 @@ import NumberCounter from '../AfricanScenicCaseStudy/NumberCounter'
 import JerryContentCard from './JerryContentCard'
 import axios from 'axios'
 import { BASE_URL } from '../../api/config'
+import CaseStudySection from '../../components/CaseStudySection'
+import Common from '../../components/Common'
+import Content9 from '../home/Content9'
 
 const JerryTanzania = () => {
     const [bannerData, setBannerData] = useState(null);
@@ -76,6 +79,27 @@ const JerryTanzania = () => {
       </div>
       <NumberCounter/>
       <JerryContentCard/>
+      <CaseStudySection
+        title={
+          <>
+            BRISTOL FARMS <br /> FACEBOOK ADS
+          </>
+        }
+        image="https://safarimarketingpro.com/images/jerrytanzaniatours.png"
+        stats={[
+          { value: "40%", label: "In New Sessions" },
+          { value: "304%", label: "In Sales" },
+          { value: "23%", label: "In Average Order Value" },
+        ]}
+        galleryImages={[
+          "https://safarimarketingpro.com/images/jerrytanzaniatours1.jpg",
+          "https://safarimarketingpro.com/images/jerrytanzaniatours2.jpg",
+          "https://safarimarketingpro.com/images/jerrytanzaniatours3.jpg",
+          "https://safarimarketingpro.com/images/jerrytanzaniatours4.jpg",
+        ]}
+      />
+      <Common />
+      <Content9 />
     </div>
   )
 }

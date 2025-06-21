@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import GoogleHome from './GoogleHome'
 import WebsitesGoogleads from './WebsitesGoogleads'
 import Displayads from './Displayads'
@@ -19,6 +19,9 @@ import Content9 from '../../home/Content9'
 
 
 function Googleads() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <>

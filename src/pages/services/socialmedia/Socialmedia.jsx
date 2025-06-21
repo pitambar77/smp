@@ -24,6 +24,10 @@ const Socialmedia = () => {
   const [video, setVideo] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     axios
       .get(API_URL)
       .then((res) => setVideo(res.data))

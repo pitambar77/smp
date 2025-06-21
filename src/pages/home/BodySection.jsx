@@ -17,9 +17,7 @@ const [showForm, setShowForm] = useState(false);
 
 const [banner, setBanner] = useState(null);
 
-//  const handleRecaptcha = (value) => {
-//     console.log("Captcha value:", value);
-//   };
+
 
 
   useEffect(() => {
@@ -39,8 +37,11 @@ const [banner, setBanner] = useState(null);
 
   const options = [
     "I need more traffic to my website",
-    "I need more bookings",
-    "I need more agents",
+    "I need more customers",
+    "I need more leads",
+    "I need more sales",
+    "I need help with brand awareness",
+    "All of the above"
   ];
   return (
     <>
@@ -64,7 +65,7 @@ const [banner, setBanner] = useState(null);
         </button>
 
         {open && (
-          <div className="absolute top-full left-0 w-full bg-white border shadow-md z-30">
+          <div className="absolute top-full left-0 mt-1 w-full bg-white border shadow-md rounded z-30">
             {options.map((option) => (
               <div
                 key={option}
@@ -72,7 +73,7 @@ const [banner, setBanner] = useState(null);
                   setSelected(option);
                   setOpen(false);
                 }}
-                className="px-5 py-3 hover:bg-gray-100 text-[#787878] cursor-pointer"
+                className="px-5 py-1 hover:bg-gray-300 text-[#787878] text-[18px] font-[500] cursor-pointer"
               >
                 {option}
               </div>
@@ -100,29 +101,7 @@ const [banner, setBanner] = useState(null);
                 </div>
               </>
   ) : (
-    //     <div className=' '>
-    //   <h2 className=" text-[50px] text-white font-bold mb-5 ">Please enter your details.</h2>
-    //   <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
-    //     <input type="text" placeholder="First Name*" className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" />
-    //     <input type="email" placeholder="Email Address*" className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" />
-    //     <select className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white">
-    //       <option value="">Country Code</option>
-    //       <option value="+91">+91</option>
-    //       <option value="+254">+254</option>
-    //     </select>
-    //     <input type="text" placeholder="Phone*" className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" />
-    //     <input type="text" placeholder="Website*" className="col-span-2 p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" />
-    //   </div>
-    //   <div className="mt-5 flex flex-col gap-[10px]">
-      //  <ReCAPTCHA
-      //     sitekey="6LeFRVsrAAAAAEfgOzVimk_7BG5hM0hQFzgsYyZ9"
-      //     onChange={handleRecaptcha}
-      //   />
-      //   <button className="bg-[#ff5254] h-[60px] cursor-pointer border border-[#ff5254] hover:bg-[#011833] hover:border-[#011833] duration-500 ease-in-out hover:text-[#ff5254] text-white px-6 py-3 rounded font-semibold">
-      //     GET MY FREE QUOTE
-      //   </button>
-    //   </div>
-    // </div>
+   
     <FormComponent/>
   )}
                </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { PiCheckFatFill } from "react-icons/pi";
 import RequestForm from "../../components/RequestForm";
 
 
@@ -53,15 +53,15 @@ function Content2() {
                 make an inquiry/bookings with you.
               </p>
               <div className="flex mb-[10px] items-center">
-                <FaCheck className="text-[#fff] text-[18px] font-[700] mr-[10px]" />
+                <PiCheckFatFill className="text-[#fff] text-[18px] font-[700] mr-[10px]" />
                 <p className="text-[19px] text-[#fff] font-[400]">
                   Make your itineraries and booking forms your sales page.
                 </p>
               </div>
               <div className="flex mb-[10px] items-start">
-                {/* <FaCheck className="text-[#fff] text-[18px] mt-1" /> */}
+                {/* <PiCheckFatFill className="text-[#fff] text-[18px] mt-1" /> */}
                 <span className="text-[#fff] text-[18px] font-[400] mr-[10px] mt-1">
-                  <FaCheck />
+                  <PiCheckFatFill />
                 </span>
                 <p className="text-[19px] text-[#fff] font-[400]">
                   We make your potential customers believe that you are a highly
@@ -72,7 +72,7 @@ function Content2() {
               <div className="flex mb-[10px] items-start">
                 {/* <FaCheck className="text-[#fff] text-[18px] mt-1" /> */}
                 <span className="text-[#fff] text-[18px] font-[400] mr-[10px] mt-1">
-                  <FaCheck />
+                  <PiCheckFatFill />
                 </span>
 
                 <p className="text-[19px] text-[#fff] font-[400]">
@@ -84,7 +84,7 @@ function Content2() {
               <div className="mt-6">
                 <button
                   onClick={() => setShowForm(true)}
-                  className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition"
+                  className="bg-[#011833] cursor-pointer font-semibold border border-[#011833] text-[#fff] text-[16px] px-8 py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition"
                 >
                   SCHEDULE CALL WITH AN EXPERT
                 </button>
@@ -119,7 +119,7 @@ function Content2() {
 
             {/* Right: Video Embed */}
             <div className=" flex justify-center items-center   ">
-              <div className=" max-w-[440px] h-[430px]  aspect-video  shadow-lg overflow-hidden">
+              <div className=" max-w-[440px] h-[430px]  aspect-video  shadow-lg overflow-hidden ">
                 <iframe
                  width="100%"
                  height='100%'

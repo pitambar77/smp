@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
+import { PiCheckFatFill } from 'react-icons/pi';
 
 
 const contentLeft = [
@@ -82,7 +83,9 @@ const Wellcraftedcontent = () => {
   {/* Left Column Items */}
   {contentLeft.map((item, i) => (
     <div key={i} className="flex items-start gap-3 px-4">
-      <i className="fa-solid fa-check text-red-500 mt-1 text-[20px]"></i>
+      <span className=" text-[#ff5255] text-[18px] mt-1">
+                          <PiCheckFatFill />
+                        </span>
       <p
         className="text-white text-[18px] font-[Montserrat] leading-relaxed"
         dangerouslySetInnerHTML={{ __html: item.text }}
@@ -93,7 +96,9 @@ const Wellcraftedcontent = () => {
   {/* Right Column Items */}
   {contentRight.map((item, i) => (
     <div key={i} className="flex items-start gap-3 px-4">
-      <i className="fa-solid fa-check text-red-500 mt-1 text-[20px]"></i>
+     <span className=" text-[#ff5255] text-[18px] mt-1">
+                         <PiCheckFatFill />
+                       </span>
       <p
         className="text-white text-[18px] font-[Montserrat] leading-relaxed"
         dangerouslySetInnerHTML={{ __html: item.text }}

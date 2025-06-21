@@ -7,18 +7,21 @@ const services = [
     description:
       "Your Safari business is unique and you need a website that can convince, who are planning to book their trips to Africa and also help separate you from the competition.",
     image: "https://safarimarketingpro.com/images/dgyhacb-icn-1.png",
+    link:"/web-designing"
   },
   {
     title: "Organic Marketing",
     description:
       "We know how important it is for you to maintain a high ranking for your safari website. We can help you with outstanding organic marketing strategy to attract your desired audience.",
     image: "https://safarimarketingpro.com/images/dgyhacb-icn-2.png",
+    link:"/organic-marketing"
   },
   {
     title: "Google Advertising",
     description:
       "The right advertising campaign can be the secret sauce to a safari company’s success. We help you with curating the best Ad strategies for your safari business to get the results.",
     image: "https://safarimarketingpro.com/images/dgyhacb-icn-3.png",
+    link:"/google-ads"
   },
 ];
 
@@ -64,7 +67,7 @@ function Content6() {
               <div className=" text-center items-center -mt-1">
                 <button
                   onClick={() => {
-                    navigate("/web-designing");
+                    navigate(`${service.link}`);
                     window.scrollTo(0, 0);
                   }}
                   className=" duration-300 cursor-pointer ease-in text-center text-white font-semibold bg-[#ff5254] border border-[#ff5254] hove:text-[#ff5254] hover:bg-[#011833] hover:text-[#ff5254] px-[22px] py-[10px] rounded-[4px] text-[15px] uppercase shadow-md  transition"

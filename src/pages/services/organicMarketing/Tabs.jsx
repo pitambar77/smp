@@ -60,22 +60,22 @@ export default function Tabs() {
     
    
         <div className=' w-full bg-[#fafaff] '>
-            <div className=' max-w-[1140px] mx-auto pt-[60px] pb-[80px] px-[15px] '>
+            <div className=' max-w-[1140px] mx-auto pt-[60px] pb-[80px] sm:px-[15px] '>
                 <div className=' flex flex-col md:flex-row justify-between'>
                     <div className=' basis-[30%]'>
-                        <h1 className=' text-[#3467d8] text-[48px] font-[700] pb-[15px] leading-[1.4] '>Organic Marketing Strategy</h1>
+                        <h1 className=' text-[#3467d8] sm:text-[48px] text-[24px] sm:text-start text-center font-[700] pb-[15px] leading-[1.4] '>Organic Marketing Strategy</h1>
                     </div>
                     <div className=' basis-[60%]'>
-                        <div className=' mt-[60px] text-start px-[15px]'>
-                            <p className='text-[#787878] text-[18px] font-[400] pb-[17px] pt-[15px] leading-[1.4] '>Doing all things right and following a proven SEO strategy can change the whole behaviors of your website, as the visibility increases. This means more traffic and more opportunities to convert potential <br /> <strong>African Safari Customers</strong> .</p>
-                            <p className='text-[#787878] text-[18px] font-[400] pb-[17px] pt-[15px] leading-[1.4] '>Here we present some of the ways that have acted as game changers for our SEO strategy.</p>
+                        <div className=' sm:mt-[60px] mt-10 sm:text-start text-justify sm:px-[15px] px-4'>
+                            <p className='text-[#787878] sm:text-[18px] text-[14px] font-[400] sm:pb-[17px] sm:pt-[15px] leading-[1.4] '>Doing all things right and following a proven SEO strategy can change the whole behaviors of your website, as the visibility increases. This means more traffic and more opportunities to convert potential <br /> <strong>African Safari Customers</strong> .</p>
+                            <p className='text-[#787878] sm:text-[18px] text-[14px]  font-[400] pb-[17px] pt-[15px] leading-[1.4] '>Here we present some of the ways that have acted as game changers for our SEO strategy.</p>
                         </div>
                     </div>
 
                 </div>
-                <div className=' flex flex-col md:flex-row gap-12 mt-[10px]'>
+                <div className=' flex flex-col md:flex-row gap-12 mt-[10px] sm:px-0 px-4  '>
                     <div className=' basis-[50%] '>
-                        <div className='grid grid-cols-2 gap-x-[45px] gap-y-6  ' >
+                        <div className='grid sm:grid-cols-2 gap-x-[45px] sm:gap-y-6 gap-y-4  ' >
                         {tabData.map((tab) => (
                             <div
                             key={tab.id}
@@ -95,21 +95,21 @@ export default function Tabs() {
                         </div>
                     </div>
                     <div className=' basis-[50%]'>
-                        <div className="basis-full md:basis-1/2 bg-white shadow-md rounded-[5px]  p-[20px] flex flex-col items-center min-h-[461px] " style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}>
-                            <div className=' mt-[50px] '>
-                                <h2 className="text-[34px] font-bold text-[#3467d8] leading-[1.3] text-start">
+                        <div className="basis-full md:basis-1/2 bg-white shadow-md rounded-[5px]  p-[20px] flex flex-col items-center sm:min-h-[461px] " style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}>
+                            <div className=' sm:mt-[50px] mt-[10px] '>
+                                <h2 className="sm:text-[34px] text-[24px] font-bold text-[#3467d8] leading-[1.3] text-start">
                                 {tabData[activeTab - 1].title}
                             </h2>
-                            <p className="text-[#787878] font-[400] text-[18px] leading-[1.5] pt-[48px]  whitespace-pre-line ">
+                            <p className="text-[#787878] font-[400] sm:text-[18px] text-[14px] leading-[1.5] sm:pt-[48px] pt-[20px]  whitespace-pre-line ">
                                 {tabData[activeTab - 1].content}
                             </p>
-                            <p className="text-[#787878] font-[400] text-[18px] leading-[1.5] whitespace-pre-line py-[15px]">
+                            <p className="text-[#787878] font-[400] sm:text-[18px] text-[14px] leading-[1.5] whitespace-pre-line py-[15px]">
                                 {tabData[activeTab - 1].content1}
                             </p>
                             </div>
          
-                                <div className='pt-[50px] pb-[15px] '>
-                                    <button className="bg-[#ff5254] text-white px-[40px] font-semibold hover:text-[#ff5254] hover:border-[#ff5254] hover:border  text-[16px] uppercase py-[15px] rounded shadow hover:bg-[#011833] border-[#ff5254] duration-500 cursor-pointer " style={{ boxShadow: '0 12px 18px 0 rgb(0 0 0 / 15%)',letterSpacing: '1.5px'  }}>
+                                <div className='sm:pt-[50px] pt-[20px] sm:pb-[15px] '>
+                                    <button className="bg-[#ff5254] text-white sm:px-[40px] px-[15px] font-semibold hover:text-[#ff5254] hover:border-[#ff5254] hover:border  sm:text-[16px] text-[14px] uppercase sm:py-[15px] py-[10px] rounded shadow hover:bg-[#011833] border-[#ff5254] duration-500 cursor-pointer " style={{ boxShadow: '0 12px 18px 0 rgb(0 0 0 / 15%)',letterSpacing: '1.5px'  }}>
                                     DOWNLOAD BROCHURE
                                 </button>
                                 </div>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
- 
+import { PiCheckFatFill } from "react-icons/pi";
+
+
 const Step = ({ id, number, title, children, isFirst = false }) => {
     
   return (
-    <div id={id} className="pt-4 pb-5">
+    <div id={id} className="pt-4 sm:pb-5 pb-0">
       {!isFirst && (
         <div className="max-w-[1140px] mx-auto">
           <div className="border-t border-gray-300 w-full" />
@@ -12,17 +14,17 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
       )}
  
       {/* Step content */}
-      <div className="max-w-[1140px] mt-10 mx-auto px-4 grid md:grid-cols-12 gap-6 items-start">
+      <div className="max-w-[1140px] mt-10 mx-auto px-4 grid md:grid-cols-12 sm:gap-6 gap-2 items-start">
         {/* Left side */}
         <div className="md:col-span-4">
-          <h3 className="text-2xl font-bold text-[#0b2239]">STEP {number}:</h3>
-          <h4 className="mt-2 text-white text-2xl font-semibold leading-snug whitespace-pre-line">
+          <h3 className="sm:text-2xl text-[18px] font-bold text-[#0b2239]">STEP {number}:</h3>
+          <h4 className="mt-2 text-white sm:text-2xl text-[18px] font-[500] leading-snug whitespace-pre-line">
             {title}
           </h4>
         </div>
  
         {/* Right side */}
-        <div className="md:col-span-8 text-white space-y-4 text-[17px]">{children}</div>
+        <div className="sm:col-span-8 text-white space-y-4 sm:text-[17px] text-[14px] sm:text-start text-justify ">{children}</div>
       </div>
     </div>
   );
@@ -31,7 +33,7 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
 const Goalwebdesign = () => {
     const navigate = useNavigate();
   return (
-    <div className="bg-[#ff5254] min-h-screen">
+    <div className="bg-[#ff5254] py-[50px] ">
       {/* Step 1 */}
       <Step
         id="step-1"
@@ -47,7 +49,7 @@ const Goalwebdesign = () => {
           Before we start with the process of a <strong>Bespoke African Safari Website Design</strong>
           , we ask you these questions:
         </p>
-        <ul className="space-y-2 ml-9">
+        <ul className="space-y-2 sm:ml-9">
           {[
             'What is your target audience?',
             'Which services do you want to offer to your customers mostly (Like trekking or Safaris)?',
@@ -56,7 +58,7 @@ const Goalwebdesign = () => {
             'Who are your competitors and how they are performing?',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1" />
+            <span className=' mt-1 mr-[12px] text-[#fff]  sm:text-[18px] text-[14px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -104,7 +106,7 @@ const Goalwebdesign = () => {
       <Step
         id="step-4"
         number={4}
-        title={`Design A World-Class Safari Website Enhances Safari\nBrand Credibility`}
+        title={`Add Value Your Destinations By Creating Amazing Contents`}
       >
         <p>
           The third step of the web design process is to design how the African Safari Website will
@@ -122,7 +124,7 @@ const Goalwebdesign = () => {
  
       {/* Step 5 */}
       <Step id="step-5" number={5} title={`Now It’s Time To Test. This Time We Are Always Consider These Questions:`}>
-        <ul className="space-y-2 ml-9">
+        <ul className="space-y-2 sm:ml-9">
           {[
             'What do your customers like or dislike about this design?',
             'What CTA buttons are being pressed first?',
@@ -132,7 +134,8 @@ const Goalwebdesign = () => {
             'How friendly is your safari website to your customers?',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1" />
+              <span className=' mt-1 mr-[12px] text-[#fff]  sm:text-[18px] text-[14px] font-[600]'><PiCheckFatFill  /></span>
+              
               <span>{item}</span>
             </li>
           ))}
@@ -147,7 +150,7 @@ const Goalwebdesign = () => {
       <Step
         id="step-6"
         number={6}
-        title={`Design A World-Class Safari Website Enhances Safari\nBrand Credibility`}
+        title={`It’s Time To Make Your Safari Site Visible In Front Of Your Customers.`}
       >
         <p>
           Your <strong>African Safari Website</strong> is ready to go live at this stage of the web
@@ -155,12 +158,12 @@ const Goalwebdesign = () => {
           will ready to go for live the site.
         </p>
  
-        <div className="px-[10px] py-[10px] text-[16px] mt-15 mb-8">
+        <div className=" sm:px-[10px] sm:py-[10px]  sm:mt-[70px] mt-[50px]  ">
          
             <button 
              onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}
-            className="bg-[#011833] text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#011833] cursor-pointer hover:bg-[#ff5254] hover:border-[#ff5254] hover:text-white transition-colors duration-300">
-              <strong>STAND OUT AMONGST THE CROWD</strong>
+            className="bg-[#011833] text-white sm:text-[16px] text-[14px]  uppercase font-[500] sm:px-10 px-[12px] sm:py-[12px] py-[10px] rounded-[5px] border border-[#011833] cursor-pointer hover:bg-[#ff5254] hover:border-[#ff5254] hover:text-white ease-in duration-300">
+              STAND OUT AMONGST THE CROWD!
             </button>
         
         </div>

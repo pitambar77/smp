@@ -25,7 +25,7 @@ const SubGallery = () => {
   return (
     <div className=' w-full pt-[70px] pb-[10px]'>
       <div className=' max-w-[1140px] mx-auto text-center  '>
-        <h1 className='text-[50px] text-[#3467d8] font-[700] px-[57px] pb-[15px] '>{heading.heading}</h1>
+        <h1 className='text-[50px] text-[#3467d8] font-[700] text-center capitalize pb-[15px] '>{heading.heading}</h1>
         <p className=' text-[18px] font-[500] text-[#787878]'>{heading.subheading}</p>
       </div>
       <Gallery/>

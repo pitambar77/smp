@@ -8,6 +8,7 @@ import ImageBlock from '../../components/ImageBlock'
 import TextImageSection from '../../components/TextImageSection'
 import CardCarousel from '../taituTour/CardCarousel'
 import Common from '../../components/Common'
+import Content9 from '../../pages/home/Content9'
 
 import aficanluxurysafari1 from '../../assets/images/africanluxurysafari-case-study1.png'
 import axios from 'axios'
@@ -133,6 +134,7 @@ const AfricanluxurysafariCaseStudy = () => {
             
       </div>
       <Common/>
+      <Content9/>
     </>
   )
 }

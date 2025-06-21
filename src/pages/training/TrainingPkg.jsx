@@ -12,11 +12,11 @@ const trainingData = [
 
 const TrainingCard = ({ title, onClick, description }) => (
   <div className=" border border-[#f1f1f1] rounded  max-w-[1140px] mx-auto  text-center] ">
-    <div className="bg-[#ff5254] text-white text-[26px]  font-bold text-center py-[10px] px-[15px] ">
+    <div className="bg-[#ff5254] text-white text-[26px]  font-semibold text-center py-[10px] px-[15px] ">
       {title}
     </div>
     <p className="text-center text-[17px] text-[#787878] mt-4 mb-6 px-4">{description}</p>
-    <ul className="space-y-2 text-center text-[17px] text-[#787878]">
+    <ul className=" text-center text-[17px] text-[#787878]">
       {trainingData.map((item, idx) => (
         <li
           key={idx}

@@ -27,6 +27,10 @@ const API_URL = `${ BASE_URL }/api/organicvideo`;
 const OrganicMarketing = () => {
   const data = caseStudies.organicMarketng
   const [video, setVideo] = useState(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
  
   useEffect(() => {
     axios.get(API_URL)
@@ -47,7 +51,7 @@ const OrganicMarketing = () => {
     <div>
       <Banner {...data} />
       <div className="flex justify-center items-center -mt-15 z-10 relative">
-        <div className="w-full max-w-[918px] h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
+        <div className="w-[290px] h-[200px] sm:w-[918px] sm:h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
           {videoId ? (
             <iframe
               className="w-full h-full"

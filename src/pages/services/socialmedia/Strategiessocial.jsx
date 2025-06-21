@@ -1,6 +1,7 @@
 import React from "react";
-import { CheckCircle } from "lucide-react";
+
 import { useNavigate } from "react-router-dom";
+import { PiCheckFatFill } from "react-icons/pi";
 const Step = ({ id, number, title, children, isFirst = false }) => {
   return (
     <div id={id} className="pt-14  pb-5 ">
@@ -18,7 +19,7 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
         {/* Left side */}
         <div className="md:col-span-4">
           <h3 className="text-2xl font-bold text-[#0b2239]">STEP {number}:</h3>
-          <h4 className="mt-2 text-white text-2xl font-semibold leading-snug whitespace-pre-line">
+          <h4 className="mt-1 text-white text-2xl font-[500] leading-snug whitespace-pre-line">
             {title}
           </h4>
         </div>
@@ -81,7 +82,7 @@ const Strategiessocial = () => {
             // 'Who are your competitors and how they are performing?',
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+              <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -103,7 +104,7 @@ const Strategiessocial = () => {
             "KMaintaining the safari brand’s positioning",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -117,7 +118,7 @@ const Strategiessocial = () => {
             "Type of content (like images, videos, surveys, or blogs)",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -138,7 +139,7 @@ const Strategiessocial = () => {
             "Long videos for informative content",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -148,7 +149,7 @@ const Strategiessocial = () => {
           {["Instagram", "Facebook", "Twitter", "LinkedIn, and", "YouTube"].map(
             (item, i) => (
               <li key={i} className="flex items-start gap-2">
-                <i className="fas fa-check text-white mt-1"></i>
+                <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
                 <span>{item}</span>
               </li>
             )
@@ -173,7 +174,7 @@ const Strategiessocial = () => {
             "Asking for regular customer feedback",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -195,7 +196,9 @@ const Strategiessocial = () => {
           plan the content that would work best for your business to generate
           revenue.
         </p>
-        <div className="px-[10px] py-[10px] text-[16px] mt-15 mb-8">
+        
+      </Step>
+      <div className="px-[10px] py-[10px] text-center text-[16px] mt-2 pb-[80px]">
           <button
             onClick={() => {
               navigate("/lets-grow-business");
@@ -203,10 +206,9 @@ const Strategiessocial = () => {
             }}
             className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[15px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white transition-colors duration-300"
           >
-            <strong>STAND OUT AMONGST THE CROWD</strong>
+            STAND OUT AMONGST THE CROWD!
           </button>
         </div>
-      </Step>
     </div>
   );
 };

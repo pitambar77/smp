@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { PiCheckFatFill } from "react-icons/pi";
 
 const contentLeft = [
   {
@@ -85,15 +86,15 @@ const WebsitesGoogleads = () => {
                 {contentLeft.map((item, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-start w-full relative pl-[30px] pb-[20px] m-0 list-none font-[Montserrat] text-white "
+                    className="flex flex-col items-start w-full relative  pb-[20px] m-0 list-none  text-white "
                   >
                     <div className="flex items-center gap-2 mb-1">
-                      <i className="fa-solid fa-check text-red-500 text-[20px]"></i>
-                      <strong className="text-[20px]  font-bold text-left">
+                      <PiCheckFatFill className=" text-[#ff5255] text-[18px] -mt-2 " />
+                       <strong className="text-[18px] font-bold text-left mb-1 pb-[4px] ">
                         {item.heading}
                       </strong>
                     </div>
-                    <p className="text-[18px] font-normal text-left leading-[1.7]">
+                    <p className="text-[18px] font-normal text-left leading-[1.7] pl-[30px]">
                       {item.content}
                     </p>
                   </div>
@@ -101,20 +102,21 @@ const WebsitesGoogleads = () => {
               </div>
 
               {/* Right Column */}
-              <div className="space-y-6 px-2 w-[464px]">
+              <div className="space-y-6 px-4 w-[464px]">
                 {contentRight.map((item, i) => (
                   <div
                     key={i}
-                    className="flex flex-col items-start w-full relative pl-[30px] pb-[20px] m-0 list-none font-[Montserrat] text-white"
+                    className="flex flex-col items-start w-full relative  pb-[20px] m-0 list-none font-[Montserrat] text-white"
                   >
                     {/* <i className="fa-solid fa-check text-red-500 mt-1"></i> */}
                     <div className="flex items-center gap-2 mb-1">
-                      <i className="fa-solid fa-check text-red-500 text-[20px]"></i>
+                      
+                      <PiCheckFatFill className=" text-[#ff5255] text-[18px] -mt-2 " />
                       <strong className="text-[18px] font-bold text-left mb-1 pb-[4px] ">
                         {item.heading}
                       </strong>
                     </div>
-                    <p className="text-[18px] font-normal text-left leading-[1.7]">
+                    <p className="text-[18px] font-normal text-left leading-[1.7] pl-[30px]">
                       {item.content}
                     </p>
                   </div>

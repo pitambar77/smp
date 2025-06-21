@@ -80,11 +80,11 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-semibold text-[18px] tracking-wide leading-1.2 mb-1.5 text-[#fff]  ">CALL</p>
-              <p className="text-gray-100">+91-6371-223-581</p>
+              <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]"> <Link to="tel: +91-6371-223-581">+91-6371-223-581</Link></p>
             </div>
             <div>
               <p className="font-semibold mb-1.5 text-[18px] tracking-wide leading-1.2 text-[#fff]  ">EMAIL</p>
-              <p className="text-[#fff] font-[400] hover:text-[#ff5254]" >sales@manoramaseoservice.com</p>
+              <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]" > <Link to="mailto: sales@manoramaseoservice.com">sales@manoramaseoservice.com</Link> </p>
             </div>
           </div>
  

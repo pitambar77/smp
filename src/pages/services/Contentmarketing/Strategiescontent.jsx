@@ -1,6 +1,7 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { PiCheckFatFill } from "react-icons/pi";
 
 const Step = ({ number, title, children, isFirst = false }) => {
   return (
@@ -50,7 +51,7 @@ const Strategiescontent = () => {
             "The keywords they want to prioritize",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+              <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -84,7 +85,7 @@ const Strategiescontent = () => {
             "How smartly they have placed their keywords",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -113,7 +114,7 @@ const Strategiescontent = () => {
             "Adding safari flavor to the content so it resonates with the safari and tour audience",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+             <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}
@@ -142,7 +143,7 @@ const Strategiescontent = () => {
             "Making sure the content is plagiarism-free",
           ].map((item, i) => (
             <li key={i} className="flex items-start gap-2">
-              <i className="fas fa-check text-white mt-1"></i>
+              <span className=' mt-1 mr-[12px] text-[#fff]  text-[18px] font-[600]'><PiCheckFatFill  /></span>
               <span>{item}</span>
             </li>
           ))}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Homecontent from './Homecontent'
 import Takepride from './Takepride'
 import Lifecycle from './Lifecycle'
@@ -13,6 +13,9 @@ import Common from '../../../components/Common'
 import Content9 from '../../home/Content9'
 
 function Content() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <>
