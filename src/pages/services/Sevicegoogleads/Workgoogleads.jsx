@@ -41,27 +41,27 @@ const WorkProcessgoogleads = () => {
     }
   };
   return (
-    <section className="bg-[#f4f4f4] text-center px-2 py-16 font-[Montserrat]">
+    <section className="bg-[#f4f4f4] text-center px-4 sm:py-16 py-[40px]">
       {/* Heading */}
-      <div className="max-w-[1140px] mx-auto mt-6 mb-6">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#3467d8] mb-2 leading-[1.5]">
+      <div className="max-w-[1140px] mx-auto sm:mt-6 mb-6">
+        <h2 className="text-[24px] sm:text-5xl font-bold text-[#3467d8] mb-2 capitalize sm:leading-[1.5]">
           Crafting a Distinctive Impact with Our Exceptional Work
         </h2>
 
         {/* Subheadings */}
-        <p className="text-xl mt-5 mb-5 text-[#5e5e5e]">
+        <p className="text-xl mt-5 mb-5 text-[#787878]">
           Reach Your Target Market With Ads That Convert
         </p>
-        {/* <p className="text-xl text-[#5e5e5e] mb-6">Identify the goal of your Safari Website</p> */}
+        {/* <p className="text-xl text-[#787878] mb-6">Identify the goal of your Safari Website</p> */}
 
         {/* Description */}
 
-        <p className=" float-left  text-[#5e5e5e] text-[17px]  text-start leading-relaxed px-[15px] ">
+        <p className=" float-left  text-[#787878] text-[17px]   sm:text-start text-justify leading-relaxed sm:px-[15px] pb-[15px] ">
           As every safari & tour business requires unique attention for running
           an ad campaign, we prepare tailor made strategies that would result in
           great returns along with amazing revenue generations.
         </p>
-        <p className=" text-[#5e5e5e] text-[17px]  text-start leading-relaxed mb-12 px-[15px]">
+        <p className=" text-[#787878] text-[17px]   sm:text-start text-justify leading-relaxed mb-12 sm:px-[15px]">
           With doing a deep analysis like knowing the keywords that would give
           us a great exposure to preparing world-class landing pages that would
           convert, we help you in designing great ad campaigns
@@ -82,7 +82,7 @@ const WorkProcessgoogleads = () => {
             >
               {/* Number */}
               <span
-                className="text-[80px]  hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                className="sm:text-[80px] text-[60px]  hover:text-red-500 font-semibold leading-[1em] relative -left-1"
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   // color: 'black',
@@ -97,7 +97,7 @@ const WorkProcessgoogleads = () => {
 
               {/* Text */}
               <div
-                className={`text-xl text-red-500 items-center font-semibold leading-snug text-[22px] text-left   hover:text-[#3467d8] ${step.color}`}
+                className={` text-red-500 items-center font-semibold leading-snug sm:text-[22px] text-[21px]  text-left   hover:text-[#3467d8] ${step.color}`}
                 // style={{ color: step.color }}
               >
                 {step.text}

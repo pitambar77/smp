@@ -1,5 +1,9 @@
 import React from "react";
 import { BiSolidQuoteRight } from "react-icons/bi";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
 
 const testimonials = [
   {
@@ -42,8 +46,8 @@ const testimonials = [
 const Testimonial = () => {
   return (
     <div className=" w-full">
-      <div className=" max-w-[1140px] mx-auto pt-[70px]  items-center justify-center text-center">
-        <h1 className=" capitalize px-[8%] pb-[15px] text-[48px]  text-[#3467d8] font-[700] leading-[1.4] ">
+      <div className=" max-w-[1140px] mx-auto pt-[30px]  items-center justify-center text-center">
+        <h1 className=" capitalize md:px-[8%] pb-[15px] px-4 md:px-0  md:text-[48px] text-[24px]  text-[#3467d8] font-[700] leading-[1.4] ">
           See What Our Clients Are Saying About Our Services
         </h1>
         <p className=" px-4  text-cente text-[#787878] text-[22px] font-[400]">
@@ -51,7 +55,7 @@ const Testimonial = () => {
         </p>
       </div>
 
-      <div className="max-w-[1140px] mx-auto px-4 py-[30px] overflow-hidden">
+      {/* <div className="max-w-[1140px] mx-auto px-4 py-[30px] overflow-hidden">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
           {testimonials.map((item, index) => (
             <div
@@ -82,7 +86,87 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
+      </div> */}
+
+
+
+<div className="max-w-[1140px] mx-auto px-4 md:py-[30px]  overflow-hidden">
+
+      {/* ✅ Mobile Swiper */}
+      <div className="sm:hidden ">
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+        >
+          {testimonials.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-lg shadow-[0px_6px_16px_rgb(0_0_0_/_22%)] p-5 h-[340px] mb-[40px]  flex flex-col justify-between overflow-hidden">
+                <BiSolidQuoteRight className="absolute bottom-35  right-[10px] text-gray-200 md:w-30 md:h-30  w-20 h-20 opacity-70 z-0" />
+                <p className="text-[#787878] md:text-[16px] text-[14px] leading-inherit mb-[15px] relative z-10 text-justify">
+                  {item.text}
+                </p>
+                <div className="flex items-center gap-4 pt-4 relative z-10">
+                  <img
+                    src={item.image}
+                    alt={item.company}
+                    className="w-[80px] h-full object-contain"
+                  />
+                  <div>
+                    <h3 className="text-[#011833] md:text-[20px] text-[16px] font-semibold pb-[5px]">
+                      {item.company}
+                    </h3>
+                    <p className="text-[#787878] md:text-[16px] text-[13px] pb-[5px] font-medium">
+                      {item.name}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
+
+      {/* ✅ Original Grid for sm and above (unchanged) */}
+      <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
+        {testimonials.map((item, index) => (
+          <div
+            key={index}
+            className="relative bg-white rounded-lg shadow-[0px_6px_16px_rgb(0_0_0_/_22%)] p-5 h-[340px] flex flex-col justify-between overflow-hidden"
+          >
+            <BiSolidQuoteRight className="absolute bottom-17 right-[10px] text-gray-200 w-30 h-30 opacity-70 z-0" />
+            <p className="text-[#787878] text-[16px] leading-inherit mb-[15px] relative z-10">
+              {item.text}
+            </p>
+            <div className="flex items-center gap-4 pt-4 relative z-10">
+              <img
+                src={item.image}
+                alt={item.company}
+                className="w-[80px] h-full object-contain"
+              />
+              <div>
+                <h3 className="text-[#011833] text-[20px] font-semibold pb-[5px]">
+                  {item.company}
+                </h3>
+                <p className="text-[#787878] text-[16px] pb-[5px] font-medium">
+                  {item.name}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+
+
+
+
+
+
+
     </div>
   );
 };

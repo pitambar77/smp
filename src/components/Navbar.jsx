@@ -43,6 +43,8 @@
 //   );
 // }
 
+//<----------------------------------Responsive ---------------------------------------->
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import smplogo from "../assets/images/smp-logo.png";
@@ -112,7 +114,6 @@ export default function Navbar() {
         <div className="max-w-[1170px] mx-auto py-[10px]">
           <div className="flex justify-between items-center px-[15px]">
             <Link to="/">
-           
               <img
                 src={smplogo}
                 alt="Logo"
@@ -120,7 +121,6 @@ export default function Navbar() {
               />
             </Link>
 
-         
             <div className="hidden md:flex text-white text-left items-center  cursor-pointer hover:text-[#ff5254]">
               <img
                 src={phonelogo}

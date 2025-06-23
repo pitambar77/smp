@@ -18,28 +18,51 @@ const Tabs = ({ activeTab, onChange }) => {
     //     </div>
     // </div>
 
-    <div className=' w-full'>
-        <div className=' w-[1140px] mx-auto   pt-[65px]   '>
-             <h1 className=' capitalize  text-[50px]  font-[700] text-[#3467d8] text-center leading-snug pb-[15px]'>Most Demaned Packages</h1>
-             <div className="flex justify-center items-center mt-[30px]  flex-wrap">
-      {tabs.map((tab, i) => (
-        <button
-          key={i}
-          onClick={() => onChange(tab)}
-          className={`py-[15px] px-[40px] rounded-md font-[600] mr-[17px] text-[20px] border-2 border-[#ccc] cursor-pointer duration-300 ${
-            activeTab === tab
-              ? "bg-[#ff5254] text-white border-[#ff5254]   "
-              : "border-[#ccc] text-[#011833]"
-          }`}
-        >
-          {tab}
-        </button>
-      ))}
-    </div>
+    // <div className=' w-full'>
+    //   <div className=' w-[1140px] mx-auto   md:pt-[65px] pt-[30px]  '>
+    //     <h1 className=' capitalize  md:text-[50px] text-[24px]  font-[700] 
+    //          text-[#3467d8] text-center leading-snug pb-[15px]'>Most Demaned Packages</h1>
+    //     <div className="flex justify-center items-center mt-[30px]  flex-wrap">
+    //       {tabs.map((tab, i) => (
+    //         <button
+    //           key={i}
+    //           onClick={() => onChange(tab)}
+    //           className={`py-[15px] px-[40px] rounded-md font-[600] mr-[17px] text-[20px] border-2 border-[#ccc] cursor-pointer duration-300 ${activeTab === tab
+    //               ? "bg-[#ff5254] text-white border-[#ff5254]   "
+    //               : "border-[#ccc] text-[#011833]"
+    //             }`}
+    //         >
+    //           {tab}
+    //         </button>
+    //       ))}
+    //     </div>
+    //   </div>
+    // </div>
+    <div className='w-full'>
+      <div className='xl:w-[1140px] mx-auto md:pt-[65px] md:pt-[30px]'>
+        <h1 className='capitalize md:text-[50px] text-[24px] font-[700] text-[#3467d8] text-center leading-snug pb-[15px]'>
+          Most Demanded Packages
+        </h1>
+
+        {/* Tab Buttons */}
+        <div className="flex flex-wrap justify-center items-center md:mt-[30px] gap-3">
+          {tabs.map((tab, i) => (
+            <button
+              key={i}
+              onClick={() => onChange(tab)}
+              className={`md:py-[10px] md:px-[25px] py-1 px-1 rounded-md font-[600] md:text-[16px] text-[14px] border-2 border-[#ccc] cursor-pointer transition duration-300 ${activeTab === tab
+                  ? "bg-[#ff5254] text-white border-[#ff5254]"
+                  : "border-[#ccc] text-[#011833]"
+                }`}
+            >
+              {tab}
+            </button>
+          ))}
         </div>
+      </div>
     </div>
 
-   
+
 
 
   )

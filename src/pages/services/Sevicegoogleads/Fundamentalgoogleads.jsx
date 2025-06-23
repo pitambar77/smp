@@ -6,8 +6,8 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        width="60px"
-        height="60px"
+        width="30px"
+        height="30px"
         viewBox="0 0 256 208"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -37,8 +37,8 @@ const features = [
   {
     icon: (
       <svg
-        height="60px"
-        width="60px"
+        width="30px"
+        height="30px"
         viewBox="0 0 256 256"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -85,8 +85,8 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        width="60px"
-        height="60px"
+       width="30px"
+        height="30px"
         viewBox="0 0 512 512"
         stroke="#ff5254"
         strokeWidth="5.632"
@@ -116,8 +116,8 @@ const features = [
   {
     icon: (
       <svg
-        width="64px"
-        height="64px"
+        width="30px"
+        height="30px"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -152,12 +152,13 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
+         width="30px"
+        height="30px"
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="60px"
-        height="60px"
+       
         viewBox="0 0 256 256"
         xmlSpace="preserve"
       >
@@ -191,8 +192,8 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        height="64px"
-        width="64px"
+        width="30px"
+        height="30px"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -252,31 +253,31 @@ function Fundamentalgoogleads() {
     <div>
       <div className="w-full h-full bg-[#f0f0f0] flex items-center justify-center px-4 ">
         <div className="max-w-6xl mx-auto text-center  mt-15">
-          <h2 className="font-[Montserrat] font-bold text-[48px] text-center capitalize text-[#3467d8] leading-[1.4] m-0 px-0 pb-[15px]">
+          <h2 className=" font-bold sm:text-[48px] text-[24px] text-center capitalize text-[#3467d8] leading-[1.4] m-0 px-0 pb-[15px]">
             Why should you consider Google Ad Safari Campaigns?
           </h2>
 
-          <h6 className="font-[Montserrat] font-normal text-[22px] text-center capitalize text-[#787878] leading-[1.4] mb-7">
+          <h6 className=" font-normal text-[22px] text-center capitalize text-[#787878] leading-[1.4] sm:mb-7 mb-4">
             Boost Your Brand Recognition and Scale Up Quickly
           </h6>
 
-          <p className="font-[Montserrat] font-normal text-[17px] text-center text-[#787878] leading-[inherit] capitalize m-0 pt-0 pb-[15px] px-[6%] min-h-[120px]">
+          <p className=" font-normal sm:text-[17px] text-[15px] text-center text-[#787878] leading-[inherit] capitalize m-0 pt-0 pb-[15px] px-[6%] min-h-[120px]">
             Starting our understanding of your needs from a marketing campaign
             to delivering revenue-generating results, we would be there with you
             in every step of running a successful ad. Here are some of the
             reasons you should consider us in your ad journey.
           </p>
 
-          <section className="py-12 px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          <section className="sm:py-12 py-6 sm:px-6">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10 gap-4">
               {features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-8">
-                  <div className="w-8 h-8 mt-1">{feature.icon}</div>
+                <div key={idx} className="flex items-start sm:gap-8 gap-4">
+                  <div className="w-20 h-20 mt-1">{feature.icon}</div>
                   <div>
-                    <h3 className="font-[Montserrat] font-semibold text-[22px] text-left text-[#011833] m-0 p-0 pb-[5px] capitalize">
+                    <h3 className=" font-semibold sm:text-[22px] text-[17px] text-left text-[#011833] m-0 p-0 pb-[5px] capitalize">
                       {feature.title}
                     </h3>
-                    <p className="font-[Montserrat] font-medium text-[16px] text-left text-[#787878] m-0 p-0 min-h-[120px]">
+                    <p className=" font-medium sm:text-[16px] text-[14px] sm:text-left text-justify text-[#787878] m-0 p-0 min-h-[120px]">
                       {feature.description}
                     </p>
                   </div>
@@ -284,17 +285,17 @@ function Fundamentalgoogleads() {
               ))}
             </div>
 
-            <div className="mt-10 text-center mb-8">
+            <div className="sm:mt-10 text-center sm:mb-8 mb-2">
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#ff4d4d] text-white font-semibold px-[30px] py-3 rounded  cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition"
+                className="bg-[#ff4d4d] text-white sm:text-[17px] text-[14px] font-semibold sm:px-[30px] sm:py-3 p-[10px] rounded  cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition"
               >
                 SCHEDULE CALL WITH AN EXPERT
               </button>
             </div>
 
             {showForm && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 ">
                 <div
                   className="  relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
                          animate-slide-down-fade"

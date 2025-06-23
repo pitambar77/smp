@@ -85,7 +85,7 @@ function Faqgoogleads() {
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className={`w-full flex justify-between cursor-pointer px-[15px] py-[20px] text-[18px] font-[500] transition-colors duration-300 ease-in-out
+            className={`w-full flex justify-between cursor-pointer sm:px-[15px] sm:py-[20px] px-[10px] py-[10px] sm:text-[18px] text-[14px] font-[500] transition-colors duration-300 ease-in-out
                  ${
                    openIndex === index
                      ? "hover:bg-[#333] bg-[#f1f1f1]  hover:text-white text-gray-900 "
@@ -103,7 +103,7 @@ function Faqgoogleads() {
             </span>
           </button>
           {openIndex === index && (
-            <div className="px-6 py-4 text-[#787878] text-[17px]">
+            <div className="px-6 py-4 text-[#787878] sm:text-[17px] text-[14px]">
               <p className="mb-0 whitespace-pre-line">{answer}</p>
             </div>
           )}
@@ -112,13 +112,13 @@ function Faqgoogleads() {
     });
 
   return (
-    <div className="bg-white pt-[100px] pb-[30px] px-4 sm:px-6 lg:px-8">
+    <div className="bg-white pt-[100px] sm:pb-[30px] pb-[10px] px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1125px] mx-auto ">
-        <h2 className="font-[Montserrat] text-center  font-[700] text-[40px] capitalize text-[#3467d8] leading-[1.3] mb-10 px-[20%] pb-[20px]">
+        <h2 className=" text-center  font-[700] sm:text-[40px] text-[24px] capitalize text-[#3467d8] leading-[1.3]  sm:mb-10 mb-4 sm:px-[20%] sm:pb-[20px] pb-[10px]">
           Frequently Asked Questions
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] px-[8px] ">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-x-[30px] px-[8px] ">
           <div className="flex flex-col  text-start">
             {renderFAQItems(leftColumn, 0)}
           </div>

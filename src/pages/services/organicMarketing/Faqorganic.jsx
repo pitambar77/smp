@@ -11,8 +11,7 @@ const faqs = [
   { question: 'How much do your charge for organic marketing cost?',answer:'Our monthly organic marketing fees range from 1000$ to $3000+/month. When you request an Organic marketing quote, we’ll review your website and provide a quote based on the size of your website and the strength of your competition.' },
  
   { question: 'Is Organic Marketing Is Better Than Paid Advertising?',answer:'ORGANIC MARKETING and PAID ADVERTISING work together to boost your website and position your brand as an authority in your industry or niche. ORGANIC MARKETING often gives you a far better return on your investment by comparison to paid media options. That’s not to say that ORGANIC MARKETING is cheap and easy; it takes a fair amount of time and resources to get it right but its long-term rewards are immense and sustainable. Most times, SEO and paid advertising will work together to provide the best results.' },
-  // { question: 'How does the payment work and how much does it cost?', answer: 'We agree on payment before starting. For websites: 50% upfront, 50% before launch. For marketing: 50% upfront, 50% after 6 months...' },
-  // { question: 'What are the benefits of hiring a digital marketing agency?', answer: 'It lets you focus on growing your safari business while we handle digital growth with reliable, accountable experts...' }
+  
 ];
  
 function Faqorganic() {

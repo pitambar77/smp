@@ -68,8 +68,9 @@ useEffect(() => {
         imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
       />
    
-       <div className=' max-w-[1140px]  mx-auto mt-[60px]  text-center  '>
-        <p className='  text-center pr-[12%] pl-[12%] pb-[10px] text-[20px]  text-[#787878] font-[400] leading-[1.8] '>Too many digital marketing providers take a copy-and-paste approach to their services. That’s not our style — and it’s not how we've driven $3 billion in revenue for our clients in just the past twelve years. Instead, we build custom plans based on your safari and tour business industry and goals. Get a preview of what that can look like below:</p>
+       <div className=' max-w-[1140px]  mx-auto md:mt-[60px] py-[40px]  text-center  '>
+        <p className='  text-center md:pr-[12%] md:pl-[12%] pb-[10px] md:text-[20px] text-[15px] px-4
+        text-[#787878] font-[400] md:leading-[1.8] leading-[1.6] '>Too many digital marketing providers take a copy-and-paste approach to their services. That’s not our style — and it’s not how we've driven $3 billion in revenue for our clients in just the past twelve years. Instead, we build custom plans based on your safari and tour business industry and goals. Get a preview of what that can look like below:</p>
      </div>
       <main className=" max-w-[1140px] mx-auto">
         <Tabs activeTab={activeTab} onChange={setActiveTab} />

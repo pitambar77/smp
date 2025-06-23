@@ -16,7 +16,7 @@ const BgSticky = () => {
   }, [showForm]);
   return (
     <div
-      className="relative py-[80px] bg-fixed bg-cover bg-center flex items-center justify-center"
+      className="relative md:py-[80px] py-[50px] bg-fixed bg-cover bg-center flex items-center justify-center"
       style={{
         backgroundImage:
           "url('https://safarimarketingpro.com/images/gfsedmv-bg.jpg')",
@@ -33,20 +33,27 @@ const BgSticky = () => {
 
       {/* Text Content */}
       <div className="relative z-30 text-center  max-w-[1140px] mx-auto">
-        <h2 className="  font-bold text-[48px] text-center capitalize text-white leading-[1.3] px-[10%] pb-[20px] ">
+        {/* <h2 className="  font-bold text-[48px] text-center capitalize text-white leading-[1.3] px-[10%] pb-[20px] "> */}
+        <h2 className="font-bold  text-[24px] md:text-[48px] text-center capitalize text-white leading-[1.3] px-4 sm:px-[10%] pb-[20px]">
+
           Let's Make Sure Your Safari Business Is Online 24/7.
         </h2>
 
-        <p className="text-[19px]  text-white  font-[400] capitalize tracking-[1px]">
+        {/* <p className="text-[19px]  text-white  font-[400] capitalize tracking-[1px]"> */}
+        <div className="px-[20px] md:px-0">
+        <p className="text-[15px] md:text-[19px] text-white font-[400] capitalize tracking-[1px]  ">
+
           All good things start with a chat…
         </p>
-        <button
+         <button
           onClick={() => setShowForm(true)}
-          className=" cursor-pointer font-[600] mt-[50px] uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[12px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+          // className=" cursor-pointer font-[600] mt-[50px] uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[12px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+          className="cursor-pointer font-[600] mt-[30px] md:mt-[50px] uppercase text-[14px]  md:text-[16px] tracking-[1.2px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] md:py-[12px] py-[10px] md:px-[40px] px-[30px]  bg-[#ff5254]  text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+
         >
           Get my free 30 minute strategy session
         </button>
-
+</div>
         {showForm && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
             <div

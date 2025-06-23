@@ -26,7 +26,8 @@ const pageKeys = [
   "getStartTraning",
   "webDesign",
   "pricing",
-  "contentMarketng"
+  "contentMarketng",
+  "googleads"
 ];
 
 

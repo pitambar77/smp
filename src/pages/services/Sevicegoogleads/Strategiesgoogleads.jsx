@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Step = ({ id, number, title, children, isFirst = false }) => {
   return (
-    <div id={id} className="pt-12 ">
+    <div id={id} className="sm:pt-12 pt-6  ">
       {!isFirst && (
         <div className="max-w-[1140px] mx-auto">
           <div className="border-t border-gray-300 w-full" />
@@ -14,14 +14,14 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
       <div className="max-w-[1140px] mt-10 mx-auto px-4 grid md:grid-cols-12 gap-6 items-start">
         {/* Left side */}
         <div className="md:col-span-4">
-          <h3 className="text-2xl font-bold text-[#0b2239]">STEP {number}:</h3>
-          <h4 className="mt-2 text-white text-2xl font-semibold leading-snug whitespace-pre-line">
+          <h3 className="sm:text-2xl text-[18px] font-bold text-[#0b2239]">STEP {number}:</h3>
+          <h4 className="mt-2 text-white sm:text-2xl text-[18px] font-semibold leading-snug whitespace-pre-line">
             {title}
           </h4>
         </div>
 
         {/* Right side */}
-        <div className="md:col-span-8 text-white space-y-4 text-[17px]">
+        <div className="md:col-span-8 text-white space-y-4 sm:text-[17px] text-[14px]">
           {children}
         </div>
       </div>
@@ -32,7 +32,7 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
 const Strategiesgoogleads = () => {
   const navigate = useNavigate();
   return (
-    <div className="bg-[#ff5254] min-h-screen">
+    <div className="bg-[#ff5254] ">
       {/* Step 1 */}
       <Step
         id="step-1"
@@ -152,13 +152,13 @@ const Strategiesgoogleads = () => {
           .
         </p>
       </Step>
-      <div className="px-[10px] py-[10px] text-center text-[16px] mt-8 pb-[100px] ">
+      <div className="sm:px-[10px] sm:py-[10px] text-center  mt-8 sm:pb-[100px] pb-[30px] ">
         <button
           onClick={() => {
             navigate("/lets-grow-business");
             window.scrollTo(0, 0);
           }}
-          className="bg-[#011833] cursor-pointer text-white text-[16px] uppercase font-semibold px-10 py-[12px] rounded-[5px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white ease-in duration-300"
+          className="bg-[#011833] cursor-pointer text-white sm:text-[16px] text-[14px] uppercase font-semibold px-[10px] sm:py-[12px] py-[10px] rounded-[4px] border border-[#ff5254] hover:bg-[#ff5254] hover:text-white ease-in duration-300"
         >
           Get Quick Inquiries Now
         </button>

@@ -7,17 +7,17 @@ const CaroselSection = () => {
     <div className=" w-full mt-24 bg-[#011833] z-10 ">
       <div className=" w-full  bg-[#ff5254]">
         
-        <div className=" max-w-[1140px] mx-auto py-[100px]">
+        <div className=" max-w-[1140px] mx-auto md:py-[100px] py-[40px]">
           
           <div className=" text-center">
-            <h1 className=" w-full text-[44px] font-[700] text-white py-[20px] ">
+            <h1 className=" w-full md:text-[44px] text-[24px] font-[700] text-white py-[20px] ">
               Explore Success Stories
             </h1>
-            <h2 className=" text-[24px] font-[600] text-white ">
+            <h2 className=" md:text-[24px]   text-[18px] font-[600] text-white ">
               Team Up With Safari Marketing Pro – The Next Amazing Case Study
               Could Be Yours!
             </h2>
-            <p className=" text-[17px] font-[500] leading-[1.7] text-white pb-[50px] pt-[3%] px-[10px]">
+            <p className=" md:text-[17px] text-[14px] font-[500] leading-[1.7] text-white md:pb-[50px]  pt-[3%] px-[10px]">
               We bring innovative thinking, an adaptive methodology, strong
               ethics, and years of expertise to marketing and web design in the
               safari and tour industry. Our team has won awards for our web

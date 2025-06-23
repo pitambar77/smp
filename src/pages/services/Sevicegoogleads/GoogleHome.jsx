@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { BASE_URL } from '../../../api/config';
+
  
 const API_URL = `${ BASE_URL }/api/googlevideo`;
+
+
  
 const GoogleHome = () => {
   const [video, setVideo] = useState(null);
@@ -23,9 +26,9 @@ const GoogleHome = () => {
   const videoId = video ? getYouTubeId(video.videoUrl) : null;
  
   return (
-    <section className="relative">
+    <section >
       {/* Background Image with Overlay and Content */}
-      <div className="w-full h-[540px] bg-[url('https://safarimarketingpro.com/images/google-ads-banner.jpg')] bg-cover bg-center">
+      {/* <div className="w-full h-[540px] bg-[url('https://safarimarketingpro.com/images/google-ads-banner.jpg')] bg-cover bg-center">
         <div className="w-full h-full bg-[linear-gradient(to_right,#0057ffd6_40%,#4679c587_80%,rgba(70,121,197,0.33)_100%)] flex items-center justify-center px-4">
           <div className="max-w-[1140px] mt-14 mx-auto text-center text-white">
             <h2 className="font-[Montserrat] text-center font-semibold text-[48px] capitalize leading-[1.4] mb-2 pb-[10px]">
@@ -36,11 +39,12 @@ const GoogleHome = () => {
             </p>
           </div>
         </div>
-      </div>
- 
+      </div> */}
+      
+     
       {/* YouTube iframe showing native UI with Watch on YouTube */}
       <div className=" w-full flex justify-center items-center -mt-15 z-10 relative">
-        <div className=" w-full max-w-[918px] h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
+        <div className="w-[290px] h-[200px] sm:w-[918px] sm:h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
           {videoId ? (
             <iframe
               className="w-full h-full"

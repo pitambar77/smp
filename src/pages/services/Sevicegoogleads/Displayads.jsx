@@ -12,16 +12,16 @@ const items = [
 
 const Displauads = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1160px] mx-auto px-6 py-20 gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 max-w-[1160px] mx-auto sm:px-6 sm:py-20 py-[50px] gap-10">
       {/* Left: Scrollable Content */}
       {/* Left: Your Content */}
-      <div className="space-y-8 ">
+      <div className="space-y-8 sm:order-1 order-2 ">
         <div>
-          <h3 className="font-[Montserrat] text-left font-bold text-[48px]  capitalize text-[#3467d8] leading-[1.4] m-0 pb-[15px]">
+          <h3 className=" sm:text-left text-center font-bold sm:text-[48px] text-[24px]  capitalize text-[#3467d8] leading-[1.4] m-0 pb-[15px]">
             Drive Customers with Search & Display Ads
           </h3>
 
-          <p className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] pt-[15px] pb-[17px] m-0">
+          <p className=" font-normal sm:text-[18px] text-[14px] sm:text-left text-justify text-[#787878] leading-[1.5] pt-[15px] pb-[17px] m-0 sm:px-0 px-4">
             With a detailed analysis of where your safari brand is positioned in
             the market, we curate paid ads that appear in front of your
             potential customers. After thoroughly testing to find the best
@@ -30,7 +30,7 @@ const Displauads = () => {
             Ads to get the most efficient results.
           </p>
 
-          <p className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] pt-[15px] pb-[17px] m-0">
+          <p className=" font-normal sm:text-[18px] text-[14px] sm:text-left text-justify text-[#787878] leading-[1.5] sm:pt-[15px] pb-[17px] m-0 sm:px-0 px-4">
             We apply deep{" "}
             <strong className="font-[600]">
               African Safari Keyword Research Technique
@@ -39,15 +39,15 @@ const Displauads = () => {
             looking for. Then we take out the most valuable time of the entire
             day to showcase it to your qualified audience.
           </p>
-          <h4 className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] m-0 py-[15px] pb-[17px]">
+          <h4 className=" font-normal sm:text-[18px] text-[14px] sm:text-left text-justify text-[#787878] leading-[1.5] m-0 py-[15px] pb-[17px] sm:px-0 px-4">
             Our key to Paid Ad management includes:
           </h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-left sm:px-0 px-4">
             {items.map((text, index) => (
               <div key={index} className="flex items-start space-x-8">
                 {/* <span className="text-green-500 text-xl mt-[18px]">✔</span> */}
-                <span className=' mt-[18px] mr-[12px] text-[#0dc091] text-[14px] font-[600]'><PiCheckFatFill  /></span>
-                <p className="font-[Montserrat] font-normal text-[18px] text-left text-[#787878] leading-[1.5] m-0 pt-[15px] pb-[17px]">
+                <span className=' sm:mt-[18px] mt-1 mr-[12px] text-[#0dc091] text-[14px] font-[600]'><PiCheckFatFill  /></span>
+                <p className=" font-normal sm:text-[18px] text-[14px] text-left text-[#787878] leading-[1.5] m-0 sm:pt-[15px] sm:pb-[17px]">
                   {text}
                 </p>
               </div>
@@ -57,7 +57,7 @@ const Displauads = () => {
       </div>
 
       {/* Right: Sticky Image */}
-      <div className="relative">
+      <div className="relative sm:order-2 order-1">
         <div className="sticky top-20">
           <img
             src="https://safarimarketingpro.com/images/google-adv-sub-img.png"
