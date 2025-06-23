@@ -65,7 +65,7 @@ const WebDesign = () => {
       />
  
       <div className="flex justify-center items-center -mt-15 z-10 relative">
-        <div className="w-[290px] h-[200px] md:max-w-[918px] md:h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
+        <div className="w-[290px] h-[200px] sm:w-[918px] sm:h-[450px]  rounded-lg shadow-2xl overflow-hidden bg-black relative" style={{ filter: 'drop-shadow(9px 13px 11px #4679c5)' }}>
           {videoId ? (
             <iframe
               className="w-full h-full"

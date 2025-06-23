@@ -10,7 +10,7 @@ const ClientReview = () => {
           </h1>
            <p  className=' px-4 py-4  text-cente text-[#787878] text-[22px] font-[400]'>Don’t just take our word for it. See what our clients are saying.</p>
         </div>
-        <div className=' hidden sm-block max-w-[1140px] mx-[80px]'>
+        <div className=' hidden sm:block max-w-[1140px] mx-[80px]'>
             <Review/>
         </div>
        

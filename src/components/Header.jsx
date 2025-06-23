@@ -186,12 +186,12 @@ export default function Header() {
         className={`flex items-center ${
           isBold ? "font-semibold" : "font-semibold"
         }
-          text-white group-hover:text-red-400 transition-all duration-500 ease-out py-[15px] text-[13px] md:text-[12px] lg:text-[15px]`}
+          text-white group-hover:text-red-400 transition-all duration-500 ease-out py-[15px]  text-[13px] sm:text-[12px] lg:text-[15px]`}
       >
         <p className="flex items-center">
           {label}
           <IoMdArrowDropdown
-            className={`text-[20px] md:text-[18px] lg:text-[24px] transition-all duration-500 ease-out ${
+            className={`text-[14px] sm:text-[18px] lg:text-[24px] transition-all duration-500 ease-out ${
               openDropdown === id ? "rotate-180" : ""
             } group-hover:text-red-400`}
           />
@@ -254,7 +254,7 @@ export default function Header() {
             <button
               onClick={() => setShowForm(true)}
               className="bg-[#FF5254] text-white cursor-pointer text-[13px] md:text-[10px] lg:text-[15px] font-semibold hover:bg-black hover:text-red-500 transition-all
-              duration-500 ease-out py-[10px] md:py-[10px] lg:py-[15px] px-[6px] md:px-[8px] lg:px-[20px] rounded-[4px]"
+              duration-500 ease-out py-[10px] sm:py-[10px] lg:py-[15px] px-[6px] sm:px-[8px] lg:px-[20px] rounded-[4px]"
             >
               REQUEST A FREE STRATEGY SESSION
             </button>
@@ -271,7 +271,7 @@ export default function Header() {
               >
                 ×
               </button>
-              <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+              <div className="text-white text-center md:py-8 py-2 -mt-5 rounded-t-lg">
                 <h3 className="text-[24px] font-medium leading-snug">
                   REQUEST A FREE STRATEGY SESSION
                 </h3>

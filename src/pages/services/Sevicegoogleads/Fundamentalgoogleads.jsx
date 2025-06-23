@@ -6,8 +6,7 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        width="30px"
-        height="30px"
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         viewBox="0 0 256 208"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -37,8 +36,7 @@ const features = [
   {
     icon: (
       <svg
-        width="30px"
-        height="30px"
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         viewBox="0 0 256 256"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -84,9 +82,8 @@ const features = [
   {
     icon: (
       <svg
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         fill="#ff5254"
-       width="30px"
-        height="30px"
         viewBox="0 0 512 512"
         stroke="#ff5254"
         strokeWidth="5.632"
@@ -116,8 +113,7 @@ const features = [
   {
     icon: (
       <svg
-        width="30px"
-        height="30px"
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -152,13 +148,11 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-         width="30px"
-        height="30px"
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         version="1.1"
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-       
         viewBox="0 0 256 256"
         xmlSpace="preserve"
       >
@@ -192,8 +186,7 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        width="30px"
-        height="30px"
+        className=" sm:w-[60px] sm:h-[60px] w-[30px] h-[30px]"
         version="1.1"
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -271,8 +264,8 @@ function Fundamentalgoogleads() {
           <section className="sm:py-12 py-6 sm:px-6">
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10 gap-4">
               {features.map((feature, idx) => (
-                <div key={idx} className="flex items-start sm:gap-8 gap-4">
-                  <div className="w-20 h-20 mt-1">{feature.icon}</div>
+                <div key={idx} className="flex items-start sm:gap-2 gap-4">
+                  <div className=" mt-1">{feature.icon}</div>
                   <div>
                     <h3 className=" font-semibold sm:text-[22px] text-[17px] text-left text-[#011833] m-0 p-0 pb-[5px] capitalize">
                       {feature.title}
@@ -285,7 +278,7 @@ function Fundamentalgoogleads() {
               ))}
             </div>
 
-            <div className="sm:mt-10 text-center sm:mb-8 mb-2">
+            <div className="sm:mt-14 text-center sm:mb-8 mb-2">
               <button
                 onClick={() => setShowForm(true)}
                 className="bg-[#ff4d4d] text-white sm:text-[17px] text-[14px] font-semibold sm:px-[30px] sm:py-3 p-[10px] rounded  cursor-pointer  hover:bg-[#011833] ease-in duration-500 hover:text-red-600 transition"

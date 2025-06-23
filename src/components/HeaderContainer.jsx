@@ -107,7 +107,7 @@ export default function HeaderContainer() {
             animate="visible"
             exit="hidden"
             variants={variants}
-            className="fixed top-0 left-0 w-full z-[999] bg-[#0057ff]  shadow-[0_1px_7px_0_rgba(0,0,0,0.4)] py-[15px]"
+            className="fixed top-0 left-0 w-full z-[999] bg-[#0057ff]  shadow-[0_1px_7px_0_rgba(0,0,0,0.4)] py-[13px]"
           >
             <div className=" max-w-[1140px] mx-auto">
               <div className=" flex justify-between items-center">
@@ -121,7 +121,7 @@ export default function HeaderContainer() {
                   <img
                     src={smplogo}
                     alt="smp logo"
-                    className=" w-24 filter invert brightness-0"
+                    className=" w-[92px]  filter invert brightness-0"
                   />
                 </button>
                 <div className="">

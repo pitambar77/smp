@@ -173,7 +173,7 @@ import React from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import FooterReviewcard from "./FooterReviewcard";
 import { Link } from "react-router-dom";
-
+ 
 export default function Footer() {
   return (
     <div className="bg-[#3467d8] text-white md:pt-22 pt-10  font-montserrat">
@@ -205,10 +205,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link
-                to="/social-media-marketing"
-                className="hover:text-[#ff5254]"
-              >
+              <Link to="/social-media-marketing" className="hover:text-[#ff5254]">
                 Social Media Marketing
               </Link>
             </li>
@@ -234,7 +231,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
+ 
         {/* Contacts */}
         <div className="flex-1">
           <h3 className="font-semibold md:text-[22px] text-[18px] md:mb-3.5  mb-2 tracking-wide">
@@ -266,7 +263,7 @@ export default function Footer() {
               </p>
             </div>
           </div>
-
+ 
           <h3 className="font-semibold md:text-[22px] text-[18px] md:mt-2.5 pt-[25px] md:mb-4 mb-3 tracking-wide text-left">
             LOVE US AS WE LOVE YOU!
           </h3>
@@ -297,7 +294,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
-
+ 
         {/* Reviews */}
         <div className="flex-1 max-w-md tracking-tighter mb-8">
           <h3 className="font-semibold md:text-[22px] text-[18px] mb-6 text-[#fff] text-left tracking-wide">
@@ -306,81 +303,91 @@ export default function Footer() {
           <FooterReviewcard />
         </div>
       </div>
-
-      <div className="bg-[#0A4ABF] hidden sm-block  md:flex flex-row justify-between items-center text-sm text-gray-100 mt-[60px] xl:py-4 md:py-2 px-6  xl:px-[120px]">
-        <p className="mb-2 md:mb-0 tracking-tight font-[400] text-[15px]">
-          © 2025 Safari Marketing Pro
-        </p>
-
-        <div className="flex items-center gap-2 flex-wrap pl-4">
-          <Link
-            to="/privacy-policy"
-            className="underline hover:text-[#ff5254] text-[14px] tracking-tight p-2 font-[500] mr-6"
-          >
-            Privacy Policy
-          </Link>
-
-          <img
-            src="https://safarimarketingpro.com/images/new-part-1.png"
-            alt="Google Partner"
-            className="h-auto  md:w-20 xl:w-28  px-2"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-2.png"
-            alt="UpCity"
-            className="h-auto  md:w-20  xl:w-28  px-2"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-3.png"
-            alt="Clutch"
-            className="h-auto md:w-20  xl:w-28  px-2"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-4.png"
-            alt="Bing"
-            className="h-auto  md:w-20  xl:w-28  px-2"
-          />
-        </div>
-      </div>
+ 
+   
+<div className="bg-[#0A4ABF] hidden sm-block  md:flex flex-row justify-between items-center text-sm text-gray-100 mt-[60px] xl:py-4 md:py-2 px-6  xl:px-[120px]">
+  <p className="mb-2 md:mb-0 tracking-tight font-[400] text-[15px]">
+    © 2025 Safari Marketing Pro
+  </p>
+ 
+  <div className="flex items-center gap-2 flex-wrap pl-4">
+    <Link
+      to="/privacy-policy"
+      className="underline hover:text-[#ff5254] text-[14px] tracking-tight p-2 font-[500] mr-6"
+    >
+      Privacy Policy
+    </Link>
+ 
+    <img
+      src="https://safarimarketingpro.com/images/new-part-1.png"
+      alt="Google Partner"
+      className="h-auto  md:w-20 xl:w-28  px-2"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-2.png"
+      alt="UpCity"
+      className="h-auto  md:w-20  xl:w-28  px-2"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-3.png"
+      alt="Clutch"
+      className="h-auto md:w-20  xl:w-28  px-2"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-4.png"
+      alt="Bing"
+      className="h-auto  md:w-20  xl:w-28  px-2"
+    />
+  </div>
+ 
+ 
+     
+</div>
       {/* Bottom bar for mobile only */}
-      <div className="bg-[#0A4ABF] md:hidden  text-gray-100 py-4 px-4 flex flex-col items-center text-sm space-y-4 ">
-        {/* Logos - 4 in a row */}
-        <div className="flex justify-center items-center gap-2 flex-wrap">
-          <img
-            src="https://safarimarketingpro.com/images/new-part-1.png"
-            alt="Google Partner"
-            className="h-auto w-15 px-[4px]"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-2.png"
-            alt="UpCity"
-            className="h-auto w-15 px-[4px]"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-3.png"
-            alt="Clutch"
-            className="h-auto w-15 px-[4px]"
-          />
-          <img
-            src="https://safarimarketingpro.com/images/new-part-4.png"
-            alt="Bing"
-            className="h-auto w-15 px-[4px]"
-          />
-        </div>
-
-        {/* Privacy Policy */}
-        <Link
-          to="/privacy-policy"
-          className="underline hover:text-[#ff5254] text-[14px] tracking-tight font-[500] text-center"
-        >
-          Privacy Policy
-        </Link>
-
-        {/* Copyright */}
-        <p className="text-center tracking-tight font-[400] text-[14px]">
-          © 2025 Safari Marketing Pro
-        </p>
-      </div>
+<div className="bg-[#0A4ABF] md:hidden  text-gray-100 py-4 px-4 flex flex-col items-center text-sm space-y-4 ">
+ 
+  {/* Logos - 4 in a row */}
+  <div className="flex justify-center items-center gap-2 flex-wrap">
+    <img
+      src="https://safarimarketingpro.com/images/new-part-1.png"
+      alt="Google Partner"
+      className="h-auto w-15 px-[4px]"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-2.png"
+      alt="UpCity"
+      className="h-auto w-15 px-[4px]"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-3.png"
+      alt="Clutch"
+      className="h-auto w-15 px-[4px]"
+    />
+    <img
+      src="https://safarimarketingpro.com/images/new-part-4.png"
+      alt="Bing"
+      className="h-auto w-15 px-[4px]"
+    />
+  </div>
+ 
+  {/* Privacy Policy */}
+  <Link
+    to="/privacy-policy"
+    className="underline hover:text-[#ff5254] text-[14px] tracking-tight font-[500] text-center"
+  >
+    Privacy Policy
+  </Link>
+ 
+  {/* Copyright */}
+  <p className="text-center tracking-tight font-[400] text-[14px]">
+    © 2025 Safari Marketing Pro
+  </p>
+</div>
+ 
+ 
     </div>
   );
 }
+ 
+
+ 
