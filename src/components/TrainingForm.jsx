@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { CountryCodes } from "../data/CountryCodes";
 const TrainingForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -40,7 +40,7 @@ const TrainingForm = () => {
         className="border rounded-[2px] px-[23px] py-[6px] text-[17px] font-[600]  border-[#ccc] bg-[#fbfbfb] h-[60px]  w-full "
       />
 
-      <div className="flex space-x-2">
+      {/* <div className="flex space-x-2">
         <select
           name="countryCode"
           onChange={handleChange}
@@ -50,7 +50,7 @@ const TrainingForm = () => {
           <option value="+1">+1</option>
           <option value="+91">+91</option>
           <option value="+44">+44</option>
-          {/* Add more as needed */}
+        
         </select>
         <input
           name="phone"
@@ -58,7 +58,32 @@ const TrainingForm = () => {
           onChange={handleChange}
           className="border rounded-[2px] px-[23px] py-[6px] text-[17px] font-[600]  border-[#ccc] bg-[#fbfbfb] h-[60px] w-2/3"
         />
-      </div>
+      </div> */}
+            <div className="flex space-x-2 ">
+  <select
+    name="countryCode"
+    value={formData.countryCode}
+    onChange={handleChange}
+    className="border rounded-[2px] px-[18px] text-[#787878] py-[6px] text-[17px] font-[600]  border-[#ccc] bg-[#fbfbfb] h-[60px] w-1/3"
+ 
+  >
+    <option value="">Country Code</option>
+    {CountryCodes.map(({ code, label }) => (
+      <option key={code} value={code}>
+        {code} ({label})
+      </option>
+    ))}
+  </select>
+  <input
+    name="phone"
+    value={formData.phone}
+    onChange={handleChange}
+    placeholder="Phone Number"
+    className="border rounded-[2px] px-[23px] py-[6px] text-[17px] font-[600]  border-[#ccc] bg-[#fbfbfb] h-[60px] w-2/3"
+  />
+</div>
+ 
+ 
       <input
         name="website"
         placeholder="Your Website"

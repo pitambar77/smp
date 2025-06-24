@@ -137,6 +137,7 @@
 import React, { useState } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
+import { CountryCodes } from "../data/CountryCodes";
  
 export default function RequestForm() {
   const [form, setForm] = useState({
@@ -192,7 +193,7 @@ export default function RequestForm() {
             />
           </div>
  
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
             <select
                 name="countryCode"
                 value={form.countryCode} onChange={handleChange}
@@ -209,7 +210,35 @@ export default function RequestForm() {
               placeholder="Phone*"
                className=" p-2  md:p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required
             />
-          </div>
+          </div> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-[10px]">
+  <div className="relative max-h-[200px] overflow-y-auto">
+    <select
+      name="countryCode"
+      value={form.countryCode}
+      onChange={handleChange}
+      className="p-2 md:p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white"
+    >
+      <option value="">Country Code</option>
+      {CountryCodes.map(({ code, label }) => (
+        <option key={code} value={code}>
+          {code} ({label})
+        </option>
+      ))}
+    </select>
+  </div>
+ 
+  <input
+    value={form.phone}
+    onChange={handleChange}
+    name="phone"
+    placeholder="Phone*"
+    className="p-2 md:p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white"
+    required
+  />
+</div>
+ 
+ 
  
           <input
           name="website"

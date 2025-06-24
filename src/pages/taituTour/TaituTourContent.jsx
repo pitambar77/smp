@@ -5,9 +5,9 @@ const TaituTourContent = () => {
     window.open("https://taitutour.com/", "_blank", "noopener,noreferrer");
   };
   return (
-    <div className=" w-full py-[100px] bg-[#ff5254]">
-      <div className=" max-w-[60%] mx-auto text-white text-center ">
-        <h1 className=" capitalize text-[48px] font-[900] mb-[20px] ">
+    <div className=" w-full sm:py-[100px] py-[50px] bg-[#ff5254] sm:px-0 px-4">
+      <div className=" sm:max-w-[60%] mx-auto text-white text-center ">
+        <h1 className=" capitalize sm:text-[48px] text-[24px] font-[900] mb-[20px] ">
           Ahead of the game
         </h1>
         <p className=" text-[17px] font-[300] leading-[1.5]">
@@ -34,9 +34,9 @@ const TaituTourContent = () => {
         />
       </div>
 
-      <div className=" grid grid-cols-2 items-center">
-        <div className=" text-white mx-[15px] pr-[129.85px]">
-          <h1 className=" font-[800] text-[48px] leading-[1.14] mb-[20px] capitalize">
+      <div className=" grid sm:grid-cols-2 grid-cols-1 items-center">
+        <div className=" text-white sm:mx-[15px] sm:pr-[129.85px]">
+          <h1 className=" font-[800] sm:text-[48px] text-[24px] leading-[1.14] mb-[20px] capitalize">
             Challenges
           </h1>
           <p className=" text-[17px] font-[300] leading-[1.5]">
@@ -73,8 +73,8 @@ const TaituTourContent = () => {
         </div>
       </div>
 
-      <div className=" grid grid-cols-2 items-center mt-[50px]">
-        <div className=" my-[50px] px-[15px]">
+      <div className=" grid sm:grid-cols-2 grid-cols-1 items-center mt-[50px]">
+        <div className=" sm:my-[50px] sm:px-[15px]">
           <img
             src="https://safarimarketingpro.com/images/taitutour-case-study3.png"
             alt="taitour-casestudy-2"
@@ -82,16 +82,16 @@ const TaituTourContent = () => {
           />
         </div>
 
-        <div className=" text-white pr-[15px] pl-[129.85px]">
-          <h1 className=" font-[800] text-[48px] leading-[1.14] mb-[20px] capitalize">
+        <div className=" text-white sm:pr-[15px] sm:pl-[129.85px] sm:pt-0 pt-[30px]">
+          <h1 className=" font-[800] sm:text-[48px] text-[24px] leading-[1.14] sm:mb-[20px] mb-[10px] capitalize">
             Solutions
           </h1>
 
-          <p className=" text-[17px] font-[600] leading-[1.5]">
+          <p className=" text-[17px] font-[600] leading-[1.5] pb-[10px]">
             Unveiling the Ultimate Luxury Experience
           </p>
-          <p>&nbsp;</p>
-          <p className=" text-[17px] font-[300] leading-[1.5]">
+
+          <p className=" text-[17px] font-[300] leading-[1.5] ">
             {" "}
             The new website seamlessly blended luxury and accessibility. It
             featured stunning full-screen imagery and captivating videos,
@@ -99,21 +99,21 @@ const TaituTourContent = () => {
             unforgettable adventure.
           </p>
           <p>&nbsp;</p>
-          <p className=" text-[17px] font-[600] leading-[1.5]">
+          <p className=" text-[17px] font-[600] leading-[1.5] pb-[10px]">
             Personalized Itinerary Building
           </p>
-          <p>&nbsp;</p>
-          <p className=" text-[17px] font-[300] leading-[1.5]">
+
+          <p className=" text-[17px] font-[300] leading-[1.5] ">
             {" "}
             A standout feature, the "itinerary builder," allowed visitors to
             create and share their dream trips, enhancing anticipation and
             excitement.
           </p>
           <p>&nbsp;</p>
-          <p className=" text-[17px] font-[600] leading-[1.5]">
+          <p className=" text-[17px] font-[600] leading-[1.5] pb-[10px]">
             Reaching a Global Elite
           </p>
-          <p>&nbsp;</p>
+
           <p className=" text-[17px] font-[300] leading-[1.5]">
             {" "}
             To cater to an international, high-net-worth clientele, the website
@@ -121,11 +121,11 @@ const TaituTourContent = () => {
             interactive trip finder and map engaged users, helping them
             visualize their journey.
           </p>
-
-          <p className=" text-[17px] font-[600] leading-[1.5]">
+          <p>&nbsp;</p>
+          <p className=" text-[17px] font-[600] leading-[1.5] pb-[10px]">
             Building Trust and Confidence
           </p>
-          <p>&nbsp;</p>
+
           <p className=" text-[17px] font-[300] leading-[1.5]">
             {" "}
             Trust signals and client reviews were strategically integrated into
@@ -135,9 +135,9 @@ const TaituTourContent = () => {
           </p>
         </div>
       </div>
-      <div className=" grid grid-cols-2 items-center px-[15px]">
-        <div className="text-white  pr-[129.85px]">
-          <h1 className=" font-[800] text-[48px] leading-[1.14] mb-[20px] capitalize">
+      <div className=" grid sm:grid-cols-2 grid-cols-1 items-center sm:px-[15px] sm:pt-0 pt-8">
+        <div className="text-white  sm:pr-[129.85px]">
+          <h1 className=" font-[800] sm:text-[48px] text-[24px]  leading-[1.14] sm:mb-[20px] mb-[10px] capitalize">
             Results and Impact
           </h1>
           <p>&nbsp;</p>
@@ -159,8 +159,8 @@ const TaituTourContent = () => {
         </div>
       </div>
 
-      <div className=" max-w-[60%] mx-auto text-white text-center ">
-        <h1 className=" text-[48px] font-[800] mb-[20px] ">Conclusion</h1>
+      <div className=" sm:max-w-[60%] mx-auto text-white text-center sm:pt-0 pt-7 ">
+        <h1 className=" sm:text-[48px] text-[24px] font-[800] mb-[20px] ">Conclusion</h1>
         <p className=" text-[17px] font-[300] leading-relaxed">
           The collaboration between Taitu Tour and Travel and Safari Marketing
           Pro elevated Taitu's digital presence and set new standards for luxury
@@ -172,31 +172,31 @@ const TaituTourContent = () => {
           and customer engagement in the luxury travel industry.
         </p>
       </div>
-      <div className=" max-w-[75%] mx-auto ">
+      <div className=" sm:max-w-[75%] mx-auto sm:px-0 px-4 ">
         <img
           src="https://safarimarketingpro.com/images/taitutour1.jpg"
           alt="taitutour1"
-          className="mt-[40px] pb-[40px]"
+          className="sm:py-[40px] py-5"
         />
         <img
           src="https://safarimarketingpro.com/images/taitutour2.png"
           alt="taitutour2"
-          className="py-[40px]"
+          className="sm:py-[40px] py-5"
         />
         <img
           src="https://safarimarketingpro.com/images/taitutour3.png"
           alt="taitutour3"
-          className="py-[40px]"
+          className="sm:py-[40px] py-5"
         />
         <img
           src="https://safarimarketingpro.com/images/taitutour4.png"
           alt="taitutour4"
-          className="py-[40px]"
+          className="sm:py-[40px] py-5"
         />
         <img
           src="https://safarimarketingpro.com/images/taitutour5.png"
           alt="taitutour5"
-          className="py-[40px]"
+          className="sm:py-[40px] py-5"
         />
       </div>
     </div>

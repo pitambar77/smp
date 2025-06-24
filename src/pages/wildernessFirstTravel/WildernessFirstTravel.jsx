@@ -41,7 +41,7 @@ const WildernessFirstTravel = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <SectionLayout>
-        <div className="max-w-[60%] mx-auto text-center">
+        <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
           <TitleBlock
             title="Enhancing Website Design"
             description="Immerse yourself in the heart-pounding energy of the arena! Our design is a thrilling journey into the world of the 'Tanzania Safari Experience,' capturing the raw adrenaline and excitement that awaits. Elevating the game and season ticket booking experience, we've seamlessly transformed curious visitors into avid customers. Your adventure begins now – where every moment is a ticket to unforgettable memories!"
@@ -65,7 +65,7 @@ const WildernessFirstTravel = () => {
           }}
           content={
             <>
-              <p className="  text-[17px] font-[300] leading-[1.5]">
+              <p className="  text-[17px] font-[300] leading-[1.5] sm:pb-0 pb-[30px]">
                 Wilderness First Travel, a specialized Tanzanian tour operator,
                 enlisted the expertise of Safari Marketing Pro to revamp its
                 online presence. Dedicated to crafting tailor-made experiences,
@@ -133,7 +133,7 @@ const WildernessFirstTravel = () => {
                 <strong>Strategic Storytelling</strong>{" "}
               </p>
 
-              <p>&nbsp;</p>
+             
               <p>
                 Safari Marketing Pro employed strategic storytelling techniques
                 to highlight Wilderness First Travel's offerings. This involved
@@ -145,7 +145,7 @@ const WildernessFirstTravel = () => {
                 <strong>Visual Immersion</strong>{" "}
               </p>
 
-              <p>&nbsp;</p>
+              
               <p>
                 The website was designed with a focus on visual immersion.
                 High-quality images and videos showcased the breathtaking
@@ -158,7 +158,7 @@ const WildernessFirstTravel = () => {
                 <strong>Mobile Optimization</strong>{" "}
               </p>
 
-              <p>&nbsp;</p>
+              
               <p>
                 Recognizing the importance of mobile accessibility, Safari
                 Marketing Pro ensured that the website was fully optimized for
@@ -170,17 +170,18 @@ const WildernessFirstTravel = () => {
                 <strong>User-Friendly Interface</strong>{" "}
               </p>
 
-              <p>&nbsp;</p>
+              
               <p>
                 A user-friendly interface was implemented, allowing visitors to
                 easily navigate through the different offerings, understand the
                 unique selling points, and initiate inquiries or bookings
                 effortlessly.
               </p>
+              <p>&nbsp;</p>
             </>
           }
         />
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Results and Impact"
             description="The redesigned website became a dynamic portal, effectively communicating the diverse offerings of Wilderness First Travel. Engaging content and visually appealing elements enhanced user experience, capturing the essence of Tanzanian adventures."
@@ -188,7 +189,7 @@ const WildernessFirstTravel = () => {
             content={
               <>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:pb-0 pb-10">
                   {" "}
                   With increased mobile optimization, the website saw a notable
                   rise in mobile users, tapping into a broader audience. The
@@ -201,7 +202,7 @@ const WildernessFirstTravel = () => {
           />
         </div>
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Conclusion"
             description="Safari Marketing Pro's collaboration with Wilderness First Travel led to the successful transformation of their digital presence. The website not only showcased the beauty and adventure of Tanzanian landscapes but also served as a powerful tool for customer engagement and conversion. By blending storytelling with visual appeal and user-centric design, Safari Marketing Pro delivered a website that not only met but exceeded the expectations of a specialized tour operator in the competitive travel industry."
@@ -209,7 +210,7 @@ const WildernessFirstTravel = () => {
           />
         </div>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="sm:max-w-[75%] mx-auto sm:px-0 px-4">
           {[
             "wildernessfirsttravel1.png",
             "wildernessfirsttravel2.png",
@@ -220,17 +221,17 @@ const WildernessFirstTravel = () => {
               key={idx}
               src={`https://safarimarketingpro.com/images/${img}`}
               alt={`taitutour${idx + 1}`}
-              className="py-[40px]"
+              className="sm:py-[40px] py-[20px]"
             />
           ))}
         </div>
       </SectionLayout>
-      <div className=" w-full py-[100px]">
+      <div className=" w-full sm:py-[100px] py-[50px]">
         <div className=" max-w-[1140px] mx-auto text-center">
-          <h1 className="text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]">
+          <h1 className="text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%] px-4">
             Explore Success Stories
           </h1>
-          <p className=" text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]">
+          <p className=" sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]">
             Team Up With Safari Marketing Pro – The Next Amazing Case Study
             Could Be Yours!
           </p>

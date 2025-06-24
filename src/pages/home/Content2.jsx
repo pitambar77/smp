@@ -246,7 +246,7 @@ function Content2() {
 
             {showForm && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
-                <div className="mt-[80px] relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg animate-slide-down-fade">
+                <div className="sm:mt-[80px] mt-[180px] relative w-[95%] sm:px-0 px-2 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg animate-slide-down-fade">
                   {/* Close Button */}
                   <button
                     onClick={() => setShowForm(false)}

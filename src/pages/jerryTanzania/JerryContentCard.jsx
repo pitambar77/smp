@@ -10,11 +10,11 @@ import { PiCheckFatFill } from "react-icons/pi";
 const JerryContentCard = () => {
   return (
     <div>
-      <div className="max-w-[1050px] mx-auto px-[15px] mt-[120px]">
-        <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+      <div className="max-w-[1050px] mx-auto px-[16px] sm:mt-[120px] mt-[60px]">
+        <h1 className="text-[20px] text-[#3467d8]  text-center font-[700] sm:text-[50px]  sm:pb-[30px] pb-[15px] leading-[1.4] sm:px-[8%]">
           {jerryTanzaniaData.heading}
         </h1>
-        <p className="text-[#787878]  text-[17px]">
+        <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify">
           {jerryTanzaniaData.subheading}
         </p>
 
@@ -26,7 +26,7 @@ const JerryContentCard = () => {
           />
         ))}
         <div className="max-w-[1050px] mx-auto ">
-          <p className="text-[#787878]  text-[17px] mb-10">
+          <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
             Safari Marketing Pro's website overhaul for Jerry Tanzania Tours
             successfully achieved the set objectives. The new design prioritizes
             user experience, mobile responsiveness, and SEO best practices,
@@ -41,11 +41,11 @@ const JerryContentCard = () => {
           />
         </div>
 
-        <div className="max-w-[1050px] mx-auto  mt-[120px]">
-          <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+        <div className="sm:max-w-[1050px] mx-auto  sm:mt-[120px] mt-[60px]">
+          <h1 className="text-[22px] text-[#3467d8] text-center font-[700] sm:text-[50px]  pb-[30px] leading-[1.4] sm:px-[8%]">
             {jerryTanzaniaData1.heading}
           </h1>
-          <p className="text-[#787878]  text-[17px]">
+          <p className="text-[#787878]   sm:text-[17px] text-[14px] sm:text-left text-justify">
             {jerryTanzaniaData1.subheading}
           </p>
         </div>
@@ -57,7 +57,7 @@ const JerryContentCard = () => {
           />
         ))}
         <div className="max-w-[1050px] mx-auto ">
-          <p className="text-[#787878]  text-[17px] mb-10">
+          <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
             Safari Marketing Pro's organic marketing strategies for Jerry
             Tanzania Tours have proven successful in improving search engine
             rankings, increasing organic traffic, and enhancing user engagement.
@@ -69,20 +69,20 @@ const JerryContentCard = () => {
             growth.
           </p>
 
-          <div className=" grid grid-cols-2 gap-[20px]  text-[#787878]  text-[17px]  p-[30px]">
+          <div className=" grid grid-cols-2 sm:gap-[20px] gap-4  text-[#787878]  sm:text-[17px] text-[14px]  sm:p-[30px] p-[15px]">
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px] font-[600]">
                 <PiCheckFatFill />
               </span>
-              <p className="text-[#787878]  text-[17px]">
-                <span className="text-[#787878] font-[600] text-[17px]">
+              <p className="text-[#787878]  ">
+                <span className="text-[#787878] font-[600] ">
                   Organic Traffic:
                 </span>
                 +360%
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px] font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -91,7 +91,7 @@ const JerryContentCard = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px] font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -101,7 +101,7 @@ const JerryContentCard = () => {
             </div>
 
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px]font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -112,7 +112,7 @@ const JerryContentCard = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px] font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -121,7 +121,7 @@ const JerryContentCard = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833] sm:text-[18px] text-[16px] font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -134,7 +134,7 @@ const JerryContentCard = () => {
           </div>
 
           <div className="max-w-[1050px] mx-auto">
-            <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+            <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
               Key Metric 1: Organic Traffic
             </h1>
             <img
@@ -143,7 +143,7 @@ const JerryContentCard = () => {
               className="py-[29.45px] "
             />
 
-            <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+            <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
               Key Metric 2: Organic Research
             </h1>
             <img
@@ -151,7 +151,7 @@ const JerryContentCard = () => {
               alt="screen-short2"
               className="py-[29.45px] "
             />
-            <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+            <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
               Key Metric 3: Top Ranking Keywords
             </h1>
             <img
@@ -160,7 +160,7 @@ const JerryContentCard = () => {
               className="py-[29.45px] "
             />
 
-            <h1 className=" text-[#011833] font-[600] text-[22px] text-center p-[3%] ">
+            <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center p-[3%] ">
               Key Metric 3: Top Ranking Keywords
             </h1>
             <img
@@ -171,11 +171,11 @@ const JerryContentCard = () => {
           </div>
         </div>
 
-        <div className="max-w-[1050px] mx-auto  mt-[120px]">
-          <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+        <div className="sm:max-w-[1050px] mx-auto  sm:mt-[120px] mt-[60px]">
+          <h1 className="text-[22px] text-[#3467d8] text-center font-[700] sm:text-[50px]  pb-[30px] leading-[1.4] sm:px-[8%]">
             {jerryTanzaniaData2.heading}
           </h1>
-          <p className="text-[#787878]  text-[17px]">
+          <p className="text-[#787878]   sm:text-[17px] text-[14px] sm:text-left text-justify">
             {jerryTanzaniaData2.subheading}
           </p>
         </div>
@@ -186,8 +186,8 @@ const JerryContentCard = () => {
             items={section.items}
           />
         ))}
-        <div className="max-w-[1050px] mx-auto ">
-          <p className="text-[#787878]  text-[17px] mb-10">
+        <div className="sm:max-w-[1050px] mx-auto  ">
+          <p className="sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
             Safari Marketing Pro's social media management strategies have
             propelled Jerry Tanzania Tours into a prominent position in the
             digital landscape. The substantial growth in followers, increased

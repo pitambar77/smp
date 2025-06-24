@@ -39,7 +39,7 @@ const CapeArchiveTours = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <SectionLayout>
-        <div className="max-w-[60%] mx-auto text-center">
+        <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
           <TitleBlock
             title="Elevating Travel Experiences"
             description="Cape Archives Tours, a prominent player in the realm of travel, sought the expertise of Safari Marketing Pro to redefine its online presence. The mission was crystal clear: to design a website that would not only mirror the lavishness of Cape Archives Tours' tailor-made Cape Town journeys but also significantly boost lead generation."
@@ -96,40 +96,42 @@ const CapeArchiveTours = () => {
             alt: "solutions image",
           }}
           imageFirst
+          
           content={
             <>
-              <p>
+              <p className="">
                 <strong>Unveiling Unprecedented Luxury:</strong>
               </p>
-              <p>&nbsp;</p>
-              <p>
+            
+               <p className="">
                 Immersive Visuals: The new website introduced visitors to the
                 unparalleled luxury of Cape Archives Tours with full-screen,
                 high-quality imagery and captivating videos, promising an
                 unforgettable adventure.
               </p>
-              <p>&nbsp;</p>
-              <p>
+                <p>&nbsp;</p>
+               <p className="">
                 <strong>Personalized Itinerary Building:</strong>
               </p>
-              <p>&nbsp;</p>
-              <p>
+               
+               <p className="">
                 Itinerary Builder: A key feature, the "itinerary builder,"
                 allowed visitors to customize their dream trips, fostering a
                 sense of ownership and anticipation.
               </p>
-              <p>&nbsp;</p>
-              <p>
+                <p>&nbsp;</p>
+               <p className="">
                 <strong>Building Trust and Confidence:</strong>
               </p>
-              <p>&nbsp;</p>
-              <p>
+              
+               <p className=" ">
                 Trust Signals: Strategically placed client reviews,
                 endorsements, and awards instilled trust in Cape Archives Tours’
                 expertise."Travel with Confidence" Messaging: Throughout the
                 user journey, the website reinforced the brand's commitment to
                 excellence with messages like "travel with confidence."
               </p>
+              
             </>
           }
         />
@@ -141,7 +143,8 @@ const CapeArchiveTours = () => {
             alt: "results image",
           }}
           content={
-            <p>
+            <>
+             <p className=" ">
               The final website isn't just a digital presence; it's a gateway to
               a once-in-a-lifetime experience for travelers. It significantly
               contributed to Cape Archives Tours' brand reinforcement, lead
@@ -149,10 +152,12 @@ const CapeArchiveTours = () => {
               showcase luxury; it embodies it, making it a game-changer in the
               industry.
             </p>
+            <p>&nbsp;</p>
+            </>
           }
         />
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Conclusion"
             description="The collaboration between Cape Archives Tours and Safari Marketing Pro has elevated its digital presence and redefined luxury travel experiences. The website now not only reflects the essence of Cape Archives Tours but also resonates with and engages a global elite, establishing it as a true industry leader."
@@ -160,7 +165,7 @@ const CapeArchiveTours = () => {
           />
         </div>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="sm:max-w-[75%] mx-auto sm:px-0 px-4">
           {[
             "cape1.png",
             "cape2.png",
@@ -174,7 +179,7 @@ const CapeArchiveTours = () => {
               key={idx}
               src={`https://safarimarketingpro.com/images/${img}`}
               alt={`taitutour${idx + 1}`}
-              className="py-[40px]"
+              className="sm:py-[40px] py-[10px]"
             />
           ))}
         </div>

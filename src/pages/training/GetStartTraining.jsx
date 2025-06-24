@@ -12,8 +12,8 @@ const GetStartTraining = () => {
       <Banner {...data}/>
       <div className=' max-w-[1140px] mx-auto pt-[70px] pb-[80px]'>
         <div className=' mx-[8%]'>
-            <h2 className=' text-[48px] font-[700] leading-[1.4] text-[#3467d8] text-center px-[4%] pb-[15px]'>Access The Platform From Any Device At Any Time </h2>
-            <p className='text-[22px] font-[400] leading-[1.4] text-[#787878] text-center px-[4%] pb-[15px]'>Unleash your true search potential and dominate the first page of Google.</p>
+            <h2 className=' sm:text-[48px] text-[24px] font-[700] leading-[1.4] text-[#3467d8] text-center px-[4%] pb-[15px]'>Access The Platform From Any Device At Any Time </h2>
+            <p className='sm:text-[22px] text-[15px] font-[400] leading-[1.4] text-[#787878] text-center px-[4%] pb-[15px]'>Unleash your true search potential and dominate the first page of Google.</p>
         </div>
         <TrainingForm/>
       </div>

@@ -40,7 +40,7 @@ const WowTravelCaseStudy = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <SectionLayout>
-        <div className="max-w-[60%] mx-auto text-center">
+        <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
           <TitleBlock
             title="Enhancing Website Design"
             description="Wow Travel & Tours, previously known as Wow Cape Town Tours, is a family-owned Destination Management Company (DMC) tour operator founded in 2007. Led by Rushdi Harper, the company specializes in providing exceptional safari experiences in South Africa. In 2021, Wow Travel & Tours recognized the need to elevate their online presence and partnered with Safari Marketing Pro, a renowned digital marketing agency specializing in the travel and tourism industry, to redesign their website."
@@ -61,7 +61,7 @@ const WowTravelCaseStudy = () => {
           }}
           content={
             <>
-              <p className=" tracking-wide text-[17px] font-[300] leading-[1.5]">
+              <p className=" tracking-wide text-[17px] font-[300] leading-[1.5] sm:pb-0 pb-[30px]">
                 The primary objective of the website redesign was to create a
                 visually appealing and user-friendly platform that effectively
                 showcased Wow Travel & Tours' unique safari experiences in South
@@ -150,17 +150,18 @@ const WowTravelCaseStudy = () => {
                 best practices to improve the website's visibility in search
                 engine rankings.
               </p>
+              <p>&nbsp;</p>
             </>
           }
         />
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Implementation"
             description=""
             center
             content={
               <>
-                <p>
+                <p className=" sm:text-center  text-left">
                   {" "}
                   <strong>Redesigned Homepage: </strong> The homepage featured
                   stunning imagery of South Africa's wildlife and landscapes,
@@ -168,30 +169,31 @@ const WowTravelCaseStudy = () => {
                   company's unique offerings.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center  text-left">
                   <strong>Interactive Safari Selection Tool: </strong> A
                   user-friendly tool was developed to help visitors filter and
                   select safari experiences based on their preferences, such as
                   location, duration, and wildlife interests.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center  text-left">
                   <strong>Inspiring Blog Section: </strong> A dedicated blog
                   section was added to share insightful articles, travel tips,
                   and captivating stories about South Africa's rich
                   biodiversity.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center  text-left">
                   <strong>Customer Testimonials and Reviews:</strong> Authentic
                   testimonials from previous customers were prominently
                   displayed to build trust and credibility.
                 </p>
+                <p>&nbsp;</p>
               </>
             }
           />
         </div>
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center  text-white sm:px-0 px-4">
           <TitleBlock
             title="Results"
             description=""
@@ -222,7 +224,7 @@ const WowTravelCaseStudy = () => {
           />
         </div>
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4 sm:pt-0 pt-5">
           <TitleBlock
             title="Conclusion"
             description="The collaboration between Wow Travel & Tours and Safari Marketing Pro resulted in a highly successful website redesign that effectively elevated the company's online presence. The visually appealing and user-friendly platform, coupled with engaging content and effective SEO strategies, led to improved user engagement, increased conversion rates, and enhanced search engine visibility. Wow Travel & Tours is now better positioned to showcase their exceptional safari experiences in South Africa to a global audience."
@@ -230,7 +232,7 @@ const WowTravelCaseStudy = () => {
           />
         </div>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="sm:max-w-[75%] mx-auto sm:px-0 px-4">
           {[
             "wowtravel1.png",
             "wowtravel2.png",
@@ -244,17 +246,17 @@ const WowTravelCaseStudy = () => {
               key={idx}
               src={`https://safarimarketingpro.com/images/${img}`}
               alt={`taitutour${idx + 1}`}
-              className="py-[40px]"
+              className="sm:py-[40px] py-5"
             />
           ))}
         </div>
       </SectionLayout>
-      <div className=" w-full py-[100px]">
+      <div className=" w-full sm:py-[100px] py-[50px]">
         <div className=" max-w-[1140px] mx-auto text-center">
-          <h1 className="text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]">
+          <h1 className="text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%] px-4">
             Explore Success Stories
           </h1>
-          <p className=" text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]">
+          <p className=" sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]">
             Team Up With Safari Marketing Pro – The Next Amazing Case Study
             Could Be Yours!
           </p>

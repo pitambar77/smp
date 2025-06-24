@@ -44,7 +44,7 @@ const AfricanluxurysafariCaseStudy = () => {
         imageUrl={`${ BASE_URL }/${bannerData.imageUrl}`}
       />
     <SectionLayout>
-      <div className="max-w-[60%] mx-auto text-center">
+      <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
         <TitleBlock
           title="Elevating Luxury Travel Experiences"
           description="Extraordinary Safaris, a prominent player in the realm of luxury global travel, sought the expertise of Safari Marketing Pro to redefine its online presence. The mission was crystal clear: to design a website that would not only mirror the lavishness of Extraordinary Safaris' tailor-made African journeys but also significantly boost lead generation."
@@ -102,11 +102,11 @@ const AfricanluxurysafariCaseStudy = () => {
         title="Results and Impact"
         image={{ src: 'https://safarimarketingpro.com/images/africanluxurysafari-case-study4.png', alt: 'results image' }}
         content={
-          <p>The final website isn't just a digital presence; it's a gateway to a once-in-a-lifetime experience for travelers. It significantly contributed to Extraordinary Safaris' brand reinforcement, lead generation, and sales conversion. The website doesn't just showcase luxury; it embodies it, making it a game-changer in the industry.</p>
+          <p className=' sm:pb-0 pb-[30px]'>The final website isn't just a digital presence; it's a gateway to a once-in-a-lifetime experience for travelers. It significantly contributed to Extraordinary Safaris' brand reinforcement, lead generation, and sales conversion. The website doesn't just showcase luxury; it embodies it, making it a game-changer in the industry.</p>
         }
       />
 
-      <div className="max-w-[60%] mx-auto text-center text-white">
+      <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
         <TitleBlock
           title="Conclusion"
           description="The collaboration between Extraordinary Safaris and Safari Marketing Pro has elevated its digital presence and redefined luxury travel experiences. The website now not only reflects the essence of Extraordinary Safaris but also resonates with and engages a global elite, establishing it as a true industry leader."
@@ -114,21 +114,21 @@ const AfricanluxurysafariCaseStudy = () => {
         />
       </div>
 
-      <div className="max-w-[75%] mx-auto">
+      <div className="sm:max-w-[75%] mx-auto">
         {["luxurysafari1.png", "luxurysafari3.png", "luxurysafari4.png", "luxurysafari5.png", "luxurysafari6.png","luxurysafari7.png"].map((img, idx) => (
           <img
             key={idx}
             src={`https://safarimarketingpro.com/images/${img}`}
             alt={`taitutour${idx + 1}`}
-            className="py-[40px]"
+            className="sm:py-[40px] py-4 sm:px-0 px-4"
           />
         ))}
       </div>
     </SectionLayout>
-    <div className=' w-full py-[100px]'>
+    <div className=' w-full sm:py-[100px] py-[50px]'>
             <div className=' max-w-[1140px] mx-auto text-center'>
-                <h1 className='text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]'>Let Us <span className='text-[#ff5254]'>PROVE</span>  It To You</h1>
-                <p className=' text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]'>Find our work what we have done, we are here to take yoir safari buisness to the next level!</p>
+                <h1 className='text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%]'>Let Us <span className='text-[#ff5254]'>PROVE</span>  It To You</h1>
+                <p className=' sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]'>Find our work what we have done, we are here to take yoir safari buisness to the next level!</p>
             <CardCarousel/>
             </div>
             

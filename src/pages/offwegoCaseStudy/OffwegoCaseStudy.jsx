@@ -41,7 +41,7 @@ const OffwegoCaseStudy = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <SectionLayout>
-        <div className="max-w-[60%] mx-auto text-center">
+        <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
           <TitleBlock
             title="Enhancing Website Design"
             description="Off We Go Safaris is a well-established East African safari company with a wealth of experience in the tourism industry. They specialize in curating tailor-made safari experiences that cater to a diverse range of client needs, including budget considerations, preferred destinations, and seasonal travel. With a commitment to excellence, Off We Go Safaris is known for its top-notch safari guides, personalized tour services, luxury camps, and an exclusive collection of secluded camps and lodges."
@@ -119,7 +119,7 @@ const OffwegoCaseStudy = () => {
             alt: "results image",
           }}
           content={
-            <p className="  leading-[1.5] text-[17px]">
+            <p className="  leading-[1.5] text-[17px] sm:pb-0 pb-[30px]">
               The redesigned website became more than just an online presence;
               it became a digital gateway to the extraordinary world of East
               African safaris. It significantly contributed to Off We Go
@@ -131,7 +131,7 @@ const OffwegoCaseStudy = () => {
           }
         />
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Conclusion"
             description="The collaboration between Off We Go Safaris and Safari Marketing Pro elevated the digital presence of the safari company, redefining the way East African safaris are experienced and marketed. The website design not only mirrors the essence of Off We Go Safaris but also engages and captivates their audience, establishing them as a leading force in the safari industry."
@@ -139,7 +139,7 @@ const OffwegoCaseStudy = () => {
           />
         </div>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="sm:max-w-[75%] mx-auto sm:px-0 px-4">
           {[
             "offwego1.png",
             "offwego3.png",
@@ -151,17 +151,17 @@ const OffwegoCaseStudy = () => {
               key={idx}
               src={`https://safarimarketingpro.com/images/${img}`}
               alt={`taitutour${idx + 1}`}
-              className="py-[40px]"
+              className="sm:py-[40px] py-5"
             />
           ))}
         </div>
       </SectionLayout>
-      <div className=" w-full py-[100px]">
+      <div className=" w-full sm:py-[100px] py-[50px]">
         <div className=" max-w-[1140px] mx-auto text-center">
-          <h1 className="text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]">
+          <h1 className="text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%] px-4">
             Explore Success Stories
           </h1>
-          <p className=" text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]">
+          <p className=" sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]">
             Team Up With Safari Marketing Pro – The Next Amazing Case Study
             Could Be Yours!
           </p>

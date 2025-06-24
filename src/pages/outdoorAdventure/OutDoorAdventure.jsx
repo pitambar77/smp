@@ -41,7 +41,7 @@ const OutDoorAdventure = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <SectionLayout>
-        <div className="max-w-[60%] mx-auto text-center">
+        <div className="sm:max-w-[60%] mx-auto text-center sm:px-0 px-4">
           <TitleBlock
             title="Ahead of the game"
             description="Tanzania Outdoor Adventures is a team of safari travel experts specializing in providing exceptional safari experiences in Tanzania, Kenya, and Uganda. With extensive experience and knowledge in East Africa, they sought to redesign their website to better showcase their unique appeal and expertise. To achieve this, they partnered with Safari Marketing Pro, a digital marketing agency specializing in the travel and tourism industry, for website design services."
@@ -65,7 +65,7 @@ const OutDoorAdventure = () => {
           }}
           content={
             <>
-              <p className="  text-[17px] font-[300] leading-[1.5]">
+              <p className="  text-[17px] font-[300] leading-[1.5] sm:pb-0 pb-[30px]">
                 The primary objective of the website redesign was to create an
                 engaging and informative online platform that effectively
                 conveyed Tanzania Outdoor Adventures' deep expertise in East
@@ -153,17 +153,18 @@ const OutDoorAdventure = () => {
                 thorough keyword research and implemented on-page SEO techniques
                 to improve the website's search engine visibility.
               </p>
+              <p>&nbsp;</p>
             </>
           }
         />
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4">
           <TitleBlock
             title="Implementation"
             description=""
             center
             content={
               <>
-                <p>
+                <p className=" sm:text-center text-left">
                   {" "}
                   <strong>Redesigned Homepage: </strong> The homepage featured
                   captivating images of East African landscapes and wildlife,
@@ -171,14 +172,14 @@ const OutDoorAdventure = () => {
                   the company's deep knowledge of the region.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center text-left">
                   <strong>Interactive Safari Planning Tool: </strong> A
                   user-friendly tool was developed to assist visitors in
                   planning their ideal safari experiences, allowing them to
                   choose destinations, wildlife interests, and trip duration.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center text-left">
                   <strong>Client Testimonials: </strong> Authentic client
                   testimonials and reviews were prominently displayed to
                   establish trust and credibility.
@@ -188,14 +189,14 @@ const OutDoorAdventure = () => {
           />
         </div>
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4 sm:pt-0 pt-[30px]">
           <TitleBlock
             title="Results"
             description=""
             center
             content={
               <>
-                <p>
+                <p className=" sm:text-center text-left">
                   {" "}
                   <strong>Increased User Engagement: </strong> The new website
                   experienced a substantial boost in user engagement, with
@@ -203,14 +204,14 @@ const OutDoorAdventure = () => {
                   offerings and educational content.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center text-left">
                   <strong>Improved Conversion Rates: </strong>The user-friendly
                   design, informative content, and intuitive navigation
                   contributed to higher conversion rates, with more visitors
                   inquiring about and booking safari experiences.
                 </p>
                 <p>&nbsp;</p>
-                <p>
+                <p className=" sm:text-center text-left">
                   <strong>Enhanced SEO Visibility: </strong> The website's
                   search engine rankings improved, leading to increased organic
                   traffic and greater visibility in search engine results.
@@ -220,7 +221,7 @@ const OutDoorAdventure = () => {
           />
         </div>
 
-        <div className="max-w-[60%] mx-auto text-center text-white">
+        <div className="sm:max-w-[60%] mx-auto text-center text-white sm:px-0 px-4 sm:pt-0 pt-[30px]">
           <TitleBlock
             title="Conclusion"
             description="The collaboration between Tanzania Outdoor Adventures and Safari Marketing Pro resulted in a highly successful website redesign that effectively elevated the company's online presence. The visually engaging and informative platform, coupled with interactive features and robust SEO strategies, led to improved user engagement, increased conversion rates, and enhanced search engine visibility. Tanzania Outdoor Adventures is now better equipped to showcase their expertise and unique appeal in East African safaris to a global audience."
@@ -228,7 +229,7 @@ const OutDoorAdventure = () => {
           />
         </div>
 
-        <div className="max-w-[75%] mx-auto">
+        <div className="sm:max-w-[75%] mx-auto sm:px-0 px-4">
           {[
             "outdooradventures1.png",
             "outdooradventures2.jpg",
@@ -240,17 +241,17 @@ const OutDoorAdventure = () => {
               key={idx}
               src={`https://safarimarketingpro.com/images/${img}`}
               alt={`taitutour${idx + 1}`}
-              className="py-[40px]"
+              className="sm:py-[40px] py-5"
             />
           ))}
         </div>
       </SectionLayout>
-      <div className=" w-full py-[100px]">
+      <div className=" w-full sm:py-[100px] py-[50px]">
         <div className=" max-w-[1140px] mx-auto text-center">
-          <h1 className="text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]">
+          <h1 className="text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%] px-4">
             Explore Success Stories
           </h1>
-          <p className=" text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]">
+          <p className=" sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]">
             Team Up With Safari Marketing Pro – The Next Amazing Case Study
             Could Be Yours!
           </p>

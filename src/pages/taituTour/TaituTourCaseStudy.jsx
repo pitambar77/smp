@@ -33,12 +33,12 @@ const TaituTourCaseStudy = () => {
         imageUrl={`${BASE_URL}/${bannerData.imageUrl}`}
       />
       <TaituTourContent />
-      <div className=" w-full py-[100px]">
+      <div className=" w-full sm:py-[100px] py-[50px]">
         <div className=" max-w-[1140px] mx-auto text-center">
-          <h1 className="text-[#3467d8] text-[40px] font-[700] leading-[1.3] px-[15%]">
+          <h1 className="text-[#3467d8] sm:text-[40px] text-[24px] font-[700] leading-[1.3] sm:px-[15%] px-4">
             Explore Success Stories
           </h1>
-          <p className=" text-[18px] font-[400] py-[15px] px-[30px] text-[#787878]">
+          <p className=" sm:text-[18px] text-[14px] font-[400] py-[15px] px-[30px] text-[#787878]">
             Team Up With Safari Marketing Pro – The Next Amazing Case Study
             Could Be Yours!
           </p>

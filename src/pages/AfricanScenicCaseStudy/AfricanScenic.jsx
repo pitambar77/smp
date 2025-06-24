@@ -38,23 +38,23 @@ const AfricanScenic = () => {
       />
       {/* Other African Scenic sections */}
       <div className="w-full">
-        <div className=" max-w-[1140px] mx-auto mt-[60px] py-[29.45px]">
+        <div className="max-w-[1140px] mx-auto sm:mt-[60px] mt-[30px] py-[29.45px]">
           <div>
-            <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px] capitalize  pb-[15px] leading-[1.4] px-[8%]">
+            <h1 className="text-[22px] text-[#3467d8]  text-center font-[700] sm:text-[50px]  sm:pb-[30px] pb-[15px] leading-[1.4] sm:px-[8%]">
               African Scenic services used
             </h1>
           </div>
-          <div className=" grid grid-cols-4 p-[2%]">
+          <div className=" grid sm:grid-cols-4 grid-cols-1 p-[2%] sm:py-0 py-5">
             <div className="px-[15px] ">
               <div className=" flex justify-center items-center">
                 <img
                   src="https://safarimarketingpro.com/images/serach.png"
                   alt="search"
-                  className="bg-[#F0F0F0] p-[9%] mb-[10px] rounded-[5px] w-[110px] items-center"
+                  className="bg-[#F0F0F0] sm:p-[9%] p-[12%] mb-[10px] rounded-[5px] w-[110px]  items-center"
                 />
               </div>
 
-              <p className="text-center text-[#787878] font-[400] text-[17px] pb-[15px]">
+              <p className="text-center text-[#787878] font-[400] sm:text-[17px] text-[14px] pb-[15px]">
                 Search Engine <br /> Optimization (SEO)
               </p>
             </div>
@@ -63,11 +63,11 @@ const AfricanScenic = () => {
                 <img
                   src="https://safarimarketingpro.com/images/donate.png"
                   alt="search"
-                  className="bg-[#F0F0F0] p-[9%] mb-[10px] rounded-[5px] w-[110px] items-center"
+                  className="bg-[#F0F0F0] sm:p-[9%] p-[12%] mb-[10px] rounded-[5px] w-[110px]  items-center"
                 />
               </div>
 
-              <p className="text-center text-[#787878] font-[400] text-[17px] pb-[15px]">
+              <p className="text-center text-[#787878] font-[400] sm:text-[17px] text-[14px] pb-[15px]">
                 Paid Social Media <br /> Advertising
               </p>
             </div>
@@ -76,11 +76,11 @@ const AfricanScenic = () => {
                 <img
                   src="https://safarimarketingpro.com/images/cursor.png"
                   alt="search"
-                  className="bg-[#F0F0F0] p-[9%] mb-[10px] rounded-[5px] w-[110px] items-center"
+                  className="bg-[#F0F0F0] sm:p-[9%] p-[12%] mb-[10px] rounded-[5px] w-[110px]  items-center"
                 />
               </div>
 
-              <p className="text-center text-[#787878] font-[400] text-[17px] pb-[15px]">
+              <p className="text-center text-[#787878] font-[400] sm:text-[17px] text-[14px] pb-[15px]">
                 Website Upgradation
               </p>
             </div>
@@ -89,19 +89,19 @@ const AfricanScenic = () => {
                 <img
                   src="https://safarimarketingpro.com/images/heart.png"
                   alt="search"
-                  className="bg-[#F0F0F0] p-[9%] mb-[10px] rounded-[5px] w-[110px] items-center"
+                  className="bg-[#F0F0F0] sm:p-[9%] p-[12%] mb-[10px] rounded-[5px] w-[110px]  items-center"
                 />
               </div>
 
-              <p className="text-center text-[#787878] font-[400] text-[17px] pb-[15px]">
+              <p className="text-center text-[#787878] font-[400] sm:text-[17px] text-[14px] pb-[15px]">
                 Organic Social Media <br /> Marketing
               </p>
             </div>
           </div>
 
-          <div className=" max-w-[1050px] mx-auto px-[15px]">
+          <div className=" max-w-[1050px] mx-auto px-[15px] sm:text-left text-justify">
             <div>
-              <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+              <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
                 African Scenic Safaris is a leading Tour Operator based in
                 Moshi, Tanzania. Established in 2009 as a family business, the
                 company is owned and operated entirely by locals who share the
@@ -109,27 +109,27 @@ const AfricanScenic = () => {
                 providing fantastic personalized service.
               </p>
             </div>
-            <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+            <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
               This company provides world-class Tanzania Safari Packages and
               Kilimanjaro Climbing packages, ideal for groups, organizations,
               families, backpackers, and individuals alike, for both leisure and
               business travel. Their sole focus and expertise are on the unique
               and top-rated Tanzania National Parks.
             </p>
-            <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+            <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
               The company partnered with Safari Marketing Pro in March 2021 to
               increase website traffic. Having seen no progress with other web
               marketing agencies in the past, they turned to Safari Marketing
               Pro for a more hands-on campaign management approach that delivers
               measurable results.
             </p>
-            <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+            <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
               Since taking over the company's digital marketing campaign, SMP
               has helped African Scenic Safaris generate a 360 percent increase
               in organic traffic year-over-year and an 88.24 percent increase in
               social media engagement.
             </p>
-            <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+            <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
               African Scenic Safaris continues to partner with Safari Marketing
               Pro to strengthen its digital presence and achieve steady business
               growth.
@@ -140,8 +140,8 @@ const AfricanScenic = () => {
         {/* Number counter sections */}
         <NumberCounter />
 
-        <div className=" max-w-[1050px] mx-auto mt-[60px] px-[15px] pt-[29.45px]">
-          <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+        <div className=" max-w-[1050px] mx-auto sm:mt-[60px] sm:text-left text-justify px-[15px] pt-[29.45px]">
+          <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
             Before partnering with Safari Marketing Pro, African Scenic Safaris
             did not prioritize digital marketing as a significant focus.
             However, due to the competitive marketplace, the client recognized
@@ -149,23 +149,23 @@ const AfricanScenic = () => {
             brand in the industry and generate more targeted leads.
           </p>
 
-          <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+          <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
             Safari Marketing Pro's digital marketing specialists conducted a
             comprehensive brand audit to identify the most effective approach to
             achieve the client's goals.
           </p>
-          <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+          <p className=" pb-[15px] sm:text-[17px] text-[14px] text-[#787878] font-[400]">
             Safari Marketing Pro implemented a complete overhaul of African
             Scenic Safaris' website, focusing on the following:
           </p>
 
-          <div className=" grid grid-cols-2 gap-[20px]  text-[#787878]  text-[17px]  p-[30px]">
+          <div className=" grid grid-cols-2 sm:gap-[20px] gap-2  text-[#787878]  sm:text-[17px] text-[14px]  sm:p-[30px] p-2">
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
-              <p className="text-[#787878]  text-[17px]">
-                <span className="text-[#787878] font-[600] text-[17px]">
+              <p className="text-[#787878]  ">
+                <span className="text-[#787878] font-[600] ">
                   Responsive Design:
                 </span>
                 Ensured that the website was accessible and user-friendly across
@@ -173,7 +173,7 @@ const AfricanScenic = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -183,7 +183,7 @@ const AfricanScenic = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -195,7 +195,7 @@ const AfricanScenic = () => {
             </div>
 
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -211,33 +211,33 @@ const AfricanScenic = () => {
           />
         </div>
 
-        <div className=" max-w-[1050px] mx-auto mt-[60px] pt-[60px] px-[15px] ">
-          <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+        <div className=" max-w-[1050px] mx-auto sm:mt-[60px] pt-[60px] px-[15px] ">
+          <h1 className="text-[22px] text-[#3467d8]  text-center font-[700] sm:text-[50px]  sm:pb-[30px] pb-[15px] leading-[1.4] sm:px-[8%]">
             Organic Marketing Strategy Implementation
           </h1>
-          <p className=" pb-[15px] text-[17px] text-[#787878] font-[400]">
+          <p className=" pb-[15px] sm:text-[17px] text-[14px] sm:text-left text-justify text-[#787878] font-[400]">
             African Scenic Safaris is a leading Tour Operator based in Moshi,
             Tanzania. Established in 2009 as a family business, the company is
             owned and operated entirely by locals who share the same passion for
             showcasing the amazing country of Tanzania and providing fantastic
             personalized service.
           </p>
-          <h1 className="text-[30px] text-[#3467d8] py-[15px] font-[700] ">
+          <h1 className="sm:text-[30px] text-[24px] text-[#3467d8] py-[15px] font-[700] ">
             Thorough Keyword Optimization
           </h1>
-          <div className=" grid grid-cols-2 gap-[20px]  text-[#787878]  text-[17px]  p-[30px]">
+          <div className=" grid grid-cols-2 gap-[20px]  text-[#787878]  sm:text-[17px] text-[14px]  sm:p-[30px] p-2">
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
-              <p className="text-[#787878]  text-[17px]">
+              <p className="text-[#787878]  ">
                 Conducted comprehensive keyword research to identify relevant
                 terms and phrases related to African Scenic Safaris' services,
                 destinations, and target audience.
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -246,7 +246,7 @@ const AfricanScenic = () => {
               </p>
             </div>
             <div className=" flex">
-              <span className=" mt-1 mr-[10px] text-[#011833] text-[18px] font-[600]">
+              <span className=" mt-1 mr-[10px] text-[#011833]  font-[600]">
                 <PiCheckFatFill />
               </span>
               <p>
@@ -257,8 +257,8 @@ const AfricanScenic = () => {
           </div>
         </div>
 
-        <div className=" max-w-[1050px] mx-auto ">
-          <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <div className=" max-w-[1050px] mx-auto sm:px-0 px-4 ">
+          <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
             Key Metric 1: Domain Authority
           </h1>
           <img
@@ -267,8 +267,8 @@ const AfricanScenic = () => {
             className="py-[29.45px] "
           />
         </div>
-        <div className=" max-w-[1050px] mx-auto ">
-          <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <div className=" max-w-[1050px] mx-auto sm:px-0 px-4 ">
+          <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
             Key Metric 2: Organic Keywords
           </h1>
           <img
@@ -277,8 +277,8 @@ const AfricanScenic = () => {
             className="py-[29.45px] "
           />
         </div>
-        <div className=" max-w-[1050px] mx-auto ">
-          <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <div className=" max-w-[1050px] mx-auto sm:px-0 px-4 ">
+          <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
             Key Metric 3: Top Ranking Keywords
           </h1>
           <img
@@ -287,8 +287,8 @@ const AfricanScenic = () => {
             className="py-[29.45px] "
           />
         </div>
-        <div className=" max-w-[1050px] mx-auto ">
-          <h1 className=" text-[#011833] font-[600] text-[22px] text-center p-[3%] ">
+        <div className=" max-w-[1050px] mx-auto sm:px-0 px-4 ">
+          <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center p-[3%] ">
             Key Metric 3: Top Ranking Keywords
           </h1>
           <img

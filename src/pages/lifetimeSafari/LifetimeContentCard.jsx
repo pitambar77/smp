@@ -9,11 +9,11 @@ import CaseStudyCard from "../../components/CaseStudyCard";
 const LifetimeContentCard = () => {
   return (
     <div className=" ">
-      <div className="max-w-[1050px] mx-auto px-[15px]  mt-[120px]">
-        <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+      <div className="max-w-[1050px] mx-auto px-[15px]  sm:mt-[120px] mt-[60px]">
+        <h1 className="text-[22px] text-[#3467d8]  text-center font-[700] sm:text-[50px]  sm:pb-[30px] pb-[15px] leading-[1.4] sm:px-[8%]">
           {lifetimeSafariData.heading}
         </h1>
-        <p className="text-[#787878]  text-[17px]">
+        <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify">
           {lifetimeSafariData.subheading}
         </p>
       
@@ -22,7 +22,7 @@ const LifetimeContentCard = () => {
       ))}
       
       <div className="max-w-[1050px] mx-auto px-[15px]">
-        <p className="text-[#787878]  text-[17px] mb-10">
+        <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
           By combining a well-structured content calendar, visually compelling
           content, and active community engagement, Safari Marketing Pro aimed
           to not only increase brand visibility but also cultivate a loyal and
@@ -37,11 +37,11 @@ const LifetimeContentCard = () => {
         />
       </div>
 
-      <div className="max-w-[1050px] mx-auto px-[15px] mt-[120px]">
-        <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+      <div className="sm:max-w-[1050px] mx-auto  sm:mt-[120px] mt-[60px]">
+        <h1 className="text-[22px] text-[#3467d8] text-center font-[700] sm:text-[50px]  pb-[30px] leading-[1.4] sm:px-[8%]">
           {organicMarketingData.heading}
         </h1>
-        <p className="text-[#787878]  text-[17px]">
+        <p className="text-[#787878]   sm:text-[17px] text-[14px] sm:text-left text-justify">
           {organicMarketingData.subheading}
         </p>
       </div>
@@ -49,7 +49,7 @@ const LifetimeContentCard = () => {
         <CaseStudyCard key={idx} title={section.title} items={section.items} />
       ))}
       <div className="max-w-[1050px] mx-auto px-[15px]">
-        <p className="text-[#787878]  text-[17px] mb-10">
+        <p className="text-[#787878]  sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
           The comprehensive organic marketing strategies implemented by Safari
           Marketing Pro have contributed to the significant improvement in
           Lifetime Safaris' search engine visibility, driving organic traffic
@@ -58,7 +58,7 @@ const LifetimeContentCard = () => {
       </div>
 
       <div className=" max-w-[1050px] mx-auto ">
-        <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
           Key Metric 1: Organic Traffic
         </h1>
         <img
@@ -68,7 +68,7 @@ const LifetimeContentCard = () => {
         />
       </div>
       <div className=" max-w-[1050px] mx-auto ">
-        <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
           Key Metric 2: Organic Research
         </h1>
         <img
@@ -78,7 +78,7 @@ const LifetimeContentCard = () => {
         />
       </div>
       <div className=" max-w-[1050px] mx-auto ">
-        <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
           Key Metric 3: Ranking Keywords
         </h1>
         <img
@@ -88,7 +88,7 @@ const LifetimeContentCard = () => {
         />
       </div>
       <div className=" max-w-[1050px] mx-auto ">
-        <h1 className=" text-[#011833] font-[600] text-[22px] text-center">
+        <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center">
           Key Metric 4: Top Ranking Keywords
         </h1>
         <img
@@ -98,11 +98,11 @@ const LifetimeContentCard = () => {
         />
       </div>
 
-      <div className="max-w-[1050px] mx-auto px-[15px] mt-[120px]">
-        <h1 className="text-4xl text-[#3467d8] text-center font-[700] md:text-[50px]  pb-[30px] leading-[1.4] px-[8%]">
+      <div className="max-w-[1050px] mx-auto px-[15px] sm:mt-[120px] mt-[60px]">
+        <h1 className="text-[22px] text-[#3467d8] text-center font-[700] sm:text-[50px]  pb-[30px] leading-[1.4] sm:px-[8%]">
           {socialMediaData.heading}
         </h1>
-        <p className="text-[#787878]  text-[17px]">
+        <p className="text-[#787878]   sm:text-[17px] text-[14px] sm:text-left text-justify">
           {socialMediaData.subheading}
         </p>
       </div>
@@ -110,7 +110,7 @@ const LifetimeContentCard = () => {
         <CaseStudyCard key={idx} title={section.title} items={section.items} />
       ))}
       <div className="max-w-[1050px] mx-auto px-[15px]">
-        <p className="text-[#787878]  text-[17px] mb-10">
+        <p className="sm:text-[17px] text-[14px] sm:text-left text-justify mb-10">
           The effective implementation of these social media strategies by
           Safari Marketing Pro has not only resulted in substantial growth in
           followers and engagement but has also significantly elevated brand
