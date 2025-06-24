@@ -367,7 +367,7 @@ We understand your safari & tour business needs to be more visible on the search
             {showForm && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
                 <div
-                  className="  relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
+                  className="  relative w-[95%] sm:px-0 px-2 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
                              animate-slide-down-fade"
                 >
                   {/* Close Button */}
@@ -377,7 +377,7 @@ We understand your safari & tour business needs to be more visible on the search
                   >
                     ×
                   </button>
-                  <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                  <div className="text-white text-center py-8 md:-mt-5 rounded-t-lg">
                     <h3 className="text-[24px] font-medium leading-snug">
                       SCHEDULE CALL WITH AN EXPERT
                     </h3>

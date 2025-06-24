@@ -221,7 +221,7 @@ function Fundamental() {
             {showForm && (
               <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60  ">
                 <div
-                  className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                  className=" mt-[80px] relative w-[95%] sm:px-0 px-4 max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
                  animate-slide-down-fade  "
                 >
                   {/* Close Button */}

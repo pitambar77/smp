@@ -37,6 +37,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaMailBulk } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Common = () => {
   return (
@@ -53,12 +54,14 @@ const Common = () => {
           >
             <FaWhatsapp className="text-[#3467d8] md:text-[45px] text-[25px]" />
             <div>
+              <Link to="tel: +91-6371-223-581">
               <h1 className="text-[#011833] md:text-[22px] text-[16px] font-[600] group-hover:text-white">
                 Whatsapp Directly
               </h1>
               <h2 className="p-1 text-[#ff5254] md:text-[18px] text-[14px] font-[600] whitespace-nowrap">
-                +91-6371-223-581
+               +91-6371-223-581
               </h2>
+              </Link>
             </div>
           </div>
 
@@ -69,12 +72,14 @@ const Common = () => {
           >
             <FaMailBulk className="text-[#3467d8] md:text-[45px] text-[25px]" />
             <div>
+              <Link to="mailto: sales@manoramaseoservice.com">
               <h1 className="text-[#011833] md:text-[22px] text-[16px] font-[600] group-hover:text-white">
                 Email Us Questions Here
               </h1>
               <h2 className="p-1 text-[#ff5254] md:text-[18px] text-[14px] font-[600]">
                 sales@manoramaseoservice.com
               </h2>
+              </Link>
             </div>
           </div>
         </div>
@@ -84,3 +89,5 @@ const Common = () => {
 };
 
 export default Common;
+
+

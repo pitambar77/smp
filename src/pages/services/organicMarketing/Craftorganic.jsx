@@ -79,12 +79,13 @@ const Craftorganic = () => {
             // key={idx}
             className="sm:text-[17px] text-[14px] text-justify sm:text-start font-[400] leading-[1.5]  sm:pb-[13px] pb-[10px] text-white"
           >
-            We live by our two primary core values: <strong> Relationships and Results </strong>.
-            We’re here for every <strong> African Safari Tour Operator </strong>, that’s our
-            pillar. We have experts who specialize in helping safari businesses
-            of all sizes -- from small businesses to large achieve exponential
-            growth. We believe in owning the voice of our clients and we work
-            hard every day to prove it.
+            We live by our two primary core values:{" "}
+            <strong> Relationships and Results </strong>. We’re here for every{" "}
+            <strong> African Safari Tour Operator </strong>, that’s our pillar.
+            We have experts who specialize in helping safari businesses of all
+            sizes -- from small businesses to large achieve exponential growth.
+            We believe in owning the voice of our clients and we work hard every
+            day to prove it.
           </p>
           {/* ))} */}
 
@@ -99,7 +100,7 @@ const Craftorganic = () => {
           {showForm && (
             <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]">
               <div
-                className="  relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
+                className="  relative w-[95%] sm:px-0 px-4 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg mt-[80px]
                                        animate-slide-down-fade"
               >
                 {/* Close Button */}
@@ -109,7 +110,7 @@ const Craftorganic = () => {
                 >
                   ×
                 </button>
-                <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                <div className="text-white text-center py-8 md:-mt-5 rounded-t-lg">
                   <h3 className="text-[24px] font-medium leading-snug">
                     REQUEST A FREE STRATEGY SESSION
                   </h3>

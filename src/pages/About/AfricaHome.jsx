@@ -56,13 +56,12 @@
 //                 serve the clients amazingly from their operations to their
 //                 sales.
 //               </p>
-              
+
 //                 <p className="text-[17px] text-[#fff] font-[600] mb-[15px] leading-[inherit]">
 //                   If you don’t know where Serengeti is, how will you bring
 //                   customers to Serengeti?
 //                 </p>
-             
-            
+
 //                 <p className="text-[17px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
 //                   So, we make sure to sit down with the clients and thoroughly
 //                   check them from the ground label up until they connect to a
@@ -71,13 +70,11 @@
 //                   convert the customers or checking whether they are following
 //                   up or not.
 //                 </p>
-              
-              
+
 //                 <p className="text-[17px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
 //                   That’s why Chin is committed to giving them face-to-face
 //                   meetings to bring value from every angle.
 //                 </p>
-            
 
 //               <div className="mt-6">
 //                 <button
@@ -133,7 +130,7 @@
 //                     >
 //                       <div className=" rounded-full flex justify-center items-center   transition">
 //                         <span className="text-[60px] mt-4">
-                        
+
 //                           <LiaPlayCircle />
 //                         </span>
 //                       </div>
@@ -162,31 +159,29 @@
 
 // export default AfricaHome;
 
-
-
 //<--------------------responsive---------------
 
 import React, { useEffect } from "react";
- 
+
 import { LiaPlayCircle } from "react-icons/lia";
- 
+
 import { useState } from "react";
 import RequestForm from "../../components/RequestForm";
- 
+
 function AfricaHome() {
   const [playVideo, setPlayVideo] = useState(false);
   const [showForm, setShowForm] = useState(false);
- 
+
   useEffect(() => {
     if (showForm) {
       document.body.classList.add("overflow-hidden");
     } else {
       document.body.classList.remove("overflow-hidden");
     }
- 
+
     return () => document.body.classList.remove("overflow-hidden");
   }, [showForm]);
- 
+
   return (
     <div className="relative w-full overflow-hidden">
       {/* Background Image Layer */}
@@ -200,10 +195,10 @@ function AfricaHome() {
           backgroundPosition: "center",
         }}
       />
- 
+
       {/* Red Overlay */}
       <div className="absolute  w-full h-full bg-[linear-gradient(rgba(255,82,84,0.9),rgba(255,82,84,0.9))] z-10" />
- 
+
       {/* Main Content */}
       <div className="relative z-20 md:py-[120px] py-[40px] px-4  sm:flex md:flex sm:justify-center">
         <div className="max-w-[1140px] mx-auto  ">
@@ -213,7 +208,7 @@ function AfricaHome() {
           <p className=" text-[22px] font-[400] text-center text-white leading-[inherit] md:pb-[15px] ">
             Chin is very well name in Africa as a Safari Mentor.
           </p>
- 
+
           {/* Two Column Layout */}
           <div className="flex flex-col lg:flex-row  text-justify md:text-left justify-between md:mt-[40px] mt-10">
             {/* Left: Fixed Width Content */}
@@ -224,29 +219,26 @@ function AfricaHome() {
                 serve the clients amazingly from their operations to their
                 sales.
               </p>
-             
-                <p className="md:text-[17px] text-[15px] text-[#fff] font-[600] mb-[15px] leading-[inherit]">
-                  If you don’t know where Serengeti is, how will you bring
-                  customers to Serengeti?
-                </p>
-             
-           
-                <p className="md:text-[17px] text-[15px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
-                  So, we make sure to sit down with the clients and thoroughly
-                  check them from the ground label up until they connect to a
-                  customer. It’s not just about marketing, where we bring
-                  customers to them; we are also part of the process where they
-                  convert the customers or checking whether they are following
-                  up or not.
-                </p>
-             
-             
-                <p className="md:text-[17px] text-[15px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
-                  That’s why Chin is committed to giving them face-to-face
-                  meetings to bring value from every angle.
-                </p>
-           
- 
+
+              <p className="md:text-[17px] text-[15px] text-[#fff] font-[600] mb-[15px] leading-[inherit]">
+                If you don’t know where Serengeti is, how will you bring
+                customers to Serengeti?
+              </p>
+
+              <p className="md:text-[17px] text-[15px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
+                So, we make sure to sit down with the clients and thoroughly
+                check them from the ground label up until they connect to a
+                customer. It’s not just about marketing, where we bring
+                customers to them; we are also part of the process where they
+                convert the customers or checking whether they are following up
+                or not.
+              </p>
+
+              <p className="md:text-[17px] text-[15px] text-[#fff] font-[400] mb-[15px] leading-[inherit]">
+                That’s why Chin is committed to giving them face-to-face
+                meetings to bring value from every angle.
+              </p>
+
               <div className="mt-6 mb-8 xl:mb-0">
                 <button
                   onClick={() => setShowForm(true)}
@@ -255,11 +247,11 @@ function AfricaHome() {
                   SCHEDULE CALL WITH AN EXPERT
                 </button>
               </div>
- 
+
               {showForm && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
                   <div
-                    className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+                    className=" mt-[80px] relative w-[95%] sm:px-0 px-4 max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
                  animate-slide-down-fade  "
                   >
                     {/* Close Button */}
@@ -269,7 +261,7 @@ function AfricaHome() {
                     >
                       ×
                     </button>
-                    <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                    <div className="text-white text-center py-8 md:-mt-5 rounded-t-lg">
                       <h3 className="text-[24px] font-medium leading-snug uppercase">
                         Schedule Call with an Expert
                       </h3>
@@ -280,7 +272,7 @@ function AfricaHome() {
                 </div>
               )}
             </div>
- 
+
             {/* Right: Video Embed */}
             <div className="sm:px-[15px]  ">
               <div className="sm:max-w-[540px] md:max-w-[540px]  sm:h-[422px] md:h-[422px] aspect-video shadow-lg overflow-hidden relative cursor-pointer ">
@@ -294,21 +286,20 @@ function AfricaHome() {
                     />
                     {/* YouTube play button overlay */}
                     <div className="absolute inset-0 bg-[#04040429] bg-opacity-30"></div>
- 
+
                     <div
                       onClick={() => setPlayVideo(true)}
                       className="absolute inset-0 flex justify-center items-center"
                     >
                       <div className=" rounded-full flex justify-center items-center   transition">
                         <span className="text-[60px] mt-4">
-                       
                           <LiaPlayCircle />
                         </span>
                       </div>
                     </div>
                   </>
                 )}
- 
+
                 {playVideo && (
                   <iframe
                     width="100%"
@@ -327,7 +318,5 @@ function AfricaHome() {
     </div>
   );
 }
- 
+
 export default AfricaHome;
- 
- 

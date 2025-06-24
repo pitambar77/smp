@@ -35,29 +35,26 @@ const BgSticky = () => {
       <div className="relative z-30 text-center  max-w-[1140px] mx-auto">
         {/* <h2 className="  font-bold text-[48px] text-center capitalize text-white leading-[1.3] px-[10%] pb-[20px] "> */}
         <h2 className="font-bold  text-[24px] md:text-[48px] text-center capitalize text-white leading-[1.3] px-4 sm:px-[10%] pb-[20px]">
-
           Let's Make Sure Your Safari Business Is Online 24/7.
         </h2>
 
         {/* <p className="text-[19px]  text-white  font-[400] capitalize tracking-[1px]"> */}
         <div className="px-[20px] md:px-0">
-        <p className="text-[15px] md:text-[19px] text-white font-[400] capitalize tracking-[1px]  ">
-
-          All good things start with a chat…
-        </p>
-         <button
-          onClick={() => setShowForm(true)}
-          // className=" cursor-pointer font-[600] mt-[50px] uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[12px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
-          className="cursor-pointer font-[600] mt-[30px] md:mt-[50px] uppercase text-[14px]  md:text-[16px] tracking-[1.2px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] md:py-[12px] py-[10px] md:px-[40px] px-[30px]  bg-[#ff5254]  text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
-
-        >
-          Get my free 30 minute strategy session
-        </button>
-</div>
+          <p className="text-[15px] md:text-[19px] text-white font-[400] capitalize tracking-[1px]  ">
+            All good things start with a chat…
+          </p>
+          <button
+            onClick={() => setShowForm(true)}
+            // className=" cursor-pointer font-[600] mt-[50px] uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[12px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+            className="cursor-pointer font-[600] mt-[30px] md:mt-[50px] uppercase text-[14px]  md:text-[16px] tracking-[1.2px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] md:py-[12px] py-[10px] md:px-[40px] px-[30px]  bg-[#ff5254]  text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+          >
+            Get my free 30 minute strategy session
+          </button>
+        </div>
         {showForm && (
           <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
             <div
-              className=" mt-[80px] relative w-[90%] max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+              className=" mt-[80px] relative w-[95%] sm:px-0 px-2 max-w-[600px] bg-gradient-to-b from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
                  animate-slide-down-fade"
             >
               {/* Close Button */}
@@ -67,7 +64,7 @@ const BgSticky = () => {
               >
                 ×
               </button>
-              <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+              <div className="text-white text-center py-8 md:-mt-5 rounded-t-lg">
                 <h3 className="text-[24px] font-medium leading-snug uppercase">
                   Get my free 30 minute strategy session
                 </h3>

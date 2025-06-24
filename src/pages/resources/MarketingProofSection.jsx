@@ -56,8 +56,8 @@
 //               className="cursor-pointer transition transform hover:scale-105"
 //             >
 //               <img
-                // src={`${BASE_URL}${image.url}`}
-                // alt={image.title || `Image ${index + 1}`}
+// src={`${BASE_URL}${image.url}`}
+// alt={image.title || `Image ${index + 1}`}
 //                 className="rounded w-full h-auto object-contain"
 //               />
 //             </div>
@@ -167,7 +167,7 @@ const MarketingProofSection = () => {
       {showForm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
           <div
-            className=" mt-[80px] relative w-[90%] max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+            className=" mt-[80px] relative w-[90%] px-2 sm:px-0 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
                  animate-slide-down-fade  "
           >
             {/* Close Button */}
@@ -179,11 +179,11 @@ const MarketingProofSection = () => {
             </button>
 
             {/* Heading */}
-             <div className="text-white text-center  -mt-5 rounded-t-lg">
-          <h3 className= "  text-[18px]  md:text-[22px] font-medium leading-snug uppercase px-4 pt-8">
+            <div className="text-white text-center  md:-mt-5 rounded-t-lg">
+              <h3 className="  text-[18px]  md:text-[22px] font-medium leading-snug uppercase px-4 pt-8">
                 {selectedImage?.title || "Get Your Free Quote"}
               </h3>
-               <div className="border-t border-white w-full mx-auto mt-4 -mb-2 " />
+              <div className="border-t border-white w-full mx-auto mt-4 -mb-2 " />
             </div>
 
             {/* Form */}

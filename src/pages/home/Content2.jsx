@@ -254,7 +254,7 @@ function Content2() {
                   >
                     ×
                   </button>
-                  <div className="text-white text-center py-8 -mt-5 rounded-t-lg">
+                  <div className="text-white text-center py-8 md:-mt-5 rounded-t-lg">
                     <h3 className="text-[24px] font-medium leading-snug uppercase">
                       Schedule Call with an Expert
                     </h3>

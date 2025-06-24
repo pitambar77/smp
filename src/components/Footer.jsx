@@ -78,15 +78,15 @@
 //                 B2, Patrapada, 751019
 //               </p>
 //             </div>
-//             <div>
-//               <p className="font-semibold text-[18px] tracking-wide leading-1.2 mb-1.5 text-[#fff]  ">CALL</p>
-//               <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]"> <Link to="tel: +91-6371-223-581">+91-6371-223-581</Link></p>
-//             </div>
-//             <div>
-//               <p className="font-semibold mb-1.5 text-[18px] tracking-wide leading-1.2 text-[#fff]  ">EMAIL</p>
-//               <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]" > <Link to="mailto: sales@manoramaseoservice.com">sales@manoramaseoservice.com</Link> </p>
-//             </div>
-//           </div>
+            // <div>
+            //   <p className="font-semibold text-[18px] tracking-wide leading-1.2 mb-1.5 text-[#fff]  ">CALL</p>
+            //   <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]"> <Link to="tel: +91-6371-223-581">+91-6371-223-581</Link></p>
+            // </div>
+            // <div>
+            //   <p className="font-semibold mb-1.5 text-[18px] tracking-wide leading-1.2 text-[#fff]  ">EMAIL</p>
+            //   <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]" > <Link to="mailto: sales@manoramaseoservice.com">sales@manoramaseoservice.com</Link> </p>
+            // </div>
+          // </div>
 
 //           <h3 className="font-semibold text-[22px] mt-2.5 mb-4 tracking-wide text-left  ">
 //             LOVE US AS WE LOVE YOU!
@@ -248,19 +248,13 @@ export default function Footer() {
                 B2, Patrapada, 751019
               </p>
             </div>
-            <div>
-              <p className="font-semibold md:text-[18px] text-[14px] tracking-wide leading-1.2 mb-1.5 text-[#fff]">
-                CALL
-              </p>
-              <p className="text-gray-100 text-[14px]">+91-6371-223-581</p>
+              <div>
+              <p className="font-semibold text-[18px] tracking-wide leading-1.2 mb-1.5 text-[#fff]  ">CALL</p>
+              <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]"> <Link to="tel: +91-6371-223-581">+91-6371-223-581</Link></p>
             </div>
             <div>
-              <p className="font-semibold mb-1.5 md:text-[18px] text-[14px] tracking-wide leading-1.2 text-[#fff]">
-                EMAIL
-              </p>
-              <p className="text-[#fff] font-[400] text-[14px] hover:text-[#ff5254]">
-                sales@manoramaseoservice.com
-              </p>
+              <p className="font-semibold mb-1.5 text-[18px] tracking-wide leading-1.2 text-[#fff]  ">EMAIL</p>
+              <p className="text-[#fff] font-[400] hover:text-[#ff5254] text-[17px]" > <Link to="mailto: sales@manoramaseoservice.com">sales@manoramaseoservice.com</Link> </p>
             </div>
           </div>
  
