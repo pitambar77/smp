@@ -8,25 +8,19 @@ const contentLeft = [
   {
     text: `<span class="font-semibold">Customized approach for each client –</span> We understand each client is unique in terms of requirements, brand identity, and target audience. So, we take a personalized approach to ensure the content aligns with your needs.`,
   },
-{
+  {
     text: `<span class="font-semibold">Content planning to drive measurable results-</span> By clearly defining the objectives, and desired outcomes, we create SEO Content For African Safari Operator that directly supports your goals and drives conversions.`,
   },
- 
- 
+
   {
     text: `<span class="font-semibold">Assuring each content is of the highest standard –  </span> High-quality content can increase audience engagement as it grabs their attention and lets them keep coming back to your content.`,
   },
   {
     text: `<span class="font-semibold">SEO-friendly writing for increased search rankings –   </span> By incorporating SEO-friendly techniques, search engines make your content more discoverable. This leads to increased organic traffic, expanding your reach to more potential customers.`,
   },
-  
 ];
 
-const contentRight = [
-  
-
-  
-];
+const contentRight = [];
 
 const Websites = () => {
   return (
