@@ -1,4 +1,5 @@
 import React from "react";
+import { FaCheck, FaTimes } from "react-icons/fa";
 
 const Table = () => {
   return (
@@ -82,12 +83,16 @@ const Table = () => {
                 <div className="bg-[#001634] text-white text-center font-montserrat text-[18px] font-semibold h-[160px] flex items-center justify-center border">
                   {row.title}
                 </div>
-                <div className="bg-[#d2e1ff] text-left font-montserrat text-[17px] text-[#626262] leading-[1.5] px-5 py-2.5 flex items-center border">
-                  <span className="text-green-600 mr-2 text-[20px]">✔</span>
+                <div className="bg-[#d2e1ff] text-left font-montserrat text-[17px] text-[#626262] leading-[1.5] px-5 py-2.5 flex items-start border">
+                  <span className="text-green-600 mr-2 text-[18px]">
+                    <FaCheck />
+                  </span>
                   {row.smp}
                 </div>
-                <div className="bg-[#d2e1ff] text-center font-montserrat text-[17px] text-[#626262] leading-[1.5] px-5 py-2.5 flex items-center justify-center border">
-                  <span className="text-red-500 mr-2 text-[20px]">✘</span>
+                <div className="bg-[#d2e1ff] text-center font-montserrat text-[17px] text-[#626262] leading-[1.5] px-5 py-2.5 flex items-start justify-center border">
+                  <span className="text-red-500 mr-2 text-[18px]">
+                    <FaTimes />
+                  </span>
                   {row.other}
                 </div>
               </div>
