@@ -69,7 +69,7 @@ const Work = () => {
         </p>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 gap-5  px-4 max-w-[1140px] sm:px-[15px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 sm:gap-10 gap-5  px-4 sm:max-w-[1140px] sm:px-[15px] mx-auto">
           {steps.map((step, index) => (
             <div
               key={index}

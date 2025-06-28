@@ -13,7 +13,7 @@ const CaroselSection = () => {
             <h1 className=" w-full md:text-[44px] text-[24px] font-[700] text-white py-[20px] ">
               Explore Success Stories
             </h1>
-            <h2 className=" md:text-[24px]   text-[18px] font-[600] text-white ">
+            <h2 className=" md:text-[24px]   text-[18px] font-[600] text-white sm:px-0 px-4 ">
               Team Up With Safari Marketing Pro – The Next Amazing Case Study
               Could Be Yours!
             </h2>

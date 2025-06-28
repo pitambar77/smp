@@ -128,7 +128,7 @@ const Craftorganic = () => {
         <img
           src={`${BASE_URL}/${data.image}`}
           alt="Craft Section"
-          className="sm:w-[445px] sm:h-auto object-contain mr-40"
+          className="sm:w-[445px] sm:h-auto object-contain sm:mr-40"
         />
       </div>
     </div>

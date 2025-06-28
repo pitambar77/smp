@@ -36,7 +36,7 @@ export default function FormComponent() {
 
   return (
     <form className=" " onSubmit={handleSubmit}>
-      <h2 className="text-[50px] text-white font-bold mb-5">Please enter your details.</h2>
+      <h2 className="sm:text-[50px] text-[26px] text-white font-bold mb-5">Please enter your details.</h2>
 
       <div className="grid grid-cols-2 gap-[10px]">
         <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="First Name*" className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />

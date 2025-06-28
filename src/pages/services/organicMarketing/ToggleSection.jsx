@@ -7,7 +7,7 @@ const ToggleSection = () => {
     <>
       <div className=" w-full sm:py-[80px] py-[60px] ">
         <div className=" max-w-[1140px] mx-auto ">
-          <div className=" max-w-[912px] mx-auto sm:py-[20px] sm:px-0 px-4">
+          <div className=" sm:max-w-[912px] mx-auto sm:py-[20px] sm:px-0 px-4">
             <h1 className=" text-[#3467d8] sm:text-[48px] text-[24px] font-[700] text-center pb-[15px]">
               Providing Marketing Solutions to Solve Your Problems
             </h1>
@@ -19,7 +19,7 @@ const ToggleSection = () => {
 
         <div className=" max-w-[1140px] mx-auto ">
           <div>
-            <div className=" flex flex-col items-center justify-center  bg-white text-center ">
+            <div className=" flex flex-col sm:items-center justify-center  bg-white text-center ">
               {/* Heading */}
 
               <p className="max-w-md text-[#787878] font-[400] z-10 sm:text-[17px] text-[14px] sm:mt-10 mt-4 sm:text-start text-justify px-4 sm:px-0 ">
@@ -30,7 +30,7 @@ const ToggleSection = () => {
               </p>
 
               {/* Main content */}
-              <div className="flex flex-col md:flex-row items-center relative sm:-mt-24 mt-4 ">
+              <div className="flex flex-col md:flex-row items-center relative sm:-mt-24 mt-4 sm:px-0 px-4 ">
                 {/* Left image */}
                 <div
                   className={`transition-transform duration-300 transform-gpu origin-center ${
@@ -40,7 +40,7 @@ const ToggleSection = () => {
                   <img
                     src="https://safarimarketingpro.com/images/toggle-left.jpg"
                     alt="Before SEO"
-                    className=" w-full object-cover mt-10 sm:mt-0 p-5 sm:p-0 "
+                    className="sm:w-full object-cover mt-10 sm:mt-0 p-5 sm:p-0 "
                   />
                 </div>
 
@@ -74,7 +74,7 @@ const ToggleSection = () => {
                   <img
                     src="https://safarimarketingpro.com/images/toggle-right.png"
                     alt="After SEO"
-                    className="rounded-full w-full object-cover p-5 sm:p-0  "
+                    className="rounded-full sm:w-full object-cover p-5 sm:p-0  "
                   />
                 </div>
               </div>

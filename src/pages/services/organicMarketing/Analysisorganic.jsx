@@ -87,7 +87,7 @@ export default function Analysisorganic() {
             <img
               src="https://safarimarketingpro.com/images/organic_adm_panel.webp"
               alt="SEO Tools"
-              className="w-[1140px] p-3 h-auto object-contain   relative rounded-4xl "
+              className="sm:w-[1140px] p-3 h-auto object-contain   relative rounded-4xl "
             />
           </div>
             </div>
