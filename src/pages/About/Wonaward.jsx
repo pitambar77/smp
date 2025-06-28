@@ -1,7 +1,7 @@
 // import React from 'react';
 
 // import { FaStar } from "react-icons/fa6";
- 
+
 // function Wonaward() {
 //   return (
 //     <div>
@@ -12,7 +12,7 @@
 //             <h2 className="text-3xl md:text-4xl font-bold text-[#0B1C39] mb-8">
 //               Awards We’ve Won
 //             </h2>
- 
+
 //             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 justify-between pr-[30px] ">
 //               <div>
 //                 <p className=" flex font-semibold text-[22px]  capitalize text-[#767676] leading-[1.3]  py-[10px] pb-[20px]">
@@ -23,7 +23,7 @@
 //                   Clutch Award
 //                 </p>
 //               </div>
- 
+
 //               <div>
 //                 <p className="flex  font-semibold text-[22px]  capitalize text-[#767676] leading-[1.3]  py-[10px] pb-[20px]">
 //                   <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
@@ -33,17 +33,17 @@
 //                   Top SEOs
 //                 </p>
 //               </div>
- 
+
 //               <div className=' pr-2'>
 //                 <p className="flex  font-semibold text-[22px] capitalize text-[#767676] leading-[1.3]  py-[10px] pb-[20px]">
 //                  <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
-//                   Growing Businesses  Online 
+//                   Growing Businesses  Online
 //                 </p>
 //                 <p className="ml-6 font-medium text-[16px]  capitalize text-[#787878] leading-[1.3] ">
 //                   Google
 //                 </p>
 //               </div>
- 
+
 //               <div >
 //                 <p className="flex  font-semibold text-[22px]  capitalize text-[#767676] leading-[1.3]  py-[10px] pb-[20px]">
 //                   <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
@@ -55,7 +55,7 @@
 //               </div>
 //             </div>
 //           </div>
- 
+
 //           {/* Right Side - Logos */}
 //           <div className=" pr-[10px]">
 //             <img
@@ -69,14 +69,14 @@
 //     </div>
 //   );
 // }
- 
+
 // export default Wonaward;
 
 //-----------------------------------------------------------------------------
 
-import React from 'react';
+import React from "react";
 import { FaStar } from "react-icons/fa6";
- 
+
 function Wonaward() {
   return (
     <div>
@@ -85,18 +85,16 @@ function Wonaward() {
           <h2 className="text-[24px]  md:pl-3 md:text-4xl font-bold text-[#0B1C39] mb-8 flex justify-center md:justify-start">
             Awards We’ve Won
           </h2>
- 
-          <div className='flex flex-col md:flex-row  justify-center items-center'>
- 
- 
+
+          <div className="flex flex-col md:flex-row  justify-center items-center">
             {/* Left Side - Awards Text */}
-            <div className=" w-fill md:w-[67.66%]  md:pr-[30px] px-[15px] ">
+            {/* <div className=" w-fill md:w-[67.66%]  md:pr-[30px] px-[15px] ">
  
  
               <div className="grid grid-cols-2 md:grid-cols-2 md:gap-5 gap-3 justify-between md:pr-[30px] ">
                 <div>
                   <p className=" flex font-semibold md:text-[22px] text-[15px]  capitalize text-[#767676] leading-[1.3]  md:py-[10px] md:pb-[20px] py-2   ">
-                    <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
+                    <span className="text-blue-500  w-[18px]  mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
                     Top B2B Company
                   </p>
                   <p className="ml-6 font-medium md:text-[16px] text-[14px]  capitalize text-[#787878] leading-[1.3] ">
@@ -116,7 +114,7 @@ function Wonaward() {
  
                 <div className=' md:pr-2'>
                   <p className="flex  font-semibold md:text-[22px] text-[15px] capitalize text-[#767676] leading-[1.3]  md:py-[10px] md:pb-[20px] py-2   ">
-                    <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
+                    <span className="text-blue-500  sm:w-[18px] w-[26px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
                     Growing Businesses  Online
                   </p>
                   <p className="ml-6 font-medium md:text-[16px] text-[14px]  capitalize text-[#787878] leading-[1.3] ">
@@ -126,7 +124,7 @@ function Wonaward() {
  
                 <div >
                   <p className="flex  font-semibold md:text-[22px] text-[15px]  capitalize text-[#767676] leading-[1.3]  md:py-[10px] md:pb-[20px] py-2   ">
-                    <span className="text-blue-500  w-[18px] mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
+                    <span className="text-blue-500 sm:w-[18px] w-[26px] h-auto object-cover mr-2 mt-[6px]"><img src="https://safarimarketingpro.com/images/wmatbp-star-icn.png" alt="" /></span>
                     Top Digital Marketing Agency
                   </p>
                   <p className="ml-6 font-medium md:text-[16px] text-[14px]  capitalize text-[#787878] leading-[1.3] ">
@@ -134,8 +132,75 @@ function Wonaward() {
                   </p>
                 </div>
               </div>
+            </div> */}
+            <div className="w-full md:w-[67.66%] md:pr-[30px] px-[15px]">
+              <div className="grid grid-cols-2 gap-3 md:gap-5">
+                {/* Item 1 */}
+                <div>
+                  <p className="flex font-semibold text-[15px] md:text-[22px] capitalize text-[#767676] leading-[1.3] py-2 md:py-[10px] md:pb-[20px]">
+                    <span className="w-[18px] mr-2 mt-[6px]">
+                      <img
+                        src="https://safarimarketingpro.com/images/wmatbp-star-icn.png"
+                        alt="star icon"
+                      />
+                    </span>
+                    Top B2B Company
+                  </p>
+                  <p className="ml-6 font-medium text-[14px] md:text-[16px] capitalize text-[#787878] leading-[1.3]">
+                    Clutch Award
+                  </p>
+                </div>
+
+                {/* Item 2 */}
+                <div>
+                  <p className="flex font-semibold text-[15px] md:text-[22px] capitalize text-[#767676] leading-[1.3] py-2 md:py-[10px] md:pb-[20px]">
+                    <span className="w-[18px] mr-2 mt-[6px]">
+                      <img
+                        src="https://safarimarketingpro.com/images/wmatbp-star-icn.png"
+                        alt="star icon"
+                      />
+                    </span>
+                    Best In Search
+                  </p>
+                  <p className="ml-6 font-medium text-[14px] md:text-[16px] capitalize text-[#787878] leading-[1.3]">
+                    Top SEOs
+                  </p>
+                </div>
+
+                {/* Item 3 */}
+                <div>
+                  <p className="flex font-semibold text-[15px] md:text-[22px] capitalize text-[#767676] leading-[1.3] py-2 md:py-[10px] md:pb-[20px] sm:pr-10">
+                    <span className="w-[26px] sm:w-[18px] mr-2 mt-[6px]">
+                      <img
+                        src="https://safarimarketingpro.com/images/wmatbp-star-icn.png"
+                        alt="star icon"
+                      />
+                    </span>
+                    Growing Businesses Online
+                  </p>
+                  <p className="ml-6 font-medium text-[14px] md:text-[16px] capitalize text-[#787878] leading-[1.3]">
+                    Google
+                  </p>
+                </div>
+
+                {/* Item 4 */}
+                <div>
+                  <p className="flex font-semibold text-[15px] md:text-[22px] capitalize text-[#767676] leading-[1.3] py-2 md:py-[10px] md:pb-[20px]">
+                    <span className="w-[26px] sm:w-[18px] mr-2 mt-[6px]">
+                      <img
+                        src="https://safarimarketingpro.com/images/wmatbp-star-icn.png"
+                        alt="star icon"
+                      />
+                    </span>
+                    Top Digital Marketing Agency
+                  </p>
+                  <p className="ml-6 font-medium text-[14px] md:text-[16px] capitalize text-[#787878] leading-[1.3]">
+                    Clutch Award
+                  </p>
+                </div>
+              </div>
             </div>
- 
+
             {/* Right Side - Logos */}
             <div className=" px-4 md:px-0 md:pr-[10px] md:mt-[30px] pt-30 ">
               <img
@@ -150,6 +215,5 @@ function Wonaward() {
     </div>
   );
 }
- 
+
 export default Wonaward;
- 

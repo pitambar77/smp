@@ -35,7 +35,7 @@ const Craftorganic = () => {
     >
       <div className="max-w-[1140px] mx-auto flex flex-col sm:flex-row items-start sm:items-center sm:justify-between relative z-10 sm:px-0 px-4">
         {/* Left Content */}
-        <div className="sm:w-[655px] text-left py-[40px] z-10">
+        <div className="sm:w-[655px] text-left sm:py-[40px] py-[10px] z-10">
           <h2 className="font-bold sm:text-[36px] sm:text-start text-center text-[24px] leading-[1.2] mt-10 mb-5 capitalize text-white">
             {data.heading}
           </h2>

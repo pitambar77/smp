@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Homecontent from './Homecontent'
 import Takepride from './Takepride'
 import Lifecycle from './Lifecycle'
-import Craftcontent from './Craftcontent'
+
 import Fundamentalcontent from './Fundamentalcontent'
 import Wellcraftedcontet from './Wellcraftedcontet'
 import Strategiescontent from './Strategiescontent'
@@ -11,6 +11,7 @@ import Faqcontent from './Faqcontent'
 import CaroselSection from '../../pricing/CaroselSection'
 import Common from '../../../components/Common'
 import Content9 from '../../home/Content9'
+import Craftcontent from './Craftcontent'
 
 function Content() {
   useEffect(() => {
@@ -23,7 +24,7 @@ function Content() {
       <Homecontent/>
       <Takepride/>
       <Lifecycle/>
-      <Craftcontent/>
+     <Craftcontent/>
       <Fundamentalcontent/>
       <Wellcraftedcontet/>
       <Work/>

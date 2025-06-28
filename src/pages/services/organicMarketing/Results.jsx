@@ -5,10 +5,9 @@ const features = [
   {
     icon: (
       <svg
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 1024 1024"
-        className="icon"
+       
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         fill="#000000"
@@ -46,8 +45,7 @@ const features = [
         fill="#ff5254"
         stroke="#ff5254"
         strokeWidth="0.36"
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 -0.08 20 20"
         xmlns="http://www.w3.org/2000/svg"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
@@ -73,8 +71,7 @@ const features = [
         fill="#ff5254"
         stroke="#ff5254"
         strokeWidth={9.216}
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
@@ -170,8 +167,7 @@ const features = [
         fill="#ff5254"
         stroke="#ff5254"
         strokeWidth={0.384}
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 64 64"
         xmlns="http://www.w3.org/2000/svg"
         style={{ strokeLinecap: "round", strokeLinejoin: "round" }}
@@ -204,8 +200,7 @@ const features = [
         id="Capa_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 71.682 71.682"
         xmlSpace="preserve"
       >
@@ -242,8 +237,7 @@ const features = [
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="60px"
-        height="60px"
+       className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 256 252"
         enableBackground="new 0 0 256 252"
         xmlSpace="preserve"
@@ -340,15 +334,15 @@ We understand your safari & tour business needs to be more visible on the search
             <div className=" sm:pl-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-8">
-                  <div className="w-9 h-8 mt-1 ">{feature.icon}</div>
-                  <div>
-                    <h3 className="font-[Montserrat] font-semibold sm:text-[22px] text-[18px] text-left text-[#011833] m-0 p-0 pb-[10px] capitalize">
+                  <div className="sm:w-8 w-[2px] sm:h-8 h-1 mt-1">{feature.icon}</div>
+                  <div className="ml-[10px] sm:ml-0">
+                    <h3 className="font-[Montserrat] font-semibold sm:text-[22px] text-[18px] text-left  text-[#011833] m-0 p-0 pb-[10px] capitalize">
                       {feature.title}
                     </h3>
-                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] text-left text-[#787878] m-0 pb-2 ">
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] sm:text-left text-justify text-[#787878] m-0 pb-2 ">
                       {feature.description}
                     </p>
-                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] text-left text-[#787878] m-0 p-0 ">
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] sm:text-left text-justify text-[#787878] m-0 p-0 ">
                       {feature.description2}
                     </p>
                   </div>

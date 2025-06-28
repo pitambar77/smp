@@ -402,9 +402,9 @@ export default function Content9() {
   };
 
   return (
-    <div className="bg-[#011833] py-[40px]">
+    <div className="bg-[#011833] sm:py-[20px] py-[1px]">
       <div
-        className="bg-no-repeat md:bg-left md:bg-contain my-1"
+        className="bg-no-repeat md:bg-left md:bg-contain sm:my-1"
         style={{
           backgroundImage: `url(${
             backgroundImage ||
@@ -414,7 +414,7 @@ export default function Content9() {
       >
         <div className="max-w-[1140px] mx-auto rounded-3xl overflow-hidden flex flex-col md:flex-row items-center justify-center">
           <div className="hidden md:block md:w-1/2 h-[850px]" />
-          <div className="w-full px-4 md:w-1/2 md:py-[70px]">
+          <div className="w-full sm:px-0 px-4 md:w-1/2 sm:py-[70px] py-[35px]">
             <div className="flex items-center justify-center flex-col text-center md:text-start">
               <h2 className="text-[23px] md:text-[40px] font-bold text-white pb-[15px] tracking-[0.45px] leading-[1.2]">
                 {heading || "We Don’t Charge To Educate Our Customers"}
@@ -426,11 +426,12 @@ export default function Content9() {
             </div>
 
             {/* Form Start */}
-            <div className="max-w-4xl mx-auto bg-white rounded-md p-4 sm:p-6 md:p-8 mt-[25px] font-montserrat text-[#333]">
+            <div className="max-w-4xl mx-auto bg-white rounded-md mt-[25px] font-montserrat text-[#333]">
               <form
                 onSubmit={handleSubmit}
-                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                
               >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 sm:p-6 md:p-8 ">
                 <input
                   type="text"
                   name="fullName"
@@ -509,16 +510,17 @@ export default function Content9() {
                   marketing tips, news and our latest services. You can get
                   everything 24/7. We are available….
                 </div>
-
-                <div className="col-span-1 md:col-span-2 pt-3">
-                  <button
-                    type="submit"
-                    className="w-full bg-[#ff5254] hover:bg-[#3467d8] text-white font-semibold py-5 text-center rounded-sm text-[12px] md:text-[18px] tracking-wider"
-                  >
-                    CONTACT US TODAY
-                  </button>
-                </div>
+                 </div>
+                  <div className="col-span-1 md:col-span-2 pt-3  ">
+                <button
+                  type="submit"
+                  className="w-full cursor-pointer bg-[#ff5254] hover:bg-[#3467d8] text-white font-semibold sm:py-5 py-[10px] text-center rounded-b-sm text-[12px] md:text-[18px] tracking-wider ease-in duration-300"
+                >
+                  CONTACT US TODAY
+                </button>
+              </div>
               </form>
+             
             </div>
             {/* Form End */}
           </div>

@@ -46,7 +46,7 @@ const BgSticky = () => {
           <button
             onClick={() => setShowForm(true)}
             // className=" cursor-pointer font-[600] mt-[50px] uppercase text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] py-[12px] px-[40px] bg-[#ff5254] text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
-            className="cursor-pointer font-[600] mt-[30px] md:mt-[50px] uppercase text-[14px]  md:text-[16px] tracking-[1.2px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] md:py-[12px] py-[10px] md:px-[40px] px-[30px]  bg-[#ff5254]  text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
+            className="cursor-pointer font-[600] mt-[30px] md:mt-[50px] uppercase text-[14px]  md:text-[16px] sm:tracking-[1.2px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] md:py-[12px] py-[15px] md:px-[40px] px-[15px]  bg-[#ff5254]  text-white hover:text-[#ff5254] rounded-[4px] border border-[#ff5254] hover:border-[#011833] transition duration-300 ease-in hover:bg-[#011833]"
           >
             Get my free 30 minute strategy session
           </button>

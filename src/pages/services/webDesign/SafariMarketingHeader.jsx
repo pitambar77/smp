@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SafariMarketingHeader = () => {
+  const [isTouched, setIsTouched] = useState(false);
+
+  const handleTouch = () => {
+    setIsTouched(!isTouched);
+  };
   const navigate = useNavigate();
   return (
     <>
       <div className="w-full     bg-[#3467d8] bg-[url('https://safarimarketingpro.com/images/bg-monkey.png')] bg-no-repeat bg-center bg-cover overflow-hidden">
         <div className=" sm:py-[100px] py-[50px]">
-          <div className="w-full sm:max-w-[1140px] mx-auto sm:px-[10%]  bg-cover bg-center text-white text-center">
+          <div className="sm:max-w-[1140px] mx-auto sm:px-[10%]  bg-cover bg-center text-white text-center">
             <h1 className=" font-bold text-[24px] sm:text-4xl md:text-5xl leading-tight sm:mb-6 mb-[10px] sm:px-0 px-2">
               Why Every Safari Operators Need Safari Marketing Pro To Build A
               World Class Safari Website ?
@@ -32,7 +37,7 @@ const SafariMarketingHeader = () => {
                   Safari Business. A well-professionally designed, lead magnet,
                   sales booster, brand-differentiating website.
                 </p>
-                <p className="italic text-white font-semibold mb-2 sm:sm:text-[20px] text-[16px] text-[16px]">
+                <p className="italic text-white font-semibold mb-2 sm:sm:text-[20px]  text-[16px]">
                   But why is it important to have a website for my safari
                   business?
                 </p>
@@ -81,7 +86,7 @@ const SafariMarketingHeader = () => {
                 <p className="font-semibold text-[18px] mb-1 italic">
                   Global Reach To Your Potential Customers
                 </p>
-                <p className=" font-light sm:text-[18px] text-[14px] text-justify text-[#efefef] leading-[1.5] m-0 sm:pb-[15px] pb-[10px] ">
+                <p className=" font-light sm:text-[18px] text-[14px] text-justify text-[#efefef] leading-[1.5] m-0 sm:pb-[15px]  ">
                   How many people you can reach by doing door to door marketing?
                   Let’s say 300 or 500 or may be maximum 1000 people in a month.
                   Instead of that having a website will make you reach 3 billion
@@ -92,7 +97,7 @@ const SafariMarketingHeader = () => {
 
               {/* Right Column */}
               <div>
-                <p className=" font-light text-[18px] text-justify italic text-[#efefef] leading-[1.5] m-0 pb-[15px] font-montserrat">
+                <p className=" font-light sm:text-[18px] text-[14px] text-justify text-[#efefef] leading-[1.5] m-0 pb-[15px] font-montserrat">
                   Don’t you think that is how your safari business going to
                   grow?
                 </p>
@@ -163,7 +168,12 @@ const SafariMarketingHeader = () => {
                   window.scrollTo(0, 0);
                 }}
               >
-                <p className=" font-bold text-[28px] text-white underline cursor-pointer hover:text-black">
+                <p 
+                onTouchStart={handleTouch} // for mobile
+      onClick={handleTouch} 
+                className={` font-bold text-[28px]  underline cursor-pointer hover:text-black ${
+        isTouched ? 'text-black' : 'text-white'
+      }`}>
                   So Stop Losing Money And get Your Safari Website Ready Today.
                 </p>
               </button>

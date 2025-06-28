@@ -4,10 +4,10 @@ import { useNavigate } from 'react-router-dom';
 const PricingCards = ({title, price, investment}) => {
   const navigate = useNavigate();
   return (
-    <div className=' w-full hover:shadow-[0_3px_15px_rgb(204,228,255,0.51)]'>
+    <div className=' w-full hover:shadow-[0_3px_15px_rgb(204,228,255,0.51)] sm:mb-0 mb-10'>
       <div className="bg-blue-50 border-b border-gray-300  p-6  text-center max-w-[1140px] mx-auto  ">
       <div className="flex justify-center mb-4">
-        <div className="bg-[#f0f6fe] rounded-full bg-white p-3 mt-[-70px] shadow-[0_3px_15px_rgb(204,228,255,0.51)]">
+        <div className="bg-[#f0f6fe] rounded-full p-3 mt-[-70px] shadow-[0_3px_15px_rgb(204,228,255,0.51)]">
           {/* <svg className="h-[50px] w-[52px] p-[20%] text-blue-600" fill="currentColor" viewBox="0 0 20 20">
             <path d="M3 3h2v14H3V3zm6 4h2v10H9V7zm6-2h2v12h-2V5z" />
           </svg> */}
@@ -21,7 +21,7 @@ const PricingCards = ({title, price, investment}) => {
       
      
     </div>
-     <div className="   text-center max-w-[1140px] mx-auto  pt-[20px] md:pb-[26px] pb-[90px] pb-[30px] duration-300 ">
+     <div className="   text-center max-w-[1140px] mx-auto  pt-[20px] md:pb-[26px]  pb-[30px] duration-300 ">
          <p className="font-bold md:text-[20px] text-[16px] text-[#011833] md:pt-[20px] md:pb-[40px] pb-5">${investment} INITIAL INVESTMENT</p>
       <button 
        onClick={() => {navigate('/lets-grow-business');window.scrollTo(0, 0); }}

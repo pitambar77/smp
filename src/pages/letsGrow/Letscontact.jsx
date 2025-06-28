@@ -31,8 +31,8 @@
 //   }
  
 //   return (
-//     <div className="min-h-screen bg-white py-[70px]  ">
-//         <div className="max-w-[1140px] mb-4 mx-auto md:text-[50px] text-[24px] px-4 md:px-0 text-center font-bold text-[#3467d8] md:px-20  " >
+//     <div className="min-h-screen bg-white sm:py-[70px] py-[40px]  ">
+//         <div className="max-w-[1140px] mb-4 mx-auto md:text-[50px] text-[24px] px-4  text-center font-bold text-[#3467d8] md:px-20  " >
 //             <h1>Tell Us More About Your Business To Get Started!</h1>
 //         </div>
 //       <div className="max-w-[1140px] mx-auto  md:mt-8">
@@ -246,13 +246,13 @@ export default function Letscontact() {
   }
 
   return (
-    <div className="min-h-screen bg-white py-[70px]">
+    <div className="min-h-screen bg-white sm:py-[70px] py-10">
       <div className="max-w-[1140px] mb-4 mx-auto md:text-[50px] text-[24px] px-4 text-center font-bold text-[#3467d8]">
         <h1>Tell Us More About Your Business To Get Started!</h1>
       </div>
 
       <div className="max-w-[1140px] mx-auto md:mt-8 px-4">
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Name and Email Row */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <input
@@ -380,10 +380,10 @@ export default function Letscontact() {
           />
 
           {/* Submit */}
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-center sm:mb-10">
             <button
               type="submit"
-              className="font-semibold mt-3 bg-red-500 hover:bg-gray-900 text-white hover:text-red-500 px-8 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
+              className="font-semibold mt-3 bg-[#ff5254] hover:bg-gray-900 text-white hover:text-red-500 px-8 py-3 rounded-md transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
             >
               {"Let's Grow Your Business"}
             </button>

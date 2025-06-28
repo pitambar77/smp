@@ -5,8 +5,7 @@ const features = [
   {
     icon: (
       <svg
-        width="62px"
-        height="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -23,8 +22,7 @@ const features = [
     icon: (
       <svg
         fill="#ff5254"
-        width="62px"
-        height="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
         style={{
@@ -46,8 +44,7 @@ const features = [
   {
     icon: (
       <svg
-        width="62px"
-        height="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -66,8 +63,7 @@ const features = [
   {
     icon: (
       <svg
-        width="62px"
-        height="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 48 48"
         xmlns="http://www.w3.org/2000/svg"
         fill="#ff5254"
@@ -85,8 +81,7 @@ const features = [
   {
     icon: (
       <svg
-        height="62px"
-        width="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
         fill="#000000"
@@ -135,8 +130,7 @@ const features = [
   {
     icon: (
       <svg
-        width="62px"
-        height="58px"
+        className=" sm:w-[60px] sm:h-[60px] w-[34px] h-[34px]"
         viewBox="0 0 32 32"
         xmlns="http://www.w3.org/2000/svg"
         fill="#000000"
@@ -192,17 +186,17 @@ function Fundamental() {
           </p>
 
           <div className="mt-8">
-            <div className="sm:max-w-[1140px] sm:mx-auto sm:px-[15px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10 ">
+            <div className="sm:max-w-[1140px] sm:mx-auto sm:px-[15px] px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10 ">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start sm:gap-8 ">
                   <div className="sm:w-8 w-[2px] sm:h-8 h-1 mt-1">
                     {feature.icon}
                   </div>
-                  <div className=" ml-[60px] sm:ml-0 ">
+                  <div className=" ml-[50px] sm:ml-0 ">
                     <h3 className=" font-semibold sm:text-[22px] text-[17px] text-left text-[#011833] pb-[5px] capitalize">
                       {feature.title}
                     </h3>
-                    <p className=" font-medium sm:text-[16px] text-[14px]  text-left text-[#787878]  sm:min-h-[120px]">
+                    <p className=" font-medium sm:text-[16px] text-[14px]  sm:text-left text-justify text-[#787878]  sm:min-h-[120px]">
                       {feature.description}
                     </p>
                   </div>

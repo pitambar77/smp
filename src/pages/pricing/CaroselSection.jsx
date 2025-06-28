@@ -9,7 +9,7 @@ const CaroselSection = () => {
         
         <div className=" max-w-[1140px] mx-auto md:py-[100px] py-[40px]">
           
-          <div className=" text-center">
+          <div className=" text-center ">
             <h1 className=" w-full md:text-[44px] text-[24px] font-[700] text-white py-[20px] ">
               Explore Success Stories
             </h1>

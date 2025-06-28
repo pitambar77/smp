@@ -161,7 +161,7 @@ const WebsitesGoogleads = () => {
             />
           </div>
 
-          <div className="font-[Montserrat] font-medium sm:text-[18px] text-[14px] text-center text-[#787878] leading-[1.8] sm:px-[18%]  pb-[18px] mt-3">
+          <div className="font-[Montserrat] font-medium sm:text-[18px] text-[15px] text-center text-[#787878] leading-[1.8] sm:px-[18%] px-4  pb-[18px] mt-3">
             <p>
               Get Noticed by Clients Who Are Actively Looking to Book a Safari.
             </p>

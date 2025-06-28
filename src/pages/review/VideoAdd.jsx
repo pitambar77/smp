@@ -11,7 +11,7 @@
 //       </div>
 //       <div className=' w-full '>
 //         <div className=' max-w-[1140px] mx-auto pb-[10px] p-[15px]'>
-            
+
 //         <div className=' grid sm:grid-cols-1 md:grid-cols-2 gap-[30px]  items-center'>
 //          <div className='bg-[url(https://i.ytimg.com/vi_webp/n6JyE-KVCsE/maxresdefault.webp)] h-[304px] bg-cover bg-bg-center'>
 //             <iframe src="https://www.youtube.com/embed/n6JyE-KVCsE?controls=0"  allow="autoplay; encrypted-media;" data-gtm-yt-inspected-12="true" className=' bg-cover bg-center w-full h-full'></iframe>
@@ -47,7 +47,7 @@ const VideoAdd = () => {
   ];
 
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 800,
     slidesToShow: 1,
@@ -61,7 +61,7 @@ const VideoAdd = () => {
     <div>
        {/* Heading Section */}
       <div className="w-full">
-        <div className="max-w-[1140px] mx-auto md:pt-[90px] pt-[50px] items-center justify-center text-center">
+        <div className="max-w-[1140px] mx-auto md:pt-[90px] pt-[50px]  items-center justify-center text-center">
           <h1 className="capitalize md:text-[40px] text-[24px] text-[#3467d8] font-[700] md:px-20 px-4 leading-[1.3]">
             When your customers become your no.1 promoters
           </h1>
@@ -78,7 +78,7 @@ const VideoAdd = () => {
             <Slider {...sliderSettings}>
               {videos.map((id, idx) => (
                 <div key={idx}>
-                  <div className='h-[304px] bg-cover bg-center'>
+                  <div className='h-[190px] bg-cover bg-center'>
                     <iframe
                       src={`https://www.youtube.com/embed/${id}?controls=0`}
                       allow="autoplay; encrypted-media;"
@@ -113,3 +113,5 @@ const VideoAdd = () => {
 };
 
 export default VideoAdd;
+
+

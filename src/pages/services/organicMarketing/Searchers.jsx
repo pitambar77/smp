@@ -49,7 +49,7 @@ const Searchers = () => {
           {/* <button className="bg-[#ff4e4e] text-white font-semibold text-sm px-6 py-3 rounded hover:bg-red-500 transition">
             GET YOUR FREE INITIAL ANALYSIS
           </button> */}
-          <div className=" text-center">
+          <div className=" sm:text-center ">
             <button
               onClick={() => setShowForm(true)}
               className="bg-[#FF5254] text-white font-semibold  sm:text-[16px] text-[13px] hover:bg-[#011833] ease-in duration-500 cursor-pointer hover:text-red-500 transition-colors   min-w-[148px] rounded sm:px-8 px-[12px] sm:py-3 py-[10px]"

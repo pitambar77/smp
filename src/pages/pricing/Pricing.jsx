@@ -173,9 +173,9 @@ const Pricing = () => {
         </p>
       </div>
  
-      <main className="max-w-[1140px] mx-auto">
+      <main className="sm:max-w-[1140px] mx-auto">
         <Tabs activeTab={activeTab} onChange={setActiveTab} />
-        <div className="grid md:grid-cols-3 gap-x-[30px] mt-[90px] px-[15px]">
+        <div className="grid md:grid-cols-3 gap-x-[30px] mt-[90px]  px-[15px]">
           {currentPackages.map((pkg, index) => (
             <PricingCards key={index} {...pkg} />
           ))}

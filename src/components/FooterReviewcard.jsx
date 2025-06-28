@@ -114,9 +114,12 @@ export default function FooterReviewcard() {
           <div className="flex items-center bg-[#1b2c37] text-white font-bold px-3 py-1 rounded-l-full">
             4.9
           </div>
-          <div className="flex items-center bg-white shadow-md px-6 py-3 rounded-r-full">
+          <div className="flex items-center bg-white shadow-md px-4 py-3 rounded-r-full">
+            
             <span className="text-red-600 rounded text-[18px] font-[400] tracking-wider leading-[2px]" >★★★★★</span>
-            <span className="text-red-600 font-[Roboto,sans-serif] tracking-wider font-[500] leading-[2px] text-[10px] ml-2">24 REVIEW ...</span>
+           <span className=" text-red-600 font-[Roboto,sans-serif] tracking-wider font-[500] leading-[2px] text-[10px] ml-2"> 24 </span>
+            <span className="text-red-600 font-[Roboto,sans-serif] tracking-wider font-[500] leading-[2px] text-[10px] ml-2">REVIEW ...</span>
+             
           </div>
         </div>
  

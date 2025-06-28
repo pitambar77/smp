@@ -75,10 +75,10 @@ function Meeting() {
     <div>
       <div className=" w-full md:pt-[70px] pt-[40px] pb-[40px] ">
         <div className=" max-w-[1140px] mx-auto text-center ">
-          <h1 className=" capitalize md:px-[8%]   md:text-[40px] text-[24px] text-[#3467d8] font-[700] pb-[15px] ">
+          <h1 className=" capitalize sm:px-[8%] px-[3%]   md:text-[40px] text-[24px] text-[#3467d8] font-[700] pb-[15px] ">
             {galleryData.heading}
           </h1>
-          <p className=" md:py-[15px] pb-10 md:mb-0 px-4 md:px-0 tracking-[0.5px] text-[#787878] md:text-[22px] text-[15px] font-[500] capitalize ">
+          <p className=" md:py-[15px] pb-10 md:mb-0  sm:px-0 px-[3%] tracking-[0.5px] text-[#787878] md:text-[22px] text-[15px] font-[500] capitalize ">
             {galleryData.subheading}
           </p>
         </div>

@@ -141,11 +141,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import Header from "./Header";
 import Navbar from "./Navbar";
 import smplogo from "../assets/images/smp-logo.png";
+import phonelogo from "../assets/images/phone-receiver.png";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdArrowDropdown } from "react-icons/io";
 import RequestForm from "./RequestForm";
 
 export default function HeaderContainer() {
+  const [activeItem, setActiveItem] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [showForm, setShowForm] = useState(false);
+
   const navigate = useNavigate();
 
   const headerRef = useRef(null);
@@ -186,14 +192,12 @@ export default function HeaderContainer() {
       },
     },
   };
-  const [openDropdown, setOpenDropdown] = useState(null);
-  const [showForm, setShowForm] = useState(false);
 
   const dropdownLinks = {
     about: [
       { label: "Our Company", href: "/about-us" },
       { label: "Our Team", href: "/team" },
-      { label: "Reviews", href: "/review" },
+      { label: "Reviews", href: "/reviews" },
     ],
     services: [
       { label: "360 Marketing", href: "/" },
@@ -207,6 +211,57 @@ export default function HeaderContainer() {
       { label: "Blog", href: "/blog" },
       { label: "EBooks", href: "/ebook" },
     ],
+  };
+
+  
+  const mobiledropdownLinks = {
+    about: [
+      { label: "Our Company", href: "/about-us" },
+      { label: "Our Team", href: "/team" },
+      { label: "Reviews", href: "/reviews" },
+    ],
+    services: [
+     
+      { label: "Web Designing", href: "/web-designing" },
+      { label: "Organic Marketing", href: "/organic-marketing" },
+      { label: "Google Ads", href: "/google-ads" },
+      
+    ],
+    resources: [
+      { label: "Blog", href: "/blog" },
+      { label: "EBooks", href: "/ebook" },
+    ],
+  };
+  // mobile droup down
+  const MobileDropdown = ({ title, id }) => {
+    const isActive = activeItem === id;
+    return (
+      <details
+        className="group"
+        open={isActive}
+        onClick={() => setActiveItem(id)}
+      >
+        <summary
+          className={`flex justify-between items-center px-4 py-3 border-b-1 border-gray-300 text-white cursor-pointer uppercase font-semibold w-full bg-[#FF5254]`}
+        >
+          {title}
+          <IoMdArrowDropdown className="text-[18px] transition-transform group-open:rotate-180" />
+        </summary>
+
+        <div className="flex flex-col bg-[#02152c] w-full">
+          {mobiledropdownLinks[id].map((item) => (
+            <Link
+              key={item.label}
+              to={item.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-white text-[14px]  font-semibold text-sm px-5 py-3 hover:text-yellow-300 uppercase border-b-1 border-gray-300 w-full"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </details>
+    );
   };
 
   const navItemWithDropdown = (label, id, isBold = false) => (
@@ -269,10 +324,11 @@ export default function HeaderContainer() {
             animate="visible"
             exit="hidden"
             variants={variants}
-            className="fixed top-0 left-0 w-full z-[999] bg-[#0057ff]  shadow-[0_1px_7px_0_rgba(0,0,0,0.4)] py-[13px]"
+            className="fixed top-0 left-0 w-full z-[999]  bg-[#0057ff]
+  shadow-[0_1px_7px_0_rgba(0,0,0,0.4)] sm:py-[15px] py-[13px]"
           >
             <div className=" max-w-[1140px] mx-auto md:px-2 xl:px-0">
-              <div className=" flex justify-between items-center">
+              <div className=" flex justify-between items-center sm:px-0 px-4">
                 <button
                   className=" cursor-pointer"
                   onClick={() => {
@@ -283,10 +339,41 @@ export default function HeaderContainer() {
                   <img
                     src={smplogo}
                     alt="smp logo"
-                    className=" xl:w-[92px] w-[85px] lg:w-[120px] filter invert brightness-0"
+                    className=" xl:w-[92px] w-[100px] lg:w-[120px] filter invert brightness-0"
                   />
                 </button>
-                <div className="">
+
+                <div className="md:hidden ">
+                  <button
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    className="bg-[#ff5254] p-2 rounded"
+                  >
+                    <svg
+                      className="w-6 h-6 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      {menuOpen ? (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      ) : (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      )}
+                    </svg>
+                  </button>
+                </div>
+
+                <div className=" hidden md:block ">
                   <nav className="hidden md:block bg-transparent relative z-50 pt-1 m-0">
                     <div className="max-w-[1140px] mx-auto pl-1 ">
                       <div
@@ -347,6 +434,69 @@ export default function HeaderContainer() {
                       </div>
                     )}
                   </nav>
+                </div>
+              </div>
+
+              <div
+                className={`fixed top-16 left-0 h-full w-[100%] sm:w-[300px]  bg-[#447acc]  z-[9999] shadow-md transform transition-transform duration-300 ease-in-out ${
+                  menuOpen ? "translate-x-0" : "-translate-x-full"
+                } md:hidden`}
+              >
+                <div className="flex flex-col  w-full text-[14px]  font-[600]">
+                  <MobileDropdown title="ABOUT US" id="about" />
+                  <MobileDropdown title="SERVICES" id="services" />
+
+                  {[
+                    { label: "PRICING", id: "pricing", href: "/pricing" },
+                    {
+                      label: "OUR CLIENTS",
+                      id: "clients",
+                      href: "/our-clients",
+                    },
+                    { label: "TRAINING", id: "training", href: "/training" },
+                  ].map((link) => (
+                    <Link
+                      key={link.id}
+                      to={link.href}
+                      onClick={() => {
+                        setActiveItem(link.id);
+                        setMenuOpen(false);
+                      }}
+                      className="w-full px-4 py-3 text-white font-semibold uppercase border-b border-gray-300 bg-[#FF5254]"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+
+                  <MobileDropdown title="RESOURCES" id="resources" />
+
+                  <div className="p-4 text-center">
+                    <button
+                      onClick={() => {
+                        setMenuOpen(false);
+                        setShowForm(true);
+                      }}
+                      className="sm:w-full px-[15px] bg-[#FF5254] text-white sm:py-3 py-[10px] sm:text-[17px] text-[14px] rounded hover:bg-black hover:text-[#FF5254] transition"
+                    >
+                      REQUEST A FREE STRATEGY SESSION
+                    </button>
+
+                    <div className="px-[15px] pb-6 pt-4 text-center">
+                      <div className="flex text-white justify-center items-center hover:text-[#ff5254]">
+                        <img
+                          src={phonelogo}
+                          alt="Phone"
+                          className="h-6 sm:h-6 w-auto mr-2 filter invert brightness-0"
+                        />
+                        <p
+                          style={{ fontFamily: "Lato, sans-serif" }}
+                          className="text-[18px]  font-[600]"
+                        >
+                          +91 6371 223 581
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

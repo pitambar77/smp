@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { CheckCircle } from "lucide-react";
 import { PiCheckFatFill } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
 const Whyorganicmaters = () => {
+  const [isTouched, setIsTouched] = useState(false);
+
+  const handleTouch = () => {
+    setIsTouched(!isTouched);
+  };
   return (
     <>
       <div className="relative w-full">
@@ -115,8 +120,15 @@ const Whyorganicmaters = () => {
           </div>
 
           <div className=" text-center sm:mt-12 mt-4 ">
-            <p className=" font-bold text-[28px]  text-white underline hover:text-black px-3 sm:px-0">
+            <p 
+            onTouchStart={handleTouch} // for mobile
+      onClick={handleTouch} 
+                className={` font-bold text-[28px]  underline cursor-pointer hover:text-black ${
+        isTouched ? 'text-black' : 'text-white'
+      }`}>
+            
               <Link to='/lets-grow-business'>
+              
                 So Stop worrying and start Acting!!
               </Link>
             </p>

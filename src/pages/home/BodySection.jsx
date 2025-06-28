@@ -231,20 +231,20 @@ export default function BodySection() {
           </div>
         </div>
 
-        {/* <div className="absolute md:-right-50.5 lg:-right-50.5 xl:-right-15.5 top-[23.5%] md:pt-2 md:pr-10 lg:pr-0  lg:pt-0">
+        <div className="absolute md:-right-50.5 lg:-right-50.5 xl:-right-15.5 top-[23.5%] md:pt-2 md:pr-10 lg:pr-0  lg:pt-0 2xl:right-[calc((100vw-1440px)/2-87px)]">
           <img
             src={`${BASE_URL}/uploads/${banner.image}`}
             alt=""
             className="object-contain lg:max-w-none md:max-w-129   "
           />
-        </div> */}
-        <div className="absolute md:-right-50.5 lg:-right-42.5 xl:-right-9.5 top-[23.5%] md:pt-2 md:pr-10 lg:pr-0 xl:pt-0 lg:pt-2 2xl:right-[calc((100vw-1440px)/2-87px)]">
+        </div>
+        {/* <div className="absolute md:-right-50.5 lg:-right-42.5 xl:-right-9.5 top-[23.5%] md:pt-2 md:pr-10 lg:pr-0 xl:pt-0 lg:pt-2 2xl:right-[calc((100vw-1440px)/2-87px)]">
           <img
             src={`${BASE_URL}/uploads/${banner.image}`}
             alt=""
             className="object-contain xl:max-w-none md:max-w-129 lg:max-w-150 "
           />
-        </div>
+        </div> */}
       </div>
 
       {/* ✅ Mobile Section */}

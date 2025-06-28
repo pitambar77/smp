@@ -103,11 +103,11 @@ return (
 
             <img src={chinSign} alt="sign" className="py-[15px] ml-[-22px] w-[180px]" />
 
-            <h2 className="text-[#3467d8] font-[600] md:text-2xl leading-[1.3]">
+            <h2 className="text-[#3467d8] font-[600] md:text-2xl leading-[1.3] flex sm:flex-row flex-col">
               <span className="text-[20px] md:text-2xl">
                 Mr Chinu Pal&nbsp;|&nbsp;
               </span>
-              <span className="italic font-[500] text-[13px] md:text-2xl">
+              <span className="italic font-[500] text-[16px] md:text-2xl">
                 Founder of the Safari Marketing Pro
               </span>
             </h2>

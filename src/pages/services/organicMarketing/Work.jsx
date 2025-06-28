@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const steps = [
   {
@@ -34,6 +34,13 @@ const steps = [
 ];
 
 const Work = () => {
+ const [touchedIndex, setTouchedIndex] = useState(null);
+  
+
+  const handleTouch = (index) => {
+    setTouchedIndex(index);
+  };
+
   const handleScrollToStep = (number) => {
     const el = document.getElementById(`step-${number}`);
     if (el) {
@@ -66,6 +73,7 @@ const Work = () => {
           {steps.map((step, index) => (
             <div
               key={index}
+               onTouchStart={() => handleTouch(index)} // for mobile
               className="flex items-start text-left gap-4 cursor-pointer"
               onClick={() => handleScrollToStep(step.number)}
               role="button"
@@ -76,7 +84,9 @@ const Work = () => {
             >
               {/* Number */}
               <span
-                className="sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                className={`sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1 ${
+                  touchedIndex === index ? "text-red-500" : " "
+                }`}
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   display: "block",
@@ -89,7 +99,10 @@ const Work = () => {
 
               {/* Text */}
               <div
-                className={`text-[20px] font-semibold text-red-500 leading-snug sm:text-[22px] text-left sm:mt-3 hover:text-blue-500 ${step.color}`}
+                 onTouchStart={() => handleTouch(index)}
+                className={` sm:text-[22px]  items-center  font-semibold leading-snug text-[20px] text-left hover:text-blue-800 ${
+                  touchedIndex === index ? "text-blue-800" : "text-red-500 "
+                }`}
               >
                 {step.text}
               </div>

@@ -77,12 +77,12 @@ function Faqorganic() {
            
           </div> */}
           <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-x-[30px] sm:px-[8px]  ">
-            <div className="flex flex-col  text-start">
-               <h2 className=' sm:text-[26px] text-[18px]  font-bold pb-[15px]'>Sales Questions</h2>
+            <div className="flex flex-col  ">
+               <h2 className=' sm:text-[26px] text-[18px] text-center  font-bold pb-[15px]'>Sales Questions</h2>
               {renderFAQItems(leftColumn, 0)}
             </div>
             <div className="flex flex-col   ">
-               <h2 className=' sm:text-[26px] text-[18px] font-bold pb-[15px] '>Content Marketing Questions</h2>
+               <h2 className=' sm:text-[26px] text-[18px] text-center font-bold pb-[15px] '>Content Marketing Questions</h2>
               {renderFAQItems(rightColumn, 1)}
             </div>
           </div>

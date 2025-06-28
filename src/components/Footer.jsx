@@ -179,7 +179,7 @@ export default function Footer() {
     <div className="bg-[#3467d8] text-white md:pt-22 pt-10  font-montserrat">
       <div className="max-w-[1150px] mb-7 mx-auto md:mt-[18px] flex flex-col sm:flex-col md:flex-row lg:flex-row justify-between gap-8 md:gap-5 px-4 xl:px-0">
         {/* Useful Links */}
-        <div className="flex-1">
+        {/* <div className="flex-1">
           <h3 className="font-semibold md:text-[22px] text-[18px] mb-3 tracking-wide">
             USEFUL LINKS
           </h3>
@@ -230,7 +230,54 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
+
+        <div className="flex-1">
+  {/* Mobile Toggle (visible on small screens only) */}
+  <div className="block md:hidden">
+    <button
+      onClick={() =>
+        document.getElementById("mobileUsefulLinks").classList.toggle("hidden")
+      }
+      className="w-full flex justify-between items-center font-semibold text-[18px] text-white mb-2 tracking-wide"
+    >
+      USEFUL LINKS
+      <span className="text-xl font-bold">+</span>
+    </button>
+    <ul
+      id="mobileUsefulLinks"
+      className="hidden space-y-2 text-white text-[15px] font-[400] tracking-wide"
+    >
+      <li><Link to="/web-designing" className="hover:text-[#ff5254]">Website Designing</Link></li>
+      <li><Link to="/organic-marketing" className="hover:text-[#ff5254]">Organic Marketing</Link></li>
+      <li><Link to="/google-ads" className="hover:text-[#ff5254]">Google Advertising</Link></li>
+      <li><Link to="/content-marketing" className="hover:text-[#ff5254]">Content Marketing</Link></li>
+      <li><Link to="/social-media-marketing" className="hover:text-[#ff5254]">Social Media Marketing</Link></li>
+      <li><Link to="/pricing" className="hover:text-[#ff5254]">Pricing</Link></li>
+      <li><Link to="/ebook" className="hover:text-[#ff5254]">Ebooks</Link></li>
+      <li><Link to="/contact-us" className="hover:text-[#ff5254]">Contact Us</Link></li>
+      <li><Link to="/blog" className="hover:text-[#ff5254]">Blog</Link></li>
+    </ul>
+  </div>
+ 
+  {/* Desktop version (unchanged, visible on md and up) */}
+  <div className="hidden md:block">
+    <h3 className="font-semibold md:text-[22px] text-[18px] mb-2 tracking-wide">
+      USEFUL LINKS
+    </h3>
+    <ul className="md:space-y-4  space-y-2 text-[#fff] md:text-[17px] text-[15px] font-[400] tracking-wide leading-0.2">
+      <li><Link to="/web-designing" className="hover:text-[#ff5254]">Website Designing</Link></li>
+      <li><Link to="/organic-marketing" className="hover:text-[#ff5254]">Organic Marketing</Link></li>
+      <li><Link to="/google-ads" className="hover:text-[#ff5254]">Google Advertising</Link></li>
+      <li><Link to="/content-marketing" className="hover:text-[#ff5254]">Content Marketing</Link></li>
+      <li><Link to="/social-media-marketing" className="hover:text-[#ff5254]">Social Media Marketing</Link></li>
+      <li><Link to="/pricing" className="hover:text-[#ff5254]">Pricing</Link></li>
+      <li><Link to="/ebook" className="hover:text-[#ff5254]">Ebooks</Link></li>
+      <li><Link to="/contact-us" className="hover:text-[#ff5254]">Contact Us</Link></li>
+      <li><Link to="/blog" className="hover:text-[#ff5254]">Blog</Link></li>
+    </ul>
+  </div>
+</div>
  
         {/* Contacts */}
         <div className="flex-1">

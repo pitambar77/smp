@@ -29,7 +29,7 @@ const Gallery = () => {
 
   return (
     <div className='max-w-[1140px] mx-auto pt-[30px]'>
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-5">
+      <div className="grid md:grid-cols-4 grid-cols-3 sm:gap-5 gap-1.5 sm:px-0 px-4">
         {trainingGallery.map((imgObj, idx) => {
           const src = `${ BASE_URL }/uploads/training/${imgObj.image}`;
           return (

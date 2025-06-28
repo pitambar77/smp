@@ -11,7 +11,7 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
       )}
 
       {/* Step content */}
-      <div className="max-w-[1140px] mt-10 mx-auto px-4 grid md:grid-cols-12 gap-6 items-start">
+      <div className="max-w-[1140px] mt-10 sm:mb-0 mb-6 mx-auto px-4 grid md:grid-cols-12 gap-6 items-start">
         {/* Left side */}
         <div className="md:col-span-4">
           <h3 className="sm:text-2xl text-[18px] font-bold text-[#0b2239]">STEP {number}:</h3>

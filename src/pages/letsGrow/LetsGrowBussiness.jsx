@@ -6,6 +6,7 @@ import Review from '../../components/Review'
 import Common from '../../components/Common'
 import axios from 'axios'
 import { BASE_URL } from '../../api/config'
+import Content9 from '../home/Content9'
 
 const LetsGrowBussiness = () => {
      const [bannerData, setBannerData] = useState(null);
@@ -36,6 +37,7 @@ const LetsGrowBussiness = () => {
       <Letscontact/>
       <Review/>
       <Common/>
+      <Content9/>
     </div>
   )
 }

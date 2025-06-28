@@ -137,13 +137,13 @@ const MarketingProofSection = () => {
         <h2 className=" font-bold text-[24px] md:text-[40px] text-center capitalize text-[#3467d8] leading-[1.3] m-0 md:px-[15%]">
           {data.heading}
         </h2>
-        <p className=" font-normal text-[15px] md:text-[18px] text-center text-[#787878] leading-normal py-[10px] md:px-[30px] md:py-[12px]">
+        <p className=" font-normal text-[15px] md:text-[18px] text-center text-[#787878] leading-normal py-[10px] md:px-[30px] px-4 md:py-[12px]">
           {data.subheading}
         </p>
       </div>
 
       {/* Cards */}
-      <div className="grid  md:px-0 px-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[12px] space-y-2 md:gap-7 max-w-[1140px] mx-auto lg:pr-8 ">
+      <div className="grid  md:px-0 px-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[12px] space-y-2 md:gap-7 max-w-[1140px] mx-auto lg:pr-8  ">
         {Array.isArray(data.images) &&
           data.images.map((image, index) => (
             <div
@@ -165,15 +165,15 @@ const MarketingProofSection = () => {
 
       {/* Form Modal */}
       {showForm && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat] ">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 font-[Montserrat]  ">
           <div
-            className=" mt-[80px] relative w-[90%] px-2 sm:px-0 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
+            className=" sm:mt-[80px] mt-[120px] relative w-[90%] px-2 sm:px-0 max-w-[600px] bg-[#3467d8] bg-gradient-to-t from-[#427fdf] to-[#396bb1] rounded-lg shadow-lg
                  animate-slide-down-fade  "
           >
             {/* Close Button */}
             <button
               onClick={() => setShowForm(false)}
-              className="absolute cursor-pointer -top-6 -right-5 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
+              className="absolute cursor-pointer sm:-top-6 -top-12 sm:-right-5 -right-0 bg-red-400 hover:bg-[#396bb1] text-white hover:text-red-400 font-bold text-[32px] w-10 h-10 flex items-center justify-center shadow-md"
             >
               ×
             </button>

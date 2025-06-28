@@ -153,7 +153,7 @@
 //---------------------------------Responsive--------------------------
 
 import React, { useEffect, useState } from "react";
-import { FaCheck } from "react-icons/fa";
+import { PiCheckFatFill } from 'react-icons/pi';
 import RequestForm from "../../components/RequestForm";
 
 function Content2() {
@@ -174,7 +174,7 @@ function Content2() {
     <div className="relative w-full overflow-visible md:overflow-hidden">
       {/* Background Image Layer */}
       <div
-        className="absolute inset-0 z-0 h-[1200px]"
+        className="absolute inset-0 z-0 sm:h-[1200px] h-[1000px]"
         style={{
           backgroundImage:
             "url('https://safarimarketingpro.com/images/socs-bg.jpg')",
@@ -185,7 +185,7 @@ function Content2() {
       />
 
       {/* Red Overlay */}
-      <div className="absolute w-full h-[1200px] bg-[rgba(255,82,84,0.9)] z-10" />
+      <div className="absolute w-full sm:h-[1200px] h-[1000px] bg-[rgba(255,82,84,0.9)] z-10" />
 
       {/* Main Content */}
       <div className="relative z-20 px-4 sm:px-6 lg:px-8 md:py-[100px] py-[40px] flex justify-center">
@@ -207,34 +207,35 @@ function Content2() {
                 potential customer’s mind before they talk to you, meet you, or
                 make an inquiry/bookings with you.
               </p>
-              <div className="flex mb-[10px] items-center">
-                <FaCheck className="text-[#fff] text-[18px] font-[700] mr-[10px]" />
+              <div className="flex mb-[10px] sm:items-center">
+                <span className="text-[#fff] sm:text-[18px] text-[14px] font-[400] mt-1 mr-[10px] ">
+                  <PiCheckFatFill />
+                </span>
                 <p className="md:text-[19px] text-justify md:text-left text-[14px] text-[#fff] font-[400]">
                   Make your itineraries and booking forms your sales page.
                 </p>
               </div>
               <div className="flex mb-[10px] items-start">
-                <span className="text-[#fff] text-[18px] font-[400] mr-[10px] mt-1">
-                  <FaCheck />
+                <span className="text-[#fff] sm:text-[18px] text-[14px] font-[400] mr-[10px] mt-1">
+                  <PiCheckFatFill />
                 </span>
-                <p className="md:text-[19px] text-justify md:text-left text-[14px] text-[#fff] font-[400]">
+                <p className="sm:text-[19px] text-justify sm:text-left text-[14px] text-[#fff] font-[400]">
                   We make your potential customers believe that you are a highly
                   professional and trusted safari company like they are looking
                   for.
                 </p>
               </div>
               <div className="flex mb-[10px] items-start">
-                <span className="text-[#fff] text-[18px] font-[400] mr-[10px] mt-1">
-                  <FaCheck />
+                <span className="text-[#fff] sm:text-[18px] text-[14px] font-[400] mr-[10px] mt-1">
+                  <PiCheckFatFill />
                 </span>
 
-                <p className="md:text-[19px] text-justify md:text-left text-[14px] text-[#fff] font-[400]">
-                  We convert strangers into paying guests with a well-presented
-                  and informative website.
+                <p className="md:text-[19px] text-justify md:text-left text-[14px] text-[#fff] sm:font-[400]">
+                  We convert strangers into paying guests with a well-presented and informative website.
                 </p>
               </div>
 
-              <div className="mt-6 ">
+              <div className="mt-6 text-center ">
                 <button
                   onClick={() => setShowForm(true)}
                   className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] md:text-[16px] text-[14px] px-2 py-3 md:px-8 md:py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition"
@@ -285,7 +286,7 @@ function Content2() {
 
       {/* Bottom Image Section */}
       <div className="z-20 -mt-6">
-        <div className="flex justify-center mb-28 relative">
+        <div className="flex justify-center sm:mb-28 mb-10 relative">
           <img
             src="https://safarimarketingpro.com/images/soowrk-fig-1.png"
             alt="Supporting Visual"

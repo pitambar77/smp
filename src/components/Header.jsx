@@ -159,7 +159,7 @@ export default function Header() {
     about: [
       { label: "Our Company", href: "/about-us" },
       { label: "Our Team", href: "/team" },
-      { label: "Reviews", href: "/review" },
+      { label: "Reviews", href: "/reviews" },
     ],
     services: [
       { label: "360 Marketing", href: "/" },

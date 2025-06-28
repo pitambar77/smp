@@ -116,7 +116,7 @@ import { MdOutlineArrowCircleRight } from "react-icons/md";
 function Content3() {
   return (
     <div
-      className="relative py-[100px] md:py-[100px] lg:py-[100px] bg-cover bg-center bg-no-repeat"
+      className="relative py-[50px] sm:py-[100px] lg:py-[100px] bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
           'linear-gradient(to right, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.01)), url("https://safarimarketingpro.com/images/socs-bg1.jpg")',
@@ -158,21 +158,22 @@ function Content3() {
             services LTD, Go2 Africa, Mahlatini Luxury Travel, TANAPA, Rhino
             Africa, Easy Travels, Altezza Travel, Zara Tours ETC..
           </p>
-
-          <Link
-            to="/about-us"
-            className="text-[#ff5254] font-semibold hover:text-white inline-flex items-center gap-2"
-          >
-            READ MORE
-            <MdOutlineArrowCircleRight className="text-md" />
-          </Link>
+          <div className="sm:text-left text-right sm:text-[17px] text-[14px] ">
+            <Link
+              to="/about-us"
+              className="text-[#ff5254] font-semibold hover:text-white inline-flex items-center gap-2 "
+            >
+              READ MORE
+              <MdOutlineArrowCircleRight className="text-md" />
+            </Link>
+          </div>
         </div>
 
         {/* Right Scroll Button */}
         <div className="flex justify-center items-center w-full lg:w-1/3 mt-10 lg:mt-0">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="  sm:w-[83px] w-[66px] h-[66px]  sm:h-[83px] sm:right-22 rounded-full mx-auto relative bg-[#ff5254] text-white flex justify-center items-center transition-transform transform hover:scale-110 shadow-2xl"
+            className="  sm:w-[83px] w-[46px] h-[46px]  sm:h-[83px] sm:right-22 rounded-full mx-auto relative bg-[#ff5254] text-white flex justify-center items-center transition-transform transform hover:scale-110 shadow-2xl"
             style={{
               animation: "pulse 2.30s infinite cubic-bezier(.66,0,0,1)",
               boxShadow: "0 0 0 0 rgba(217, 217, 217, 0.7)",

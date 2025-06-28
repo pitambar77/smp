@@ -203,11 +203,11 @@ function FAQ() {
       return (
         <div
           key={index}
-          className="rounded-[10px] border mb-[10px] border-[#ddd] cursor-pointer  overflow-hidden"
+          className="rounded-[10px] border mb-[10px] border-[#ddd] cursor-pointer   overflow-hidden"
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className={`w-full flex justify-between md:px-[15px] md:py-[20px] px-4 py-2 md:text-[18px]  text-[15px] font-[500] transition-colors duration-300 ease-in-out
+            className={`w-full flex justify-between md:px-[15px] md:py-[20px] px-4 py-2 md:text-[18px]  text-[14px] font-[500] transition-colors duration-300 ease-in-out
               ${
                 openIndex === index
                   ? "hover:bg-[#333] bg-[#f1f1f1]  hover:text-white text-gray-900 "
@@ -216,11 +216,11 @@ function FAQ() {
           >
             <span className="text-left ">{question}</span>
 
-            <span className="ml-4 text-lg font-black">
+            <span className="ml-4 sm:text-lg text-[14px] font-black">
               {openIndex === index ? (
                 <FaChevronDown />
               ) : (
-                <FaChevronRight className=" mr-[5px] mt-1 font-bold" />
+                <FaChevronRight className=" sm:mr-[5px] mt-1 font-bold" />
               )}
             </span>
           </button>
@@ -241,7 +241,7 @@ function FAQ() {
           African Safari Operators
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[30px] md:px-[8px]  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 sm:gap-x-[30px] gap-x-[15px] md:px-[8px]  ">
           <div className="flex flex-col  text-start">
             {renderFAQItems(leftColumn, 0)}
           </div>

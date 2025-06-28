@@ -1,64 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 const steps = [
   {
     number: "1",
-    text: (
-      <>
-        Identify The Goal Of Your  Safari Website
-      </>
-    ),
+    text: <>Identify The Goal Of Your Safari Website</>,
     color: "#ff4c4c",
   },
   {
     number: "2",
-    text: (
-      <>
-        Collect Information,  Brainstorm & Analyze  Sketches
-      </>
-    ),
+    text: <>Collect Information, Brainstorm & Analyze Sketches</>,
     color: "#ff4c4c",
   },
   {
     number: "3",
     text: (
-      <>
-        Design A World-Class  Safari Website That  Enhances Brand{" "}
-         Credibility
-      </>
+      <>Design A World-Class Safari Website That Enhances Brand Credibility</>
     ),
     color: "#ff4c4c",
   },
   {
     number: "4",
-    text: (
-      <>
-        Add Value To Your  Destinations By Creating  Amazing Content
-      </>
-    ),
+    text: <>Add Value To Your Destinations By Creating Amazing Content</>,
     color: "#ff4c4c",
   },
   {
     number: "5",
-    text: (
-      <>
-        Now It’s Time To Test  Your Website
-      </>
-    ),
+    text: <>Now It’s Time To Test Your Website</>,
     color: "#ff4c4c",
   },
   {
     number: "6",
-    text: (
-      <>
-        Time To Present Your  Safari Website To Your  Customers
-      </>
-    ),
+    text: <>Time To Present Your Safari Website To Your Customers</>,
     color: "#ff4c4c",
   },
 ];
 
 const WorkProcess = () => {
+  const [touchedIndex, setTouchedIndex] = useState(null);
+  
+
+  const handleTouch = (index) => {
+    setTouchedIndex(index);
+  };
   const handleScrollToStep = (number) => {
     const el = document.getElementById(`step-${number}`);
     if (el) {
@@ -95,6 +78,7 @@ const WorkProcess = () => {
           {steps.map((step, index) => (
             <div
               key={index}
+              onTouchStart={() => handleTouch(index)} // for mobile
               className="flex items-start text-left gap-4 cursor-pointer"
               onClick={() => handleScrollToStep(step.number)}
               role="button"
@@ -105,7 +89,9 @@ const WorkProcess = () => {
             >
               {/* Number */}
               <span
-                className="sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                className={`sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1 ${
+                  touchedIndex === index ? "text-red-500" : " "
+                }`}
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   display: "block",
@@ -119,7 +105,10 @@ const WorkProcess = () => {
 
               {/* Text */}
               <div
-                className={`sm:text-[22px] text-red-500 items-center  font-semibold leading-snug text-[16px] text-left hover:text-blue-800`}
+              onTouchStart={() => handleTouch(index)}
+                className={`sm:text-[22px]  items-center  font-semibold leading-snug text-[16px] text-left hover:text-blue-800 ${
+                  touchedIndex === index ? "text-blue-800" : "text-red-500 "
+                }`}
               >
                 {step.text}
               </div>

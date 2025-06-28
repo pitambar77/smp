@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const steps = [
   {
@@ -34,6 +34,14 @@ const steps = [
 ];
 
 const WorkProcessgoogleads = () => {
+
+  const [touchedIndex, setTouchedIndex] = useState(null);
+    
+  
+    const handleTouch = (index) => {
+      setTouchedIndex(index);
+    };
+
   const handleScrollToStep = (number) => {
     const el = document.getElementById(`step-${number}`);
     if (el) {
@@ -72,6 +80,7 @@ const WorkProcessgoogleads = () => {
           {steps.map((step, index) => (
             <div
               key={index}
+              onTouchStart={() => handleTouch(index)} // for mobile
               className="flex  text-left gap-4 px-[15px] cursor-pointer capitalize items-center"
               onClick={() => handleScrollToStep(step.number)}
               role="button"
@@ -82,7 +91,9 @@ const WorkProcessgoogleads = () => {
             >
               {/* Number */}
               <span
-                className="sm:text-[80px] text-[60px]  hover:text-red-500 font-semibold leading-[1em] relative -left-1"
+                 className={`sm:text-[80px] text-[60px] hover:text-red-500 font-semibold leading-[1em] relative -left-1 ${
+                  touchedIndex === index ? "text-red-500" : " "
+                }`}
                 style={{
                   fontFamily: "'Poppins', sans-serif",
                   // color: 'black',
@@ -97,7 +108,10 @@ const WorkProcessgoogleads = () => {
 
               {/* Text */}
               <div
-                className={` text-red-500 items-center font-semibold leading-snug sm:text-[22px] text-[21px]  text-left   hover:text-[#3467d8] ${step.color}`}
+               onTouchStart={() => handleTouch(index)}
+                className={` sm:text-[22px]  items-center  font-semibold leading-snug text-[20px] text-left hover:text-blue-800 ${
+                  touchedIndex === index ? "text-blue-800" : "text-red-500 "
+                }`}
                 // style={{ color: step.color }}
               >
                 {step.text}

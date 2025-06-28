@@ -80,7 +80,7 @@ import { useNavigate } from "react-router-dom";
 export default function CardCarousel() {
   let navigate = useNavigate();
   return (
-    <div className="sm:py-12 py-0 px-4 ">
+    <div className="sm:py-12 py-0 px-4 sm:pt-4 pt-[60px] ">
       <Swiper
         slidesPerView={1}
         spaceBetween={24}

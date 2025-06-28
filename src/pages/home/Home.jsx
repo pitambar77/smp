@@ -30,7 +30,7 @@ const Home = () => {
       <BgSticky />
       <Content6 />
       <VideoAdd />
-      <div className=" w-full pt-[40px] pb-[100px] hidden md:block ">
+      <div className=" w-full pt-[100px] pb-[100px] hidden md:block ">
         <div className=" max-w-[1172px] mx-auto  items-center justify-center text-center pb-[15px]">
           <h1 className=" capitalize   md:text-[48px] text-2xl text-[#3467d8] font-[700] px-[10%] pb-[10px]  leading-[1.3] ">
             See What Our Clients Are Saying About Our Services

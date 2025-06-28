@@ -290,6 +290,17 @@ import { FaCheck } from "react-icons/fa";
 
 function Ourhistory() {
   const [showForm, setShowForm] = useState(false);
+  const [touchedIndex, setTouchedIndex] = useState(null);
+
+  const items = [
+    "How A Tour Operator Works",
+    "The Mindset Of A Tour Operator",
+    "The Demand & Value Of The Market",
+  ];
+
+  const handleTouch = (index) => {
+    setTouchedIndex(index);
+  };
 
   useEffect(() => {
     if (showForm) {
@@ -421,36 +432,32 @@ function Ourhistory() {
                 business. We learned 3 important things:
               </p>
             </div>
-            <div className="flex justify-between items-center my-[13px]">
-              {/* Item 1 */}
-              <div className="group flex items-center  cursor-pointer">
-                <span className="text-[#0dc091]  group-hover:text-red-500 transition-colors duration-300">
-                  <FaCheck className=" text-[14px]" />
-                </span>
-                <p className="ml-2 font-semibold md:text-[18px] text-[14px] text-justify  text-[#787878] leading-[1.5] m-0 pt-2 pb-2 group-hover:text-blue-600 transition-colors duration-300">
-                  How A Tour Operator Works
-                </p>
-              </div>
-
-              {/* Item 2 */}
-              <div className="group flex items-center  cursor-pointer">
-                <span className="text-[#0dc091] group-hover:text-red-500 transition-colors duration-300">
-                  <FaCheck className=" text-[14px]" />
-                </span>
-                <p className="ml-2  font-semibold md:text-[18px] text-[14px]  text-[rgb(120,120,120)] leading-[1.5] m-0 pt-2 pb-2 group-hover:text-blue-600 transition-colors duration-300">
-                  The Mindset Of A Tour Operator
-                </p>
-              </div>
-
-              {/* Item 3 */}
-              <div className="group flex items-center  cursor-pointer">
-                <span className="text-[#0dc091]  group-hover:text-red-500 transition-colors duration-300">
-                  <FaCheck className=" text-[14px]" />
-                </span>
-                <p className="ml-2  font-semibold md:text-[18px] text-[14px]  text-[#787878] leading-[1.5] m-0 pt-2 pb-2 group-hover:text-blue-600 transition-colors duration-300">
-                  The Demand & Value Of The Market
-                </p>
-              </div>
+            <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center my-[13px]">
+              {items.map((text, index) => (
+                <div
+                  key={index}
+                  onTouchStart={() => handleTouch(index)}
+                  onClick={() => handleTouch(index)} // desktop fallback
+                  className="group flex sm:items-center cursor-pointer"
+                >
+                  <span
+                    className={`${
+                      touchedIndex === index ? "text-red-500" : "text-[#0dc091]"
+                    } group-hover:text-red-500 transition-colors duration-300`}
+                  >
+                    <FaCheck className="sm:text-[14px] text-[12px] sm:mt-0 mt-3" />
+                  </span>
+                  <p
+                    className={`${
+                      touchedIndex === index
+                        ? "text-blue-600"
+                        : "text-[#787878]"
+                    } ml-2 font-semibold md:text-[18px] text-[14px] text-justify leading-[1.5] m-0 py-[6px] group-hover:text-blue-600 transition-colors duration-300`}
+                  >
+                    {text}
+                  </p>
+                </div>
+              ))}
             </div>
 
             <p className=" text-[15px] text-justify  md:text-[18px]  text-[#787878] leading-[1.5] m-0 pt-[15p  md:pb-[17px] pb-2">
@@ -533,7 +540,7 @@ function Ourhistory() {
         <div className=" pt-[30px] px-3 pb-[15px] text-center ">
           <button
             onClick={() => setShowForm(true)}
-            className="uppercase cursor-pointer text-[14px] md:text-[16px] tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px] py-[12px] bg-[#ff5254] text-white   font-semibold hover:bg-[#011833]  hover:text-red-500 duration-500 ease-in rounded-[4px]"
+            className="uppercase cursor-pointer text-[14px] md:text-[16px] sm:tracking-[1.5px] shadow-[0_12px_18px_0_rgba(0,0,0,0.15)] px-[40px]  sm:py-[12px] py-[15px] bg-[#ff5254] text-white   font-semibold hover:bg-[#011833]  hover:text-red-500 duration-500 ease-in rounded-[4px]"
           >
             REQUEST A FREE STRATEGY SESSION
           </button>

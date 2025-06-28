@@ -176,7 +176,7 @@ const reviews = [
  
 const Review = () => {
   return (
-    <div className="max-w-[915px] mx-auto px-8 pb-8 py-[20px]  bg-gray-50/80">
+    <div className=" hidden md:block max-w-[915px] mx-auto px-8 pb-8 py-[20px]  bg-gray-50/80">
       <h2 className="text-[24px] font-[400] text-[#17313b]  mb-[17px] hover:underline">
         Manorama Web Solutions Private Limited Reviews
       </h2>

@@ -70,10 +70,10 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { BASE_URL } from "../../api/config";
- 
+
 const Softbanner = () => {
   const [director, setdirector] = useState(null);
- 
+
   useEffect(() => {
     axios
       .get(`${BASE_URL}/api/about-director`)
@@ -84,7 +84,7 @@ const Softbanner = () => {
       })
       .catch((err) => console.error(err));
   }, []);
- 
+
   if (!director) return <div className="text-center">Loading...</div>;
   console.log(director);
   return (
@@ -99,7 +99,7 @@ const Softbanner = () => {
               className=" w-[100%] transform scale-x-[-1]"
             />
           </div>
- 
+
           {/* Right - Content */}
           {/* <div className=" w-[100%] md:w-1/2  mt-[50px] flex flex-col ">
             <h3 className=" px-[15px] text-[24px] md:text-[36px] font-[600] text-[#3467d8] capitalize leading-[1.3] text-center  ">{director.heading}</h3>
@@ -122,15 +122,21 @@ const Softbanner = () => {
               Manorama Pallai - <span className=" italic "> Managing Director </span>
             </h5>
           </div> */}
- 
-<div className=" md:w-1/2 w-[100%]  mt-[50px] flex flex-col">
-            <h3 className=" px-[15px] text-[24px] md:text-[36px] font-[600] text-[#3467d8] capitalize leading-[1.3] md:text-left text-center ">{director.heading}</h3>
- 
-            <p className=" px-[15px] text-[20px] font-[500] text-[#787878]  leading-[32px] mt-[20px] pt-[15px] pb-[17px] text-justify">{director.content1}</p>
- 
-            <p className=" px-[15px] text-[18px] font-[400] text-[#787878]  leading-[1.5]  pt-[15px] pb-[17px]">{director.content2}</p>
- 
-            <div className=" py-[15px] px-[15px]">
+
+          <div className=" md:w-1/2 w-[100%]  mt-[50px] flex flex-col sm:px-0 px-4">
+            <h3 className=" px-[15px] text-[24px] md:text-[36px] font-[600] text-[#3467d8] capitalize leading-[1.3] md:text-left text-center ">
+              {director.heading}
+            </h3>
+
+            <p className=" px-[15px] text-[20px] font-[500] text-[#787878]  leading-[32px] mt-[20px] pt-[15px] pb-[17px] text-justify">
+              {director.content1}
+            </p>
+
+            <p className=" px-[15px] text-[18px] font-[400] text-[#787878]  leading-[1.5]  pt-[15px] pb-[17px]">
+              {director.content2}
+            </p>
+
+            <div className=" py-[15px] ">
               <img
                 src="https://safarimarketingpro.com/images/md-sign.svg.png"
                 alt="Signature"
@@ -139,18 +145,16 @@ const Softbanner = () => {
                 }}
               />
             </div>
- 
-            <h5 className=" px-[15px] text-[24px] font-[500] text-[#3467d8] capitalize leading-[inherit] ">
-              Manorama Pallai - <span className=" italic "> Managing Director </span>
+
+            <h5 className=" px-[15px] sm:text-[24px] text-[20px] font-[600]  text-[#3467d8] capitalize leading-[inherit] ">
+              Manorama Pallai -{" "}
+              <span className=" italic sm:text-[24px] text-[16px] font-[500] "> Managing Director </span>
             </h5>
           </div>
- 
- 
         </div>
       </div>
     </div>
   );
 };
- 
+
 export default Softbanner;
- 

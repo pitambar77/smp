@@ -31,7 +31,7 @@ export default function Analysisorganic() {
                             <img
                                 src="https://safarimarketingpro.com/images/awt.png" 
                                 alt="SEO Tools"
-                                className="sm:w-[330px] sm:mt-6 sm:mr-12 h-auto object-contain sm:absolute z-10 "
+                                className="sm:w-[330px] sm:mt-6 sm:mr-12 h-auto object-contain sm:absolute z-10 sm:pb-0 pb-10 "
                             />
                            
                         </div>
