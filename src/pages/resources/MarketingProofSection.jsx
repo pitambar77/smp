@@ -114,6 +114,8 @@ const MarketingProofSection = () => {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const [showForm, setShowForm] = useState(false);
+const [activeIndex, setActiveIndex] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -143,7 +145,7 @@ const MarketingProofSection = () => {
       </div>
 
       {/* Cards */}
-      <div className="grid  md:px-0 px-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[12px] space-y-2 md:gap-7 max-w-[1140px] mx-auto lg:pr-8  ">
+      {/* <div className="grid  md:px-0 px-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[12px] space-y-2 md:gap-7 max-w-[1140px] mx-auto lg:pr-8  ">
         {Array.isArray(data.images) &&
           data.images.map((image, index) => (
             <div
@@ -158,6 +160,35 @@ const MarketingProofSection = () => {
                 src={`${BASE_URL}${image.url}`}
                 alt={image.title || `Image ${index + 1}`}
                 className=" w-full h-auto object-contain"
+              />
+            </div>
+          ))}
+      </div> */}
+
+      <div className="grid  md:px-0 px-4 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-[12px] space-y-2 md:gap-7 max-w-[1140px] mx-auto lg:pr-8  ">
+        {Array.isArray(data.images) &&
+          data.images.map((image, index) => (
+            <div
+              key={index}
+              onClick={() => {
+                setSelectedImage(image);
+                setShowForm(true);
+ 
+                setActiveIndex(index); // highlight clicked/tapped card
+              }}
+            //   className="transition transform cursor-pointer hover:scale-105"
+            // >
+            onTouchStart={() => setActiveIndex(index)} // mobile tap "hover"
+  onMouseEnter={() => setActiveIndex(index)} // desktop hover
+  onMouseLeave={() => setActiveIndex(null)} // reset on leave
+  className={`cursor-pointer transition duration-300 ease-in-out transform ${
+    activeIndex === index ? "scale-105 shadow-lg z-10" : ""
+  }`}
+>
+              <img
+                src={`${BASE_URL}${image.url}`}
+                alt={image.title || `Image ${index + 1}`}
+                className="object-contain w-full h-auto "
               />
             </div>
           ))}

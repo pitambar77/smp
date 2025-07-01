@@ -1,4 +1,7 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import {
   jerryTanzaniaData,
   jerryTanzaniaData1,
@@ -6,6 +9,23 @@ import {
 } from "../../data/CaseStudyData";
 import CaseStudyCard from "../../components/CaseStudyCard";
 import { PiCheckFatFill } from "react-icons/pi";
+
+
+
+const lifeimages = [
+  {
+   
+    image: "https://safarimarketingpro.com/images/jerrytanzaniatours-casestudy6.png",
+   
+  },
+  {
+   
+    image: "https://safarimarketingpro.com/images/jerrytanzaniatours-casestudy7.png",
+   
+  },
+  
+ 
+];
 
 const JerryContentCard = () => {
   return (
@@ -161,13 +181,35 @@ const JerryContentCard = () => {
             />
 
             <h1 className=" text-[#011833] font-[600] sm:text-[22px] text-[18px] text-center p-[3%] ">
-              Key Metric 3: Top Ranking Keywords
+              Key Metric 4: Top Ranking Keywords
             </h1>
-            <img
-              src="https://safarimarketingpro.com/images/jerrytanzaniatours-casestudy6.png"
-              alt="screen-short4"
-              className="py-[29.45px] "
-            />
+            <div className="">
+                    <Swiper
+                      modules={[Autoplay]}
+                      autoplay={{ delay: 2500, disableOnInteraction: false }}
+                      spaceBetween={20}
+                      slidesPerView={1}
+                      loop={true}
+                    // onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
+                    // onMouseLeave={() => swiperRef.current?.autoplay?.start()}
+                    >
+                     {lifeimages.map((item, index) => (
+                          <SwiperSlide key={index}>
+                            <div className="" key={index}>
+                             
+                               <img
+                            src={item.image}
+                            alt={item.image}
+                            className=""
+                          />
+       
+                             
+                            </div>
+       
+                          </SwiperSlide>
+                        ))}
+                    </Swiper>
+                    </div>
           </div>
         </div>
 

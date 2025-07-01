@@ -148,7 +148,7 @@ export default function Contactpage() {
   {/* Location Card */}
   <div className="bg-white rounded shadow-[0px_8px_40px_-5px_rgb(9_31_67_/_10%)] p-[28px] flex flex-col sm:flex-row items-center sm:items-start sm:space-x-6  sm:space-y-0">
     <div className="flex-shrink-0">
-      <div className="  w-18 h-14 rounded-full flex text-center md:text-start">
+      <div className=" pl-4 md:pl-0 w-18 h-14 rounded-full flex text-center md:text-start">
             {/* <div className="w-18 h-14 rounded-full flex items-center justify-center"> */}
  
         <img
@@ -202,26 +202,19 @@ export default function Contactpage() {
           <h3 className="text-[18px] md:text-[20px] text-center md:text-left font-semibold capitalize text-[#011833] leading-[inherit]   pb-[10px] font-montserrat">
             Email Address
           </h3>
-             {/* <p className=" hidden lg:block text-[15px] md:text-[17px] font-medium leading-[inherit] font-montserrat text-[#787878] text-center md:text-left p-0 m-0">
-            sales@manoramaseoservice.com
-          </p>
-          <p className=" hidden sm-block text-[15px] md:text-[17px] font-medium leading-[inherit] font-montserrat text-[#787878] text-center md:text-left p-0 m-0">
-            sales@manorama<br/>seoservice.com
-          </p> */}
-          {/* Visible on mobile, tablet, laptop, desktop — except md (tablet) */}
+
 <p className="block md:hidden lg:block text-[15px] md:text-[17px] font-medium leading-[inherit] font-montserrat text-[#787878] text-center md:text-left p-0 m-0">
   sales@manoramaseoservice.com
 </p>
  
-{/* Visible only on tablets (md screens) */}
+
 <p className="hidden md:block lg:hidden text-[15px] md:text-[17px] font-medium leading-[inherit] font-montserrat text-[#787878] text-center md:text-left p-0 m-0">
   sales@manorama<br />seoservice.com
 </p>
  
         </div>
 </div>
- 
-      {/* Main Content */}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 ">
         {/* Left Column - Form */}
         <div className="md:mt-6 md:px-[15px]">

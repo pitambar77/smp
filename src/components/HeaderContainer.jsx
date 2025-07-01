@@ -476,7 +476,10 @@ export default function HeaderContainer() {
                         setMenuOpen(false);
                         setShowForm(true);
                       }}
-                      className="sm:w-full px-[15px] bg-[#FF5254] text-white sm:py-3 py-[10px] sm:text-[17px] text-[14px] rounded hover:bg-black hover:text-[#FF5254] transition"
+                      className="sm:w-full px-[15px] bg-[#FF5254] text-white sm:py-3 py-[10px] sm:text-[17px] text-[14px] rounded transition
+                      hover:bg-[#011833] hover:border-[#011833] hover:text-[#ff5254]
+    active:bg-[#011833] active:border-[#011833] active:text-[#ff5254]
+duration-500 ease-in-out"
                     >
                       REQUEST A FREE STRATEGY SESSION
                     </button>

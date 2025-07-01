@@ -120,7 +120,7 @@ const Websites = () => {
           <div className="sm:w-[86%] sm:px-0 px-3 mx-auto  pt-5  grid grid-cols-1 md:grid-cols-2 sm:gap-x-[40px]   ">
             <div className="">
               {contentLeft.map((item, i) => (
-                <div key={i} className=" flex items-start sm:pb-[20px] pb-[10px]   ">
+                <div key={i} className=" flex md:items-start sm:pb-[20px] pb-[10px] sm:text-left text-justify  ">
                   <PiCheckFatFill className=" text-[#ff5255] w-32  sm:text-lg text-[14px] mt-1 mr-1 " />
                   <p
                     className="text-white sm:text-[18px] text-[14px] "
@@ -132,7 +132,7 @@ const Websites = () => {
 
             <div className=" ">
               {contentRight.map((item, i) => (
-                <div key={i} className=" flex items-start  sm:pb-[20px] pb-[10px]  ">
+                <div key={i} className=" flex items-start  sm:pb-[20px] pb-[10px] sm:text-left text-justify  ">
                   <PiCheckFatFill className=" text-[#ff5255] w-32  sm:text-lg text-[14px] mt-1 mr-1 " />
                   <p
                     className="text-white sm:text-[18px] text-[14px]  "

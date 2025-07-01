@@ -235,10 +235,10 @@ function Content2() {
                 </p>
               </div>
 
-              <div className="mt-6 text-center ">
+              <div className="mt-6 sm:text-left text-center ">
                 <button
                   onClick={() => setShowForm(true)}
-                  className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] md:text-[16px] text-[14px] px-2 py-3 md:px-8 md:py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition"
+                  className="bg-[#011833] font-semibold border border-[#011833] text-[#fff] md:text-[16px] text-[14px] px-2 py-3 md:px-8 md:py-3 rounded hover:bg-[rgba(255,82,84,0.9)] hover:border-white transition active:bg-[rgba(255,82,84,0.9)] active:border-white "
                 >
                   SCHEDULE CALL WITH AN EXPERT
                 </button>

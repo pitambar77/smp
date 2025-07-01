@@ -103,7 +103,7 @@ return (
 
             <img src={chinSign} alt="sign" className="py-[15px] ml-[-22px] w-[180px]" />
 
-            <h2 className="text-[#3467d8] font-[600] md:text-2xl leading-[1.3] flex sm:flex-row flex-col">
+            <h2 className="text-[#3467d8] font-[600] md:text-2xl leading-[1.3] flex sm:flex-row flex-col sm:pb-0 pb-5">
               <span className="text-[20px] md:text-2xl">
                 Mr Chinu Pal&nbsp;|&nbsp;
               </span>

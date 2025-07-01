@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import RequestForm from "../../../components/RequestForm";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+
 
 const features = [
   {
@@ -330,8 +334,49 @@ function Results() {
           {/* <p className=" font-[Montserrat] font-normal text-[17px] text-center text-[#787878] leading-inherit uppercase-normal px-[6%] pb-[20px]  ">
 We understand your safari & tour business needs to be more visible on the search engine result page to attract more potential customers and opportunities that would convert. With years of trial & test, we come up with some ways that would give you the best results by implementing SEO.                        </p> */}
 
+
+
           <section className="mt-8">
-            <div className=" sm:pl-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
+
+
+{/* Mobile responsive */}
+  <div className="grid grid-cols-1 mx-auto sm:pl-5 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
+       {/* ✅ Mobile Swiper */}
+          <div className="sm:hidden ">
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 2500, disableOnInteraction: false }}
+              spaceBetween={20}
+              slidesPerView={1}
+              loop={true}
+            >
+              {features.map((feature, idx) => (
+                            <SwiperSlide key={idx}>
+               
+                <div key={idx} className="flex items-start gap-8">
+                  <div className="sm:w-8 w-[2px] sm:h-8 h-1 mt-1">{feature.icon}</div>
+                  <div className="ml-[10px] sm:ml-0">
+                    <h3 className="font-[Montserrat] font-semibold sm:text-[22px] text-[18px] text-left  text-[#011833] m-0 p-0 pb-[10px] capitalize">
+                      {feature.title}
+                    </h3>
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] sm:text-left text-justify text-[#787878] m-0 pb-2 ">
+                      {feature.description}
+                    </p>
+                    <p className="font-[Montserrat] font-medium sm:text-[16px] text-[14px] sm:text-left text-justify text-[#787878] m-0 p-0 ">
+                      {feature.description2}
+                    </p>
+                  </div>
+                </div>
+ 
+            </SwiperSlide>
+              ))}
+              </Swiper>
+            </div>
+ 
+</div>
+ 
+
+            <div className=" hidden  sm:pl-5 mx-auto md:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-5">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-8">
                   <div className="sm:w-8 w-[2px] sm:h-8 h-1 mt-1">{feature.icon}</div>

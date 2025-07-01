@@ -33,7 +33,7 @@ const Step = ({ id, number, title, children, isFirst = false }) => {
 const Goalwebdesign = () => {
     const navigate = useNavigate();
   return (
-    <div className="bg-[#ff5254] py-[50px] ">
+    <div className="bg-[#ff5254] md:py-[50px] py-0 sm:pb-0 pb-[50px] ">
       {/* Step 1 */}
       <Step
         id="step-1"

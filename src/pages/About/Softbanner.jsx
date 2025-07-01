@@ -146,9 +146,12 @@ const Softbanner = () => {
               />
             </div>
 
-            <h5 className=" px-[15px] sm:text-[24px] text-[20px] font-[600]  text-[#3467d8] capitalize leading-[inherit] ">
-              Manorama Pallai -{" "}
-              <span className=" italic sm:text-[24px] text-[16px] font-[500] "> Managing Director </span>
+            <h5 className=" px-[15px] sm:text-[24px] text-[20px] font-[600]  text-[#3467d8] capitalize leading-[inherit]  ">
+              Manorama Pallai -<span className=" block lg:inline"></span>
+              <span className=" italic sm:text-[24px] text-[16px] font-[500] ">
+                {" "}
+                Managing Director{" "}
+              </span>
             </h5>
           </div>
         </div>

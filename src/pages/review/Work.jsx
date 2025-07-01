@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../../api/config";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,8 +13,6 @@ const Work = () => {
     subheading: "",
     images: [],
   });
-
-  const swiperRef = useRef(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,18 +42,15 @@ const Work = () => {
         <div className="sm:hidden ">
           <Swiper
             modules={[Autoplay]}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            speed={2500}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
             spaceBetween={20}
             slidesPerView={1}
             loop={true}
-            onMouseEnter={() => swiperRef.current?.autoplay?.stop()}
-            onMouseLeave={() => swiperRef.current?.autoplay?.start()}
           >
             {Array.isArray(data.images) &&
               data.images.map((image, index) => (
                 <SwiperSlide key={index}>
-                  <div className="bg-white rounded-lg border border-gray-200  p-5  mb-[40px]  flex flex-col justify-between overflow-hidden">
+                  <div className="bg-white rounded-lg border border-gray-200  p-5  md:mb-[40px]  flex flex-col justify-between overflow-hidden">
                     <div className="" key={index}>
                       <div className=" flex">
                         <img

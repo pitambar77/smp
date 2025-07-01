@@ -300,7 +300,14 @@ export default function BodySection() {
               {/* Quote button */}
               <button
                 onClick={() => setShowForm(true)}
-                className="bg-[#FF4F4F] border-[#ff5254] cursor-pointer border hover:bg-[#011833] hover:border-[#011833] duration-500 ease-in-out hover:text-[#ff5254] w-full md:px-[2px] md:py-[5px]  p-3.5 text-white tracking-[1px] text-[14px] font-semibold rounded mt-4"
+                className="bg-[#FF4F4F] border-[#ff5254] text-white
+    border cursor-pointer rounded w-full
+    md:px-[2px] md:py-[5px] p-3.5 tracking-[1px] text-[14px] font-semibold mt-4
+ 
+    hover:bg-[#011833] hover:border-[#011833] hover:text-[#ff5254]
+    active:bg-[#011833] active:border-[#011833] active:text-[#ff5254]
+ 
+    duration-500 ease-in-out"
               >
                 GET A FREE QUOTE
               </button>

@@ -96,7 +96,7 @@ const Content1 = () => {
 
   return (
     <div className="w-full relative flex justify-center bg-white pb-10 sm:pb-12 md:pb-14 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-5xl mx-auto text-center ">
+      <div className="w-full max-w-5xl mx-auto  ">
         <h1 className="font-montserrat font-bold text-[24px]  md:text-[36px] lg:text-[40px] text-center  capitalize text-[#3467d8] leading-snug lg:leading-[1.3] mb-8   lg:pb-5">
           {overview.heading}
         </h1>
@@ -145,9 +145,9 @@ const Content1 = () => {
         </div>
 
         {/* Button */}
-        <div className="mt-8 sm:mt-10">
+        <div className="mt-8 sm:mt-10 text-center">
           <button
-            className="bg-gray-900 text-white text-sm sm:text-base px-6 sm:px-10 py-[10px] sm:py-3 rounded-md hover:bg-red-400 transition-all"
+            className="bg-gray-900 text-white text-sm sm:text-base px-6 sm:px-10 py-[10px] sm:py-3 rounded-md hover:bg-red-400 transition-all active:bg-[#011833] active:border-[#011833] active:text-[#ff5254]"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             <strong>GET MY FREE PROPOSAL</strong>

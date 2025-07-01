@@ -408,9 +408,9 @@ function Content4() {
                 "No control over your business",
               ].map((item, index) => (
                 <div key={index} className="flex items-start  ">
-                  <div className="flex items-center justify-center w-4 h-4 mt-1  mx-[10px] rounded-full border-3 border-[#ff5254] text-[#ff5254] font-extrabold text-[22px]  ">
-                    &middot;
-                  </div>
+                 <strong className="pr-2 mt-1 ">
+              <FaRegDotCircle className=" text-[#ff5254] w-4.5 " />
+            </strong>
                   {/* <FaRegDotCircle  className="flex items-center justify-center pl-[10px] text-[#ff5254] text-[26px] font-extrabold "/> */}
                   <strong className=" font-semibold text-[#ede7e7] md:text-[17px] text-[14px] pb-[10px] ">
                     {item}
@@ -434,7 +434,10 @@ function Content4() {
         {/* Footer Call-to-Action */}
         <div className="pt-[30px] text-center">
           <button onClick={() => setShowForm(true)}>
-            <p className="text-[28px] font-bold md:pb-[15px] text-white underline hover:text-black duration-500 cursor-pointer">
+            <p className="text-[28px] font-bold md:pb-[15px] text-white underline
+        hover:text-black
+        active:text-black
+        duration-500 cursor-pointer">
               So Now Stop Losing Money and Get the first step towards getting
               More Leads and Schedule a Strategy Session
             </p>
