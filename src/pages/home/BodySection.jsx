@@ -249,16 +249,17 @@ export default function BodySection() {
 
       {/* ✅ Mobile Section */}
       <div className="block sm:hidden bg-[rgba(61,114,194,0.95)] relative w-full overflow-hidden pt-[150px]  px-4">
-        <div className="text-white ">
-          <h1 className="font-[700] text-[30px] leading-[1.2] pb-[16px] text-center">
-            {banner.heading}
-          </h1>
-          <p className="text-[16px] leading-[26px] pb-[24px] text-center">
-            {banner.subheading}
-          </p>
+        <div className=" ">
+          
 
           {!showForm ? (
             <>
+            <h1 className="  font-[700] text-[30px] leading-[1.2] pb-[16px] text-center text-white">
+            {banner.heading}
+          </h1>
+          <p className="text-[16px] leading-[26px] pb-[24px] text-center text-white">
+            {banner.subheading}
+          </p>
               {/* Dropdown + chevron row */}
               <div className="flex shadow-[0_12px_18px_0_rgb(0_0_0_/_15%)] mt-1.5">
                 <div

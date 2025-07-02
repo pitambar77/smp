@@ -38,20 +38,21 @@ export default function FormComponent() {
     <form className=" " onSubmit={handleSubmit}>
       <h2 className="sm:text-[50px] text-[26px] text-white font-bold mb-5">Please enter your details.</h2>
 
-      <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-[10px]  ">
-        <div>
+      <div className="sm:grid sm:grid-cols-2 grid-cols-1 sm:gap-[10px]  ">
+        <div className='sm:mb-0 mb-3'>
             <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="First Name*" className="p-4   rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
         </div>
-       <div>
+       <div className='sm:mb-0 mb-3'>
         <input name="email" value={form.email} onChange={handleChange} placeholder="Email Address*" className=" p-4  rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required type="email" />
 
        </div>
-        <select name="countryCode" value={form.countryCode} onChange={handleChange} className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required>
+       
+        <select name="countryCode" value={form.countryCode} onChange={handleChange} className="p-4 sm:mb-0 mb-3 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required>
           <option value="">Country Code</option>
           <option value="+91">+91 (India)</option>
           <option value="+1">+1 (USA)</option>
         </select>
-        <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone*" className="p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
+        <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone*" className="p-3 sm:mb-0 mb-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
         <input name="website" value={form.website} onChange={handleChange} placeholder="Website*" className="col-span-2 p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
       </div>
 
