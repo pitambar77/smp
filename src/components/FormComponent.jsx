@@ -36,7 +36,7 @@ export default function FormComponent() {
 
   return (
     <form className=" " onSubmit={handleSubmit}>
-      <h2 className="sm:text-[50px] text-[26px] text-white font-bold mb-5">Please enter your details.</h2>
+      <h2 className="sm:text-[50px] text-[26px] text-white font-bold mb-5 ">Please enter your details.</h2>
 
       <div className="sm:grid sm:grid-cols-2 grid-cols-1 sm:gap-[10px]  ">
         <div className='sm:mb-0 mb-3'>
@@ -52,11 +52,11 @@ export default function FormComponent() {
           <option value="+91">+91 (India)</option>
           <option value="+1">+1 (USA)</option>
         </select>
-        <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone*" className="p-3 sm:mb-0 mb-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
+        <input name="phone" value={form.phone} onChange={handleChange} placeholder="Phone*" className="p-3 sm:mb-0 mb-3 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
         <input name="website" value={form.website} onChange={handleChange} placeholder="Website*" className="col-span-2 p-4 rounded w-full border border-gray-300 focus:border-red-400 focus:outline-none bg-white" required />
       </div>
 
-      <div className="mt-5 flex flex-col gap-[10px]">
+      <div className="mt-3 flex flex-col gap-[10px]">
         <ReCAPTCHA
           sitekey="6Lf2glwrAAAAAPsuvFIyVh24DbavfwihlL8CU2-Z"
           onChange={(token) => setCaptchaToken(token)}
