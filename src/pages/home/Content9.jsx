@@ -427,100 +427,96 @@ export default function Content9() {
 
             {/* Form Start */}
             <div className="max-w-4xl mx-auto bg-white rounded-md mt-[25px] font-montserrat text-[#333]">
-              <form
-                onSubmit={handleSubmit}
-                
-              >
+              <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 sm:p-6 md:p-8 ">
-                <input
-                  type="text"
-                  name="fullName"
-                  placeholder="Full Name"
-                  value={form.fullName}
-                  onChange={handleChange}
-                  className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
-                  required
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={form.email}
-                  onChange={handleChange}
-                  className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
-                  required
-                />
-                <input
-                  type="text"
-                  name="company"
-                  placeholder="Company"
-                  value={form.company}
-                  onChange={handleChange}
-                  className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
-                />
-                <textarea
-                  rows="1"
-                  name="furtherComments"
-                  placeholder="Further Comments"
-                  value={form.furtherComments}
-                  onChange={handleChange}
-                  className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none resize-none"
-                />
+                  <input
+                    type="text"
+                    name="fullName"
+                    placeholder="Full Name"
+                    value={form.fullName}
+                    onChange={handleChange}
+                    className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={form.email}
+                    onChange={handleChange}
+                    className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder="Company"
+                    value={form.company}
+                    onChange={handleChange}
+                    className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
+                  />
+                  <textarea
+                    rows="1"
+                    name="furtherComments"
+                    placeholder="Further Comments"
+                    value={form.furtherComments}
+                    onChange={handleChange}
+                    className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none resize-none"
+                  />
 
-                <div className="col-span-1 md:col-span-2 flex gap-6 flex-col md:flex-row">
-                  <div className="md:w-1/3 w-full">
-                    <select
-                      name="countryCode"
-                      value={form.countryCode}
-                      onChange={handleChange}
-                      className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none bg-transparent"
-                      required
-                    >
-                      <option value="">Country Code</option>
-                      {CountryCodes.map(({ code, label }) => (
-                        <option key={code} value={code}>
-                          {code} ({label})
-                        </option>
-                      ))}
-                    </select>
+                  <div className="col-span-1 md:col-span-2 flex gap-6 flex-col md:flex-row">
+                    <div className="md:w-1/3 w-full">
+                      <select
+                        name="countryCode"
+                        value={form.countryCode}
+                        onChange={handleChange}
+                        className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none bg-transparent"
+                        required
+                      >
+                        <option value="">Country Code</option>
+                        {CountryCodes.map(({ code, label }) => (
+                          <option key={code} value={code}>
+                            {code} ({label})
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div className="flex-1">
+                      <input
+                        type="text"
+                        name="phone"
+                        placeholder="Phone"
+                        value={form.phone}
+                        onChange={handleChange}
+                        className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
+                        required
+                      />
+                    </div>
                   </div>
-                  <div className="flex-1">
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Phone"
-                      value={form.phone}
-                      onChange={handleChange}
-                      className="text-[14px] md:text-[15px] w-full border-b border-gray-300 focus:outline-none"
-                      required
+
+                  <div className="col-span-1 md:col-span-2 mt-2">
+                    <ReCAPTCHA
+                      sitekey="6Lf2glwrAAAAAPsuvFIyVh24DbavfwihlL8CU2-Z"
+                      onChange={(token) => setCaptchaToken(token)}
                     />
                   </div>
-                </div>
 
-                <div className="col-span-1 md:col-span-2 mt-2">
-                  <ReCAPTCHA
-                    sitekey="6Lf2glwrAAAAAPsuvFIyVh24DbavfwihlL8CU2-Z"
-                    onChange={(token) => setCaptchaToken(token)}
-                  />
+                  <div className="col-span-1 md:col-span-2 text-[14px] md:text-[15px] text-[#787878] leading-[24px] font-[400] text-justify pt-4">
+                    By submitting this form, you agree to us for your business
+                    marketing requirements. We will use your data to send you
+                    free marketing tips, news and our latest services. You can
+                    get everything 24/7. We are available….
+                  </div>
                 </div>
-
-                <div className="col-span-1 md:col-span-2 text-[14px] md:text-[15px] text-[#787878] leading-[24px] font-[400] text-justify pt-4">
-                  By submitting this form, you agree to us for your business
-                  marketing requirements. We will use your data to send you free
-                  marketing tips, news and our latest services. You can get
-                  everything 24/7. We are available….
+                <div className="col-span-1 md:col-span-2 pt-3  ">
+                  <button
+                    type="submit"
+                    className="w-full cursor-pointer bg-[#ff5254] hover:bg-[#3467d8] text-white font-semibold sm:py-5 py-[10px] text-center rounded-b-sm text-[12px] md:text-[18px] tracking-wider ease-in duration-300"
+                  >
+                    CONTACT US TODAY
+                  </button>
                 </div>
-                 </div>
-                  <div className="col-span-1 md:col-span-2 pt-3  ">
-                <button
-                  type="submit"
-                  className="w-full cursor-pointer bg-[#ff5254] hover:bg-[#3467d8] text-white font-semibold sm:py-5 py-[10px] text-center rounded-b-sm text-[12px] md:text-[18px] tracking-wider ease-in duration-300"
-                >
-                  CONTACT US TODAY
-                </button>
-              </div>
               </form>
-             
             </div>
             {/* Form End */}
           </div>

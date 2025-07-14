@@ -14,14 +14,14 @@ const FullscreenModal = ({ images, currentIndex, onClose, onPrev, onNext }) => {
   return (
     <div className="fixed inset-0 z-50 bg-black/80 bg-opacity-90 flex items-center justify-center">
       <button
-        className="absolute top-5 right-5 text-white text-2xl"
+        className="absolute top-24 right-5 text-white text-2xl cursor-pointer"
         onClick={onClose}
       >
         <FaTimes />
       </button>
 
       <button
-        className="absolute left-5 text-white text-5xl"
+        className="absolute left-5 text-white text-5xl cursor-pointer"
         onClick={onPrev}
       >
         <IoMdArrowDropleft />
@@ -36,7 +36,7 @@ const FullscreenModal = ({ images, currentIndex, onClose, onPrev, onNext }) => {
       />
 
       <button
-        className="absolute right-5 text-white text-5xl"
+        className="absolute right-5 text-white text-5xl cursor-pointer"
         onClick={onNext}
       >
         <IoMdArrowDropright />

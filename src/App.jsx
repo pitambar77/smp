@@ -85,6 +85,7 @@ function App() {
           <Route path='form-component' element={<FormComponent/>} />
           <Route path='contacts' element={<StrategyForm/>}/>
           
+          
 
           
           
@@ -96,6 +97,7 @@ function App() {
          <Route path="/forgot-password" element={<ResetPassword />} />
           <Route path="/payment" element={<PaymentForm/>} />
       
+
       <Route
           path="/admin"
           element={
