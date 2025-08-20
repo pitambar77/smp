@@ -43,6 +43,8 @@ import StrategyForm from './components/StrategyForm'
 import GooglAdsPPCForm from './components/GooglAdsPPCForm'
 import PaymentForm from './components/PaymentForm'
 
+import Webdesignmarketingafrica from './pages/Webdesignmarketingafrica/Webdesignmarketingafrica'
+import SubForm from './pages/Webdesignmarketingafrica/SubForm'
 
 
 
@@ -86,7 +88,6 @@ function App() {
           <Route path='contacts' element={<StrategyForm/>}/>
           
           
-
           
           
       </Route>
@@ -96,7 +97,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
          <Route path="/forgot-password" element={<ResetPassword />} />
           <Route path="/payment" element={<PaymentForm/>} />
-      
+        <Route path='/web-design-marketing-africa' element={<Webdesignmarketingafrica/>}/>
+          <Route path='adds-booking' element={<SubForm/>}/>
+
 
       <Route
           path="/admin"
