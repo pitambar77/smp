@@ -3,7 +3,7 @@ import WebHeader from '../../components/WebHeader'
 import Hoverheader from '../../components/Hoverheader'
 import Herosection from './Herosection'
 import Gallery from './Gallery'
-import Visitors from './visitors'
+// import Visitors from './visitors'
 import Successtories from './Successtories'
 import Compare from './Compare'
 import Partneringrowth from './Partneringrowth'
@@ -30,7 +30,7 @@ function Webdesignmarketingafrica() {
       <Hoverheader/>
       <Herosection/>
      <Gallery/>
-     <Visitors/>
+     {/* <Visitors/> */}
      <Successtories/>
      <Compare/>
      <Partneringrowth/>
