@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 import { PiCheckFatFill } from 'react-icons/pi';
-import RequestForm from "../../components/RequestForm";
+
 
 function Visitors() {
   const [showForm] = useState(false);
