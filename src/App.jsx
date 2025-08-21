@@ -45,6 +45,7 @@ import PaymentForm from './components/PaymentForm'
 
 import Webdesignmarketingafrica from './pages/Webdesignmarketingafrica/Webdesignmarketingafrica'
 import SubForm from './pages/Webdesignmarketingafrica/SubForm'
+import Blog from './pages/blog/Blog'
 
 
 
@@ -86,6 +87,8 @@ function App() {
           <Route path='contact-us' element={<Contactus/>}/> 
           <Route path='form-component' element={<FormComponent/>} />
           <Route path='contacts' element={<StrategyForm/>}/>
+          <Route path='blog' element={<Blog/>}/>
+
           
           
           
