@@ -2,6 +2,8 @@ import React from "react";
 import BlogHighlights from "./BlogHighlights";
 import BlogLayout from "./BlogLayout";
 import BlogSection from "./BlogSection";
+import CategoriesSection from "./CategoriesSection";
+import Common from "../../components/Common";
 
 const Blog = () => {
   return (
@@ -37,6 +39,8 @@ const Blog = () => {
     <BlogHighlights/>
     <BlogLayout/>
     <BlogSection/>
+    <CategoriesSection/>
+    <Common/>
     </>
   );
 };
