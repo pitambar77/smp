@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { FaTags } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
@@ -9,6 +9,10 @@ import Common from "../../components/Common";
 const BlogDetails = () => {
   const { slug } = useParams(); // Get blog id from URL
   const blog = blogPosts.find((post) => post.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [slug]);
 
   if (!blog) {
     return <h2 className="text-center text-red-500">Blog not found!</h2>;
