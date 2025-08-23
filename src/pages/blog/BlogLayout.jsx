@@ -47,7 +47,7 @@ const BlogLayout = () => {
       <div className="lg:col-span-2  rounded hover:shadow-2xl transform ease-in-out">
         <div className="bg-gray-100 p-6 ">
        
-           <h2 className="text-2xl font-bold text-gray-800 mb-2">
+           <h2 className="text-2xl font-bold text-[#3467d8] mb-2">
             1 Day Safari Tanzania: Is It Possible Way To Experience The Real
             Wildlife?
           </h2>
@@ -73,20 +73,14 @@ const BlogLayout = () => {
 
       {/* Blog Content */}
       <div className="p-5">
-        <h2 className="text-xl font-semibold text-gray-800">
+        <h2 className="text-xl font-semibold text-[#3467d8]">
           1 Day Safari Tanzania: Is it Possible Way to Experience the Real Wildlife?
         </h2>
-        <p className="text-gray-600 mt-2 text-sm">
+        <p className=" mt-2 font-normal sm:text-[18px] text-[14px] sm:text-left text-justify text-[#787878] leading-[1.5] sm:pt-[15px] pb-[17px] m-0">
           Discover the beauty of Tanzania’s wildlife in just one day! 
           A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
           A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.Discover the beauty of Tanzania’s wildlife in just one day! 
-          A thrilling adventure awaits with breathtaking landscapes and exotic animals.
+
         </p>
 
         {/* Post Info */}
