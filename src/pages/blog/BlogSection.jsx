@@ -284,94 +284,65 @@
 // export default BlogSection;
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { FaTags } from "react-icons/fa6";
 import { SlCalender } from "react-icons/sl";
+import { blogPosts } from "./BlogData";
 
-const blogPosts = [
-  {
-    id: 1,
-    title:
-      "Climbing Mount Kilimanjaro? Explore The Fascinating Parts Of Kilimanjaro Glaciers",
-    category: "Trekking",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 2,
-    title: "5 Things You Need To Do The Night Before You Climb Kilimanjaro",
-    category: "Trekking",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 3,
-    title:
-      "Where to stay on Tanzania Family Safari – Comparison Between a Lodge and a Tented Camp",
-    category: "Safari",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 4,
-    title: "Why Tanzania Safari is Africa’s Best Kept Secret?",
-    category: "Safari",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 5,
-    title: "Why Now is the Great Time to Start Tanzania Safari?",
-    category: "Safari",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 5,
-    title: "Why Now is the Great Time to Start Tanzania Safari?",
-    category: "Safari",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-  {
-    id: 5,
-    title: "Why Now is the Great Time to Start Tanzania Safari?",
-    category: "Safari",
-    date: "23/11/2020",
-    image:
-      "https://safarimarketingpro.com/blog/wp-content/uploads/2020/11/Mt-Cook-boardwalks-RTAR.jpg",
-  },
-];
+
+
+
+// const BlogCard = ({ post }) => (
+//   <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
+//     {post.image && (
+//       <img
+//         src={post.image}
+//         alt={post.title}
+//         className="w-full h-48 object-cover"
+//       />
+//     )}
+//     <div className="p-4">
+//       <h3 className="text-base font-semibold leading-6 text-gray-900">
+//         {post.title}
+//       </h3>
+//       <div className="flex items-center mt-2 text-sm text-gray-500 gap-5">
+//         <span className="flex items-center gap-1">
+//           <FaTags /> {post.category}
+//         </span>
+//         <span className="flex items-center gap-1">
+//           <SlCalender /> {post.date}
+//         </span>
+//       </div>
+//     </div>
+//   </div>
+// );
 
 const BlogCard = ({ post }) => (
-  <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition">
-    {post.image && (
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full h-48 object-cover"
-      />
-    )}
-    <div className="p-4">
-      <h3 className="text-base font-semibold leading-6 text-gray-900">
-        {post.title}
-      </h3>
-      <div className="flex items-center mt-2 text-sm text-gray-500 gap-5">
-        <span className="flex items-center gap-1">
-          <FaTags /> {post.category}
-        </span>
-        <span className="flex items-center gap-1">
-          <SlCalender /> {post.date}
-        </span>
+  <Link to={`/blog/${post.slug}`}>
+    <div className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer">
+      {post.image && (
+        <img
+          src={post.image}
+          alt={post.title}
+          className="w-full h-48 object-cover"
+        />
+      )}
+      <div className="p-4">
+        <h3 className="text-base font-semibold leading-6 text-gray-900">
+          {post.title}
+        </h3>
+        <div className="flex items-center mt-2 text-sm text-gray-500 gap-5">
+          <span className="flex items-center gap-1">
+            <FaTags /> {post.category}
+          </span>
+          <span className="flex items-center gap-1">
+            <SlCalender /> {post.date}
+          </span>
+        </div>
       </div>
     </div>
-  </div>
+  </Link>
 );
 
 const SubscribeBox = () => (
@@ -401,13 +372,6 @@ const SubscribeBox = () => (
   </div>
 );
 
-const ReportBox = () => (
-  <div className="  bg-gradient-to-r from-blue-500 to-pink-500 text-white p-6 rounded-lg shadow-lg flex items-center justify-center">
-    <button className="bg-white text-blue-500 px-4 py-2 rounded font-semibold">
-      Explore the Report
-    </button>
-  </div>
-);
 
 const BlogSection = () => {
   const [visibleCount, setVisibleCount] = useState(4);
@@ -416,7 +380,7 @@ const BlogSection = () => {
   const showLess = () => setVisibleCount(4);
 
   return (
-    <div className="max-w-[1080px] mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
       {/* Left / Middle Section */}
       <div className="md:col-span-2">
         {/* Top Section */}

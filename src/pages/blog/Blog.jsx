@@ -21,18 +21,42 @@ const Blog = () => {
             Let's build it together this 2021.{" "}
           </h3>
         </div>
-        <div className=" items-center justify-between text-center py-[60px] ">
-          <h3 className="text-[#dadada] font-semibold text-[16px] leading-[22px] text-center tracking-[0.55em]">
-            FEATURED IN
-          </h3>
-          <p className=" flex items-center justify-center text-center  mt-[30px]">
-            <img className="w-[170px] mx-[18px]" src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner.png" />
-            <img className="w-[170px] mx-[18px]" src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-1.png" />
-            <img className="w-[170px] mx-[18px]" src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-2.png" />
-            <img className="w-[170px] mx-[18px]" src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-3.png" />
-            <img className="w-[170px] mx-[18px]"  src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-4.png" />
-          </p>
-        </div>
+        <div className="items-center justify-between text-center py-[60px] hidden lg:block">
+  {/* Heading */}
+  <h3 className="text-[#dadada] font-semibold text-[16px] leading-[22px] text-center tracking-[0.55em]">
+    FEATURED IN
+  </h3>
+
+  {/* Logos */}
+  <div className="flex flex-wrap items-center justify-center gap-6 mt-[30px]">
+    <img
+      className="w-[120px] sm:w-[150px] md:w-[170px]"
+      src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner.png"
+      alt="logo"
+    />
+    <img
+      className="w-[120px] sm:w-[150px] md:w-[170px]"
+      src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-1.png"
+      alt="logo"
+    />
+    <img
+      className="w-[120px] sm:w-[150px] md:w-[170px]"
+      src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-2.png"
+      alt="logo"
+    />
+    <img
+      className="w-[120px] sm:w-[150px] md:w-[170px]"
+      src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-3.png"
+      alt="logo"
+    />
+    <img
+      className="w-[120px] sm:w-[150px] md:w-[170px]"
+      src="https://safarimarketingpro.com/blog/wp-content/themes/ds-child/images/logo-banner-4.png"
+      alt="logo"
+    />
+  </div>
+</div>
+
         
       </div>
     </div>

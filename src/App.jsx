@@ -46,6 +46,8 @@ import PaymentForm from './components/PaymentForm'
 import Webdesignmarketingafrica from './pages/Webdesignmarketingafrica/Webdesignmarketingafrica'
 import SubForm from './pages/Webdesignmarketingafrica/SubForm'
 import Blog from './pages/blog/Blog'
+import BlogDetails from './pages/blog/BlogDetails'
+import CategoryPage from './pages/blog/CategoryPage'
 
 
 
@@ -84,15 +86,12 @@ function App() {
           <Route path='privacy-policy' element={<Privacy/>}/>
          <Route path='google-ads' element={<Googleads/>}/> 
          <Route path='content-marketing' element={<Content/>}/> 
-          <Route path='contact-us' element={<Contactus/>}/> 
-          <Route path='form-component' element={<FormComponent/>} />
-          <Route path='contacts' element={<StrategyForm/>}/>
-          <Route path='blog' element={<Blog/>}/>
-
-          
-          
-          
-          
+        <Route path='contact-us' element={<Contactus/>}/> 
+        <Route path='form-component' element={<FormComponent/>} />
+        <Route path='contacts' element={<StrategyForm/>}/>
+        <Route path='blog' element={<Blog/>}/>
+        <Route path="blog/:slug" element={<BlogDetails/>} />
+        <Route path="/category/:slug" element={<CategoryPage />}/>    
       </Route>
       
     <Route path='/contacts-form' element={<GooglAdsPPCForm/>}/>
@@ -101,7 +100,7 @@ function App() {
          <Route path="/forgot-password" element={<ResetPassword />} />
           <Route path="/payment" element={<PaymentForm/>} />
         <Route path='/web-design-marketing-africa' element={<Webdesignmarketingafrica/>}/>
-          <Route path='adds-booking' element={<SubForm/>}/>
+        <Route path='adds-booking' element={<SubForm/>}/>
 
 
       <Route
