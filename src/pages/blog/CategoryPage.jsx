@@ -3,6 +3,8 @@ import { useParams, Link } from "react-router-dom";
 import { blogPosts } from "./BlogData"; // import your posts
 import CategoriesSection from "./CategoriesSection";
 import Common from "../../components/Common";
+import NavbarBlue from "../../components/NavbarBlue";
+import HeaderContainerBlue from "../../components/HeaderContainerBule";
 
 export default function CategoryPage() {
   const { slug } = useParams(); // category slug from URL
@@ -28,8 +30,9 @@ export default function CategoryPage() {
 
   return (
     <>
-    <div className=" bg-gradient-to-b from-[#3d72c2f2] to-white py-20">
-
+    <div className=" ">
+    <NavbarBlue/>
+    <HeaderContainerBlue/>
     </div>
     <div className="max-w-6xl mx-auto px-4 py-12 ">
       <h1 className="text-[44px] font-bold text-[#26a3d4] mb-16 text-center">

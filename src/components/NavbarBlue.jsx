@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import smplogo from "../assets/images/smp-logo.png";
-import phonelogo from "../assets/images/phone-receiver.png";
+import smplogo from "../assets/images/smpblue.png";
+import phonelogo from "../assets/images/bluecall.png";
 import RequestForm from "./RequestForm";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-export default function Navbar() {
+export default function NavbarBlue() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [activeItem, setActiveItem] = useState(null);
@@ -56,7 +56,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-transparent w-full relative z-50">
+    <div className="  w-full relative z-50">
       <nav>
         <div className="max-w-[1170px] mx-auto py-[10px]">
           <div className="flex justify-between items-center px-[15px]">
@@ -64,15 +64,15 @@ export default function Navbar() {
               <img
                 src={smplogo}
                 alt="Logo"
-                className="h-auto max-h-[50px] w-[100px] sm:w-[120px] md:w-[130px] lg:w-[158px] filter invert brightness-0"
+                className="h-auto max-h-[50px] w-[100px] sm:w-[120px] md:w-[130px] lg:w-[158px]"
               />
             </Link>
 
-            <div className="hidden md:flex text-white items-center cursor-pointer hover:text-[#ff5254]">
+            <div className="hidden md:flex text-[#3467d8]  items-center cursor-pointer hover:text-[#ff5254]">
               <img
                 src={phonelogo}
                 alt="Phone"
-                className="h-5 md:h-6 w-auto mr-2 filter invert brightness-0"
+                className="h-5 md:h-5 w-auto mr-2 "
               />
               <p
                 style={{ fontFamily: "Lato, sans-serif" }}
@@ -137,7 +137,7 @@ export default function Navbar() {
                     setActiveItem(link.id);
                     setMenuOpen(false);
                   }}
-                  className="w-full px-4 py-3 text-white font-semibold uppercase border-b border-gray-300 bg-[#FF5254]"
+                  className="w-full px-4 py-3  font-semibold uppercase border-b border-gray-300 bg-[#FF5254]"
                 >
                   {link.label}
                 </Link>
@@ -161,7 +161,7 @@ export default function Navbar() {
                     <img
                       src={phonelogo}
                       alt="Phone"
-                      className="h-6 w-auto mr-2 filter invert brightness-0"
+                      className="h-6 w-auto mr-2 "
                     />
                     <p
                       style={{ fontFamily: "Lato, sans-serif" }}

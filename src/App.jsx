@@ -90,8 +90,8 @@ function App() {
         <Route path='form-component' element={<FormComponent/>} />
         <Route path='contacts' element={<StrategyForm/>}/>
         <Route path='blog' element={<Blog/>}/>
-        <Route path="blog/:slug" element={<BlogDetails/>} />
-        <Route path="/category/:slug" element={<CategoryPage />}/>    
+        
+          
       </Route>
       
     <Route path='/contacts-form' element={<GooglAdsPPCForm/>}/>
@@ -101,6 +101,8 @@ function App() {
           <Route path="/payment" element={<PaymentForm/>} />
         <Route path='/web-design-marketing-africa' element={<Webdesignmarketingafrica/>}/>
         <Route path='adds-booking' element={<SubForm/>}/>
+        <Route path="blog/:slug" element={<BlogDetails/>} />
+         <Route path="/category/:slug" element={<CategoryPage />}/> 
 
 
       <Route
