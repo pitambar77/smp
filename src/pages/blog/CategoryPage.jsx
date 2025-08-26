@@ -5,6 +5,7 @@ import CategoriesSection from "./CategoriesSection";
 import Common from "../../components/Common";
 import NavbarBlue from "../../components/NavbarBlue";
 import HeaderContainerBlue from "../../components/HeaderContainerBule";
+import Footer from '../../components/Footer'
 
 export default function CategoryPage() {
   const { slug } = useParams(); // category slug from URL
@@ -61,6 +62,7 @@ export default function CategoryPage() {
     </div>
     <CategoriesSection/>
     <Common/>
+    <Footer/>
     </>
   );
 }
