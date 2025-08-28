@@ -48,6 +48,9 @@ import SubForm from './pages/Webdesignmarketingafrica/SubForm'
 import Blog from './pages/blog/Blog'
 import BlogDetails from './pages/blog/BlogDetails'
 import CategoryPage from './pages/blog/CategoryPage'
+import BlogForm from './components/BlogForm'
+import BlogAllDetail from './pages/blog/BlogAllDetail'
+import BlogList from './pages/blog/BlogList'
 
 
 
@@ -103,7 +106,11 @@ function App() {
         <Route path='adds-booking' element={<SubForm/>}/>
         <Route path="blog/:slug" element={<BlogDetails/>} />
          <Route path="/category/:slug" element={<CategoryPage />}/> 
-
+        
+         <Route path="/blogs/create" element={<BlogForm/>}/> 
+          <Route path="/blogs" element={<BlogList/>}/> 
+           <Route path="/blogs/:id" element={<BlogAllDetail/>}/> 
+        
 
       <Route
           path="/admin"

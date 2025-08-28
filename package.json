@@ -10,8 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tinymce/tinymce-react": "^6.3.0",
+    "@tiptap/extension-image": "^3.3.0",
+    "@tiptap/react": "^3.3.0",
+    "@tiptap/starter-kit": "^3.3.0",
     "axios": "^1.9.0",
     "framer-motion": "^12.12.2",
+    "jodit-react": "^5.2.19",
     "lucide-react": "^0.511.0",
     "react": "^19.1.0",
     "react-countup": "^6.5.3",
