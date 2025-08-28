@@ -104,7 +104,7 @@ function App() {
           <Route path="/payment" element={<PaymentForm/>} />
         <Route path='/web-design-marketing-africa' element={<Webdesignmarketingafrica/>}/>
         <Route path='adds-booking' element={<SubForm/>}/>
-        <Route path="blog/:slug" element={<BlogDetails/>} />
+        <Route path="blog/:id" element={<BlogDetails/>} />
          <Route path="/category/:slug" element={<CategoryPage />}/> 
         
          <Route path="/blogs/create" element={<BlogForm/>}/> 
